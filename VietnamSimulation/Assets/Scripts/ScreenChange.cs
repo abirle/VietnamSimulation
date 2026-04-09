@@ -87,7 +87,7 @@ public class ScreenChange : MonoBehaviour
         resultsScreen.SetActive(true);
 
         resourceManager.CalculateResults();
-
+        resourceManager.FinalizeResults();
     }
 
 }
