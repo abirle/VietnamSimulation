@@ -1,0 +1,1404 @@
+fileFormatVersion: 2
+guid: dd9030a5ef56a54428a52eef5f30b2bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4987925291684424478
+    second: rolledmaps_0
+  - first:
+      213: -5070764108762891707
+    second: rolledmaps_1
+  - first:
+      213: 5389940874136296157
+    second: rolledmaps_2
+  - first:
+      213: 1878362686537338232
+    second: rolledmaps_3
+  - first:
+      213: -2197083319208996696
+    second: rolledmaps_4
+  - first:
+      213: 4879361892313772731
+    second: rolledmaps_5
+  - first:
+      213: -1540442449327700428
+    second: rolledmaps_6
+  - first:
+      213: -524873282642652254
+    second: rolledmaps_7
+  - first:
+      213: 2212769922340898247
+    second: rolledmaps_8
+  - first:
+      213: 6505926749921876362
+    second: rolledmaps_9
+  - first:
+      213: -5770173483295718821
+    second: rolledmaps_10
+  - first:
+      213: -5372466568357960775
+    second: rolledmaps_11
+  - first:
+      213: 6134914776823226352
+    second: rolledmaps_12
+  - first:
+      213: 6635810925416064294
+    second: rolledmaps_13
+  - first:
+      213: 4354439389222806592
+    second: rolledmaps_14
+  - first:
+      213: -5366493076403298294
+    second: rolledmaps_15
+  - first:
+      213: -7715867309310858389
+    second: rolledmaps_16
+  - first:
+      213: -5595666582300173124
+    second: rolledmaps_17
+  - first:
+      213: -3210393632668473208
+    second: rolledmaps_18
+  - first:
+      213: -741218766315294431
+    second: rolledmaps_19
+  - first:
+      213: -3010419463845140322
+    second: rolledmaps_20
+  - first:
+      213: 3823194988318908386
+    second: rolledmaps_21
+  - first:
+      213: 8253286239628339993
+    second: rolledmaps_22
+  - first:
+      213: -401486698731998692
+    second: rolledmaps_23
+  - first:
+      213: -3281616552724481212
+    second: rolledmaps_24
+  - first:
+      213: -5023334420639607182
+    second: rolledmaps_25
+  - first:
+      213: 2743421471939662496
+    second: rolledmaps_26
+  - first:
+      213: 2169752920687670156
+    second: rolledmaps_27
+  - first:
+      213: -3130391925811111943
+    second: rolledmaps_28
+  - first:
+      213: -6327835779506668934
+    second: rolledmaps_29
+  - first:
+      213: 2184843070687841607
+    second: rolledmaps_30
+  - first:
+      213: -5744888111441060794
+    second: rolledmaps_31
+  - first:
+      213: 7852348267293652601
+    second: rolledmaps_32
+  - first:
+      213: -5466392073235184084
+    second: rolledmaps_33
+  - first:
+      213: -3476761788797936881
+    second: rolledmaps_34
+  - first:
+      213: 9038654800315122613
+    second: rolledmaps_35
+  - first:
+      213: -2543581547651136416
+    second: rolledmaps_36
+  - first:
+      213: 4893232098738775695
+    second: rolledmaps_37
+  - first:
+      213: 7190832934281746019
+    second: rolledmaps_38
+  - first:
+      213: -7319263700043225634
+    second: rolledmaps_39
+  - first:
+      213: 778174041556416970
+    second: rolledmaps_40
+  - first:
+      213: 3472361062823353859
+    second: rolledmaps_41
+  - first:
+      213: -1529651470512981407
+    second: rolledmaps_42
+  - first:
+      213: -8419092989238242556
+    second: rolledmaps_43
+  - first:
+      213: 519578472203777488
+    second: rolledmaps_44
+  - first:
+      213: -4943485327831254064
+    second: rolledmaps_45
+  - first:
+      213: -3412716821268528004
+    second: rolledmaps_46
+  - first:
+      213: 1557417662186022957
+    second: rolledmaps_47
+  - first:
+      213: 5895905522835586595
+    second: rolledmaps_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rolledmaps_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 220
+        width: 189
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b690920aba83540800000000000000
+      internalID: 4987925291684424478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 92
+        width: 238
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a336db8e601a9b0800000000000000
+      internalID: -5070764108762891707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 431
+        width: 182
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda904bfaaaecca40800000000000000
+      internalID: 5389940874136296157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_3
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 461
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87d086259e8411a10800000000000000
+      internalID: 1878362686537338232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_4
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 429
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a09c90ac546281e0800000000000000
+      internalID: -2197083319208996696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_5
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 402
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb2b0f10ac9f6b340800000000000000
+      internalID: 4879361892313772731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_6
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 401
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436c3e201cf3f9ae0800000000000000
+      internalID: -1540442449327700428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_7
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 389
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3ddf3c78647b8f0800000000000000
+      internalID: -524873282642652254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_8
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 92
+        width: 204
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c54cc6458655be10800000000000000
+      internalID: 2212769922340898247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_9
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 374
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a891ecfb8e1b94a50800000000000000
+      internalID: 6505926749921876362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_10
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 363
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52c7c3e9c93cefa0800000000000000
+      internalID: -5770173483295718821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_11
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 348
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3ac51ee1a2175b0800000000000000
+      internalID: -5372466568357960775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_12
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 272
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffd7df3c78932550800000000000000
+      internalID: 6134914776823226352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_13
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 274
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625a41ee0e2271c50800000000000000
+      internalID: 6635810925416064294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_14
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044289ebd831e6c30800000000000000
+      internalID: 4354439389222806592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_15
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 231
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00636bdaf26685b0800000000000000
+      internalID: -5366493076403298294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_16
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 217
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b2a76009bbbe490800000000000000
+      internalID: -7715867309310858389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_17
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 207
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc5978f3e23852b0800000000000000
+      internalID: -5595666582300173124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_18
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 189
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 888ae9f10046273d0800000000000000
+      internalID: -3210393632668473208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_19
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 187
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1217cec8579a6b5f0800000000000000
+      internalID: -741218766315294431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_20
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 162
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98a6909277d836d0800000000000000
+      internalID: -3010419463845140322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_21
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 151
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef5dc1f597be0530800000000000000
+      internalID: 3823194988318908386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_22
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 114
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91baaae6b10998270800000000000000
+      internalID: 8253286239628339993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_23
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 67
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12f80489f1ad6af0800000000000000
+      internalID: -401486698731998692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_24
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 77
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44bb0ddc12b5572d0800000000000000
+      internalID: -3281616552724481212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_25
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 68
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27698cd85f7894ab0800000000000000
+      internalID: -5023334420639607182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_26
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a294202b47921620800000000000000
+      internalID: 2743421471939662496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_27
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 50
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8374f719c28c1e10800000000000000
+      internalID: 2169752920687670156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_28
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 50
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f71746012d9e84d0800000000000000
+      internalID: -3130391925811111943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_29
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 18
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a7f7582e20f28a0800000000000000
+      internalID: -6327835779506668934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_30
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d825e623f125e10800000000000000
+      internalID: 2184843070687841607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_31
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 8
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64cd03b43be0640b0800000000000000
+      internalID: -5744888111441060794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_32
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 17
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97631b4452529fc60800000000000000
+      internalID: 7852348267293652601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_33
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c264ecf1f597324b0800000000000000
+      internalID: -5466392073235184084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_34
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b1c02e29f00cfc0800000000000000
+      internalID: -3476761788797936881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_35
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3892ce6a0cf6d70800000000000000
+      internalID: 9038654800315122613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_36
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06404031f0263bcd0800000000000000
+      internalID: -2543581547651136416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_37
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 12
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f862dd81ba048e340800000000000000
+      internalID: 4893232098738775695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_38
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3661b0f7478fac360800000000000000
+      internalID: 7190832934281746019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_39
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed52385a170cc6a90800000000000000
+      internalID: -7319263700043225634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_40
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac97668fa21acca00800000000000000
+      internalID: 778174041556416970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_41
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 2
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30edb714dfd403030800000000000000
+      internalID: 3472361062823353859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_42
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 0
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a7bed871695cae0800000000000000
+      internalID: -1529651470512981407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4031975588f592b80800000000000000
+      internalID: -8419092989238242556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_44
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 7
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d575ac1ed9e53700800000000000000
+      internalID: 519578472203777488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_45
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db334a3946356bb0800000000000000
+      internalID: -4943485327831254064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_46
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 0
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c740a45e12893a0d0800000000000000
+      internalID: -3412716821268528004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_47
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 0
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d286489bc1f0d9510800000000000000
+      internalID: 1557417662186022957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolledmaps_48
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 0
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ef0edc5d672d150800000000000000
+      internalID: 5895905522835586595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rolledmaps_0: 4987925291684424478
+      rolledmaps_1: -5070764108762891707
+      rolledmaps_10: -5770173483295718821
+      rolledmaps_11: -5372466568357960775
+      rolledmaps_12: 6134914776823226352
+      rolledmaps_13: 6635810925416064294
+      rolledmaps_14: 4354439389222806592
+      rolledmaps_15: -5366493076403298294
+      rolledmaps_16: -7715867309310858389
+      rolledmaps_17: -5595666582300173124
+      rolledmaps_18: -3210393632668473208
+      rolledmaps_19: -741218766315294431
+      rolledmaps_2: 5389940874136296157
+      rolledmaps_20: -3010419463845140322
+      rolledmaps_21: 3823194988318908386
+      rolledmaps_22: 8253286239628339993
+      rolledmaps_23: -401486698731998692
+      rolledmaps_24: -3281616552724481212
+      rolledmaps_25: -5023334420639607182
+      rolledmaps_26: 2743421471939662496
+      rolledmaps_27: 2169752920687670156
+      rolledmaps_28: -3130391925811111943
+      rolledmaps_29: -6327835779506668934
+      rolledmaps_3: 1878362686537338232
+      rolledmaps_30: 2184843070687841607
+      rolledmaps_31: -5744888111441060794
+      rolledmaps_32: 7852348267293652601
+      rolledmaps_33: -5466392073235184084
+      rolledmaps_34: -3476761788797936881
+      rolledmaps_35: 9038654800315122613
+      rolledmaps_36: -2543581547651136416
+      rolledmaps_37: 4893232098738775695
+      rolledmaps_38: 7190832934281746019
+      rolledmaps_39: -7319263700043225634
+      rolledmaps_4: -2197083319208996696
+      rolledmaps_40: 778174041556416970
+      rolledmaps_41: 3472361062823353859
+      rolledmaps_42: -1529651470512981407
+      rolledmaps_43: -8419092989238242556
+      rolledmaps_44: 519578472203777488
+      rolledmaps_45: -4943485327831254064
+      rolledmaps_46: -3412716821268528004
+      rolledmaps_47: 1557417662186022957
+      rolledmaps_48: 5895905522835586595
+      rolledmaps_5: 4879361892313772731
+      rolledmaps_6: -1540442449327700428
+      rolledmaps_7: -524873282642652254
+      rolledmaps_8: 2212769922340898247
+      rolledmaps_9: 6505926749921876362
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
