@@ -1,5 +1,6 @@
 using System.Resources;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScreenChange : MonoBehaviour
 {
@@ -9,6 +10,18 @@ public class ScreenChange : MonoBehaviour
     public GameObject ledgerSliderScreen;
     public GameObject decisionScreen;
     public GameObject resultsScreen;
+    public Camera camera;
+    public Image blackscreen;
+    Color transparent = new Color(0, 0, 0, 0);
+
+
+    bool isZoomingInOnMap;
+    Vector3 cameraCenter = new Vector3(1288, 725, -1500);
+    Vector3 cameraMap = new Vector3(1283, 722, -1500);
+    float timeElapsed = 0f;
+    float zoomDuration = 3f;
+    
+
     GameObject gameManager;
     ResourceManager resourceManager;
 
@@ -23,7 +36,24 @@ public class ScreenChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isZoomingInOnMap)
+        {
+            timeElapsed += Time.deltaTime;
+            float progress = Mathf.Clamp01(timeElapsed / zoomDuration);
+            camera.transform.position = Vector3.Lerp(cameraCenter, cameraMap, progress);
+            camera.orthographicSize = Mathf.Lerp(5, 2, progress);
+            blackscreen.color = Color.Lerp(transparent, Color.black, progress);
+
+            if (progress == 1f)
+            {
+                isZoomingInOnMap = false;
+                militaryGoalsScreen.SetActive(false);
+                mapSliderScreen.SetActive(true);
+                camera.transform.position = new Vector3(1288, 725, -1500);
+                camera.orthographicSize = 5;
+                blackscreen.color = transparent;
+            }
+        }
     }
 
     public void MilitaryScene()
@@ -34,12 +64,15 @@ public class ScreenChange : MonoBehaviour
 
     public void MapZoomIn()
     {
-        militaryGoalsScreen.SetActive(false);
-        mapSliderScreen.SetActive(true);
+        timeElapsed = 0f;
+        isZoomingInOnMap = true;
     }
 
     public void MapZoomOut()
     {
+        camera.orthographicSize = 5;
+        camera.transform.position = new Vector3(1288, 725, -1500);
+
         mapSliderScreen.SetActive(false);
         militaryGoalsScreen.SetActive(true);
     }
