@@ -19,9 +19,8 @@ public class InputFieldUpdate : MonoBehaviour
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    void Start()
     {
-        Debug.Log("awake");
         gameManager = GameObject.FindGameObjectWithTag("Manager");
         resourceManager = gameManager.GetComponent<ResourceManager>();
     }
@@ -34,12 +33,37 @@ public class InputFieldUpdate : MonoBehaviour
 
     public void UpdateInputFieldM1()
     {
+        //if (inputField.text == "")
+        //{
+        //    inputField.text = "0";
+        //}
+        //if ((resourceManager.numResources - slider.value) < 0)
+        //{
+        //    float excessResources = slider.value - resourceManager.numResources;
+        //    inputField.text = resourceManager.numResources.ToString();
+        //    Debug.Log(inputField.text);
+        //    alternateInputField.text = resourceManager.numResources.ToString();
+        //    alternateSlider.value = resourceManager.numResources;
+
+        //    //inputField.text = resourceManager.numResources.ToString();
+        //    //alternateInputField.text = resourceManager.numResources.ToString();
+        //    //alternateSlider.value = resourceManager.numResources;
+        //}
+        //else
+        //{
+        //    inputField.text = slider.value.ToString();
+        //    alternateInputField.text = slider.value.ToString();
+        //    alternateSlider.value = slider.value;
+        //}
+
         inputField.text = slider.value.ToString();
         alternateInputField.text = slider.value.ToString();
         alternateSlider.value = slider.value;
 
         resourcesAllocated = int.Parse(inputField.text);
         resourceManager.SetM1Resources(resourcesAllocated);
+
+
 
     }
 

@@ -9,7 +9,7 @@ public class ResourceManager : MonoBehaviour
     public TMP_Text resultsText;
 
     int totalResources = 200;
-    int numResources;
+    public int numResources;
 
     int numM1Resources = 0;
     int numM2Resources = 0;

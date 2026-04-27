@@ -9,6 +9,9 @@ public class PointOfInterest : MonoBehaviour
     public GameObject poiText01; 
     public GameObject poiImage01;
 
+    public Sprite originalImage;
+    public Sprite newImage;
+
     public Material glowMaterial;
 
     bool poiClicked = false;
@@ -32,6 +35,8 @@ public class PointOfInterest : MonoBehaviour
         {
             poiText01.SetActive(true);
             poiImage01.SetActive(true);
+            poiButton01.image.sprite = newImage;
+            poiButton01.GetComponent<Image>().material = null;
 
             poiClicked = true;
         }
@@ -39,6 +44,7 @@ public class PointOfInterest : MonoBehaviour
         {
             poiText01.SetActive(false);
             poiImage01.SetActive(false);
+            poiButton01.image.sprite = originalImage;
 
             poiClicked = false;
         }
@@ -47,7 +53,10 @@ public class PointOfInterest : MonoBehaviour
 
     public void Hovered()
     {
-        poiButton01.GetComponent<Image>().material = glowMaterial;
+        if (!poiClicked)
+        {
+            poiButton01.GetComponent<Image>().material = glowMaterial;
+        }
 
         Debug.Log("Hovered");
     }
