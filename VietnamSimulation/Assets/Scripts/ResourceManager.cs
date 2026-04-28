@@ -1,6 +1,8 @@
 using TMPro;
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
+
 
 public class ResourceManager : MonoBehaviour
 {
@@ -62,8 +64,6 @@ public class ResourceManager : MonoBehaviour
     bool deterioratingCalculatedM3 = false;
     bool deterioratingCalculatedM4 = false;
     bool deterioratingCalculatedM5 = false;
-
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

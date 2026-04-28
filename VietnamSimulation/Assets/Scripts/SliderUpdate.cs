@@ -3,6 +3,8 @@ using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using System.Collections.Generic;
+
 
 public class SliderUpdate: MonoBehaviour
 {
@@ -30,15 +32,10 @@ public class SliderUpdate: MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("Manager");
-        sourceParent = GameObject.FindGameObjectWithTag("AudioSource");
+        audioSource = gameManager.GetComponent<AudioSource>();
         resourceManager = gameManager.GetComponent<ResourceManager>();
         screenChange = resourceManager.GetComponent<ScreenChange>();
-        audioSource = sourceParent.GetComponent<AudioSource>();
         paperSlide = audioSource.clip;
-        //screenChange.pauseScreen.SetActive(false);
-        //screenChange.ledgerSliderScreen.SetActive(false);
-        //screenChange.mapSliderScreen.SetActive(false);
-
 
     }
 
@@ -58,29 +55,59 @@ public class SliderUpdate: MonoBehaviour
 
     }
 
+    public void InputFieldEntered(int fieldNum)
+    {
+        if (resourceManager.numResources < 0)
+        {
+            float excessResources = 0 - resourceManager.numResources;
+
+            resourcesAllocated = int.Parse(inputField.text) - (int)excessResources;
+
+            if (fieldNum == 1)
+            {
+                resourceManager.SetM1Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 2)
+            {
+                resourceManager.SetM2Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 3)
+            {
+                resourceManager.SetM3Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 4)
+            {
+                resourceManager.SetM4Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 5)
+            {
+                resourceManager.SetM5Resources(resourcesAllocated);
+            }
+
+            inputField.text = (float.Parse(inputField.text) - excessResources).ToString();
+
+        }
+        else
+        {
+            slider.value = float.Parse(inputField.text);
+            alternateSlider.value = slider.value;
+            alternateInputField.text = inputField.text;
+
+            resourcesAllocated = (int)slider.value;
+            resourceManager.SetM1Resources(resourcesAllocated);
+        }
+    }
 
     public void UpdateSliderM1()
     {
-        //if ((resourceManager.numResources - float.Parse(inputField.text)) < 0)
-        //{
-        //    float excessResources = float.Parse(inputField.text) - resourceManager.numResources;
-        //    slider.value = resourceManager.numResources;
-        //    alternateSlider.value = resourceManager.numResources;
-        //    alternateInputField.text = resourceManager.numResources.ToString();
-        //}
-        //else
-        //{
-        //    slider.value = float.Parse(inputField.text);
-        //    alternateSlider.value = float.Parse(inputField.text);
-        //    alternateInputField.text = inputField.text;
-        //}
-
+ 
         slider.value = float.Parse(inputField.text);
-        alternateSlider.value = float.Parse(inputField.text);
+        alternateSlider.value = slider.value;
         alternateInputField.text = inputField.text;
 
         resourcesAllocated = (int)slider.value;
         resourceManager.SetM1Resources(resourcesAllocated);
+
 
         if (!slidePlaying)
         {

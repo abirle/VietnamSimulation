@@ -42,6 +42,33 @@ public class ScreenChange : MonoBehaviour
 
     GameObject gameManager;
     ResourceManager resourceManager;
+    public AudioSource audioSource;
+    public AudioClip transitionSound;
+
+    public void AllScreensActive()
+    {
+        militaryGoalsScreen.SetActive(true);
+        pauseScreen.SetActive(true);
+        ledgerSliderScreen.SetActive(true);
+        mapSliderScreen.SetActive(true);
+        lobbyScreen.SetActive(true);
+        decisionScreen.SetActive(true);
+        resultsScreen.SetActive(true);
+        corkboardScreen.SetActive(true);
+    }
+
+
+    public void AllScreensInactive()
+    {
+        lobbyScreen.SetActive(false);
+        militaryGoalsScreen.SetActive(false);
+        mapSliderScreen.SetActive(false);
+        ledgerSliderScreen.SetActive(false);
+        decisionScreen.SetActive(false);
+        resultsScreen.SetActive(false);
+        corkboardScreen.SetActive(false);
+        pauseScreen.SetActive(false);
+    }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -49,10 +76,10 @@ public class ScreenChange : MonoBehaviour
     {
         gameManager = GameObject.FindGameObjectWithTag("Manager");
         resourceManager = gameManager.GetComponent<ResourceManager>();
-        militaryGoalsScreen.SetActive(true);
-        pauseScreen.SetActive(true);
-        ledgerSliderScreen.SetActive(true);
-        mapSliderScreen.SetActive(true);
+
+        AllScreensActive();
+
+
     }
 
 // Update is called once per frame
@@ -185,9 +212,13 @@ void Update()
 
     }
 
+
     public void MilitaryScene()
     {
-        lobbyScreen.SetActive(false);
+        AllScreensInactive();
+
+        audioSource.PlayOneShot(transitionSound);
+
         militaryGoalsScreen.SetActive(true);
     }
 
@@ -195,6 +226,8 @@ void Update()
     {
         if (!isZoomingInOnMap)
         {
+            audioSource.PlayOneShot(transitionSound);
+
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
             isZoomingInOnMap = true;
@@ -205,6 +238,8 @@ void Update()
     {
         if (!isZoomingOutOnMap)
         {
+            audioSource.PlayOneShot(transitionSound);
+
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
             isZoomingOutOnMap = true;
@@ -216,6 +251,8 @@ void Update()
     {
         if (!isViewingLedger && !isZoomingInOnMap)
         {
+            audioSource.PlayOneShot(transitionSound);
+
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
             isViewingLedger = true;
@@ -227,6 +264,8 @@ void Update()
     {
         if (!isViewingMap)
         {
+            audioSource.PlayOneShot(transitionSound);
+
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
             isViewingMap = true;
@@ -238,6 +277,8 @@ void Update()
     {
         if (!isZoomingInOnCorkboard)
         {
+            audioSource.PlayOneShot(transitionSound);
+
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
             isZoomingInOnCorkboard = true;
@@ -248,6 +289,8 @@ void Update()
     {
         if (!isZoomingOutOnCorkboard)
         {
+            audioSource.PlayOneShot(transitionSound);
+
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
             isZoomingOutOnCorkboard = true;
@@ -257,6 +300,8 @@ void Update()
 
     public void BackToLobby()
     {
+        audioSource.PlayOneShot(transitionSound);
+
         militaryGoalsScreen.SetActive(false);
         lobbyScreen.SetActive(true);
     }
