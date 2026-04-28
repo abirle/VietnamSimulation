@@ -14,6 +14,10 @@ public class PointOfInterest : MonoBehaviour
 
     public Material glowMaterial;
 
+    AudioSource audioSource;
+    public AudioClip openSound;
+    public AudioClip closeSound;
+
     bool poiClicked = false;
 
 
@@ -21,6 +25,11 @@ public class PointOfInterest : MonoBehaviour
     void Start()
     {
         
+    }
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +42,8 @@ public class PointOfInterest : MonoBehaviour
     {
         if (!poiClicked)
         {
+            audioSource.PlayOneShot(openSound);
+
             poiText01.SetActive(true);
             poiImage01.SetActive(true);
             poiButton01.image.sprite = newImage;
@@ -42,6 +53,8 @@ public class PointOfInterest : MonoBehaviour
         }
         else if (poiClicked) 
         {
+            audioSource.PlayOneShot(closeSound);
+
             poiText01.SetActive(false);
             poiImage01.SetActive(false);
             poiButton01.image.sprite = originalImage;

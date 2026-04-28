@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using System.Collections.Generic;
 using static UnityEngine.Rendering.DebugUI;
 
 public class InputFieldUpdate : MonoBehaviour
@@ -31,39 +32,66 @@ public class InputFieldUpdate : MonoBehaviour
         
     }
 
+    public void SliderReleased(int sliderNum)
+    {
+        if (inputField.text == "")
+        {
+            inputField.text = "0";
+        }
+        if (resourceManager.numResources < 0)
+        {
+            float excessResources = 0 - resourceManager.numResources;
+
+            resourcesAllocated = (int)slider.value - (int)excessResources;
+
+            if (sliderNum == 1)
+            {
+                resourceManager.SetM1Resources(resourcesAllocated);
+            }
+            if (sliderNum == 2)
+            {
+                resourceManager.SetM2Resources(resourcesAllocated);
+            }
+            if (sliderNum == 3)
+            {
+                resourceManager.SetM3Resources(resourcesAllocated);
+            }
+            if (sliderNum == 4)
+            {
+                resourceManager.SetM4Resources(resourcesAllocated);
+            }
+            if (sliderNum == 5)
+            {
+                resourceManager.SetM5Resources(resourcesAllocated);
+            }
+
+            slider.value = slider.value - excessResources;
+
+        }
+        else
+        {
+            inputField.text = slider.value.ToString();
+            alternateInputField.text = inputField.text;
+            alternateSlider.value = slider.value;
+
+            resourcesAllocated = int.Parse(inputField.text);
+            resourceManager.SetM1Resources(resourcesAllocated);
+        }
+    }
+
     public void UpdateInputFieldM1()
     {
-        //if (inputField.text == "")
-        //{
-        //    inputField.text = "0";
-        //}
-        //if ((resourceManager.numResources - slider.value) < 0)
-        //{
-        //    float excessResources = slider.value - resourceManager.numResources;
-        //    inputField.text = resourceManager.numResources.ToString();
-        //    Debug.Log(inputField.text);
-        //    alternateInputField.text = resourceManager.numResources.ToString();
-        //    alternateSlider.value = resourceManager.numResources;
-
-        //    //inputField.text = resourceManager.numResources.ToString();
-        //    //alternateInputField.text = resourceManager.numResources.ToString();
-        //    //alternateSlider.value = resourceManager.numResources;
-        //}
-        //else
-        //{
-        //    inputField.text = slider.value.ToString();
-        //    alternateInputField.text = slider.value.ToString();
-        //    alternateSlider.value = slider.value;
-        //}
-
+        
         inputField.text = slider.value.ToString();
-        alternateInputField.text = slider.value.ToString();
+        alternateInputField.text = inputField.text;
         alternateSlider.value = slider.value;
 
         resourcesAllocated = int.Parse(inputField.text);
         resourceManager.SetM1Resources(resourcesAllocated);
 
-
+        //inputField.text = slider.value.ToString();
+        //alternateInputField.text = slider.value.ToString();
+        //alternateSlider.value = slider.value;
 
     }
 
