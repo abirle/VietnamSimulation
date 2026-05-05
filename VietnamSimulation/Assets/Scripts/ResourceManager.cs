@@ -65,6 +65,10 @@ public class ResourceManager : MonoBehaviour
     bool deterioratingCalculatedM4 = false;
     bool deterioratingCalculatedM5 = false;
 
+    public int pointsInvestigated = 0;
+    public GameObject notification;
+    public bool advisorAvailable = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -76,7 +80,11 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (pointsInvestigated >= 3)
+        {
+            notification.SetActive(true);
+            advisorAvailable = true;
+        }
     }
 
 

@@ -1,7 +1,8 @@
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 using NUnit.Framework.Constraints;
+using System.Resources;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class PointOfInterest : MonoBehaviour
 {
@@ -18,13 +19,18 @@ public class PointOfInterest : MonoBehaviour
     public AudioClip openSound;
     public AudioClip closeSound;
 
+    bool poiClickedFirst = false;
     bool poiClicked = false;
+
+    GameObject gameManager;
+    ResourceManager resourceManager;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        gameManager = GameObject.FindGameObjectWithTag("Manager");
+        resourceManager = gameManager.GetComponent<ResourceManager>();
     }
 
     void Awake()
@@ -38,10 +44,15 @@ public class PointOfInterest : MonoBehaviour
         
     }
 
-    public void PointofInterest01()
+    public void PointofInterestClick()
     {
         if (!poiClicked)
         {
+            if (!poiClickedFirst)
+            {
+                poiClickedFirst = true;
+                resourceManager.pointsInvestigated++;
+            }
             audioSource.PlayOneShot(openSound);
 
             poiText01.SetActive(true);

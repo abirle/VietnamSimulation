@@ -34,7 +34,7 @@ public class SliderUpdate: MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("Manager");
         audioSource = gameManager.GetComponent<AudioSource>();
         resourceManager = gameManager.GetComponent<ResourceManager>();
-        screenChange = resourceManager.GetComponent<ScreenChange>();
+        screenChange = gameManager.GetComponent<ScreenChange>();
         paperSlide = audioSource.clip;
 
     }

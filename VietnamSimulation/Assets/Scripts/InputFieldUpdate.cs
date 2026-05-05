@@ -44,6 +44,16 @@ public class InputFieldUpdate : MonoBehaviour
 
             resourcesAllocated = (int)slider.value - (int)excessResources;
 
+            slider.value = slider.value - excessResources;
+        }
+        else
+        {
+            inputField.text = slider.value.ToString();
+            alternateInputField.text = inputField.text;
+            alternateSlider.value = slider.value;
+
+            resourcesAllocated = int.Parse(inputField.text);
+
             if (sliderNum == 1)
             {
                 resourceManager.SetM1Resources(resourcesAllocated);
@@ -64,18 +74,6 @@ public class InputFieldUpdate : MonoBehaviour
             {
                 resourceManager.SetM5Resources(resourcesAllocated);
             }
-
-            slider.value = slider.value - excessResources;
-
-        }
-        else
-        {
-            inputField.text = slider.value.ToString();
-            alternateInputField.text = inputField.text;
-            alternateSlider.value = slider.value;
-
-            resourcesAllocated = int.Parse(inputField.text);
-            resourceManager.SetM1Resources(resourcesAllocated);
         }
     }
 
