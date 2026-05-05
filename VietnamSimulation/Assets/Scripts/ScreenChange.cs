@@ -12,6 +12,7 @@ public class ScreenChange : MonoBehaviour
     public GameObject resultsScreen;
     public GameObject corkboardScreen;
     public GameObject pauseScreen;
+    public GameObject advisor;
 
 
     public Camera camera;
@@ -25,13 +26,18 @@ public class ScreenChange : MonoBehaviour
     bool isZoomingOutOnLedger = false;
     bool isZoomingInOnCorkboard = false;
     bool isZoomingOutOnCorkboard = false;
+    bool isZoomingInOnRadio = false;
+    bool isZoomingOutOnRadio = false;
     bool isViewingLedger = false;
     bool isViewingMap = false;
+    bool isFadingInOnWarRoom = false;
+    bool isFadingOutOnWarRoom = false;
 
     Vector3 cameraCenter = new Vector3(1288, 725, -1500);
     Vector3 cameraMap = new Vector3(1283, 722, -1500);
     Vector3 cameraCorkboard = new Vector3(1284, (float)725.7, -1500);
-    Vector3 cameraLedger = new Vector3(1306, 725, -1500);
+    Vector3 cameraLedger = new Vector3((float)1297.2, 725, -1500);
+    Vector3 cameraRadio = new Vector3((float)1286.76, (float)723.15, -1500);
     float timeElapsed = 0f;
     float secondTimeElapsed = 0f;
     float zoomDuration = 3f;
@@ -44,6 +50,8 @@ public class ScreenChange : MonoBehaviour
     ResourceManager resourceManager;
     public AudioSource audioSource;
     public AudioClip transitionSound;
+
+    bool hasEnteredWarRoom = false;
 
     public void AllScreensActive()
     {
@@ -100,6 +108,7 @@ void Update()
                 secondTimeElapsed += Time.deltaTime;
                 militaryGoalsScreen.SetActive(false);
                 mapSliderScreen.SetActive(true);
+                ledgerSliderScreen.SetActive(true);
                 camera.transform.position = cameraCenter;
                 camera.orthographicSize = 5;
                 float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
@@ -122,8 +131,10 @@ void Update()
 
             if (extraTimeProgress == 1f)
             {
+                camera.transform.position = cameraCenter;
                 secondTimeElapsed += Time.deltaTime;
                 mapSliderScreen.SetActive(false);
+                ledgerSliderScreen.SetActive(false);
                 militaryGoalsScreen.SetActive(true);
                 float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
                 blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
@@ -210,16 +221,83 @@ void Update()
             }
         }
 
+        else if (isZoomingInOnRadio)
+        {
+            timeElapsed += Time.deltaTime;
+            float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
+            camera.transform.position = Vector3.Lerp(cameraCenter, cameraRadio, zoomProgress);
+            camera.orthographicSize = Mathf.Lerp(5, (float)1.5, zoomProgress);
+
+            if (zoomProgress == 1f)
+            {
+                resourceManager.pointsInvestigated = 0;
+                advisor.SetActive(true);
+                resourceManager.advisorAvailable = false;
+                resourceManager.notification.SetActive(false);
+                isZoomingInOnRadio = false;
+
+            }
+        }
+
+        else if (isZoomingOutOnRadio)
+        {
+            timeElapsed += Time.deltaTime;
+            float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
+            camera.transform.position = Vector3.Lerp(cameraRadio, cameraCenter, zoomProgress);
+            camera.orthographicSize = Mathf.Lerp((float)1.5, 5, zoomProgress);
+
+            if (zoomProgress == 1f)
+            {
+                isZoomingOutOnRadio = false;
+            }
+        }
+
+        else if (isFadingInOnWarRoom)
+        {
+            timeElapsed += Time.deltaTime;
+            float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
+            float extraTimeProgress = Mathf.Clamp01(timeElapsed / (fadeOutDuration + 1));
+            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+
+            if (extraTimeProgress == 1f)
+            {
+                if (!hasEnteredWarRoom)
+                {
+                    camera.transform.position = cameraRadio;
+                    camera.orthographicSize = (float)1.5;
+
+                    advisor.SetActive(true);
+                    hasEnteredWarRoom = true;
+                }
+
+                secondTimeElapsed += Time.deltaTime;
+                AllScreensInactive();
+                militaryGoalsScreen.SetActive(true);
+                float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
+                blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
+
+                if (fadeInProgress == 1f)
+                {
+                    isFadingInOnWarRoom = false;
+                }
+            }
+        }
+
     }
 
 
     public void MilitaryScene()
     {
-        AllScreensInactive();
-
+        
         audioSource.PlayOneShot(transitionSound);
 
-        militaryGoalsScreen.SetActive(true);
+        if (!isFadingInOnWarRoom)
+        {
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isFadingInOnWarRoom = true;
+        }
+       
     }
 
     public void MapZoomIn()
@@ -294,6 +372,32 @@ void Update()
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
             isZoomingOutOnCorkboard = true;
+        }
+    }
+
+    public void RadioZoomIn()
+    {
+        if (resourceManager.advisorAvailable && !isZoomingInOnRadio)
+        {
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingInOnRadio = true;
+        }
+    }
+
+    public void RadioZoomOut()
+    {
+        advisor.SetActive(false);
+
+        if (!isZoomingOutOnRadio)
+        {
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingOutOnRadio = true;
         }
     }
 
