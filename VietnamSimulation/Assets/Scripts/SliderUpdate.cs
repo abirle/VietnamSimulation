@@ -14,11 +14,14 @@ public class SliderUpdate: MonoBehaviour
     public UnityEngine.UI.Slider alternateSlider;
     public TMP_InputField alternateInputField;
 
-    GameObject sourceParent;
     AudioSource audioSource;
     AudioClip paperSlide;
     bool slidePlaying;
     float slideDuration = 2f;
+
+    AudioClip penWriting;
+    bool penPlaying;
+    float penDuration = 3f;
 
     int resourcesAllocated;
     GameObject gameManager;
@@ -36,6 +39,8 @@ public class SliderUpdate: MonoBehaviour
         resourceManager = gameManager.GetComponent<ResourceManager>();
         screenChange = gameManager.GetComponent<ScreenChange>();
         paperSlide = audioSource.clip;
+        penWriting = screenChange.writingSound;
+
 
     }
 
@@ -53,6 +58,15 @@ public class SliderUpdate: MonoBehaviour
             slideProgress = 0f;
         }
 
+        float penProgress = Mathf.Clamp01(timeElapsed / penDuration);
+
+        if (penProgress == 1f)
+        {
+            penPlaying = false;
+            timeElapsed = 0f;
+            penProgress = 0f;
+        }
+
     }
 
     public void InputFieldEntered(int fieldNum)
@@ -62,6 +76,17 @@ public class SliderUpdate: MonoBehaviour
             float excessResources = 0 - resourceManager.numResources;
 
             resourcesAllocated = int.Parse(inputField.text) - (int)excessResources;
+
+            inputField.text = (float.Parse(inputField.text) - excessResources).ToString();
+        }
+
+        else
+        {
+            slider.value = float.Parse(inputField.text);
+            alternateSlider.value = slider.value;
+            alternateInputField.text = inputField.text;
+
+            resourcesAllocated = (int)slider.value;
 
             if (fieldNum == 1)
             {
@@ -84,94 +109,131 @@ public class SliderUpdate: MonoBehaviour
                 resourceManager.SetM5Resources(resourcesAllocated);
             }
 
-            inputField.text = (float.Parse(inputField.text) - excessResources).ToString();
-
         }
-        else
-        {
-            slider.value = float.Parse(inputField.text);
-            alternateSlider.value = slider.value;
-            alternateInputField.text = inputField.text;
 
-            resourcesAllocated = (int)slider.value;
-            resourceManager.SetM1Resources(resourcesAllocated);
-        }
+        timeElapsed = 0f;
     }
 
-    public void UpdateSliderM1()
+
+    public void UpdateSlider(int fieldNum)
     {
- 
         slider.value = float.Parse(inputField.text);
         alternateSlider.value = slider.value;
         alternateInputField.text = inputField.text;
 
         resourcesAllocated = (int)slider.value;
-        resourceManager.SetM1Resources(resourcesAllocated);
 
-
-        if (!slidePlaying)
+        if (!slidePlaying && (fieldNum == 1 || fieldNum == 2 || fieldNum == 5))
         {
             audioSource.PlayOneShot(paperSlide);
+            audioSource.pitch = 0.5f;
             slidePlaying = true;
+        }
+        else if (!slidePlaying && (fieldNum == 3 || fieldNum == 4))
+        {
+            audioSource.PlayOneShot(penWriting);
+            audioSource.pitch = 1f;
+            slidePlaying = true;
+        }
+
+        if (fieldNum == 1)
+        {
+            resourceManager.SetM1Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 2)
+        {
+            resourceManager.SetM2Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 3)
+        {
+            resourceManager.SetM3Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 4)
+        {
+            resourceManager.SetM4Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 5)
+        {
+            resourceManager.SetM5Resources(resourcesAllocated);
         }
 
     }
 
 
-    public void UpdateSliderM2()
-    {
-        slider.value = float.Parse(inputField.text);
-        alternateSlider.value = float.Parse(inputField.text);
-        alternateInputField.text = inputField.text;
+    //public void UpdateSliderM1()
+    //{
+ 
+    //    slider.value = float.Parse(inputField.text);
+    //    alternateSlider.value = slider.value;
+    //    alternateInputField.text = inputField.text;
 
-        resourcesAllocated = (int)slider.value;
-        resourceManager.SetM2Resources(resourcesAllocated);
+    //    resourcesAllocated = (int)slider.value;
+    //    resourceManager.SetM1Resources(resourcesAllocated);
 
-        if (!slidePlaying)
-        {
-            audioSource.PlayOneShot(paperSlide);
-            slidePlaying = true;
-        }
+    //    if (!slidePlaying)
+    //    {
+    //        audioSource.PlayOneShot(paperSlide);
+    //        slidePlaying = true;
+    //    }
 
-    }
-
-
-    public void UpdateSliderM3()
-    {
-        slider.value = float.Parse(inputField.text);
-        alternateSlider.value = float.Parse(inputField.text);
-        alternateInputField.text = inputField.text;
-
-        resourcesAllocated = (int)slider.value;
-        resourceManager.SetM3Resources(resourcesAllocated);
-    }
+    //}
 
 
-    public void UpdateSliderM4()
-    {
-        slider.value = float.Parse(inputField.text);
-        alternateSlider.value = float.Parse(inputField.text);
-        alternateInputField.text = inputField.text;
+    //public void UpdateSliderM2()
+    //{
+    //    slider.value = float.Parse(inputField.text);
+    //    alternateSlider.value = float.Parse(inputField.text);
+    //    alternateInputField.text = inputField.text;
 
-        resourcesAllocated = (int)slider.value;
-        resourceManager.SetM4Resources(resourcesAllocated);
-    }
+    //    resourcesAllocated = (int)slider.value;
+    //    resourceManager.SetM2Resources(resourcesAllocated);
+
+    //    if (!slidePlaying)
+    //    {
+    //        audioSource.PlayOneShot(paperSlide);
+    //        slidePlaying = true;
+    //    }
+
+    //}
 
 
-    public void UpdateSliderM5()
-    {
-        slider.value = float.Parse(inputField.text);
-        alternateSlider.value = float.Parse(inputField.text);
-        alternateInputField.text = inputField.text;
+    //public void UpdateSliderM3()
+    //{
+    //    slider.value = float.Parse(inputField.text);
+    //    alternateSlider.value = float.Parse(inputField.text);
+    //    alternateInputField.text = inputField.text;
 
-        resourcesAllocated = (int)slider.value;
-        resourceManager.SetM5Resources(resourcesAllocated);
+    //    resourcesAllocated = (int)slider.value;
+    //    resourceManager.SetM3Resources(resourcesAllocated);
+    //}
 
-        if (!slidePlaying)
-        {
-            audioSource.PlayOneShot(paperSlide);
-            slidePlaying = true;
-        }
 
-    }
+    //public void UpdateSliderM4()
+    //{
+    //    slider.value = float.Parse(inputField.text);
+    //    alternateSlider.value = float.Parse(inputField.text);
+    //    alternateInputField.text = inputField.text;
+
+    //    resourcesAllocated = (int)slider.value;
+    //    resourceManager.SetM4Resources(resourcesAllocated);
+    //}
+
+
+    //public void UpdateSliderM5()
+    //{
+    //    slider.value = float.Parse(inputField.text);
+    //    alternateSlider.value = float.Parse(inputField.text);
+    //    alternateInputField.text = inputField.text;
+
+    //    resourcesAllocated = (int)slider.value;
+    //    resourceManager.SetM5Resources(resourcesAllocated);
+
+    //    if (!slidePlaying)
+    //    {
+    //        audioSource.PlayOneShot(paperSlide);
+    //        slidePlaying = true;
+    //    }
+
+    //}
+
 }
