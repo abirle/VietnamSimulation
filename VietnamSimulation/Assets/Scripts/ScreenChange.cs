@@ -1,4 +1,5 @@
 using System.Resources;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,9 @@ public class ScreenChange : MonoBehaviour
     public GameObject corkboardScreen;
     public GameObject pauseScreen;
     public GameObject advisor;
+    public TMP_Text advisorText;
+    public GameObject closeButton;
+    public GameObject nextButton;
 
 
     public Camera camera;
@@ -50,8 +54,11 @@ public class ScreenChange : MonoBehaviour
     ResourceManager resourceManager;
     public AudioSource audioSource;
     public AudioClip transitionSound;
+    public AudioClip writingSound;
 
     bool hasEnteredWarRoom = false;
+    bool viewingResults = false;
+    int numResultsViewed = 0;
 
     public void AllScreensActive()
     {
@@ -257,11 +264,27 @@ void Update()
             timeElapsed += Time.deltaTime;
             float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
             float extraTimeProgress = Mathf.Clamp01(timeElapsed / (fadeOutDuration + 1));
-            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+            if (numResultsViewed <= 1)
+            {
+                blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+            }
+            else
+            {
+                AllScreensInactive();
+
+                camera.transform.position = cameraRadio;
+                camera.orthographicSize = (float)1.5;
+
+                advisor.SetActive(true);
+                hasEnteredWarRoom = true;
+
+                militaryGoalsScreen.SetActive(true);
+                isFadingInOnWarRoom = false;
+            }
 
             if (extraTimeProgress == 1f)
             {
-                if (!hasEnteredWarRoom)
+                if (!hasEnteredWarRoom || viewingResults)
                 {
                     camera.transform.position = cameraRadio;
                     camera.orthographicSize = (float)1.5;
@@ -281,6 +304,7 @@ void Update()
                     isFadingInOnWarRoom = false;
                 }
             }
+
         }
 
     }
@@ -428,11 +452,46 @@ void Update()
 
     public void ViewResults()
     {
-        decisionScreen.SetActive(false);
-        resultsScreen.SetActive(true);
-
         resourceManager.CalculateResults();
         resourceManager.FinalizeResults();
+
+        closeButton.SetActive(false);
+        nextButton.SetActive(true);
+
+        if (numResultsViewed == 0)
+        {
+            advisorText.text = resourceManager.resultsText.text;
+        }
+        else if (numResultsViewed == 1) 
+        {
+            advisorText.text = "second advisor message";
+        }
+        else if (numResultsViewed == 2)
+        {
+            advisorText.text = "third advisor message";
+        }
+        else if (numResultsViewed == 3)
+        {
+            nextButton.SetActive(false);
+            closeButton.SetActive(true);
+        }
+
+        numResultsViewed += 1;
+
+        decisionScreen.SetActive(false);
+
+        audioSource.PlayOneShot(transitionSound);
+
+        viewingResults = true;
+
+        if (!isFadingInOnWarRoom)
+        {
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isFadingInOnWarRoom = true;
+        }
+
+        //resultsScreen.SetActive(true);
     }
 
 }
