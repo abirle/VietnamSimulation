@@ -1,6 +1,8 @@
 using System.Resources;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 using UnityEngine.UI;
 
 public class ScreenChange : MonoBehaviour
@@ -41,12 +43,12 @@ public class ScreenChange : MonoBehaviour
     Vector3 cameraMap = new Vector3(1283, 722, -1500);
     Vector3 cameraCorkboard = new Vector3(1284, (float)725.7, -1500);
     Vector3 cameraLedger = new Vector3((float)1297.2, 725, -1500);
-    Vector3 cameraRadio = new Vector3((float)1286.76, (float)723.15, -1500);
+    Vector3 cameraRadio = new Vector3((float)1286.74, (float)723.66, -1500);
     float timeElapsed = 0f;
     float secondTimeElapsed = 0f;
-    float zoomDuration = 3f;
-    float fadeOutDuration = 2f;
-    float fadeInDuration = 2f;
+    float zoomDuration = 2f;
+    float fadeOutDuration = 1f;
+    float fadeInDuration = 1f;
     float shiftDuration = 1f;
     
 
@@ -93,6 +95,8 @@ public class ScreenChange : MonoBehaviour
         resourceManager = gameManager.GetComponent<ResourceManager>();
 
         AllScreensActive();
+
+        
 
 
     }
@@ -237,7 +241,7 @@ void Update()
 
             if (zoomProgress == 1f)
             {
-                resourceManager.pointsInvestigated = 0;
+                //ResourceManager.pointsInvestigated = 0;
                 advisor.SetActive(true);
                 resourceManager.advisorAvailable = false;
                 resourceManager.notification.SetActive(false);
@@ -256,6 +260,7 @@ void Update()
             if (zoomProgress == 1f)
             {
                 isZoomingOutOnRadio = false;
+                InputSystem.EnableDevice(Mouse.current);
             }
         }
 
@@ -414,6 +419,7 @@ void Update()
     public void RadioZoomOut()
     {
         advisor.SetActive(false);
+        InputSystem.DisableDevice(Mouse.current);
 
         if (!isZoomingOutOnRadio)
         {
@@ -469,12 +475,14 @@ void Update()
         else if (numResultsViewed == 2)
         {
             advisorText.text = "third advisor message";
-        }
-        else if (numResultsViewed == 3)
-        {
             nextButton.SetActive(false);
             closeButton.SetActive(true);
         }
+        //else if (numResultsViewed == 3)
+        //{
+        //    nextButton.SetActive(false);
+        //    closeButton.SetActive(true);
+        //}
 
         numResultsViewed += 1;
 

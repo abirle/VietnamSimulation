@@ -1,7 +1,8 @@
+using System.Collections.Generic;
+using System.Resources;
 using TMPro;
 using UnityEngine;
-using TMPro;
-using System.Collections.Generic;
+using UnityEngine.UI;
 
 
 public class ResourceManager : MonoBehaviour
@@ -65,9 +66,11 @@ public class ResourceManager : MonoBehaviour
     bool deterioratingCalculatedM4 = false;
     bool deterioratingCalculatedM5 = false;
 
-    public int pointsInvestigated = 0;
+    public static int pointsInvestigated = 0;
+    public static int pointsThreshold = 2;
     public GameObject notification;
     public bool advisorAvailable = false;
+    public GameObject[] questionsArray;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -80,11 +83,32 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pointsInvestigated >= 3)
+        if (advisorAvailable)
+        {
+            foreach (GameObject question in questionsArray) 
+            {
+                question.SetActive(true);
+                
+            }
+        }
+
+        if (pointsInvestigated >= pointsThreshold)
         {
             notification.SetActive(true);
             advisorAvailable = true;
+
+            foreach (GameObject question in questionsArray)
+            {
+                Button button = question.GetComponent<Button>();
+                if (!question.GetComponent<AdvisorQuestions>().questionAsked)
+                {
+                    button.interactable = true;
+                }
+            }
+
+            pointsInvestigated = 0;
         }
+
     }
 
 

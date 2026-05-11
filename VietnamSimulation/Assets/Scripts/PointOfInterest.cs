@@ -51,7 +51,7 @@ public class PointOfInterest : MonoBehaviour
             if (!poiClickedFirst)
             {
                 poiClickedFirst = true;
-                resourceManager.pointsInvestigated++;
+                ResourceManager.pointsInvestigated++;
             }
             audioSource.PlayOneShot(openSound);
 
@@ -82,14 +82,12 @@ public class PointOfInterest : MonoBehaviour
             poiButton01.GetComponent<Image>().material = glowMaterial;
         }
 
-        Debug.Log("Hovered");
     }
 
     public void Unhovered()
     {
         poiButton01.GetComponent<Image>().material = null;
 
-        Debug.Log("Unhovered");
     }
 
 }
