@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Resources;
 using TMPro;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -72,6 +73,8 @@ public class ResourceManager : MonoBehaviour
     public bool advisorAvailable = false;
     public GameObject[] questionsArray;
 
+    public static string classification = "";
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -134,6 +137,16 @@ public class ResourceManager : MonoBehaviour
 
         whatsLeftText.text = "You have " + numSliders.ToString() + " untouched categories and " + numResources.ToString() + " resources left.";
 
+    }
+
+
+    public void PrintResources()
+    {
+        Debug.Log("---RESOURCE STATUS--- M1: " + numM1Resources
+                + " M2: " + numM2Resources
+                + " M3: " + numM3Resources
+                + " M4: " + numM4Resources 
+                + " M5: " + numM5Resources);
     }
 
 
@@ -211,18 +224,25 @@ public class ResourceManager : MonoBehaviour
         {
             //failure
 
-            numM2Resources -= 10;
-            numM5Resources -= 5;
-
-            numM3Resources -= 100;
-            numM4Resources -= 100;
-
             if (!failureCalculatedM1)
             {
+                numM2Resources -= 10;
+                numM5Resources -= 5;
+
+                numM3Resources -= 100;
+                numM4Resources -= 100;
+
+                Debug.Log("M1 FAIL: M2 -10; M5 - 5; M3 & M4 -100");
+                PrintResources();
+
                 if (successCalculatedM1)
                 {
                     numM3Resources -= 10;
                     numM4Resources -= 5;
+
+                    Debug.Log("*previous M1 success fix; M3 -10; M4 -5");
+                    PrintResources();
+
                 }
                 failureCalculatedM1 = true;
                 deterioratingCalculatedM1 = false;
@@ -237,10 +257,17 @@ public class ResourceManager : MonoBehaviour
 
             if (!deterioratingCalculatedM1)
             {
+                Debug.Log("M1 SITUATION DETERIORATING");
+                PrintResources();
+
                 if (successCalculatedM1)
                 {
                     numM3Resources -= 10;
                     numM4Resources -= 5;
+
+                    Debug.Log("*previous M1 success fix; M3 -10; M4 -5");
+                    PrintResources();
+
                 }
                 if (failureCalculatedM1)
                 {
@@ -249,6 +276,10 @@ public class ResourceManager : MonoBehaviour
 
                     numM3Resources += 100;
                     numM4Resources += 100;
+
+                    Debug.Log("*previous M1 failure fix; M2 +10; M5 +5; M3 & M4 +100");
+                    PrintResources();
+
                 }
                 deterioratingCalculatedM1 = true;
                 failureCalculatedM1 = false;
@@ -261,11 +292,14 @@ public class ResourceManager : MonoBehaviour
         {
             //success
 
-            numM3Resources += 10;
-            numM4Resources += 5;
-
             if (!successCalculatedM1)
             {
+                numM3Resources += 10;
+                numM4Resources += 5;
+
+                Debug.Log("M1 SUCCESS: M3 +10; M4 +5");
+                PrintResources();
+
                 if (failureCalculatedM1)
                 {
                     numM2Resources += 10;
@@ -273,6 +307,10 @@ public class ResourceManager : MonoBehaviour
 
                     numM3Resources += 100;
                     numM4Resources += 100;
+
+                    Debug.Log("*previous M1 failure fix; M2 +10; M5 +5; M3 & M4 +100");
+                    PrintResources();
+
                 }
                 successCalculatedM1 = true;
                 deterioratingCalculatedM1 = false;
@@ -287,14 +325,21 @@ public class ResourceManager : MonoBehaviour
         {
             //failure
 
-            numDi7Resources -= 5;
-
             if (!failureCalculatedM2)
             {
+                numDi7Resources -= 5;
+
+                Debug.Log("M2 FAIL: Di7 -5");
+                PrintResources();
+
                 if (successCalculatedM2)
                 {
                     numM1Resources -= 5;
                     numM5Resources -= 10;
+
+                    Debug.Log("*previous M2 success fix; M1 -5; M5 -10");
+                    PrintResources();
+
                 }
                 failureCalculatedM2 = true;
                 deterioratingCalculatedM2 = false;
@@ -309,14 +354,23 @@ public class ResourceManager : MonoBehaviour
 
             if (!deterioratingCalculatedM2)
             {
+                Debug.Log("M2 SITUATION DETERIORATING");
+                PrintResources();
+
                 if (successCalculatedM2)
                 {
                     numM1Resources -= 5;
                     numM5Resources -= 10;
+
+                    Debug.Log("*previous M2 success fix; M1 -5; M5 -10");
+                    PrintResources();
                 }
                 if (failureCalculatedM2)
                 {
                     numDi7Resources += 5;
+
+                    Debug.Log("*previous M2 failure fix; Di7 +5");
+                    PrintResources();
                 }
                 deterioratingCalculatedM2 = true;
                 failureCalculatedM2 = false;
@@ -329,14 +383,20 @@ public class ResourceManager : MonoBehaviour
         {
             //success
 
-            numM1Resources += 5;
-            numM5Resources += 10;
-
             if (!successCalculatedM2)
             {
+                numM1Resources += 5;
+                numM5Resources += 10;
+
+                Debug.Log("M2 SUCCESS: M1 +5; M5 +10");
+                PrintResources();
+
                 if (failureCalculatedM2)
                 {
                     numDi7Resources += 5;
+
+                    Debug.Log("*previous M2 failure fix; Di7 +5");
+                    PrintResources();
                 }
                 successCalculatedM2 = true;
                 deterioratingCalculatedM2 = false;
@@ -351,14 +411,20 @@ public class ResourceManager : MonoBehaviour
         {
             //failure
 
-            numM1Resources -= 5;
-
             if (!failureCalculatedM3)
             {
+                numM1Resources -= 5;
+
+                Debug.Log("M3 FAIL: M1 -5");
+                PrintResources();
+
                 if (successCalculatedM3)
                 {
                     numM4Resources -= 5;
                     numDi6Resources -= 3;
+
+                    Debug.Log("*previous M3 success fix; M4 -5; Di6 -3");
+                    PrintResources();
                 }
                 failureCalculatedM3 = true;
                 deterioratingCalculatedM3 = false;
@@ -373,14 +439,23 @@ public class ResourceManager : MonoBehaviour
 
             if (!deterioratingCalculatedM3)
             {
+                Debug.Log("M3: SITUATION DETERIORATING");
+                PrintResources();
+
                 if (successCalculatedM3)
                 {
                     numM4Resources -= 5;
                     numDi6Resources -= 3;
+
+                    Debug.Log("*previous M3 success fix; M4 -5; Di6 -3");
+                    PrintResources();
                 }
                 if (failureCalculatedM3)
                 {
                     numM1Resources += 5;
+
+                    Debug.Log("*previous M3 failure fix; M1 +5");
+                    PrintResources();
                 }
                 deterioratingCalculatedM3 = true;
                 failureCalculatedM3 = false;
@@ -393,14 +468,20 @@ public class ResourceManager : MonoBehaviour
         {
             //success
 
-            numM4Resources += 5;
-            numDi6Resources += 3;
-
             if (!successCalculatedM3)
             {
+                numM4Resources += 5;
+                numDi6Resources += 3;
+
+                Debug.Log("M3 SUCCESS: M4 +5; Di6 +3");
+                PrintResources();
+
                 if (failureCalculatedM3)
                 {
                     numM1Resources += 5;
+
+                    Debug.Log("*previous M3 failure fix; M1 +5");
+                    PrintResources();
                 }
                 successCalculatedM3 = true;
                 deterioratingCalculatedM3 = false;
@@ -415,14 +496,20 @@ public class ResourceManager : MonoBehaviour
         {
             //failure
 
-            numM1Resources -= 5;
-
             if (!failureCalculatedM4)
             {
+                numM1Resources -= 5;
+
+                Debug.Log("M4 FAIL: M1 -5");
+                PrintResources();
+
                 if (successCalculatedM4)
                 {
                     numDo10Resources -= 5;
                     numDi6Resources -= 3;
+
+                    Debug.Log("*previous M4 success fix; Do10 -5; Di6 -3");
+                    PrintResources();
                 }
                 failureCalculatedM4 = true;
                 deterioratingCalculatedM4 = false;
@@ -437,14 +524,23 @@ public class ResourceManager : MonoBehaviour
 
             if (!deterioratingCalculatedM4)
             {
+                Debug.Log("M4: SITUATION DETERIORATING");
+                PrintResources();
+
                 if (successCalculatedM4)
                 {
                     numDo10Resources -= 5;
                     numDi6Resources -= 3;
+
+                    Debug.Log("*previous M4 success fix; Do10 -5; Di6 -3");
+                    PrintResources();
                 }
                 if (failureCalculatedM4)
                 {
                     numM1Resources += 5;
+
+                    Debug.Log("*previous M4 failure fix; M1 +5");
+                    PrintResources();
                 }
                 deterioratingCalculatedM4 = true;
                 failureCalculatedM4 = false;
@@ -457,14 +553,20 @@ public class ResourceManager : MonoBehaviour
         {
             //success
 
-            numDo10Resources += 5;
-            numDi6Resources += 3;
-
             if (!successCalculatedM4)
             {
+                numDo10Resources += 5;
+                numDi6Resources += 3;
+
+                Debug.Log("M4 SUCCESS: Do10 +5; Di6 +3");
+                PrintResources();
+
                 if (failureCalculatedM4)
                 {
                     numM1Resources += 5;
+
+                    Debug.Log("*previous M4 failure fix; M1 +5");
+                    PrintResources();
                 }
                 successCalculatedM4 = true;
                 deterioratingCalculatedM4 = false;
@@ -477,17 +579,23 @@ public class ResourceManager : MonoBehaviour
         // Protect U.S. troops and minimize casualties
         if (numM5Resources < 10)
         {
-            //failure
-
-            numM1Resources -= 5;
-            numDo11Resources -= 3;
+            //failure            
 
             if (!failureCalculatedM5)
             {
+                numM1Resources -= 5;
+                numDo11Resources -= 3;
+
+                Debug.Log("M5 FAIL: M1 -5; Do11 -3");
+                PrintResources();
+
                 if (successCalculatedM5)
                 {
                     numDo10Resources -= 3;
                     numDo11Resources -= 5;
+
+                    Debug.Log("*previous M5 success fix; Do10 -3; Do11 -5");
+                    PrintResources();
                 }
                 failureCalculatedM5 = true;
                 deterioratingCalculatedM5 = false;
@@ -502,15 +610,24 @@ public class ResourceManager : MonoBehaviour
 
             if (!deterioratingCalculatedM5)
             {
+                Debug.Log("M5: SITUATION DETERIORATING");
+                PrintResources();
+
                 if (successCalculatedM5)
                 {
                     numDo10Resources -= 3;
                     numDo11Resources -= 5;
+
+                    Debug.Log("*previous M5 success fix; Do10 -3; Do11 -5");
+                    PrintResources();
                 }
                 if (failureCalculatedM5)
                 {
                     numM1Resources += 5;
                     numDo11Resources += 3;
+
+                    Debug.Log("*previous M5 failure fix; M1 +5; Do11 +3");
+                    PrintResources();
                 }
                 deterioratingCalculatedM5 = true;
                 failureCalculatedM5 = false;
@@ -523,15 +640,21 @@ public class ResourceManager : MonoBehaviour
         {
             //success
 
-            numDo10Resources += 3;
-            numDo11Resources += 5;
-
             if (!successCalculatedM5)
             {
-                if (failureCalculatedM4)
+                numDo10Resources += 3;
+                numDo11Resources += 5;
+
+                Debug.Log("M5 SUCCESS: Do10 +3; Do11 +5");
+                PrintResources();
+
+                if (failureCalculatedM5)
                 {
                     numM1Resources += 5;
                     numDo11Resources += 3;
+
+                    Debug.Log("*previous M5 failure fix; M1 +5; Do11 +3");
+                    PrintResources();
                 }
                 successCalculatedM5 = true;
                 deterioratingCalculatedM5 = false;
@@ -542,7 +665,6 @@ public class ResourceManager : MonoBehaviour
         }
 
         return;
-
     }
 
 
@@ -553,71 +675,80 @@ public class ResourceManager : MonoBehaviour
         // Prevent a Communist takeover of South Vietnam
         if (numM1Resources < 15)
         {
-            resultsText.text = "M1: failure";
+            resultsText.text = "M1: failure - " + numM1Resources;
         }
         else if (numM1Resources < 30)
         {
-            resultsText.text = "M1: situation deteriorating";
+            resultsText.text = "M1: situation deteriorating - " + numM1Resources;
         }
         else
         {
-            resultsText.text = "M1: success";
+            resultsText.text = "M1: success - " + numM1Resources;
         }
 
         // Achieve military success in the field
         if (numM2Resources < 12)
         {
-            resultsText.text += " M2: failure";
+            resultsText.text += " M2: failure - " + numM2Resources;
         }
         else if (numM2Resources < 25)
         {
-            resultsText.text += " M2: situation deteriorating";
+            resultsText.text += " M2: situation deteriorating - " + numM2Resources;
         }
         else
         {
-            resultsText.text += " M2: success";
+            resultsText.text += " M2: success - " + numM2Resources;
         }
 
         // Secure South Vietnamese countryside (pacification)
         if (numM3Resources < 12)
         {
-            resultsText.text += " M3: failure";
+            resultsText.text += " M3: failure - " + numM3Resources;
         }
         else if (numM3Resources < 25)
         {
-            resultsText.text += " M3: situation deteriorating";
+            resultsText.text += " M3: situation deteriorating - " + numM3Resources;
         }
         else
         {
-            resultsText.text += " M3: success";
+            resultsText.text += " M3: success - " + numM3Resources;
         }
 
         // Stabilize and strengthen the South Vietnamese government
         if (numM4Resources < 10)
         {
-            resultsText.text += " M4: failure";
+            resultsText.text += " M4: failure - " + numM4Resources;
         }
         else if (numM4Resources < 20)
         {
-            resultsText.text += " M4: situation deteriorating";
+            resultsText.text += " M4: situation deteriorating - " + numM4Resources;
         }
         else
         {
-            resultsText.text += " M4: success";
+            resultsText.text += " M4: success - " + numM4Resources;
         }
 
         // Protect U.S. troops and minimize casualties
         if (numM5Resources < 10)
         {
-            resultsText.text += " M5: failure";
+            resultsText.text += " M5: failure - " + numM5Resources;
         }
         else if (numM5Resources < 20)
         {
-            resultsText.text += " M5: situation deteriorating";
+            resultsText.text += " M5: situation deteriorating - " + numM5Resources;
         }
         else
         {
-            resultsText.text += " M5: success";
+            resultsText.text += " M5: success - " + numM5Resources;
+        }
+
+        if ((numM1Resources + numM2Resources + numM3Resources + numM4Resources + numM5Resources) > 70)
+        {
+            classification = "Hawk";
+        }
+        else
+        {
+            classification = "Dove";
         }
 
     }

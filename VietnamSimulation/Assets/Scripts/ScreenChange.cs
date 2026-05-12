@@ -129,6 +129,7 @@ void Update()
                 if (extraTimeProgress == 1f)
                 {
                     isZoomingInOnMap = false;
+                    InputSystem.EnableDevice(Mouse.current);
                 }
             }
         }
@@ -153,6 +154,7 @@ void Update()
                 if (fadeInProgress == 1f)
                 {
                     isZoomingOutOnMap = false;
+                    InputSystem.EnableDevice(Mouse.current);
                 }
             }
         }
@@ -180,6 +182,7 @@ void Update()
                 if (extraTimeProgress == 1f)
                 {
                     isZoomingInOnCorkboard = false;
+                    InputSystem.EnableDevice(Mouse.current);
                 }
             }
         }
@@ -202,6 +205,7 @@ void Update()
                 if (fadeInProgress == 1f)
                 {
                     isZoomingOutOnCorkboard = false;
+                    InputSystem.EnableDevice(Mouse.current);
                 }
             }
         }
@@ -216,6 +220,7 @@ void Update()
             if (shiftProgress == 1f)
             {
                 isViewingLedger = false;
+                InputSystem.EnableDevice(Mouse.current);
             }
         }
 
@@ -229,6 +234,7 @@ void Update()
             if (shiftProgress == 1f)
             {
                 isViewingMap = false;
+                InputSystem.EnableDevice(Mouse.current);
             }
         }
 
@@ -246,7 +252,7 @@ void Update()
                 resourceManager.advisorAvailable = false;
                 resourceManager.notification.SetActive(false);
                 isZoomingInOnRadio = false;
-
+                InputSystem.EnableDevice(Mouse.current);
             }
         }
 
@@ -307,6 +313,7 @@ void Update()
                 if (fadeInProgress == 1f)
                 {
                     isFadingInOnWarRoom = false;
+                    InputSystem.EnableDevice(Mouse.current);
                 }
             }
 
@@ -322,6 +329,8 @@ void Update()
 
         if (!isFadingInOnWarRoom)
         {
+            InputSystem.DisableDevice(Mouse.current);
+
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
             isFadingInOnWarRoom = true;
@@ -333,6 +342,8 @@ void Update()
     {
         if (!isZoomingInOnMap)
         {
+            InputSystem.DisableDevice(Mouse.current);
+
             audioSource.PlayOneShot(transitionSound);
 
             timeElapsed = 0f;
@@ -345,6 +356,8 @@ void Update()
     {
         if (!isZoomingOutOnMap)
         {
+            InputSystem.DisableDevice(Mouse.current);
+
             audioSource.PlayOneShot(transitionSound);
 
             timeElapsed = 0f;
@@ -358,6 +371,8 @@ void Update()
     {
         if (!isViewingLedger && !isZoomingInOnMap)
         {
+            InputSystem.DisableDevice(Mouse.current);
+
             audioSource.PlayOneShot(transitionSound);
 
             timeElapsed = 0f;
@@ -371,6 +386,8 @@ void Update()
     {
         if (!isViewingMap)
         {
+            InputSystem.DisableDevice(Mouse.current);
+
             audioSource.PlayOneShot(transitionSound);
 
             timeElapsed = 0f;
@@ -384,6 +401,8 @@ void Update()
     {
         if (!isZoomingInOnCorkboard)
         {
+            InputSystem.DisableDevice(Mouse.current);
+
             audioSource.PlayOneShot(transitionSound);
 
             timeElapsed = 0f;
@@ -396,6 +415,8 @@ void Update()
     {
         if (!isZoomingOutOnCorkboard)
         {
+            InputSystem.DisableDevice(Mouse.current);
+
             audioSource.PlayOneShot(transitionSound);
 
             timeElapsed = 0f;
@@ -408,6 +429,8 @@ void Update()
     {
         if (resourceManager.advisorAvailable && !isZoomingInOnRadio)
         {
+            InputSystem.DisableDevice(Mouse.current);
+
             audioSource.PlayOneShot(transitionSound);
 
             timeElapsed = 0f;
@@ -419,10 +442,11 @@ void Update()
     public void RadioZoomOut()
     {
         advisor.SetActive(false);
-        InputSystem.DisableDevice(Mouse.current);
 
         if (!isZoomingOutOnRadio)
         {
+            InputSystem.DisableDevice(Mouse.current);
+
             audioSource.PlayOneShot(transitionSound);
 
             timeElapsed = 0f;
@@ -443,6 +467,8 @@ void Update()
 
     public void Decide()
     {
+        AllScreensInactive();
+
         lobbyScreen.SetActive(false);
         decisionScreen.SetActive(true);
 
@@ -475,14 +501,14 @@ void Update()
         else if (numResultsViewed == 2)
         {
             advisorText.text = "third advisor message";
+        }
+        else if (numResultsViewed == 3)
+        {
+            advisorText.text = "Classification: " + ResourceManager.classification;
+
             nextButton.SetActive(false);
             closeButton.SetActive(true);
         }
-        //else if (numResultsViewed == 3)
-        //{
-        //    nextButton.SetActive(false);
-        //    closeButton.SetActive(true);
-        //}
 
         numResultsViewed += 1;
 
