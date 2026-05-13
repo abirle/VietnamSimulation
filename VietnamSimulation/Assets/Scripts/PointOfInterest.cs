@@ -9,6 +9,7 @@ public class PointOfInterest : MonoBehaviour
     public Button poiButton01;
     public GameObject poiText01; 
     public GameObject poiImage01;
+    public GameObject poiCloseButton;
 
     public Sprite originalImage;
     public Sprite newImage;
@@ -57,23 +58,30 @@ public class PointOfInterest : MonoBehaviour
 
             poiText01.SetActive(true);
             poiImage01.SetActive(true);
+            poiCloseButton.SetActive(true);
             poiButton01.image.sprite = newImage;
             poiButton01.GetComponent<Image>().material = null;
 
             poiClicked = true;
         }
-        else if (poiClicked) 
-        {
-            audioSource.PlayOneShot(closeSound);
-
-            poiText01.SetActive(false);
-            poiImage01.SetActive(false);
-            poiButton01.image.sprite = originalImage;
-
-            poiClicked = false;
-        }
 
     }
+
+
+    public void PointofInterestClose()
+    {
+        audioSource.PlayOneShot(closeSound);
+
+        poiButton01.image.sprite = originalImage;
+
+        poiClicked = false;
+
+        poiText01.SetActive(false);
+        poiImage01.SetActive(false);
+        poiCloseButton.SetActive(false);
+
+    }
+
 
     public void Hovered()
     {

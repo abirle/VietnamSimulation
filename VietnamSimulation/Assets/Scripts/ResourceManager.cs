@@ -79,7 +79,7 @@ public class ResourceManager : MonoBehaviour
     void Start()
     {
         numResources = totalResources;
-        resourceNumberText.text = numResources.ToString();
+        resourceNumberText.text = "$" + numResources.ToString() + "M";
         whatsLeftText.text = "You have " + numSliders.ToString() + " untouched categories and " + numResources.ToString() + " resources left.";
     }
 
