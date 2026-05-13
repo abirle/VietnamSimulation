@@ -490,6 +490,12 @@ void Update()
         closeButton.SetActive(false);
         nextButton.SetActive(true);
 
+        resourceManager.notification.SetActive(false);
+        foreach (GameObject question in resourceManager.questionsArray)
+        {
+            question.SetActive(false);
+        }
+
         if (numResultsViewed == 0)
         {
             advisorText.text = resourceManager.resultsText.text;
