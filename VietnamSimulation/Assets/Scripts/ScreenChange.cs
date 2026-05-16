@@ -15,6 +15,8 @@ public class ScreenChange : MonoBehaviour
     public GameObject resultsScreen;
     public GameObject corkboardScreen;
     public GameObject pauseScreen;
+    public GameObject campaignScreen;
+
     public GameObject advisor;
     public TMP_Text advisorText;
     public GameObject closeButton;
@@ -37,7 +39,8 @@ public class ScreenChange : MonoBehaviour
     bool isViewingLedger = false;
     bool isViewingMap = false;
     bool isFadingInOnWarRoom = false;
-    bool isFadingOutOnWarRoom = false;
+    bool isFadingInOnLobby = false;
+    bool isFadingInOnCampaignOffice = false;
 
     Vector3 cameraCenter = new Vector3(1288, 725, -1500);
     Vector3 cameraMap = new Vector3(1283, 722, -1500);
@@ -72,6 +75,7 @@ public class ScreenChange : MonoBehaviour
         decisionScreen.SetActive(true);
         resultsScreen.SetActive(true);
         corkboardScreen.SetActive(true);
+        campaignScreen.SetActive(true);
     }
 
 
@@ -85,6 +89,7 @@ public class ScreenChange : MonoBehaviour
         resultsScreen.SetActive(false);
         corkboardScreen.SetActive(false);
         pauseScreen.SetActive(false);
+        campaignScreen.SetActive(false);
     }
 
 
@@ -319,6 +324,54 @@ void Update()
 
         }
 
+        else if (isFadingInOnLobby)
+        {
+            timeElapsed += Time.deltaTime;
+            float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
+            float extraTimeProgress = Mathf.Clamp01(timeElapsed / (fadeOutDuration + 1));
+            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+
+            if (extraTimeProgress == 1f)
+            {
+                secondTimeElapsed += Time.deltaTime;
+                AllScreensInactive();
+                lobbyScreen.SetActive(true);
+                float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
+                blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
+
+                if (fadeInProgress == 1f)
+                {
+                    isFadingInOnLobby = false;
+                    InputSystem.EnableDevice(Mouse.current);
+                }
+            }
+
+        }
+
+        else if (isFadingInOnCampaignOffice)
+        {
+            timeElapsed += Time.deltaTime;
+            float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
+            float extraTimeProgress = Mathf.Clamp01(timeElapsed / (fadeOutDuration + 1));
+            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+
+            if (extraTimeProgress == 1f)
+            {
+                secondTimeElapsed += Time.deltaTime;
+                AllScreensInactive();
+                campaignScreen.SetActive(true);
+                float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
+                blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
+
+                if (fadeInProgress == 1f)
+                {
+                    isFadingInOnCampaignOffice = false;
+                    InputSystem.EnableDevice(Mouse.current);
+                }
+            }
+
+        }
+
     }
 
 
@@ -458,10 +511,33 @@ void Update()
 
     public void BackToLobby()
     {
+        if (!isFadingInOnLobby)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isFadingInOnLobby = true;
+        }
+
+    }
+
+    public void EnterCampaignOffice()
+    {
+
         audioSource.PlayOneShot(transitionSound);
 
-        militaryGoalsScreen.SetActive(false);
-        lobbyScreen.SetActive(true);
+        if (!isFadingInOnCampaignOffice)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isFadingInOnCampaignOffice = true;
+        }
+
     }
 
 
