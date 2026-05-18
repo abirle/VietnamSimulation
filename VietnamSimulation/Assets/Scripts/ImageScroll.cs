@@ -4,6 +4,7 @@ using UnityEngine;
 public class ImageScroll : MonoBehaviour
 {
     public GameObject[] images;
+    public Transform[] imageTransformReferences;
     GameObject currentImage;
     GameObject rightImage;
     GameObject leftImage;
@@ -18,7 +19,11 @@ public class ImageScroll : MonoBehaviour
     public float distanceTraveled = 0;
     public float shiftDistance;
 
-    public static float scaleSpeed = 0.001f;
+    static float oldScaleFactor = 0.5f;
+    Vector3 oldScale = new Vector3(oldScaleFactor, oldScaleFactor, oldScaleFactor);
+    static float scaleFactor = 1.1f;
+    Vector3 newScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+    static float scaleSpeed = 0.002f;
     Vector3 scaleIncrement = new Vector3(scaleSpeed, scaleSpeed, scaleSpeed);
 
 
@@ -39,10 +44,11 @@ public class ImageScroll : MonoBehaviour
             distanceTraveled += Time.deltaTime * scrollSpeed;
             images[0].transform.localScale += scaleIncrement;
 
-            if (distanceTraveled >= (shiftDistance / 2))
+            if (Vector3.Distance(images[0].transform.localScale, newScale) < 0.1)
             {
                 startZoom = false;
             }
+
         }
 
         else if (isScrollingRight)
@@ -54,11 +60,11 @@ public class ImageScroll : MonoBehaviour
                     image.transform.Translate(-(Time.deltaTime * scrollSpeed), 0, 0);
                     distanceTraveled += Time.deltaTime * scrollSpeed;
 
-                    if (image == rightImage)
+                    if (image == rightImage && Vector3.Distance(image.transform.localScale, newScale) > 0.1)
                     {
                         image.transform.localScale += scaleIncrement;
                     }
-                    else if (image == currentImage)
+                    else if (image == currentImage && Vector3.Distance(image.transform.localScale, oldScale) > 0.1)
                     {
                         image.transform.localScale -= scaleIncrement;
                     }
@@ -98,11 +104,11 @@ public class ImageScroll : MonoBehaviour
                     image.transform.Translate((Time.deltaTime * scrollSpeed), 0, 0);
                     distanceTraveled += Time.deltaTime * scrollSpeed;
 
-                    if (image == leftImage)
+                    if (image == leftImage && Vector3.Distance(image.transform.localScale, newScale) > 0.1)
                     {
                         image.transform.localScale += scaleIncrement;
                     }
-                    else if (image == currentImage)
+                    else if (image == currentImage && Vector3.Distance(image.transform.localScale, oldScale) > 0.1)
                     {
                         image.transform.localScale -= scaleIncrement;
                     }
