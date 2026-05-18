@@ -69,9 +69,13 @@ public class ResourceManager : MonoBehaviour
 
     public static int pointsInvestigated = 0;
     public static int pointsThreshold = 2;
-    public GameObject notification;
-    public bool advisorAvailable = false;
-    public GameObject[] questionsArray;
+    public GameObject radioNotification;
+    public bool militaryAdvisorAvailable = false;
+    public GameObject[] militaryQuestionsArray;
+
+    public GameObject phoneNotification;
+    public bool domesticAdvisorAvailable = false;
+    public GameObject[] domesticQuestionsArray;
 
     public static string classification = "";
 
@@ -86,21 +90,40 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (advisorAvailable)
+        if (militaryAdvisorAvailable)
         {
-            foreach (GameObject question in questionsArray) 
+            foreach (GameObject question in militaryQuestionsArray) 
+            {
+                question.SetActive(true); 
+            }
+        }
+
+        if (domesticAdvisorAvailable)
+        {
+            foreach (GameObject question in domesticQuestionsArray)
             {
                 question.SetActive(true);
-                
             }
         }
 
         if (pointsInvestigated >= pointsThreshold)
         {
-            notification.SetActive(true);
-            advisorAvailable = true;
+            radioNotification.SetActive(true);
+            militaryAdvisorAvailable = true;
 
-            foreach (GameObject question in questionsArray)
+            phoneNotification.SetActive(true);
+            domesticAdvisorAvailable = true;
+
+            foreach (GameObject question in militaryQuestionsArray)
+            {
+                Button button = question.GetComponent<Button>();
+                if (!question.GetComponent<AdvisorQuestions>().questionAsked)
+                {
+                    button.interactable = true;
+                }
+            }
+
+            foreach (GameObject question in domesticQuestionsArray)
             {
                 Button button = question.GetComponent<Button>();
                 if (!question.GetComponent<AdvisorQuestions>().questionAsked)
@@ -218,6 +241,8 @@ public class ResourceManager : MonoBehaviour
     public void CalculateResults()
     {
         //INTERDEPENDENCY CALCULATIONS
+
+        //MILITARY GOALS
 
         // Prevent a Communist takeover of South Vietnam
         if (numM1Resources < 15)
@@ -664,6 +689,102 @@ public class ResourceManager : MonoBehaviour
             }
         }
 
+
+        //DIPLOMATIC GOALS
+
+        //Di6: Preserve American global credibility
+        //  success: 15+
+        //  situation deteriorating: 7-14
+        //  failure: <7
+        //      interdependencies:
+        //          success: +3 to #8; +3 to #9
+        //          failure: -5 to #8
+
+
+        //Di7: Open peace negotiations with North Vietnam
+        //  success: 20+
+        //  situation deteriorating: 10-19
+        //  failure: <10
+        //      interdependencies:
+        //          success: +5 to #10; +3 to #6
+        //          failure: -5 to #2
+
+
+        //Di8: Maintain allied support
+        //  success: 15+
+        //  situation deteriorating: 7-14
+        //  failure: <7
+        //      interdependencies:
+        //          success: +3 to #1
+        //          failure: -5 to #6
+
+
+        //Di9: Manage relations with the Soviet Union and China
+        //  success: 20+
+        //  situation deteriorating: 10-19
+        //  failure: <10
+        //      interdependencies:
+        //          success: +3 to #6; +3 to #7
+        //          failure: -5 to #2
+
+
+        //DOMESTIC GOALS
+
+        //Do10: Win the 1968 Presidential Election / Maintain Democratic party Unity
+        //  success: 25+
+        //  situation deteriorating: 12-24
+        //  failure: <12
+        //      interdependencies:
+        //          success: +3 to #12
+        //          failure: -5 to #11
+
+
+        //Do11: Respond to growing antiwar movement and public opinion
+        //  success: 20+
+        //  situation deteriorating: 10-19
+        //  failure: <10
+        //      interdependencies:
+        //          success: +5 to #12; +3 to #10
+        //          failure: -5 to #5; -5 to #10
+
+
+        //Do12: Maintain confidence of Congress
+        //  success: 15+
+        //  situation deteriorating: 7-14
+        //  failure: <7
+        //      interdependencies:
+        //          success: +3 to #13
+        //          failure: -5 to #1
+
+
+        //Do13: Manage U.S. economy
+        //  success: 20+
+        //  situation deteriorating: 10-19
+        //  failure: <10
+        //      interdependencies:
+        //          success: +3 to #14
+        //          failure: -5 to #15
+
+
+        //Do14: Preserve Johnson's domestic "Great Society" programs
+        //  success: 20+
+        //  situation deteriorating: 10-19
+        //  failure: <10
+        //      interdependencies:
+        //          success: +3 to #15
+        //          failure: -5 to #13
+
+
+        //Do15: Handle civil rights and urban unrest
+        //  success: 15+
+        //  situation deteriorating: 7-14
+        //  failure: <7
+        //      interdependencies:
+        //          success: +3 to #11
+        //          failure: -5 to #10
+
+
+
         return;
     }
 
@@ -742,7 +863,9 @@ public class ResourceManager : MonoBehaviour
             resultsText.text += " M5: success - " + numM5Resources;
         }
 
-        if ((numM1Resources + numM2Resources + numM3Resources + numM4Resources + numM5Resources) > 70)
+        int militaryResources = numM1Resources + numM2Resources + numM3Resources + numM4Resources + numM5Resources;
+
+        if (militaryResources > 70)
         {
             classification = "Hawk";
         }

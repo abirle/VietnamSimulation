@@ -35,18 +35,18 @@ public class AdvisorQuestions : MonoBehaviour
     {
         if (numQuestion == 1)
         {
-            screenChange.advisorText.text = "Question #1 Answer";
+            screenChange.militaryAdvisorText.text = "Question #1 Answer";
         }
         else if (numQuestion == 2)
         {
-            screenChange.advisorText.text = "Question #2 Answer";
+            screenChange.militaryAdvisorText.text = "Question #2 Answer";
         }
         else if (numQuestion == 3)
         {
-            screenChange.advisorText.text = "Question #3 Answer";
+            screenChange.militaryAdvisorText.text = "Question #3 Answer";
         }
 
-        foreach(GameObject question in resourceManager.questionsArray)
+        foreach(GameObject question in resourceManager.militaryQuestionsArray)
         {
             Button button = question.GetComponent<Button>();
             button.interactable = false;

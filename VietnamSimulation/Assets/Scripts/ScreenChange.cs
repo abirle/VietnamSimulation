@@ -8,19 +8,24 @@ using UnityEngine.UI;
 public class ScreenChange : MonoBehaviour
 {
     public GameObject lobbyScreen;
-    public GameObject militaryGoalsScreen;
+    public GameObject militaryScreen;
     public GameObject mapSliderScreen;
     public GameObject ledgerSliderScreen;
     public GameObject decisionScreen;
     public GameObject resultsScreen;
     public GameObject corkboardScreen;
     public GameObject pauseScreen;
-    public GameObject campaignScreen;
+    public GameObject domesticScreen;
 
-    public GameObject advisor;
-    public TMP_Text advisorText;
-    public GameObject closeButton;
-    public GameObject nextButton;
+    public GameObject militaryAdvisor;
+    public TMP_Text militaryAdvisorText;
+    public GameObject militaryCloseButton;
+    public GameObject militaryNextButton;
+
+    public GameObject domesticAdvisor;
+    public TMP_Text domesticAdvisorText;
+    public GameObject domesticCloseButton;
+    public GameObject domesticNextButton;
 
 
     public Camera camera;
@@ -30,8 +35,6 @@ public class ScreenChange : MonoBehaviour
 
     bool isZoomingInOnMap = false;
     bool isZoomingOutOnMap = false;
-    bool isZoomingInOnLedger = false;
-    bool isZoomingOutOnLedger = false;
     bool isZoomingInOnCorkboard = false;
     bool isZoomingOutOnCorkboard = false;
     bool isZoomingInOnRadio = false;
@@ -41,12 +44,16 @@ public class ScreenChange : MonoBehaviour
     bool isFadingInOnWarRoom = false;
     bool isFadingInOnLobby = false;
     bool isFadingInOnCampaignOffice = false;
+    bool isZoomingInOnPhone = false;
+    bool isZoomingOutOnPhone = false;
 
     Vector3 cameraCenter = new Vector3(1288, 725, -1500);
     Vector3 cameraMap = new Vector3(1283, 722, -1500);
     Vector3 cameraCorkboard = new Vector3(1284, (float)725.7, -1500);
     Vector3 cameraLedger = new Vector3((float)1297.2, 725, -1500);
     Vector3 cameraRadio = new Vector3((float)1286.74, (float)723.66, -1500);
+    Vector3 cameraPhone = new Vector3((float)1290.33, (float)722.90, -1500);
+    
     float timeElapsed = 0f;
     float secondTimeElapsed = 0f;
     float zoomDuration = 2f;
@@ -62,12 +69,13 @@ public class ScreenChange : MonoBehaviour
     public AudioClip writingSound;
 
     bool hasEnteredWarRoom = false;
+    bool hasEnteredCampaignOffice = false;
     bool viewingResults = false;
     int numResultsViewed = 0;
 
     public void AllScreensActive()
     {
-        militaryGoalsScreen.SetActive(true);
+        militaryScreen.SetActive(true);
         pauseScreen.SetActive(true);
         ledgerSliderScreen.SetActive(true);
         mapSliderScreen.SetActive(true);
@@ -75,21 +83,21 @@ public class ScreenChange : MonoBehaviour
         decisionScreen.SetActive(true);
         resultsScreen.SetActive(true);
         corkboardScreen.SetActive(true);
-        campaignScreen.SetActive(true);
+        domesticScreen.SetActive(true);
     }
 
 
     public void AllScreensInactive()
     {
         lobbyScreen.SetActive(false);
-        militaryGoalsScreen.SetActive(false);
+        militaryScreen.SetActive(false);
         mapSliderScreen.SetActive(false);
         ledgerSliderScreen.SetActive(false);
         decisionScreen.SetActive(false);
         resultsScreen.SetActive(false);
         corkboardScreen.SetActive(false);
         pauseScreen.SetActive(false);
-        campaignScreen.SetActive(false);
+        domesticScreen.SetActive(false);
     }
 
 
@@ -100,9 +108,6 @@ public class ScreenChange : MonoBehaviour
         resourceManager = gameManager.GetComponent<ResourceManager>();
 
         AllScreensActive();
-
-        
-
 
     }
 
@@ -122,7 +127,7 @@ void Update()
             if (zoomProgress == 1f)
             {
                 secondTimeElapsed += Time.deltaTime;
-                militaryGoalsScreen.SetActive(false);
+                militaryScreen.SetActive(false);
                 mapSliderScreen.SetActive(true);
                 ledgerSliderScreen.SetActive(true);
                 camera.transform.position = cameraCenter;
@@ -152,7 +157,7 @@ void Update()
                 secondTimeElapsed += Time.deltaTime;
                 mapSliderScreen.SetActive(false);
                 ledgerSliderScreen.SetActive(false);
-                militaryGoalsScreen.SetActive(true);
+                militaryScreen.SetActive(true);
                 float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
                 blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
 
@@ -176,7 +181,7 @@ void Update()
             if (zoomProgress == 1f)
             {
                 secondTimeElapsed += Time.deltaTime;
-                militaryGoalsScreen.SetActive(false);
+                militaryScreen.SetActive(false);
                 corkboardScreen.SetActive(true);
                 camera.transform.position = cameraCenter;
                 camera.orthographicSize = 5;
@@ -203,7 +208,7 @@ void Update()
             {
                 secondTimeElapsed += Time.deltaTime;
                 corkboardScreen.SetActive(false);
-                militaryGoalsScreen.SetActive(true);
+                militaryScreen.SetActive(true);
                 float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
                 blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
 
@@ -253,9 +258,9 @@ void Update()
             if (zoomProgress == 1f)
             {
                 //ResourceManager.pointsInvestigated = 0;
-                advisor.SetActive(true);
-                resourceManager.advisorAvailable = false;
-                resourceManager.notification.SetActive(false);
+                militaryAdvisor.SetActive(true);
+                resourceManager.militaryAdvisorAvailable = false;
+                resourceManager.radioNotification.SetActive(false);
                 isZoomingInOnRadio = false;
                 InputSystem.EnableDevice(Mouse.current);
             }
@@ -291,10 +296,10 @@ void Update()
                 camera.transform.position = cameraRadio;
                 camera.orthographicSize = (float)1.5;
 
-                advisor.SetActive(true);
+                militaryAdvisor.SetActive(true);
                 hasEnteredWarRoom = true;
 
-                militaryGoalsScreen.SetActive(true);
+                militaryScreen.SetActive(true);
                 isFadingInOnWarRoom = false;
             }
 
@@ -305,13 +310,13 @@ void Update()
                     camera.transform.position = cameraRadio;
                     camera.orthographicSize = (float)1.5;
 
-                    advisor.SetActive(true);
+                    militaryAdvisor.SetActive(true);
                     hasEnteredWarRoom = true;
                 }
 
                 secondTimeElapsed += Time.deltaTime;
                 AllScreensInactive();
-                militaryGoalsScreen.SetActive(true);
+                militaryScreen.SetActive(true);
                 float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
                 blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
 
@@ -353,13 +358,38 @@ void Update()
             timeElapsed += Time.deltaTime;
             float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
             float extraTimeProgress = Mathf.Clamp01(timeElapsed / (fadeOutDuration + 1));
-            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+            if (numResultsViewed <= 1)
+            {
+                blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+            }
+            else
+            {
+                AllScreensInactive();
+
+                camera.transform.position = cameraPhone;
+                camera.orthographicSize = (float)1.5;
+
+                domesticAdvisor.SetActive(true);
+                hasEnteredWarRoom = true;
+
+                domesticScreen.SetActive(true);
+                isFadingInOnCampaignOffice = false;
+            }
 
             if (extraTimeProgress == 1f)
             {
+                if (!hasEnteredCampaignOffice || viewingResults)
+                {
+                    camera.transform.position = cameraPhone;
+                    camera.orthographicSize = (float)1.5;
+
+                    domesticAdvisor.SetActive(true);
+                    hasEnteredCampaignOffice = true;
+                }
+
                 secondTimeElapsed += Time.deltaTime;
                 AllScreensInactive();
-                campaignScreen.SetActive(true);
+                domesticScreen.SetActive(true);
                 float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
                 blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
 
@@ -370,6 +400,38 @@ void Update()
                 }
             }
 
+        }
+
+        else if (isZoomingInOnPhone)
+        {
+            timeElapsed += Time.deltaTime;
+            float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
+            camera.transform.position = Vector3.Lerp(cameraCenter, cameraPhone, zoomProgress);
+            camera.orthographicSize = Mathf.Lerp(5, (float)1.5, zoomProgress);
+
+            if (zoomProgress == 1f)
+            {
+                //ResourceManager.pointsInvestigated = 0;
+                domesticAdvisor.SetActive(true);
+                resourceManager.domesticAdvisorAvailable = false;
+                resourceManager.phoneNotification.SetActive(false);
+                isZoomingInOnPhone = false;
+                InputSystem.EnableDevice(Mouse.current);
+            }
+        }
+
+        else if (isZoomingOutOnPhone)
+        {
+            timeElapsed += Time.deltaTime;
+            float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
+            camera.transform.position = Vector3.Lerp(cameraPhone, cameraCenter, zoomProgress);
+            camera.orthographicSize = Mathf.Lerp((float)1.5, 5, zoomProgress);
+
+            if (zoomProgress == 1f)
+            {
+                isZoomingOutOnPhone = false;
+                InputSystem.EnableDevice(Mouse.current);
+            }
         }
 
     }
@@ -480,7 +542,7 @@ void Update()
 
     public void RadioZoomIn()
     {
-        if (resourceManager.advisorAvailable && !isZoomingInOnRadio)
+        if (resourceManager.militaryAdvisorAvailable && !isZoomingInOnRadio)
         {
             InputSystem.DisableDevice(Mouse.current);
 
@@ -494,7 +556,7 @@ void Update()
 
     public void RadioZoomOut()
     {
-        advisor.SetActive(false);
+        militaryAdvisor.SetActive(false);
 
         if (!isZoomingOutOnRadio)
         {
@@ -540,6 +602,36 @@ void Update()
 
     }
 
+    public void PhoneZoomIn()
+    {
+        if (resourceManager.domesticAdvisorAvailable && !isZoomingInOnPhone)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingInOnPhone = true;
+        }
+    }
+
+    public void PhoneZoomOut()
+    {
+        domesticAdvisor.SetActive(false);
+
+        if (!isZoomingOutOnPhone)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingOutOnPhone = true;
+        }
+    }
+
 
     public void Decide()
     {
@@ -563,34 +655,51 @@ void Update()
         resourceManager.CalculateResults();
         resourceManager.FinalizeResults();
 
-        closeButton.SetActive(false);
-        nextButton.SetActive(true);
+        militaryCloseButton.SetActive(false);
+        militaryNextButton.SetActive(true);
 
-        resourceManager.notification.SetActive(false);
-        foreach (GameObject question in resourceManager.questionsArray)
+        resourceManager.radioNotification.SetActive(false);
+        foreach (GameObject question in resourceManager.militaryQuestionsArray)
         {
             question.SetActive(false);
         }
 
         if (numResultsViewed == 0)
         {
-            advisorText.text = resourceManager.resultsText.text;
+            militaryAdvisorText.text = resourceManager.resultsText.text;
         }
         else if (numResultsViewed == 1) 
         {
-            advisorText.text = "second advisor message";
+            militaryAdvisorText.text = "second advisor message";
         }
         else if (numResultsViewed == 2)
         {
-            advisorText.text = "third advisor message";
+            militaryAdvisorText.text = "third advisor message";
         }
         else if (numResultsViewed == 3)
         {
-            advisorText.text = "Classification: " + ResourceManager.classification;
+            militaryAdvisorText.text = "fourth advisor message";
+            //militaryAdvisorText.text = "Classification: " + ResourceManager.classification;
 
-            nextButton.SetActive(false);
-            closeButton.SetActive(true);
+            //militaryNextButton.SetActive(false);
+            //militaryCloseButton.SetActive(true);
         }
+        else if (numResultsViewed == 4)
+        {
+            militaryAdvisorText.text = "fifth advisor message";
+        }
+        else if (numResultsViewed == 5)
+        {
+            if (!isFadingInOnCampaignOffice)
+            {
+                timeElapsed = 0f;
+                secondTimeElapsed = 0f;
+                isFadingInOnCampaignOffice = true;
+            }
+
+            domesticAdvisorText.text = resourceManager.resultsText.text;
+        }
+
 
         numResultsViewed += 1;
 

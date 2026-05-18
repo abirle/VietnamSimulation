@@ -24,18 +24,18 @@ public class RadioPlayPause : MonoBehaviour
 
     public void RadioClicked()
     {
-        if (!resourceManager.advisorAvailable && !radioClicked)
+        if (!resourceManager.militaryAdvisorAvailable && !radioClicked)
         {
             audioSource.Play();
             radioClicked = true;
             radioPlaying = true;
         }
-        else if (!resourceManager.advisorAvailable && radioPlaying)
+        else if (!resourceManager.militaryAdvisorAvailable && radioPlaying)
         {
             audioSource.mute = true;
             radioPlaying = false;
         }
-        else if (!resourceManager.advisorAvailable && !radioPlaying)
+        else if (!resourceManager.militaryAdvisorAvailable && !radioPlaying)
         {
             audioSource.mute = false;
             radioPlaying = true;
