@@ -108,6 +108,46 @@ public class SliderUpdate: MonoBehaviour
             {
                 resourceManager.SetM5Resources(resourcesAllocated);
             }
+            else if (fieldNum == 6)
+            {
+                resourceManager.SetDi6Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 7)
+            {
+                resourceManager.SetDi7Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 8)
+            {
+                resourceManager.SetDi8Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 9)
+            {
+                resourceManager.SetDi9Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 10)
+            {
+                resourceManager.SetDo10Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 11)
+            {
+                resourceManager.SetDo11Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 12)
+            {
+                resourceManager.SetDo12Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 13)
+            {
+                resourceManager.SetDo13Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 14)
+            {
+                resourceManager.SetDo14Resources(resourcesAllocated);
+            }
+            else if (fieldNum == 15)
+            {
+                resourceManager.SetDo15Resources(resourcesAllocated);
+            }
 
         }
 
@@ -155,6 +195,46 @@ public class SliderUpdate: MonoBehaviour
         else if (fieldNum == 5)
         {
             resourceManager.SetM5Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 6)
+        {
+            resourceManager.SetDi6Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 7)
+        {
+            resourceManager.SetDi7Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 8)
+        {
+            resourceManager.SetDi8Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 9)
+        {
+            resourceManager.SetDi9Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 10)
+        {
+            resourceManager.SetDo10Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 11)
+        {
+            resourceManager.SetDo11Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 12)
+        {
+            resourceManager.SetDo12Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 13)
+        {
+            resourceManager.SetDo13Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 14)
+        {
+            resourceManager.SetDo14Resources(resourcesAllocated);
+        }
+        else if (fieldNum == 15)
+        {
+            resourceManager.SetDo15Resources(resourcesAllocated);
         }
 
     }

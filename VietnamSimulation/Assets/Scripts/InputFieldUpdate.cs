@@ -58,21 +58,61 @@ public class InputFieldUpdate : MonoBehaviour
             {
                 resourceManager.SetM1Resources(resourcesAllocated);
             }
-            if (sliderNum == 2)
+            else if (sliderNum == 2)
             {
                 resourceManager.SetM2Resources(resourcesAllocated);
             }
-            if (sliderNum == 3)
+            else if (sliderNum == 3)
             {
                 resourceManager.SetM3Resources(resourcesAllocated);
             }
-            if (sliderNum == 4)
+            else if (sliderNum == 4)
             {
                 resourceManager.SetM4Resources(resourcesAllocated);
             }
-            if (sliderNum == 5)
+            else if (sliderNum == 5)
             {
                 resourceManager.SetM5Resources(resourcesAllocated);
+            }
+            else if (sliderNum == 6)
+            {
+                resourceManager.SetDi6Resources(resourcesAllocated);
+            }
+            else if (sliderNum == 7)
+            {
+                resourceManager.SetDi7Resources(resourcesAllocated);
+            }
+            else if (sliderNum == 8)
+            {
+                resourceManager.SetDi8Resources(resourcesAllocated);
+            }
+            else if (sliderNum == 9)
+            {
+                resourceManager.SetDi9Resources(resourcesAllocated);
+            }
+            else if (sliderNum == 10)
+            {
+                resourceManager.SetDo10Resources(resourcesAllocated);
+            }
+            else if (sliderNum == 11)
+            {
+                resourceManager.SetDo11Resources(resourcesAllocated);
+            }
+            else if (sliderNum == 12)
+            {
+                resourceManager.SetDo12Resources(resourcesAllocated);
+            }
+            else if (sliderNum == 13)
+            {
+                resourceManager.SetDo13Resources(resourcesAllocated);
+            }
+            else if (sliderNum == 14)
+            {
+                resourceManager.SetDo14Resources(resourcesAllocated);
+            }
+            else if (sliderNum == 15)
+            {
+                resourceManager.SetDo15Resources(resourcesAllocated);
             }
         }
     }
@@ -96,21 +136,61 @@ public class InputFieldUpdate : MonoBehaviour
         {
             resourceManager.SetM1Resources(resourcesAllocated);
         }
-        if (sliderNum == 2)
+        else if (sliderNum == 2)
         {
             resourceManager.SetM2Resources(resourcesAllocated);
         }
-        if (sliderNum == 3)
+        else if (sliderNum == 3)
         {
             resourceManager.SetM3Resources(resourcesAllocated);
         }
-        if (sliderNum == 4)
+        else if (sliderNum == 4)
         {
             resourceManager.SetM4Resources(resourcesAllocated);
         }
-        if (sliderNum == 5)
+        else if (sliderNum == 5)
         {
             resourceManager.SetM5Resources(resourcesAllocated);
+        }
+        else if (sliderNum == 6)
+        {
+            resourceManager.SetDi6Resources(resourcesAllocated);
+        }
+        else if (sliderNum == 7)
+        {
+            resourceManager.SetDi7Resources(resourcesAllocated);
+        }
+        else if (sliderNum == 8)
+        {
+            resourceManager.SetDi8Resources(resourcesAllocated);
+        }
+        else if (sliderNum == 9)
+        {
+            resourceManager.SetDi9Resources(resourcesAllocated);
+        }
+        else if (sliderNum == 10)
+        {
+            resourceManager.SetDo10Resources(resourcesAllocated);
+        }
+        else if (sliderNum == 11)
+        {
+            resourceManager.SetDo11Resources(resourcesAllocated);
+        }
+        else if (sliderNum == 12)
+        {
+            resourceManager.SetDo12Resources(resourcesAllocated);
+        }
+        else if (sliderNum == 13)
+        {
+            resourceManager.SetDo13Resources(resourcesAllocated);
+        }
+        else if (sliderNum == 14)
+        {
+            resourceManager.SetDo14Resources(resourcesAllocated);
+        }
+        else if (sliderNum == 15)
+        {
+            resourceManager.SetDo15Resources(resourcesAllocated);
         }
     }
 

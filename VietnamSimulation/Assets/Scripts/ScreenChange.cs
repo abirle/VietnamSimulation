@@ -15,7 +15,9 @@ public class ScreenChange : MonoBehaviour
     public GameObject resultsScreen;
     public GameObject corkboardScreen;
     public GameObject pauseScreen;
+
     public GameObject domesticScreen;
+    public GameObject typewriterScreen;
 
     public GameObject militaryAdvisor;
     public TMP_Text militaryAdvisorText;
@@ -46,6 +48,8 @@ public class ScreenChange : MonoBehaviour
     bool isFadingInOnCampaignOffice = false;
     bool isZoomingInOnPhone = false;
     bool isZoomingOutOnPhone = false;
+    bool isZoomingInOnTypewriter = false;
+    bool isZoomingOutOnTypewriter = false;
 
     Vector3 cameraCenter = new Vector3(1288, 725, -1500);
     Vector3 cameraMap = new Vector3(1283, 722, -1500);
@@ -53,6 +57,7 @@ public class ScreenChange : MonoBehaviour
     Vector3 cameraLedger = new Vector3((float)1297.2, 725, -1500);
     Vector3 cameraRadio = new Vector3((float)1286.74, (float)723.66, -1500);
     Vector3 cameraPhone = new Vector3((float)1290.33, (float)722.90, -1500);
+    Vector3 cameraTypewriter = new Vector3(1283, 722, -1500);
     
     float timeElapsed = 0f;
     float secondTimeElapsed = 0f;
@@ -84,6 +89,7 @@ public class ScreenChange : MonoBehaviour
         resultsScreen.SetActive(true);
         corkboardScreen.SetActive(true);
         domesticScreen.SetActive(true);
+        typewriterScreen.SetActive(true);
     }
 
 
@@ -98,6 +104,7 @@ public class ScreenChange : MonoBehaviour
         corkboardScreen.SetActive(false);
         pauseScreen.SetActive(false);
         domesticScreen.SetActive(false);
+        typewriterScreen.SetActive(false);
     }
 
 
@@ -434,6 +441,61 @@ void Update()
             }
         }
 
+        //FIXME
+
+        if (isZoomingInOnTypewriter)
+        {
+            timeElapsed += Time.deltaTime;
+            float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
+            float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
+
+            camera.transform.position = Vector3.Lerp(cameraCenter, cameraTypewriter, zoomProgress);
+            camera.orthographicSize = Mathf.Lerp(5, 2, zoomProgress);
+            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+
+            if (zoomProgress == 1f)
+            {
+                secondTimeElapsed += Time.deltaTime;
+                domesticScreen.SetActive(false);
+                typewriterScreen.SetActive(true);
+                camera.transform.position = cameraCenter;
+                camera.orthographicSize = 5;
+                float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
+                float extraTimeProgress = Mathf.Clamp01(secondTimeElapsed / (fadeInDuration + 1));
+                blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
+
+                if (extraTimeProgress == 1f)
+                {
+                    isZoomingInOnTypewriter = false;
+                    InputSystem.EnableDevice(Mouse.current);
+                }
+            }
+        }
+
+        else if (isZoomingOutOnTypewriter)
+        {
+            timeElapsed += Time.deltaTime;
+            float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
+            float extraTimeProgress = Mathf.Clamp01(timeElapsed / (fadeOutDuration + 1));
+            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+
+            if (extraTimeProgress == 1f)
+            {
+                camera.transform.position = cameraCenter;
+                secondTimeElapsed += Time.deltaTime;
+                typewriterScreen.SetActive(false);
+                domesticScreen.SetActive(true);
+                float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
+                blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
+
+                if (fadeInProgress == 1f)
+                {
+                    isZoomingOutOnTypewriter = false;
+                    InputSystem.EnableDevice(Mouse.current);
+                }
+            }
+        }
+
     }
 
 
@@ -629,6 +691,35 @@ void Update()
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
             isZoomingOutOnPhone = true;
+        }
+    }
+
+
+    public void TypewriterZoomIn()
+    {
+        if (!isZoomingInOnTypewriter)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingInOnTypewriter = true;
+        }
+    }
+
+    public void TypewriterZoomOut()
+    {
+        if (!isZoomingOutOnTypewriter)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingOutOnTypewriter = true;
         }
     }
 
