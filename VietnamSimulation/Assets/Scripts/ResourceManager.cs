@@ -4,6 +4,7 @@ using TMPro;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Audio.ProcessorInstance;
 
 
 public class ResourceManager : MonoBehaviour
@@ -54,18 +55,48 @@ public class ResourceManager : MonoBehaviour
     bool failureCalculatedM3 = false;
     bool failureCalculatedM4 = false;
     bool failureCalculatedM5 = false;
+    bool failureCalculatedDi6 = false;
+    bool failureCalculatedDi7 = false;
+    bool failureCalculatedDi8 = false;
+    bool failureCalculatedDi9 = false;
+    bool failureCalculatedDo10 = false;
+    bool failureCalculatedDo11 = false;
+    bool failureCalculatedDo12 = false;
+    bool failureCalculatedDo13 = false;
+    bool failureCalculatedDo14 = false;
+    bool failureCalculatedDo15 = false;
 
     bool successCalculatedM1 = false;
     bool successCalculatedM2 = false;
     bool successCalculatedM3 = false;
     bool successCalculatedM4 = false;
     bool successCalculatedM5 = false;
+    bool successCalculatedDi6 = false;
+    bool successCalculatedDi7 = false;
+    bool successCalculatedDi8 = false;
+    bool successCalculatedDi9 = false;
+    bool successCalculatedDo10 = false;
+    bool successCalculatedDo11 = false;
+    bool successCalculatedDo12 = false;
+    bool successCalculatedDo13 = false;
+    bool successCalculatedDo14 = false;
+    bool successCalculatedDo15 = false;
 
     bool deterioratingCalculatedM1 = false;
     bool deterioratingCalculatedM2 = false;
     bool deterioratingCalculatedM3 = false;
     bool deterioratingCalculatedM4 = false;
     bool deterioratingCalculatedM5 = false;
+    bool deterioratingCalculatedDi6 = false;
+    bool deterioratingCalculatedDi7 = false;
+    bool deterioratingCalculatedDi8 = false;
+    bool deterioratingCalculatedDi9 = false;
+    bool deterioratingCalculatedDo10 = false;
+    bool deterioratingCalculatedDo11 = false;
+    bool deterioratingCalculatedDo12 = false;
+    bool deterioratingCalculatedDo13 = false;
+    bool deterioratingCalculatedDo14 = false;
+    bool deterioratingCalculatedDo15 = false;
 
     public static int pointsInvestigated = 0;
     public static int pointsThreshold = 2;
@@ -166,10 +197,20 @@ public class ResourceManager : MonoBehaviour
     public void PrintResources()
     {
         Debug.Log("---RESOURCE STATUS--- M1: " + numM1Resources
-                + " M2: " + numM2Resources
-                + " M3: " + numM3Resources
-                + " M4: " + numM4Resources 
-                + " M5: " + numM5Resources);
+                                    + " M2: " + numM2Resources
+                                    + " M3: " + numM3Resources
+                                    + " M4: " + numM4Resources 
+                                    + " M5: " + numM5Resources
+                                    + " Di6: " + numDi6Resources
+                                    + " Di7: " + numDi7Resources
+                                    + " Di8: " + numDi8Resources
+                                    + " Di9: " + numDi9Resources
+                                    + " Do10: " + numDo10Resources
+                                    + " Do11: " + numDo11Resources
+                                    + " Do12: " + numDo12Resources
+                                    + " Do13: " + numDo13Resources
+                                    + " Do14: " + numDo14Resources
+                                    + " Do15: " + numDo15Resources);
     }
 
 
@@ -238,10 +279,142 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
+
+    public void SetDi6Resources(int resourcesUsed)
+    {
+        numDi6Resources = resourcesUsed;
+        ResourcesToText();
+
+        if (!hasClickedDi6)
+        {
+            hasClickedDi6 = true;
+            numSliders--;
+        }
+    }
+
+
+    public void SetDi7Resources(int resourcesUsed)
+    {
+        numDi7Resources = resourcesUsed;
+        ResourcesToText();
+
+        if (!hasClickedDi7)
+        {
+            hasClickedDi7 = true;
+            numSliders--;
+        }
+    }
+
+
+    public void SetDi8Resources(int resourcesUsed)
+    {
+        numDi8Resources = resourcesUsed;
+        ResourcesToText();
+
+        if (!hasClickedDi8)
+        {
+            hasClickedDi8 = true;
+            numSliders--;
+        }
+    }
+
+
+    public void SetDi9Resources(int resourcesUsed)
+    {
+        numDi9Resources = resourcesUsed;
+        ResourcesToText();
+
+        if (!hasClickedDi9)
+        {
+            hasClickedDi9 = true;
+            numSliders--;
+        }
+    }
+
+
+    public void SetDo10Resources(int resourcesUsed)
+    {
+        numDo10Resources = resourcesUsed;
+        ResourcesToText();
+
+        if (!hasClickedDo10)
+        {
+            hasClickedDo10 = true;
+            numSliders--;
+        }
+    }
+
+
+    public void SetDo11Resources(int resourcesUsed)
+    {
+        numDo11Resources = resourcesUsed;
+        ResourcesToText();
+
+        if (!hasClickedDo11)
+        {
+            hasClickedDo11 = true;
+            numSliders--;
+        }
+    }
+
+
+    public void SetDo12Resources(int resourcesUsed)
+    {
+        numDo12Resources = resourcesUsed;
+        ResourcesToText();
+
+        if (!hasClickedDo12)
+        {
+            hasClickedDo12 = true;
+            numSliders--;
+        }
+    }
+
+
+    public void SetDo13Resources(int resourcesUsed)
+    {
+        numDo13Resources = resourcesUsed;
+        ResourcesToText();
+
+        if (!hasClickedDo13)
+        {
+            hasClickedDo13 = true;
+            numSliders--;
+        }
+    }
+
+
+    public void SetDo14Resources(int resourcesUsed)
+    {
+        numDo14Resources = resourcesUsed;
+        ResourcesToText();
+
+        if (!hasClickedDo14)
+        {
+            hasClickedDo14 = true;
+            numSliders--;
+        }
+    }
+
+
+    public void SetDo15Resources(int resourcesUsed)
+    {
+        numDo15Resources = resourcesUsed;
+        ResourcesToText();
+
+        if (!hasClickedDo15)
+        {
+            hasClickedDo15 = true;
+            numSliders--;
+        }
+    }
+
+
+
+    //INTERDEPENDENCY CALCULATIONS
+
     public void CalculateResults()
     {
-        //INTERDEPENDENCY CALCULATIONS
-
         //MILITARY GOALS
 
         // Prevent a Communist takeover of South Vietnam
@@ -700,6 +873,95 @@ public class ResourceManager : MonoBehaviour
         //          success: +3 to #8; +3 to #9
         //          failure: -5 to #8
 
+        // Preserve American global credibility
+        if (numDi6Resources < 7)
+        {
+            //failure
+
+            if (!failureCalculatedDi6)
+            {
+                numDi8Resources -= 5;
+
+                Debug.Log("Di6 FAIL: Di8 -5");
+                PrintResources();
+
+                if (successCalculatedDi6)
+                {
+                    numDi8Resources -= 3;
+                    numDi9Resources -= 3;
+
+                    Debug.Log("*previous Di6 success fix; Di8 -3; Di9 -3");
+                    PrintResources();
+
+                }
+                failureCalculatedDi6 = true;
+                deterioratingCalculatedDi6 = false;
+                successCalculatedDi6 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else if (numDi6Resources < 15)
+        {
+            //situation deteriorating
+
+            if (!deterioratingCalculatedDi6)
+            {
+                Debug.Log("Di6 SITUATION DETERIORATING");
+                PrintResources();
+
+                if (successCalculatedDi6)
+                {
+                    numDi8Resources -= 3;
+                    numDi9Resources -= 3;
+
+                    Debug.Log("*previous Di6 success fix; Di8 -3; Di9 -3");
+                    PrintResources();
+
+                }
+                if (failureCalculatedDi6)
+                {
+                    numDi8Resources += 5;
+
+                    Debug.Log("*previous Di6 failure fix; Di8 +5");
+                    PrintResources();
+
+                }
+                deterioratingCalculatedDi6 = true;
+                failureCalculatedDi6 = false;
+                successCalculatedDi6 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else
+        {
+            //success
+
+            if (!successCalculatedDi6)
+            {
+                numDi8Resources += 3;
+                numDi9Resources += 3;
+
+                Debug.Log("Di6 SUCCESS: Di8 +3; Di9 +3");
+                PrintResources();
+
+                if (failureCalculatedDi6)
+                {
+                    numDi8Resources += 5;
+
+                    Debug.Log("*previous Di6 failure fix; Di8 +5"); 
+                    PrintResources();
+
+                }
+                successCalculatedDi6 = true;
+                deterioratingCalculatedDi6 = false;
+                failureCalculatedDi6 = false;
+                CalculateResults();
+                return;
+            }
+        }
+
 
         //Di7: Open peace negotiations with North Vietnam
         //  success: 20+
@@ -708,6 +970,95 @@ public class ResourceManager : MonoBehaviour
         //      interdependencies:
         //          success: +5 to #10; +3 to #6
         //          failure: -5 to #2
+
+        // Open peace negotiations with North Vietnam
+        if (numDi7Resources < 10)
+        {
+            //failure
+
+            if (!failureCalculatedDi7)
+            {
+                numM2Resources -= 5;
+
+                Debug.Log("Di7 FAIL: M2 -5");
+                PrintResources();
+
+                if (successCalculatedDi7)
+                {
+                    numDo10Resources -= 5;
+                    numDi6Resources -= 3;
+
+                    Debug.Log("*previous Di7 success fix; Do10 -5; Di6 -3");
+                    PrintResources();
+
+                }
+                failureCalculatedDi7 = true;
+                deterioratingCalculatedDi7 = false;
+                successCalculatedDi7 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else if (numDi7Resources < 20)
+        {
+            //situation deteriorating
+
+            if (!deterioratingCalculatedDi7)
+            {
+                Debug.Log("Di7 SITUATION DETERIORATING");
+                PrintResources();
+
+                if (successCalculatedDi7)
+                {
+                    numDo10Resources -= 5;
+                    numDi6Resources -= 3;
+
+                    Debug.Log("*previous Di7 success fix; Do10 -5; Di6 -3");
+                    PrintResources();
+
+                }
+                if (failureCalculatedDi7)
+                {
+                    numM2Resources += 5;
+
+                    Debug.Log("*previous Di7 failure fix; M2 +5");
+                    PrintResources();
+
+                }
+                deterioratingCalculatedDi7 = true;
+                failureCalculatedDi7 = false;
+                successCalculatedDi7 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else
+        {
+            //success
+
+            if (!successCalculatedDi7)
+            {
+                numDo10Resources += 5;
+                numDi6Resources += 3;
+
+                Debug.Log("Di7 SUCCESS: Di10 +5; Di6 +3");
+                PrintResources();
+
+                if (failureCalculatedDi7)
+                {
+                    numM2Resources += 5;
+
+                    Debug.Log("*previous Di7 failure fix; M2 +5");
+                    PrintResources();
+
+                }
+                successCalculatedDi7 = true;
+                deterioratingCalculatedDi7 = false;
+                failureCalculatedDi7 = false;
+                CalculateResults();
+                return;
+            }
+        }
 
 
         //Di8: Maintain allied support
@@ -718,6 +1069,92 @@ public class ResourceManager : MonoBehaviour
         //          success: +3 to #1
         //          failure: -5 to #6
 
+        // Maintain allied support
+        if (numDi8Resources < 7)
+        {
+            //failure
+
+            if (!failureCalculatedDi8)
+            {
+                numDi6Resources -= 5;
+
+                Debug.Log("Di8 FAIL: Di6 -5");
+                PrintResources();
+
+                if (successCalculatedDi8)
+                {
+                    numM1Resources -= 3;
+
+                    Debug.Log("*previous Di8 success fix; M1 -3");
+                    PrintResources();
+
+                }
+                failureCalculatedDi8 = true;
+                deterioratingCalculatedDi8 = false;
+                successCalculatedDi8 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else if (numDi8Resources < 15)
+        {
+            //situation deteriorating
+
+            if (!deterioratingCalculatedDi8)
+            {
+                Debug.Log("Di8 SITUATION DETERIORATING");
+                PrintResources();
+
+                if (successCalculatedDi8)
+                {
+                    numM1Resources -= 3;
+
+                    Debug.Log("*previous Di8 success fix; M1 -3");
+                    PrintResources();
+
+                }
+                if (failureCalculatedDi8)
+                {
+                    numDi6Resources += 5;
+
+                    Debug.Log("*previous Di8 failure fix; Di6 +5");
+                    PrintResources();
+
+                }
+                deterioratingCalculatedDi8 = true;
+                failureCalculatedDi8 = false;
+                successCalculatedDi8 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else
+        {
+            //success
+
+            if (!successCalculatedDi8)
+            {
+                numM1Resources += 3;
+
+                Debug.Log("Di8 SUCCESS: M1 +3");
+                PrintResources();
+
+                if (failureCalculatedDi8)
+                {
+                    numDi6Resources += 5;
+
+                    Debug.Log("*previous Di8 failure fix; Di6 +5");
+                    PrintResources();
+
+                }
+                successCalculatedDi8 = true;
+                deterioratingCalculatedDi8 = false;
+                failureCalculatedDi8 = false;
+                CalculateResults();
+                return;
+            }
+        }
+
 
         //Di9: Manage relations with the Soviet Union and China
         //  success: 20+
@@ -726,6 +1163,95 @@ public class ResourceManager : MonoBehaviour
         //      interdependencies:
         //          success: +3 to #6; +3 to #7
         //          failure: -5 to #2
+
+        // Manage relations with the Soviet Union and China
+        if (numDi9Resources < 10)
+        {
+            //failure
+
+            if (!failureCalculatedDi9)
+            {
+                numM2Resources -= 5;
+
+                Debug.Log("Di9 FAIL: M2 -5");
+                PrintResources();
+
+                if (successCalculatedDi9)
+                {
+                    numDi6Resources -= 3;
+                    numDi7Resources -= 3;
+
+                    Debug.Log("*previous Di9 success fix; Di6 -3; Di7 -3");
+                    PrintResources();
+
+                }
+                failureCalculatedDi9 = true;
+                deterioratingCalculatedDi9 = false;
+                successCalculatedDi9 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else if (numDi9Resources < 20)
+        {
+            //situation deteriorating
+
+            if (!deterioratingCalculatedDi9)
+            {
+                Debug.Log("Di9 SITUATION DETERIORATING");
+                PrintResources();
+
+                if (successCalculatedDi9)
+                {
+                    numDi6Resources -= 3;
+                    numDi7Resources -= 3;
+
+                    Debug.Log("*previous Di9 success fix; Di6 -3; Di7 -3");
+                    PrintResources();
+
+                }
+                if (failureCalculatedDi9)
+                {
+                    numM2Resources += 5;
+
+                    Debug.Log("*previous Di9 failure fix; M2 +5");
+                    PrintResources();
+
+                }
+                deterioratingCalculatedDi9 = true;
+                failureCalculatedDi9 = false;
+                successCalculatedDi9 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else
+        {
+            //success
+
+            if (!successCalculatedDi9)
+            {
+                numDi6Resources += 3;
+                numDi7Resources += 3;
+
+                Debug.Log("Di9 SUCCESS: Di6 +3; Di7 +3");
+                PrintResources();
+
+                if (failureCalculatedDi9)
+                {
+                    numM2Resources += 5;
+
+                    Debug.Log("*previous Di9 failure fix; M2 +5");
+                    PrintResources();
+
+                }
+                successCalculatedDi9 = true;
+                deterioratingCalculatedDi9 = false;
+                failureCalculatedDi9 = false;
+                CalculateResults();
+                return;
+            }
+        }
 
 
         //DOMESTIC GOALS
@@ -738,6 +1264,88 @@ public class ResourceManager : MonoBehaviour
         //          success: +3 to #12
         //          failure: -5 to #11
 
+        // Win the 1968 Presidential Election / Maintain Democratic party Unity
+        if (numDo10Resources < 12)
+        {
+            //failure
+
+            if (!failureCalculatedDo10)
+            {
+                numDo11Resources -= 5;
+
+                Debug.Log("Do10 FAIL: Do11 -5");
+                PrintResources();
+
+                if (successCalculatedDo10)
+                {
+                    numDo12Resources -= 3;
+
+                    Debug.Log("*previous Do10 success fix; Do12 -3");
+                    PrintResources();
+                }
+                failureCalculatedDo10 = true;
+                deterioratingCalculatedDo10 = false;
+                successCalculatedDo10 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else if (numDo10Resources < 25)
+        {
+            //situation deteriorating
+
+            if (!deterioratingCalculatedDo10)
+            {
+                Debug.Log("Do10: SITUATION DETERIORATING");
+                PrintResources();
+
+                if (successCalculatedDo10)
+                {
+                    numDo12Resources -= 3;
+
+                    Debug.Log("*previous Do10 success fix; Do12 -3");
+                    PrintResources();
+                }
+                if (failureCalculatedDo10)
+                {
+                    numDo11Resources += 5;
+
+                    Debug.Log("*previous Do10 failure fix; Do11 +5");
+                    PrintResources();
+                }
+                deterioratingCalculatedDo10 = true;
+                failureCalculatedDo10 = false;
+                successCalculatedDo10 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else
+        {
+            //success
+
+            if (!successCalculatedDo10)
+            {
+                numDo12Resources += 3;
+
+                Debug.Log("Do10 SUCCESS: Do12 +3");
+                PrintResources();
+
+                if (failureCalculatedDo10)
+                {
+                    numDo11Resources += 5;
+
+                    Debug.Log("*previous Do10 failure fix; Do11 +5");
+                    PrintResources();
+                }
+                successCalculatedDo10 = true;
+                deterioratingCalculatedDo10 = false;
+                failureCalculatedDo10 = false;
+                CalculateResults();
+                return;
+            }
+        }
+
 
         //Do11: Respond to growing antiwar movement and public opinion
         //  success: 20+
@@ -746,6 +1354,94 @@ public class ResourceManager : MonoBehaviour
         //      interdependencies:
         //          success: +5 to #12; +3 to #10
         //          failure: -5 to #5; -5 to #10
+
+        // Respond to growing antiwar movement and public opinion
+        if (numDo11Resources < 10)
+        {
+            //failure
+
+            if (!failureCalculatedDo11)
+            {
+                numM5Resources -= 5;
+                numDo10Resources -= 5;
+
+                Debug.Log("Do11 FAIL: M5 -5; Do10 -5");
+                PrintResources();
+
+                if (successCalculatedDo11)
+                {
+                    numDo12Resources -= 5;
+                    numDo10Resources -= 3;
+
+                    Debug.Log("*previous Do11 success fix; Do12 -5; Do10 -3");
+                    PrintResources();
+                }
+                failureCalculatedDo11 = true;
+                deterioratingCalculatedDo11 = false;
+                successCalculatedDo11 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else if (numDo11Resources < 25)
+        {
+            //situation deteriorating
+
+            if (!deterioratingCalculatedDo11)
+            {
+                Debug.Log("Do11: SITUATION DETERIORATING");
+                PrintResources();
+
+                if (successCalculatedDo11)
+                {
+                    numDo12Resources -= 5;
+                    numDo10Resources -= 3;
+
+                    Debug.Log("*previous Do11 success fix; Do12 -5; Do10 -3");
+                    PrintResources();
+                }
+                if (failureCalculatedDo11)
+                {
+                    numM5Resources += 5;
+                    numDo10Resources += 5;
+
+                    Debug.Log("*previous Do11 failure fix; M5 +5; Do10 +5");
+                    PrintResources();
+                }
+                deterioratingCalculatedDo11 = true;
+                failureCalculatedDo11 = false;
+                successCalculatedDo11 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else
+        {
+            //success
+
+            if (!successCalculatedDo11)
+            {
+                numDo12Resources += 5;
+                numDo10Resources += 3;
+
+                Debug.Log("Do11 SUCCESS: Do12 +5; Do10 +3");
+                PrintResources();
+
+                if (failureCalculatedDo11)
+                {
+                    numM5Resources += 5;
+                    numDo10Resources += 5;
+
+                    Debug.Log("*previous Do11 failure fix; M5 +5; Do10 +5");
+                    PrintResources();
+                }
+                successCalculatedDo11 = true;
+                deterioratingCalculatedDo11 = false;
+                failureCalculatedDo11 = false;
+                CalculateResults();
+                return;
+            }
+        }
 
 
         //Do12: Maintain confidence of Congress
@@ -756,6 +1452,88 @@ public class ResourceManager : MonoBehaviour
         //          success: +3 to #13
         //          failure: -5 to #1
 
+        // Maintain confidence of Congress
+        if (numDo12Resources < 7)
+        {
+            //failure
+
+            if (!failureCalculatedDo12)
+            {
+                numM1Resources -= 5;
+
+                Debug.Log("Do12 FAIL: M1 -5");
+                PrintResources();
+
+                if (successCalculatedDo12)
+                {
+                    numDo13Resources -= 3;
+
+                    Debug.Log("*previous Do12 success fix; Do13 -3");
+                    PrintResources();
+                }
+                failureCalculatedDo12 = true;
+                deterioratingCalculatedDo12 = false;
+                successCalculatedDo12 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else if (numDo12Resources < 15)
+        {
+            //situation deteriorating
+
+            if (!deterioratingCalculatedDo12)
+            {
+                Debug.Log("Do12: SITUATION DETERIORATING");
+                PrintResources();
+
+                if (successCalculatedDo12)
+                {
+                    numDo13Resources -= 3;
+
+                    Debug.Log("*previous Do12 success fix; Do13 -3");
+                    PrintResources();
+                }
+                if (failureCalculatedDo12)
+                {
+                    numM1Resources += 5;
+
+                    Debug.Log("*previous Do12 failure fix; M1 +5");
+                    PrintResources();
+                }
+                deterioratingCalculatedDo12 = true;
+                failureCalculatedDo12 = false;
+                successCalculatedDo12 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else
+        {
+            //success
+
+            if (!successCalculatedDo12)
+            {
+                numDo13Resources += 3;
+
+                Debug.Log("Do12 SUCCESS: Do13 +3");
+                PrintResources();
+
+                if (failureCalculatedDo12)
+                {
+                    numM1Resources += 5;
+
+                    Debug.Log("*previous Do12 failure fix; M1 +5");
+                    PrintResources();
+                }
+                successCalculatedDo12 = true;
+                deterioratingCalculatedDo12 = false;
+                failureCalculatedDo12 = false;
+                CalculateResults();
+                return;
+            }
+        }
+
 
         //Do13: Manage U.S. economy
         //  success: 20+
@@ -764,6 +1542,88 @@ public class ResourceManager : MonoBehaviour
         //      interdependencies:
         //          success: +3 to #14
         //          failure: -5 to #15
+
+        // Manage U.S. economy
+        if (numDo13Resources < 10)
+        {
+            //failure
+
+            if (!failureCalculatedDo13)
+            {
+                numDo15Resources -= 5;
+
+                Debug.Log("Do13 FAIL: Do15 -5");
+                PrintResources();
+
+                if (successCalculatedDo13)
+                {
+                    numDo14Resources -= 3;
+
+                    Debug.Log("*previous Do13 success fix; Do14 -3");
+                    PrintResources();
+                }
+                failureCalculatedDo13 = true;
+                deterioratingCalculatedDo13 = false;
+                successCalculatedDo13 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else if (numDo13Resources < 25)
+        {
+            //situation deteriorating
+
+            if (!deterioratingCalculatedDo13)
+            {
+                Debug.Log("Do13: SITUATION DETERIORATING");
+                PrintResources();
+
+                if (successCalculatedDo13)
+                {
+                    numDo14Resources -= 3;
+
+                    Debug.Log("*previous Do13 success fix; Do14 -3");
+                    PrintResources();
+                }
+                if (failureCalculatedDo13)
+                {
+                    numDo15Resources += 5;
+
+                    Debug.Log("*previous Do13 failure fix; Do15 +5");
+                    PrintResources();
+                }
+                deterioratingCalculatedDo13 = true;
+                failureCalculatedDo13 = false;
+                successCalculatedDo13 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else
+        {
+            //success
+
+            if (!successCalculatedDo13)
+            {
+                numDo14Resources += 3;
+
+                Debug.Log("Do13 SUCCESS: Do14 +3");
+                PrintResources();
+
+                if (failureCalculatedDo13)
+                {
+                    numDo15Resources += 5;
+
+                    Debug.Log("*previous Do13 failure fix; Do15 +5");
+                    PrintResources();
+                }
+                successCalculatedDo13 = true;
+                deterioratingCalculatedDo13 = false;
+                failureCalculatedDo13 = false;
+                CalculateResults();
+                return;
+            }
+        }
 
 
         //Do14: Preserve Johnson's domestic "Great Society" programs
@@ -774,6 +1634,88 @@ public class ResourceManager : MonoBehaviour
         //          success: +3 to #15
         //          failure: -5 to #13
 
+        // Preserve Johnson's domestic "Great Society" programs
+        if (numDo14Resources < 10)
+        {
+            //failure
+
+            if (!failureCalculatedDo14)
+            {
+                numDo13Resources -= 5;
+
+                Debug.Log("Do14 FAIL: Do13 -5");
+                PrintResources();
+
+                if (successCalculatedDo14)
+                {
+                    numDo15Resources -= 3;
+
+                    Debug.Log("*previous Do14 success fix; Do15 -3");
+                    PrintResources();
+                }
+                failureCalculatedDo14 = true;
+                deterioratingCalculatedDo14 = false;
+                successCalculatedDo14 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else if (numDo14Resources < 25)
+        {
+            //situation deteriorating
+
+            if (!deterioratingCalculatedDo14)
+            {
+                Debug.Log("Do14: SITUATION DETERIORATING");
+                PrintResources();
+
+                if (successCalculatedDo14)
+                {
+                    numDo15Resources -= 3;
+
+                    Debug.Log("*previous Do14 success fix; Do15 -3");
+                    PrintResources();
+                }
+                if (failureCalculatedDo14)
+                {
+                    numDo13Resources += 5;
+
+                    Debug.Log("*previous Do14 failure fix; Do13 +5");
+                    PrintResources();
+                }
+                deterioratingCalculatedDo14 = true;
+                failureCalculatedDo14 = false;
+                successCalculatedDo14 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else
+        {
+            //success
+
+            if (!successCalculatedDo14)
+            {
+                numDo15Resources += 3;
+
+                Debug.Log("Do14 SUCCESS: Do15 +3");
+                PrintResources();
+
+                if (failureCalculatedDo14)
+                {
+                    numDo13Resources += 5;
+
+                    Debug.Log("*previous Do14 failure fix; Do13 +5");
+                    PrintResources();
+                }
+                successCalculatedDo14 = true;
+                deterioratingCalculatedDo14 = false;
+                failureCalculatedDo14 = false;
+                CalculateResults();
+                return;
+            }
+        }
+
 
         //Do15: Handle civil rights and urban unrest
         //  success: 15+
@@ -783,13 +1725,95 @@ public class ResourceManager : MonoBehaviour
         //          success: +3 to #11
         //          failure: -5 to #10
 
+        // Handle civil rights and urban unrest
+        if (numDo15Resources < 7)
+        {
+            //failure
+
+            if (!failureCalculatedDo15)
+            {
+                numDo10Resources -= 5;
+
+                Debug.Log("Do15 FAIL: Do10 -5");
+                PrintResources();
+
+                if (successCalculatedDo15)
+                {
+                    numDo11Resources -= 3;
+
+                    Debug.Log("*previous Do15 success fix; Do11 -3");
+                    PrintResources();
+                }
+                failureCalculatedDo15 = true;
+                deterioratingCalculatedDo15 = false;
+                successCalculatedDo15 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else if (numDo15Resources < 15)
+        {
+            //situation deteriorating
+
+            if (!deterioratingCalculatedDo15)
+            {
+                Debug.Log("Do15: SITUATION DETERIORATING");
+                PrintResources();
+
+                if (successCalculatedDo15)
+                {
+                    numDo11Resources -= 3;
+
+                    Debug.Log("*previous Do15 success fix; Do11 -3");
+                    PrintResources();
+                }
+                if (failureCalculatedDo15)
+                {
+                    numDo10Resources += 5;
+
+                    Debug.Log("*previous Do15 failure fix; Do10 +5");
+                    PrintResources();
+                }
+                deterioratingCalculatedDo15 = true;
+                failureCalculatedDo15 = false;
+                successCalculatedDo15 = false;
+                CalculateResults();
+                return;
+            }
+        }
+        else
+        {
+            //success
+
+            if (!successCalculatedDo15)
+            {
+                numDo11Resources += 3;
+
+                Debug.Log("Do15 SUCCESS: Do11 +3");
+                PrintResources();
+
+                if (failureCalculatedDo15)
+                {
+                    numDo10Resources += 5;
+
+                    Debug.Log("*previous Do15 failure fix; Do10 +5");
+                    PrintResources();
+                }
+                successCalculatedDo15 = true;
+                deterioratingCalculatedDo15 = false;
+                failureCalculatedDo15 = false;
+                CalculateResults();
+                return;
+            }
+        }
 
 
         return;
     }
 
 
-    //Outcomes of calculations
+
+    //CALCULATION OUTCOMES
 
     public void FinalizeResults()
     {
@@ -863,6 +1887,207 @@ public class ResourceManager : MonoBehaviour
             resultsText.text += " M5: success - " + numM5Resources;
         }
 
+
+        //Di6: Preserve American global credibility
+        //  success: 15+
+        //  situation deteriorating: 7-14
+        //  failure: <7
+
+        // Preserve American global credibility
+        if (numDi6Resources < 7)
+        {
+            resultsText.text += " Di6: failure - " + numDi6Resources;
+        }
+        else if (numDi6Resources < 15)
+        {
+            resultsText.text += " Di6: situation deteriorating - " + numDi6Resources;
+        }
+        else
+        {
+            resultsText.text += " Di6: success - " + numDi6Resources;
+        }
+
+
+        //Di7: Open peace negotiations with North Vietnam
+        //  success: 20+
+        //  situation deteriorating: 10-19
+        //  failure: <10
+
+        // Open peace negotiations with North Vietnam
+        if (numDi7Resources < 10)
+        {
+            resultsText.text += " Di7: failure - " + numDi7Resources;
+        }
+        else if (numDi7Resources < 20)
+        {
+            resultsText.text += " Di7: situation deteriorating - " + numDi7Resources;
+        }
+        else
+        {
+            resultsText.text += " Di7: success - " + numDi7Resources;
+        }
+
+
+        //Di8: Maintain allied support
+        //  success: 15+
+        //  situation deteriorating: 7-14
+        //  failure: <7
+
+        // Maintain allied support
+        if (numDi8Resources < 7)
+        {
+            resultsText.text += " Di8: failure - " + numDi8Resources;
+        }
+        else if (numDi8Resources < 15)
+        {
+            resultsText.text += " Di8: situation deteriorating - " + numDi8Resources;
+        }
+        else
+        {
+            resultsText.text += " Di8: success - " + numDi8Resources;
+        }
+
+
+        //Di9: Manage relations with the Soviet Union and China
+        //  success: 20+
+        //  situation deteriorating: 10-19
+        //  failure: <10
+
+        // Manage relations with the Soviet Union and China
+        if (numDi9Resources < 10)
+        {
+            resultsText.text += " Di9: failure - " + numDi9Resources;
+        }
+        else if (numDi9Resources < 20)
+        {
+            resultsText.text += " Di9: situation deteriorating - " + numDi9Resources;
+        }
+        else
+        {
+            resultsText.text += " Di9: success - " + numDi9Resources;
+        }
+
+
+        //Do10: Win the 1968 Presidential Election / Maintain Democratic party Unity
+        //  success: 25+
+        //  situation deteriorating: 12-24
+        //  failure: <12
+
+        // Win the 1968 Presidential Election / Maintain Democratic party Unity
+        if (numDo10Resources < 12)
+        {
+            resultsText.text += " Do10: failure - " + numDo10Resources;
+        }
+        else if (numDo10Resources < 25)
+        {
+            resultsText.text += " Do10: situation deteriorating - " + numDo10Resources;
+        }
+        else
+        {
+            resultsText.text += " Do10: success - " + numDo10Resources;
+        }
+
+
+        //Do11: Respond to growing antiwar movement and public opinion
+        //  success: 20+
+        //  situation deteriorating: 10-19
+        //  failure: <10
+
+        // Respond to growing antiwar movement and public opinion
+        if (numDo11Resources < 10)
+        {
+            resultsText.text += " Do11: failure - " + numDo11Resources;
+        }
+        else if (numDo11Resources < 20)
+        {
+            resultsText.text += " Do11: situation deteriorating - " + numDo11Resources;
+        }
+        else
+        {
+            resultsText.text += " Do11: success - " + numDo11Resources;
+        }
+
+        //Do12: Maintain confidence of Congress
+        //  success: 15+
+        //  situation deteriorating: 7-14
+        //  failure: <7
+
+        // Maintain confidence of Congress
+        if (numDo12Resources < 7)
+        {
+            resultsText.text += " Do12: failure - " + numDo12Resources;
+        }
+        else if (numDo12Resources < 15)
+        {
+            resultsText.text += " Do12: situation deteriorating - " + numDo12Resources;
+        }
+        else
+        {
+            resultsText.text += " Do12: success - " + numDo12Resources;
+        }
+
+
+        //Do13: Manage U.S. economy
+        //  success: 20+
+        //  situation deteriorating: 10-19
+        //  failure: <10
+
+        // Manage U.S. economy
+        if (numDo13Resources < 10)
+        {
+            resultsText.text += " Do13: failure - " + numDo13Resources;
+        }
+        else if (numDo13Resources < 20)
+        {
+            resultsText.text += " Do13: situation deteriorating - " + numDo13Resources;
+        }
+        else
+        {
+            resultsText.text += " Do13: success - " + numDo13Resources;
+        }
+
+
+        //Do14: Preserve Johnson's domestic "Great Society" programs
+        //  success: 20+
+        //  situation deteriorating: 10-19
+        //  failure: <10
+
+        // Preserve Johnson's domestic "Great Society" programs
+        if (numDo14Resources < 10)
+        {
+            resultsText.text += " Do14: failure - " + numDo14Resources;
+        }
+        else if (numDo14Resources < 20)
+        {
+            resultsText.text += " Do14: situation deteriorating - " + numDo14Resources;
+        }
+        else
+        {
+            resultsText.text += " Do14: success - " + numDo14Resources;
+        }
+
+
+        //Do15: Handle civil rights and urban unrest
+        //  success: 15+
+        //  situation deteriorating: 7-14
+        //  failure: <7
+
+        // Preserve Johnson's domestic "Great Society" programs
+        if (numDo15Resources < 7)
+        {
+            resultsText.text += " Do15: failure - " + numDo15Resources;
+        }
+        else if (numDo15Resources < 15)
+        {
+            resultsText.text += " Do15: situation deteriorating - " + numDo15Resources;
+        }
+        else
+        {
+            resultsText.text += " Do15: success - " + numDo15Resources;
+        }
+
+
+
         int militaryResources = numM1Resources + numM2Resources + numM3Resources + numM4Resources + numM5Resources;
 
         if (militaryResources > 70)
@@ -875,7 +2100,5 @@ public class ResourceManager : MonoBehaviour
         }
 
     }
-
-
 
 }

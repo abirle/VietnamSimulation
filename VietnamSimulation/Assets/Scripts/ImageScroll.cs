@@ -23,7 +23,7 @@ public class ImageScroll : MonoBehaviour
     Vector3 oldScale = new Vector3(oldScaleFactor, oldScaleFactor, oldScaleFactor);
     static float scaleFactor = 1.1f;
     Vector3 newScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
-    static float scaleSpeed = 0.002f;
+    static float scaleSpeed = 0.005f;
     Vector3 scaleIncrement = new Vector3(scaleSpeed, scaleSpeed, scaleSpeed);
 
 
