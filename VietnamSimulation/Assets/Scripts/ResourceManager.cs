@@ -50,7 +50,7 @@ public class ResourceManager : MonoBehaviour
     bool hasClickedDo14 = false;
     bool hasClickedDo15 = false;
 
-    bool failureCalculatedM1 = false;
+    public static bool failureCalculatedM1 = false;
     bool failureCalculatedM2 = false;
     bool failureCalculatedM3 = false;
     bool failureCalculatedM4 = false;
@@ -66,9 +66,9 @@ public class ResourceManager : MonoBehaviour
     bool failureCalculatedDo14 = false;
     bool failureCalculatedDo15 = false;
 
-    bool successCalculatedM1 = false;
-    bool successCalculatedM2 = false;
-    bool successCalculatedM3 = false;
+    public static bool successCalculatedM1 = false;
+    public static bool successCalculatedM2 = false;
+    public static bool successCalculatedM3 = false;
     bool successCalculatedM4 = false;
     bool successCalculatedM5 = false;
     bool successCalculatedDi6 = false;
@@ -82,7 +82,7 @@ public class ResourceManager : MonoBehaviour
     bool successCalculatedDo14 = false;
     bool successCalculatedDo15 = false;
 
-    bool deterioratingCalculatedM1 = false;
+    public static bool deterioratingCalculatedM1 = false;
     bool deterioratingCalculatedM2 = false;
     bool deterioratingCalculatedM3 = false;
     bool deterioratingCalculatedM4 = false;
