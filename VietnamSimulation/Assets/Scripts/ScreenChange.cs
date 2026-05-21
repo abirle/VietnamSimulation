@@ -1,9 +1,14 @@
+using Mono.Cecil;
+using System;
 using System.Resources;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
 using UnityEngine.UI;
+using static UnityEngine.LowLevelPhysics2D.PhysicsShape;
 
 public class ScreenChange : MonoBehaviour
 {
@@ -72,6 +77,12 @@ public class ScreenChange : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip transitionSound;
     public AudioClip writingSound;
+
+    public AudioClip militaryIntro01;
+    bool listeningToMilitaryIntro01 = false;
+    public Button militaryContinueButton;
+
+    public AudioClip militaryQuestionIntro;
 
     bool hasEnteredWarRoom = false;
     bool hasEnteredCampaignOffice = false;
@@ -269,6 +280,7 @@ void Update()
                 resourceManager.militaryAdvisorAvailable = false;
                 resourceManager.radioNotification.SetActive(false);
                 isZoomingInOnRadio = false;
+                audioSource.PlayOneShot(militaryQuestionIntro);
                 InputSystem.EnableDevice(Mouse.current);
             }
         }
@@ -319,6 +331,11 @@ void Update()
 
                     militaryAdvisor.SetActive(true);
                     hasEnteredWarRoom = true;
+                    if (!viewingResults)
+                    {
+                        audioSource.PlayOneShot(militaryIntro01);
+                        listeningToMilitaryIntro01 = true;
+                    }
                 }
 
                 secondTimeElapsed += Time.deltaTime;
@@ -496,6 +513,19 @@ void Update()
             }
         }
 
+        else if (listeningToMilitaryIntro01)
+        {
+            timeElapsed += Time.deltaTime;
+            InputSystem.DisableDevice(Mouse.current);
+
+            if (timeElapsed >= 41)
+            {
+                militaryContinueButton.interactable = true;
+                listeningToMilitaryIntro01 = false;
+                InputSystem.EnableDevice(Mouse.current);
+            }
+        }
+
     }
 
 
@@ -609,6 +639,8 @@ void Update()
             InputSystem.DisableDevice(Mouse.current);
 
             audioSource.PlayOneShot(transitionSound);
+
+            militaryCloseButton.GetComponent<Button>().interactable = false;
 
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
@@ -761,7 +793,19 @@ void Update()
         }
         else if (numResultsViewed == 1) 
         {
-            militaryAdvisorText.text = "second advisor message";
+            if (ResourceManager.successCalculatedM1)
+            {
+                militaryAdvisorText.text = "I believe the resource commitment here has been, at least under the present circumstances, the right call. U.S.and ARVN forces are holding the major cities. The countryside is still contested, but it remains under government control. The Viet Cong took heavy losses during Tet, and Hanoi has not been able to achieve a decisive breakthrough. Our credibility with our allies is intact, and South Vietnam continues to function as a state.Now, I want to be clear: the cost has been immense.Troop levels are up, casualties are significant, and this war is far from over.But the central objective — preventing a communist takeover — has held. That is the foundation everything else sits on.";
+            }
+            else if (ResourceManager.deterioratingCalculatedM1)
+            {
+                militaryAdvisorText.text = "I have to be direct with you. South Vietnam is surviving, but only barely, and that is not a position I'm comfortable reporting. The Viet Cong and North Vietnamese forces have infiltrated much of the countryside. The ARVN is struggling to maintain control outside the cities. Pacification programs are collapsing in rural areas, and refugees are flooding into Saigon and the urban centers. I believe I'm correct in saying that international observers now see a government that is formally in power but effectively besieged. We have prevented total collapse — for now. But this situation cannot hold. Allies are beginning to question our staying power, and I would tell you that the resources allocated here were not sufficient for what we are facing. This is a very serious problem, and it is getting worse.\r\n";
+            }
+            else
+            {
+                militaryAdvisorText.text = "Let me be absolutely clear on what has happened here. South Vietnam is disintegrating. Communist forces, emboldened by their battlefield gains, have overrun large parts of the countryside and are moving on the major cities. The Thieu government is on the edge of collapse — it cannot inspire loyalty, it cannot command its own security forces, and it cannot govern. We are now confronting what I would have considered, six months ago, unthinkable: after everything this country has invested — the troops, the resources, the lives — we are facing the prospect of outright defeat. And I will tell you something else: this does not stay in Vietnam. The fall of South Vietnam is triggering a crisis of credibility across the globe. Every ally we have is watching, and every adversary is taking note. The resources committed to this objective were wholly inadequate, and the consequences of that decision are now playing out in front of us.";
+            }
+            //militaryAdvisorText.text = "second advisor message";
         }
         else if (numResultsViewed == 2)
         {
