@@ -14,6 +14,8 @@ public class IntroSkip : MonoBehaviour
     public TMP_Text introText;
     public AudioSource audioSource;
     public AudioClip[] introClips;
+    public AudioClip radioCrackle;
+    bool radioCrackling = false;
 
     public GameObject closeButton;
     public GameObject nextButton;
@@ -28,29 +30,51 @@ public class IntroSkip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (radioCrackling)
+        {
+            timeElapsed += Time.deltaTime;
+
+            if (timeElapsed >= 1)
+            {
+                if (numClicked == 1)
+                {
+                    audioSource.PlayOneShot(introClips[0]);
+                }
+                else if (numClicked == 2)
+                {
+                    audioSource.PlayOneShot(introClips[1]);
+                }
+
+                listening = true;
+                radioCrackling = false;
+            }
+        }
+
         if (listening)
         {
             if (numClicked == 1)
             {
                 timeElapsed += Time.deltaTime;
 
-                if (timeElapsed >= 40)
+                if (timeElapsed >= 41)
                 {
                     nextButton.GetComponent<Button>().interactable = true;
                     listening = false;
                     InputSystem.EnableDevice(Mouse.current);
+                    audioSource.PlayOneShot(radioCrackle);
+
                 }
             }
             else if (numClicked == 2)
             {
                 timeElapsed += Time.deltaTime;
 
-                if (timeElapsed >= 38)
+                if (timeElapsed >= 31)
                 {
                     closeButton.GetComponent<Button>().interactable = true;
                     listening = false;
                     InputSystem.EnableDevice(Mouse.current);
-
+                    audioSource.PlayOneShot(radioCrackle);
                 }
             }
         }
@@ -63,24 +87,24 @@ public class IntroSkip : MonoBehaviour
             if (numClicked == 0)
             {
                 introText.text = "Now, in the countryside, the situation is, if anything, worse. The pacification programs are faltering. Strategic hamlets that were meant to protect local populations and isolate the Viet Cong — many of them have been abandoned or overrun. South Vietnamese units, in several provinces, are refusing to fight. Corruption in the government out there continues to undermine every effort to provide security and basic services. Our commanders are dealing with three problems at once: protecting their own troops, coordinating air and ground operations, and keeping supply lines open under conditions that are more difficult than we have publicly acknowledged.";
-                audioSource.PlayOneShot(introClips[0]);
+                audioSource.PlayOneShot(radioCrackle);
                 numClicked++;
                 nextButton.GetComponent<Button>().interactable = false;
                 timeElapsed = 0;
-                listening = true;
+                radioCrackling = true;
                 InputSystem.DisableDevice(Mouse.current);
 
             }
             else if (numClicked == 1) 
             {
                 introText.text = "I understand there are other demands on your resources. The diplomatic situation, the domestic picture — I'm not going to tell you those don't matter. But at least under the present circumstances, everything depends on what happens on the ground. It's always a balancing of gains and losses, and I will tell you plainly: if we do not hold the military position in Vietnam, our present target policies — diplomatic, domestic, all of it — fall apart. There is no negotiation from weakness. There is no domestic agenda that survives a collapse out there.\r\n\nThat's the situation. Think carefully about where these resources go.";
-                audioSource.PlayOneShot(introClips[1]);
+                audioSource.PlayOneShot(radioCrackle);
                 numClicked++;
                 nextButton.SetActive(false);
                 closeButton.SetActive(true);
                 closeButton.GetComponent<Button>().interactable = false;
                 timeElapsed = 0;
-                listening = true;
+                radioCrackling = true;
                 InputSystem.DisableDevice(Mouse.current);
 
             }

@@ -20,6 +20,7 @@ public class ScreenChange : MonoBehaviour
     public GameObject resultsScreen;
     public GameObject corkboardScreen;
     public GameObject pauseScreen;
+    public GameObject televisionScreen;
 
     public GameObject domesticScreen;
     public GameObject typewriterScreen;
@@ -55,6 +56,9 @@ public class ScreenChange : MonoBehaviour
     bool isZoomingOutOnPhone = false;
     bool isZoomingInOnTypewriter = false;
     bool isZoomingOutOnTypewriter = false;
+    bool isZoomingInOnTelevision = false;
+    bool isZoomingOutOnTelevision = false;
+
 
     Vector3 cameraCenter = new Vector3(1288, 725, -1500);
     Vector3 cameraMap = new Vector3(1283, 722, -1500);
@@ -63,7 +67,8 @@ public class ScreenChange : MonoBehaviour
     Vector3 cameraRadio = new Vector3((float)1286.74, (float)723.66, -1500);
     Vector3 cameraPhone = new Vector3((float)1290.33, (float)722.90, -1500);
     Vector3 cameraTypewriter = new Vector3(1283, 722, -1500);
-    
+    Vector3 cameraTelevision = new Vector3((float)1290.33, (float)722.90, -1500);
+
     float timeElapsed = 0f;
     float secondTimeElapsed = 0f;
     float zoomDuration = 2f;
@@ -83,6 +88,9 @@ public class ScreenChange : MonoBehaviour
     public Button militaryContinueButton;
 
     public AudioClip militaryQuestionIntro;
+    public AudioClip radioCrackle;
+    public AudioClip tvStatic;
+    bool radioCrackling;
 
     bool hasEnteredWarRoom = false;
     bool hasEnteredCampaignOffice = false;
@@ -101,6 +109,7 @@ public class ScreenChange : MonoBehaviour
         corkboardScreen.SetActive(true);
         domesticScreen.SetActive(true);
         typewriterScreen.SetActive(true);
+        televisionScreen.SetActive(true);
     }
 
 
@@ -116,6 +125,8 @@ public class ScreenChange : MonoBehaviour
         pauseScreen.SetActive(false);
         domesticScreen.SetActive(false);
         typewriterScreen.SetActive(false);
+        televisionScreen.SetActive(false);
+
     }
 
 
@@ -331,11 +342,7 @@ void Update()
 
                     militaryAdvisor.SetActive(true);
                     hasEnteredWarRoom = true;
-                    if (!viewingResults)
-                    {
-                        audioSource.PlayOneShot(militaryIntro01);
-                        listeningToMilitaryIntro01 = true;
-                    }
+
                 }
 
                 secondTimeElapsed += Time.deltaTime;
@@ -348,6 +355,13 @@ void Update()
                 {
                     isFadingInOnWarRoom = false;
                     InputSystem.EnableDevice(Mouse.current);
+
+                    if (camera.orthographicSize == (float)1.5)
+                    {
+                        audioSource.PlayOneShot(radioCrackle);
+                        radioCrackling = true;
+                        timeElapsed = 0;
+                    }
                 }
             }
 
@@ -513,16 +527,86 @@ void Update()
             }
         }
 
+        //FIXME
+
+        else if (isZoomingInOnTelevision)
+        {
+            timeElapsed += Time.deltaTime;
+            float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
+            float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
+            camera.transform.position = Vector3.Lerp(cameraCenter, cameraTelevision, zoomProgress);
+            camera.orthographicSize = Mathf.Lerp(5, 2, zoomProgress);
+            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+
+            if (zoomProgress == 1f)
+            {
+                secondTimeElapsed += Time.deltaTime;
+                domesticScreen.SetActive(false);
+                televisionScreen.SetActive(true);
+                camera.transform.position = cameraCenter;
+                camera.orthographicSize = 5;
+                float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
+                float extraTimeProgress = Mathf.Clamp01(secondTimeElapsed / (fadeInDuration + 1));
+                blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
+
+                if (extraTimeProgress == 1f)
+                {
+                    isZoomingInOnTelevision = false;
+                    InputSystem.EnableDevice(Mouse.current);
+                }
+            }
+        }
+
+        else if (isZoomingOutOnTelevision)
+        {
+            timeElapsed += Time.deltaTime;
+            float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
+            float extraTimeProgress = Mathf.Clamp01(timeElapsed / (fadeOutDuration + 1));
+            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+
+            if (extraTimeProgress == 1f)
+            {
+                secondTimeElapsed += Time.deltaTime;
+                televisionScreen.SetActive(false);
+                domesticScreen.SetActive(true);
+                float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
+                blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
+
+                if (fadeInProgress == 1f)
+                {
+                    isZoomingOutOnTelevision = false;
+                    InputSystem.EnableDevice(Mouse.current);
+                }
+            }
+        }
+
+
+
+        else if (radioCrackling)
+        {
+            timeElapsed += Time.deltaTime;
+
+            if (timeElapsed >= 1)
+            {
+                radioCrackling = false;
+                audioSource.PlayOneShot(militaryIntro01);
+                listeningToMilitaryIntro01 = true;
+                timeElapsed = 0;
+            }
+        }
+
         else if (listeningToMilitaryIntro01)
         {
             timeElapsed += Time.deltaTime;
             InputSystem.DisableDevice(Mouse.current);
 
-            if (timeElapsed >= 41)
+            if (timeElapsed >= 42)
             {
                 militaryContinueButton.interactable = true;
                 listeningToMilitaryIntro01 = false;
                 InputSystem.EnableDevice(Mouse.current);
+                audioSource.PlayOneShot(radioCrackle);
+
             }
         }
 
@@ -752,6 +836,34 @@ void Update()
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
             isZoomingOutOnTypewriter = true;
+        }
+    }
+
+    public void TelevisionZoomIn()
+    {
+        if (!isZoomingInOnTelevision)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(tvStatic);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingInOnTelevision = true;
+        }
+    }
+
+    public void TelevisionZoomOut()
+    {
+        if (!isZoomingOutOnTelevision)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(tvStatic);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingOutOnTelevision = true;
         }
     }
 
