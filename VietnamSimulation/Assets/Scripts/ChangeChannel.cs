@@ -22,7 +22,8 @@ public class ChangeChannel : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        channels[0].GetComponent<RawImage>().enabled = true;
+        channels[1].GetComponent<RawImage>().enabled = false;
     }
 
     // Update is called once per frame
