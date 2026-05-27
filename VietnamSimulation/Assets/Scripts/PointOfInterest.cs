@@ -6,13 +6,16 @@ using UnityEngine.UI;
 
 public class PointOfInterest : MonoBehaviour
 {
-    public Button poiButton01;
-    public GameObject poiText01; 
+    public Button poiButton;
+    //public GameObject poiText; 
     public GameObject poiImage01;
+    public GameObject poiImage02;
     public GameObject poiCloseButton;
+    public GameObject poiShiftButtons;
+    public GameObject buttonBlock;
 
-    public Sprite originalImage;
-    public Sprite newImage;
+    //public Sprite originalImage;
+    //public Sprite newImage;
 
     public Material glowMaterial;
 
@@ -56,29 +59,49 @@ public class PointOfInterest : MonoBehaviour
             }
             audioSource.PlayOneShot(openSound);
 
-            poiText01.SetActive(true);
+            //poiText.SetActive(true);
             poiImage01.SetActive(true);
             poiCloseButton.SetActive(true);
-            poiButton01.image.sprite = newImage;
-            poiButton01.GetComponent<Image>().material = null;
+            poiShiftButtons.SetActive(true);
+            buttonBlock.SetActive(true);
+            //poiButton.image.sprite = newImage;
+            poiButton.GetComponent<Image>().material = null;
 
             poiClicked = true;
         }
 
     }
 
+    public void POINext()
+    {
+        audioSource.PlayOneShot(openSound);
+
+        poiImage01.SetActive(false);
+        poiImage02.SetActive(true);
+    }
+
+    public void POIPrevious()
+    {
+        audioSource.PlayOneShot(closeSound);
+
+        poiImage02.SetActive(false);
+        poiImage01.SetActive(true);
+    }
 
     public void PointofInterestClose()
     {
         audioSource.PlayOneShot(closeSound);
 
-        poiButton01.image.sprite = originalImage;
+        //poiButton.image.sprite = originalImage;
 
         poiClicked = false;
 
-        poiText01.SetActive(false);
+        //poiText.SetActive(false);
         poiImage01.SetActive(false);
+        poiImage02.SetActive(false);
         poiCloseButton.SetActive(false);
+        poiShiftButtons.SetActive(false);
+        buttonBlock.SetActive(false);
 
     }
 
@@ -87,14 +110,14 @@ public class PointOfInterest : MonoBehaviour
     {
         if (!poiClicked)
         {
-            poiButton01.GetComponent<Image>().material = glowMaterial;
+            poiButton.GetComponent<Image>().material = glowMaterial;
         }
 
     }
 
     public void Unhovered()
     {
-        poiButton01.GetComponent<Image>().material = null;
+        poiButton.GetComponent<Image>().material = null;
 
     }
 
