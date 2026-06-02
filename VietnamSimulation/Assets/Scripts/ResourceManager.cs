@@ -10,6 +10,7 @@ using static UnityEngine.Audio.ProcessorInstance;
 public class ResourceManager : MonoBehaviour
 {
     public TMP_Text resourceNumberText;
+    public TMP_Text lobbyResourceText;
     public TMP_Text whatsLeftText;
     public TMP_Text resultsText;
 
@@ -98,15 +99,23 @@ public class ResourceManager : MonoBehaviour
     public static bool deterioratingCalculatedDo14 = false;
     public static bool deterioratingCalculatedDo15 = false;
 
-    public static int pointsInvestigated = 0;
-    public static int pointsThreshold = 5;
+    public static int militaryPointsInvestigated = 0;
+    public static int militaryPointsThreshold = 11;
     public GameObject radioNotification;
     public bool militaryAdvisorAvailable = false;
     public GameObject[] militaryQuestionsArray;
 
+    public static int domesticPointsInvestigated = 0;
+    public static int domesticPointsThreshold = 2;
     public GameObject phoneNotification;
     public bool domesticAdvisorAvailable = false;
     public GameObject[] domesticQuestionsArray;
+
+    public static int diplomaticPointsInvestigated = 0;
+    public static int diplomaticPointsThreshold = 2;
+    public GameObject recorderNotification;
+    public bool diplomaticAdvisorAvailable = false;
+    public GameObject[] diplomaticQuestionsArray;
 
     public static string classification = "";
 
@@ -114,6 +123,7 @@ public class ResourceManager : MonoBehaviour
     void Start()
     {
         numResources = totalResources;
+        lobbyResourceText.text = "$" + numResources.ToString() + "M";
         resourceNumberText.text = "$" + numResources.ToString() + "M";
         whatsLeftText.text = "You have " + numSliders.ToString() + " untouched categories and " + numResources.ToString() + " resources left.";
     }
@@ -137,13 +147,18 @@ public class ResourceManager : MonoBehaviour
             }
         }
 
-        if (pointsInvestigated >= pointsThreshold)
+        if (diplomaticAdvisorAvailable)
+        {
+            foreach (GameObject question in diplomaticQuestionsArray)
+            {
+                question.SetActive(true);
+            }
+        }
+
+        if (militaryPointsInvestigated >= militaryPointsThreshold)
         {
             radioNotification.SetActive(true);
             militaryAdvisorAvailable = true;
-
-            phoneNotification.SetActive(true);
-            domesticAdvisorAvailable = true;
 
             foreach (GameObject question in militaryQuestionsArray)
             {
@@ -154,6 +169,15 @@ public class ResourceManager : MonoBehaviour
                 }
             }
 
+            militaryPointsInvestigated = 0;
+        }
+
+        if (domesticPointsInvestigated >= domesticPointsThreshold)
+        {
+            phoneNotification.SetActive(true);
+            Debug.Log("notified");
+            domesticAdvisorAvailable = true;
+
             foreach (GameObject question in domesticQuestionsArray)
             {
                 Button button = question.GetComponent<Button>();
@@ -163,7 +187,24 @@ public class ResourceManager : MonoBehaviour
                 }
             }
 
-            pointsInvestigated = 0;
+            domesticPointsInvestigated = 0;
+        }
+
+        if (diplomaticPointsInvestigated >= diplomaticPointsThreshold)
+        {
+            recorderNotification.SetActive(true);
+            diplomaticAdvisorAvailable = true;
+
+            foreach (GameObject question in diplomaticQuestionsArray)
+            {
+                Button button = question.GetComponent<Button>();
+                if (!question.GetComponent<AdvisorQuestions>().questionAsked)
+                {
+                    button.interactable = true;
+                }
+            }
+
+            diplomaticPointsInvestigated = 0;
         }
 
     }
@@ -186,8 +227,9 @@ public class ResourceManager : MonoBehaviour
             - numDo12Resources
             - numDo13Resources
             - numDo14Resources
-            - numDo15Resources; 
-        resourceNumberText.text = numResources.ToString();
+            - numDo15Resources;
+        lobbyResourceText.text = "$" + numResources.ToString() + "M";
+        resourceNumberText.text = "$" + numResources.ToString() + "M";
 
         whatsLeftText.text = "You have " + numSliders.ToString() + " untouched categories and " + numResources.ToString() + " resources left.";
 

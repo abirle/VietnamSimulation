@@ -169,11 +169,11 @@ public class SliderUpdate: MonoBehaviour
             audioSource.pitch = 0.5f;
             slidePlaying = true;
         }
-        else if (!slidePlaying && (fieldNum == 3 || fieldNum == 4))
+        else if (!penPlaying && (fieldNum == 3 || fieldNum == 4))
         {
             audioSource.PlayOneShot(penWriting);
             audioSource.pitch = 1f;
-            slidePlaying = true;
+            penPlaying = true;
         }
 
         if (fieldNum == 1)

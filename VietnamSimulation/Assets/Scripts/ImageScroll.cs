@@ -26,6 +26,11 @@ public class ImageScroll : MonoBehaviour
     static float scaleSpeed = 0.0125f;
     Vector3 scaleIncrement = new Vector3(scaleSpeed, scaleSpeed, scaleSpeed);
 
+    //public int numPages;
+    //int currentPage = 1;
+    public PointOfInterest poi;
+    bool hasBeenOpened = false;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,7 +53,8 @@ public class ImageScroll : MonoBehaviour
             {
                 startZoom = false;
             }
-
+            
+            
         }
 
         else if (isScrollingRight)
@@ -78,6 +84,25 @@ public class ImageScroll : MonoBehaviour
                         if (rightImageIndex >= images.Length)
                         {
                             rightImage = null;
+
+                            if (poi.room == "War Tent")
+                            {
+                                ResourceManager.militaryPointsInvestigated++;
+                                Debug.Log(ResourceManager.militaryPointsInvestigated);
+
+                            }
+                            if (poi.room == "Campaign Office")
+                            {
+                                ResourceManager.domesticPointsInvestigated++;
+                                Debug.Log(ResourceManager.domesticPointsInvestigated);
+
+                            }
+                            if (poi.room == "State Department")
+                            {
+                                ResourceManager.diplomaticPointsInvestigated++;
+                                Debug.Log(ResourceManager.diplomaticPointsInvestigated);
+                            }
+
                         }
                         else
                         {
@@ -160,5 +185,30 @@ public class ImageScroll : MonoBehaviour
             isScrollingRight = false;
             isScrollingLeft = true;
         }
+    }
+
+    public void Open()
+    {
+        if (!hasBeenOpened){
+
+            if (poi.room == "War Tent")
+            {
+                ResourceManager.militaryPointsInvestigated--;
+                Debug.Log(ResourceManager.militaryPointsInvestigated);
+            }
+            if (poi.room == "Campaign Office")
+            {
+                ResourceManager.domesticPointsInvestigated--;
+                Debug.Log(ResourceManager.domesticPointsInvestigated);
+            }
+            if (poi.room == "State Department")
+            {
+                ResourceManager.diplomaticPointsInvestigated--;
+                Debug.Log(ResourceManager.diplomaticPointsInvestigated);
+            }
+
+            hasBeenOpened = true;
+        }
+
     }
 }

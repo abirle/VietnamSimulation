@@ -80,8 +80,6 @@
 			<method name="MoreInfo"/>
 			<method name="MoreInfo"/>
 			<method name="MoreInfo"/>
-			<method name="MoreInfo"/>
-			<method name="MoreInfo"/>
 		</type>
 		<type fullname="PointOfInterest">
 			<method name="Hovered"/>
@@ -98,6 +96,17 @@
 			<method name="Hovered"/>
 			<method name="Hovered"/>
 			<method name="Hovered"/>
+			<method name="Hovered"/>
+			<method name="POINext"/>
+			<method name="POINext"/>
+			<method name="POINext"/>
+			<method name="POINext"/>
+			<method name="POINext"/>
+			<method name="POINext"/>
+			<method name="POINext"/>
+			<method name="POINext"/>
+			<method name="POINext"/>
+			<method name="PointofInterestClick"/>
 			<method name="PointofInterestClick"/>
 			<method name="PointofInterestClick"/>
 			<method name="PointofInterestClick"/>
@@ -126,6 +135,17 @@
 			<method name="PointofInterestClose"/>
 			<method name="PointofInterestClose"/>
 			<method name="PointofInterestClose"/>
+			<method name="PointofInterestClose"/>
+			<method name="POIPrevious"/>
+			<method name="POIPrevious"/>
+			<method name="POIPrevious"/>
+			<method name="POIPrevious"/>
+			<method name="POIPrevious"/>
+			<method name="POIPrevious"/>
+			<method name="POIPrevious"/>
+			<method name="POIPrevious"/>
+			<method name="POIPrevious"/>
+			<method name="Unhovered"/>
 			<method name="Unhovered"/>
 			<method name="Unhovered"/>
 			<method name="Unhovered"/>
@@ -144,9 +164,7 @@
 		<type fullname="RadioPlayPause">
 			<method name="RadioClicked"/>
 			<method name="RadioClicked"/>
-		</type>
-		<type fullname="SceneTransition">
-			<method name="StartClicked"/>
+			<method name="RadioClicked"/>
 		</type>
 		<type fullname="ScreenChange">
 			<method name="BackToLobby"/>
@@ -157,6 +175,7 @@
 			<method name="CorkboardZoomOut"/>
 			<method name="Decide"/>
 			<method name="EnterCampaignOffice"/>
+			<method name="EnterCampaignOffice"/>
 			<method name="LedgerZoomIn"/>
 			<method name="LedgerZoomOut"/>
 			<method name="MapZoomIn"/>
@@ -164,11 +183,14 @@
 			<method name="MilitaryScene"/>
 			<method name="PhoneZoomIn"/>
 			<method name="PhoneZoomOut"/>
+			<method name="PhoneZoomOut"/>
 			<method name="RadioZoomIn"/>
+			<method name="RadioZoomOut"/>
 			<method name="RadioZoomOut"/>
 			<method name="TelevisionZoomIn"/>
 			<method name="TelevisionZoomOut"/>
 			<method name="TypewriterZoomIn"/>
+			<method name="TypewriterZoomOut"/>
 			<method name="TypewriterZoomOut"/>
 			<method name="ViewResults"/>
 			<method name="ViewResults"/>
@@ -247,8 +269,15 @@
 			<method name="OnIncrement"/>
 		</type>
 	</assembly>
+	<assembly fullname="UnityEngine" ignoreIfMissing="1">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
+	</assembly>
 	<assembly fullname="UnityEngine.AudioModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.AudioSource">
+			<method name="PlayOneShot"/>
 			<method name="PlayOneShot"/>
 			<method name="PlayOneShot"/>
 			<method name="PlayOneShot"/>
@@ -277,6 +306,7 @@
 	</assembly>
 	<assembly fullname="UnityEngine.VideoModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.Video.VideoPlayer">
+			<method name="Play"/>
 			<method name="Play"/>
 		</type>
 	</assembly>
