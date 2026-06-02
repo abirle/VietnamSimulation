@@ -30,11 +30,14 @@ public class ScreenChange : MonoBehaviour
     public GameObject domesticCloseButton;
     public GameObject domesticNextButton;
 
+    public GameObject diplomaticAdvisor;
+    public TMP_Text diplomaticAdvisorText;
+    public GameObject diplomaticCloseButton;
+    public GameObject diplomaticNextButton;
 
     public Camera camera;
     public Image blackscreen;
     Color transparent = new Color(0, 0, 0, 0);
-
 
     bool isZoomingInOnMap = false;
     bool isZoomingOutOnMap = false;
@@ -53,7 +56,7 @@ public class ScreenChange : MonoBehaviour
     bool isZoomingOutOnTypewriter = false;
     bool isZoomingInOnTelevision = false;
     bool isZoomingOutOnTelevision = false;
-
+    bool isFadingInOnStateDepartment = false;
 
     Vector3 cameraCenter = new Vector3(1288, 725, -1500);
     Vector3 cameraMap = new Vector3(1283, 722, -1500);
@@ -87,12 +90,19 @@ public class ScreenChange : MonoBehaviour
     public AudioClip tvStatic;
     bool radioCrackling;
 
+    public AudioClip domesticQuestionIntro;
+    public AudioClip rotaryPhone;
+    bool phoneSpinning;
+
     public AudioClip domesticIntro01;
     bool listeningToDomesticIntro01 = false;
     public Button domesticContinueButton;
 
+    public AudioSource radioSource;
+
     bool hasEnteredWarRoom = false;
     bool hasEnteredCampaignOffice = false;
+    bool hasEnteredStateDepartment = false;
     bool viewingResults = false;
     int numResultsViewed = 0;
 
@@ -140,7 +150,7 @@ public class ScreenChange : MonoBehaviour
     }
 
 // Update is called once per frame
-void Update()
+    void FixedUpdate()
     {
         if (isZoomingInOnMap)
         {
@@ -291,6 +301,7 @@ void Update()
                 resourceManager.militaryAdvisorAvailable = false;
                 resourceManager.radioNotification.SetActive(false);
                 isZoomingInOnRadio = false;
+                radioSource.mute = true;
                 audioSource.PlayOneShot(militaryQuestionIntro);
                 InputSystem.EnableDevice(Mouse.current);
             }
@@ -299,12 +310,15 @@ void Update()
         else if (isZoomingOutOnRadio)
         {
             timeElapsed += Time.deltaTime;
+            
             float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
             camera.transform.position = Vector3.Lerp(cameraRadio, cameraCenter, zoomProgress);
             camera.orthographicSize = Mathf.Lerp((float)1.5, 5, zoomProgress);
+            Debug.Log(camera.orthographicSize);
 
             if (zoomProgress == 1f)
             {
+                radioSource.mute = false;
                 isZoomingOutOnRadio = false;
                 InputSystem.EnableDevice(Mouse.current);
             }
@@ -438,8 +452,10 @@ void Update()
 
                     if (camera.orthographicSize == (float)1.5)
                     {
-                        audioSource.PlayOneShot(domesticIntro01);
-                        listeningToDomesticIntro01 = true;
+                        //audioSource.PlayOneShot(domesticIntro01);
+                        //listeningToDomesticIntro01 = true;
+                        audioSource.PlayOneShot(rotaryPhone);
+                        phoneSpinning = true;
                         timeElapsed = 0;
                     }
                 }
@@ -458,10 +474,13 @@ void Update()
             {
                 //ResourceManager.pointsInvestigated = 0;
                 domesticAdvisor.SetActive(true);
+                domesticAdvisorText.text = "Listen, I'm due on air shortly, but I've got a minute if you need me. One question, and then I've gotta go.";
                 resourceManager.domesticAdvisorAvailable = false;
                 resourceManager.phoneNotification.SetActive(false);
                 isZoomingInOnPhone = false;
+                audioSource.PlayOneShot(domesticQuestionIntro);
                 InputSystem.EnableDevice(Mouse.current);
+
             }
         }
 
@@ -602,6 +621,19 @@ void Update()
             }
         }
 
+        else if (phoneSpinning)
+        {
+            timeElapsed += Time.deltaTime;
+
+            if (timeElapsed >= 2.5f)
+            {
+                phoneSpinning = false;
+                audioSource.PlayOneShot(domesticIntro01);
+                listeningToDomesticIntro01 = true;
+                timeElapsed = 0;
+            }
+        }
+
         else if (listeningToMilitaryIntro01)
         {
             timeElapsed += Time.deltaTime;
@@ -622,12 +654,12 @@ void Update()
             timeElapsed += Time.deltaTime;
             //InputSystem.DisableDevice(Mouse.current);
 
-            if (timeElapsed >= 42)
+            if (timeElapsed >= 53)
             {
                 domesticContinueButton.interactable = true;
                 listeningToDomesticIntro01 = false;
                 InputSystem.EnableDevice(Mouse.current);
-                audioSource.PlayOneShot(radioCrackle);
+                audioSource.PlayOneShot(rotaryPhone);
 
             }
         }
@@ -896,7 +928,6 @@ void Update()
 
         lobbyScreen.SetActive(false);
         decisionScreen.SetActive(true);
-
     }
 
 
@@ -904,7 +935,6 @@ void Update()
     {
         decisionScreen.SetActive(false);
         lobbyScreen.SetActive(true);
-
     }
 
     public void ViewResults()

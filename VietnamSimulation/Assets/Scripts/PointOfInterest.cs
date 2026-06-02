@@ -13,6 +13,7 @@ public class PointOfInterest : MonoBehaviour
     public GameObject poiCloseButton;
     public GameObject poiShiftButtons;
     public GameObject buttonBlock;
+    public string room;
 
     //public Sprite originalImage;
     //public Sprite newImage;
@@ -54,8 +55,20 @@ public class PointOfInterest : MonoBehaviour
         {
             if (!poiClickedFirst)
             {
+                if (room == "War Tent")
+                {
+                    ResourceManager.militaryPointsInvestigated++;
+                }
+                else if (room == "Campaign Office")
+                {
+                    ResourceManager.domesticPointsInvestigated++;
+                }
+                if (room == "State Department")
+                {
+                    ResourceManager.diplomaticPointsInvestigated++;
+                }
+
                 poiClickedFirst = true;
-                ResourceManager.pointsInvestigated++;
             }
             audioSource.PlayOneShot(openSound);
 

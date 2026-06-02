@@ -10,7 +10,6 @@
 		<type fullname="PointOfInterest" preserve="nothing"/>
 		<type fullname="RadioPlayPause" preserve="nothing"/>
 		<type fullname="ResourceManager" preserve="nothing"/>
-		<type fullname="SceneTransition" preserve="nothing"/>
 		<type fullname="ScreenChange" preserve="nothing"/>
 		<type fullname="SliderUpdate" preserve="nothing"/>
 	</assembly>

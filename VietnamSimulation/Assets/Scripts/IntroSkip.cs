@@ -82,7 +82,7 @@ public class IntroSkip : MonoBehaviour
             {
                 timeElapsed += Time.deltaTime;
 
-                if (timeElapsed >= 55)
+                if (timeElapsed >= 64)
                 {
                     closeButton.GetComponent<Button>().interactable = true;
                     listening = false;
@@ -129,7 +129,7 @@ public class IntroSkip : MonoBehaviour
         {
             if (numClicked == 0)
             {
-                introText.text = "And here's the other thing you cannot afford to ignore — the President is still trying to hold the Great Society together. Schools are struggling to make the new funding work. Medicare and Medicaid are expanding, civil rights initiatives are still moving forward, but the money is running out because the war is eating everything. The economists are worried about inflation and deficits, and you're seeing labor unrest in places where wages aren't keeping up with prices.\r\nI know there are military and diplomatic priorities competing for these resources. But what's happening on the home front is what the American people see and feel every day, and it's what they'll be voting on in November. If you lose the public, none of the rest of it holds together. Make sure your messaging and resources reflect that.\r\n";
+                introText.text = "And here's the other thing you cannot afford to ignore — the President is still trying to hold the Great Society together. Schools are struggling to make the new funding work. Medicare and Medicaid are expanding, civil rights initiatives are still moving forward, but the money is running out because the war is eating everything. Every evening broadcast is running stories about rising prices and stalled programs, and you're seeing labor unrest in places where wages aren't keeping up.\r\n\r\nI know there are military and diplomatic priorities competing for these resources. But what's happening on the home front is what the American people see on their television sets every night, and it's what they'll be voting on in November. If you lose the public, none of the rest of it holds together.\r\n\r\nDo me a favor before you start making decisions — flip through the channels on TV and see what the country is watching tonight. Look at the polling numbers. Do your research. You need to know what the polls look like before you decide where the resources go, and so far, they're telling you the same thing I am. \r\n";
                 audioSource.PlayOneShot(crackle);
                 numClicked++;
                 nextButton.SetActive(false);
