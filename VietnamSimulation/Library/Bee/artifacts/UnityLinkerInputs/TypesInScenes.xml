@@ -12,6 +12,7 @@
 		<type fullname="ResourceManager" preserve="nothing"/>
 		<type fullname="ScreenChange" preserve="nothing"/>
 		<type fullname="SliderUpdate" preserve="nothing"/>
+		<type fullname="WebGLVideo" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.2D.Animation.Runtime">
 		<type fullname="UnityEngine.U2D.Animation.BufferManager" preserve="nothing"/>
@@ -140,7 +141,6 @@
 		<type fullname="UnityEngine.Texture" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Transform" preserve="nothing"/>
-		<type fullname="UnityEngine.Video.VideoClip" preserve="nothing"/>
 		<type fullname="UnityEngine.Video.VideoPlayer" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">

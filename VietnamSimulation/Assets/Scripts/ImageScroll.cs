@@ -30,6 +30,7 @@ public class ImageScroll : MonoBehaviour
     //int currentPage = 1;
     public PointOfInterest poi;
     bool hasBeenOpened = false;
+    bool hasFoundPoi = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -84,23 +85,28 @@ public class ImageScroll : MonoBehaviour
                         if (rightImageIndex >= images.Length)
                         {
                             rightImage = null;
-
-                            if (poi.room == "War Tent")
+                            
+                            if (!hasFoundPoi)
                             {
-                                ResourceManager.militaryPointsInvestigated++;
-                                Debug.Log(ResourceManager.militaryPointsInvestigated);
+                                if (poi.room == "War Tent")
+                                {
+                                    ResourceManager.militaryPointsInvestigated++;
+                                    Debug.Log(ResourceManager.militaryPointsInvestigated);
 
-                            }
-                            if (poi.room == "Campaign Office")
-                            {
-                                ResourceManager.domesticPointsInvestigated++;
-                                Debug.Log(ResourceManager.domesticPointsInvestigated);
+                                }
+                                if (poi.room == "Campaign Office")
+                                {
+                                    ResourceManager.domesticPointsInvestigated++;
+                                    Debug.Log(ResourceManager.domesticPointsInvestigated);
 
-                            }
-                            if (poi.room == "State Department")
-                            {
-                                ResourceManager.diplomaticPointsInvestigated++;
-                                Debug.Log(ResourceManager.diplomaticPointsInvestigated);
+                                }
+                                if (poi.room == "State Department")
+                                {
+                                    ResourceManager.diplomaticPointsInvestigated++;
+                                    Debug.Log(ResourceManager.diplomaticPointsInvestigated);
+                                }
+
+                                hasFoundPoi = true;
                             }
 
                         }
