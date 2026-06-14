@@ -207,6 +207,24 @@ public class ResourceManager : MonoBehaviour
             diplomaticPointsInvestigated = 0;
         }
 
+        if (ScreenChange.viewingResults)
+        {
+            foreach (GameObject question in militaryQuestionsArray)
+            {
+                question.SetActive(false);
+            }
+
+            foreach (GameObject question in domesticQuestionsArray)
+            {
+                question.SetActive(false);
+            }
+
+            foreach (GameObject question in diplomaticQuestionsArray)
+            {
+                question.SetActive(false);
+            }
+        }
+
     }
 
 
@@ -233,6 +251,26 @@ public class ResourceManager : MonoBehaviour
 
         whatsLeftText.text = "You have " + numSliders.ToString() + " untouched categories and " + numResources.ToString() + " resources left.";
 
+    }
+
+    public string GetAllResourcesText()
+    {
+        string allResourcesText = "---RESOURCE STATUS--- \r\nM1: " + numM1Resources
+                                    + " \r\nM2: " + numM2Resources
+                                    + " \r\nM3: " + numM3Resources
+                                    + " \r\nM4: " + numM4Resources
+                                    + " \r\nM5: " + numM5Resources
+                                    + " \r\nDi6: " + numDi6Resources
+                                    + " \r\nDi7: " + numDi7Resources
+                                    + " \r\nDi8: " + numDi8Resources
+                                    + " \r\nDi9: " + numDi9Resources
+                                    + " \r\nDo10: " + numDo10Resources
+                                    + " \r\nDo11: " + numDo11Resources
+                                    + " \r\nDo12: " + numDo12Resources
+                                    + " \r\nDo13: " + numDo13Resources
+                                    + " \r\nDo14: " + numDo14Resources
+                                    + " \r\nDo15: " + numDo15Resources;
+        return allResourcesText;
     }
 
 
@@ -2131,14 +2169,55 @@ public class ResourceManager : MonoBehaviour
 
 
         int militaryResources = numM1Resources + numM2Resources + numM3Resources + numM4Resources + numM5Resources;
+        float militaryResourcesAverage = militaryResources / 5;
 
-        if (militaryResources > 70)
+        int domesticResources = numDo10Resources + numDo11Resources + numDo12Resources + numDo13Resources + numDo14Resources + numDo15Resources;
+        float domesticResourcesAverage = domesticResources / 6;
+
+        int diplomaticResources = numDi6Resources + numDi7Resources + numDi8Resources + numDi9Resources;
+        float diplomaticResourcesAverage = diplomaticResources / 4;
+
+        //Military > Domestic
+        if (militaryResourcesAverage > domesticResourcesAverage)
         {
-            classification = "Hawk";
+            //Military > Domestic > Diplomatic
+            if (domesticResourcesAverage > diplomaticResourcesAverage) 
+            {
+                classification = "Warrior";
+            }
+            //Diplomatic > Domestic
+            else if (diplomaticResourcesAverage > domesticResourcesAverage)
+            {
+                //Military > Diplomatic > Domestic
+                if (militaryResourcesAverage > diplomaticResourcesAverage)
+                {
+                    classification = "Warrior";
+                }
+                //Diplomatic > Military > Domestic
+                else if (diplomaticResourcesAverage > militaryResourcesAverage)
+                {
+                    classification = "Diplomat";
+                }
+            }
         }
-        else
+        //Domestic > Military
+        else if (domesticResourcesAverage > militaryResourcesAverage)
         {
-            classification = "Dove";
+            //Domestic > Military > Diplomatic
+            if (militaryResourcesAverage > diplomaticResourcesAverage)
+            {
+                classification = "Politician";
+            }
+            //Diplomatic > Domestic > Military
+            else if (diplomaticResourcesAverage > domesticResourcesAverage)
+            {
+                classification = "Diplomat";
+            }
+            //Domestic > Diplomatic > Military
+            else if (domesticResourcesAverage > diplomaticResourcesAverage)
+            {
+                classification = "Politician";
+            }
         }
 
     }

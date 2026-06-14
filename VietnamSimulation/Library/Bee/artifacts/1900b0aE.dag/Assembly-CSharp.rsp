@@ -520,6 +520,7 @@
 "Assets/Scripts/SceneTransition.cs"
 "Assets/Scripts/ScreenChange.cs"
 "Assets/Scripts/SliderUpdate.cs"
+"Assets/Scripts/WebGLVideo.cs"
 -langversion:9.0
 /deterministic
 /optimize+

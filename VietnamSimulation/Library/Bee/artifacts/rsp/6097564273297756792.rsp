@@ -90,7 +90,6 @@
 -s="C:\Program Files\Unity\Hub\Editor\6000.4.0f1\Editor\Data\NetStandard\EditorExtensions"
 -s="C:\Program Files\Unity\Hub\Editor\6000.4.0f1\Editor\Data\NetStandard\Extensions\2.0.0"
 -s="C:\Program Files\Unity\Hub\Editor\6000.4.0f1\Editor\Data\NetStandard\ref\2.1.0"
--s="C:\Program Files\Unity\Hub\Editor\6000.4.0f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed"
 -s="C:\Users\HP\Documents\GitHub\VietnamSimulation\VietnamSimulation\Library\ScriptAssemblies"
 -s="C:\Users\HP\Documents\GitHub\VietnamSimulation\VietnamSimulation\Library\PackageCache\com.unity.analytics@c9d14a6bdec6"
 -s="C:\Users\HP\Documents\GitHub\VietnamSimulation\VietnamSimulation\Library\PackageCache\com.unity.analytics@c9d14a6bdec6\AnalyticsStandardEvents"

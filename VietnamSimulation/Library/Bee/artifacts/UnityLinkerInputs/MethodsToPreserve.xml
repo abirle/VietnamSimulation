@@ -7,12 +7,18 @@
 			<method name="AskQuestion"/>
 			<method name="AskQuestion"/>
 			<method name="AskQuestion"/>
+			<method name="AskQuestion"/>
+			<method name="AskQuestion"/>
+			<method name="AskQuestion"/>
 		</type>
 		<type fullname="ChangeChannel">
 			<method name="NextChannel"/>
 			<method name="PreviousChannel"/>
 		</type>
 		<type fullname="ImageScroll">
+			<method name="Open"/>
+			<method name="Open"/>
+			<method name="Open"/>
 			<method name="ScrollLeft"/>
 			<method name="ScrollLeft"/>
 			<method name="ScrollLeft"/>
@@ -69,8 +75,11 @@
 		<type fullname="IntroSkip">
 			<method name="Continue"/>
 			<method name="Continue"/>
+			<method name="Continue"/>
 		</type>
 		<type fullname="MoreInfoButton">
+			<method name="MoreInfo"/>
+			<method name="MoreInfo"/>
 			<method name="MoreInfo"/>
 			<method name="MoreInfo"/>
 			<method name="MoreInfo"/>
@@ -97,6 +106,7 @@
 			<method name="Hovered"/>
 			<method name="Hovered"/>
 			<method name="Hovered"/>
+			<method name="Hovered"/>
 			<method name="POINext"/>
 			<method name="POINext"/>
 			<method name="POINext"/>
@@ -121,6 +131,8 @@
 			<method name="PointofInterestClick"/>
 			<method name="PointofInterestClick"/>
 			<method name="PointofInterestClick"/>
+			<method name="PointofInterestClick"/>
+			<method name="PointofInterestClose"/>
 			<method name="PointofInterestClose"/>
 			<method name="PointofInterestClose"/>
 			<method name="PointofInterestClose"/>
@@ -145,6 +157,7 @@
 			<method name="POIPrevious"/>
 			<method name="POIPrevious"/>
 			<method name="POIPrevious"/>
+			<method name="Unhovered"/>
 			<method name="Unhovered"/>
 			<method name="Unhovered"/>
 			<method name="Unhovered"/>
@@ -169,19 +182,23 @@
 		<type fullname="ScreenChange">
 			<method name="BackToLobby"/>
 			<method name="BackToLobby"/>
+			<method name="BackToLobby"/>
+			<method name="ChalkboardZoomIn"/>
+			<method name="ChalkboardZoomOut"/>
 			<method name="ChangeYourMind"/>
-			<method name="CorkboardZoomIn"/>
 			<method name="CorkboardZoomIn"/>
 			<method name="CorkboardZoomOut"/>
 			<method name="Decide"/>
 			<method name="EnterCampaignOffice"/>
-			<method name="EnterCampaignOffice"/>
+			<method name="EnterStateDepartment"/>
 			<method name="LedgerZoomIn"/>
 			<method name="LedgerZoomOut"/>
 			<method name="MapZoomIn"/>
 			<method name="MapZoomOut"/>
 			<method name="MilitaryScene"/>
 			<method name="PhoneZoomIn"/>
+			<method name="PhoneZoomOut"/>
+			<method name="PhoneZoomOut"/>
 			<method name="PhoneZoomOut"/>
 			<method name="PhoneZoomOut"/>
 			<method name="RadioZoomIn"/>
@@ -191,7 +208,7 @@
 			<method name="TelevisionZoomOut"/>
 			<method name="TypewriterZoomIn"/>
 			<method name="TypewriterZoomOut"/>
-			<method name="TypewriterZoomOut"/>
+			<method name="ViewResults"/>
 			<method name="ViewResults"/>
 			<method name="ViewResults"/>
 			<method name="ViewResults"/>
@@ -269,12 +286,6 @@
 			<method name="OnIncrement"/>
 		</type>
 	</assembly>
-	<assembly fullname="UnityEngine" ignoreIfMissing="1">
-		<type fullname="UnityEngine.GameObject">
-			<method name="SetActive"/>
-			<method name="SetActive"/>
-		</type>
-	</assembly>
 	<assembly fullname="UnityEngine.AudioModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.AudioSource">
 			<method name="PlayOneShot"/>
@@ -285,6 +296,14 @@
 			<method name="PlayOneShot"/>
 			<method name="PlayOneShot"/>
 			<method name="PlayOneShot"/>
+			<method name="set_mute"/>
+			<method name="set_mute"/>
+			<method name="set_mute"/>
+			<method name="set_mute"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
 		</type>
 	</assembly>
 	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
@@ -302,10 +321,19 @@
 			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>
+			<method name="SetActive"/>
 		</type>
 	</assembly>
 	<assembly fullname="UnityEngine.VideoModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.Video.VideoPlayer">
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
 			<method name="Play"/>
 			<method name="Play"/>
 		</type>

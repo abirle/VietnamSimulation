@@ -11,9 +11,9 @@ ScriptsOnlyBuild:
     - PointOfInterest
     - RadioPlayPause
     - ResourceManager
-    - SceneTransition
     - ScreenChange
     - SliderUpdate
+    - WebGLVideo
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
@@ -107,6 +107,7 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
+    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -278,51 +279,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: SceneTransition
-    methodName: StartClicked
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
-    methodName: OnAction
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
-    methodName: OnScrollbarClicked
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
-    methodName: OnScrollbarClicked
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
-    methodName: ResetDebugManager
-  - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
   - assembly: Assembly-CSharp
@@ -362,6 +318,12 @@ ScriptsOnlyBuild:
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
   - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: PhoneZoomOut
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Play
+  - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: POIPrevious
   - assembly: Assembly-CSharp
@@ -376,6 +338,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: RadioZoomOut
@@ -385,6 +350,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: RadioPlayPause
     methodName: RadioClicked
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
+  - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: PhoneZoomOut
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
@@ -409,6 +380,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ImageScroll
+    methodName: Open
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: Hovered
@@ -448,6 +422,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
+  - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: BackToLobby
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
@@ -476,6 +453,9 @@ ScriptsOnlyBuild:
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
   - assembly: Assembly-CSharp
+    fullTypeName: ImageScroll
+    methodName: Open
+  - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: Hovered
   - assembly: Assembly-CSharp
@@ -490,12 +470,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: Unhovered
+  - assembly: Assembly-CSharp
+    fullTypeName: AdvisorQuestions
+    methodName: AskQuestion
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: BackToLobby
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
@@ -511,6 +497,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: Unhovered
+  - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: EnterCampaignOffice
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
@@ -632,8 +627,17 @@ ScriptsOnlyBuild:
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
   - assembly: Assembly-CSharp
-    fullTypeName: ScreenChange
-    methodName: EnterCampaignOffice
+    fullTypeName: PointOfInterest
+    methodName: PointofInterestClick
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_mute
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: Hovered
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: Unhovered
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
@@ -661,6 +665,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: PhoneZoomOut
@@ -673,6 +680,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ChangeChannel
     methodName: NextChannel
+  - assembly: Assembly-CSharp
+    fullTypeName: AdvisorQuestions
+    methodName: AskQuestion
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: POINext
@@ -747,7 +757,7 @@ ScriptsOnlyBuild:
     methodName: Unhovered
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
-    methodName: CorkboardZoomIn
+    methodName: ChalkboardZoomIn
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
@@ -760,18 +770,39 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
-  - assembly: Assembly-CSharp
-    fullTypeName: MoreInfoButton
-    methodName: MoreInfo
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MoreInfoButton
+    methodName: MoreInfo
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: TelevisionZoomIn
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Play
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Play
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Play
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Play
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Play
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_mute
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
@@ -792,7 +823,7 @@ ScriptsOnlyBuild:
     methodName: CorkboardZoomIn
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
-    methodName: TypewriterZoomOut
+    methodName: ChalkboardZoomOut
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -866,6 +897,9 @@ ScriptsOnlyBuild:
     fullTypeName: ScreenChange
     methodName: RadioZoomIn
   - assembly: Assembly-CSharp
+    fullTypeName: MoreInfoButton
+    methodName: MoreInfo
+  - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
   - assembly: Assembly-CSharp
@@ -880,6 +914,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ImageScroll
+    methodName: Open
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
@@ -941,17 +978,23 @@ ScriptsOnlyBuild:
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
   - assembly: Assembly-CSharp
+    fullTypeName: AdvisorQuestions
+    methodName: AskQuestion
+  - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: POINext
+  - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: EnterStateDepartment
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: TelevisionZoomOut
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_mute
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
@@ -980,6 +1023,9 @@ ScriptsOnlyBuild:
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
   - assembly: Assembly-CSharp
+    fullTypeName: IntroSkip
+    methodName: Continue
+  - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
   - assembly: Assembly-CSharp
@@ -1006,6 +1052,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: ViewResults
+  - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: ViewResults
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_mute
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: PointofInterestClose
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
@@ -1037,6 +1092,9 @@ ScriptsOnlyBuild:
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
   - assembly: Assembly-CSharp
+    fullTypeName: MoreInfoButton
+    methodName: MoreInfo
+  - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
   - assembly: Assembly-CSharp
@@ -1051,9 +1109,54 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: BackToLobby
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
+    methodName: OnAction
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
+    methodName: OnScrollbarClicked
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
+    methodName: OnScrollbarClicked
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
+    methodName: ResetDebugManager
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -1067,6 +1170,8 @@ ScriptsOnlyBuild:
     - Class: 28
       Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -1083,73 +1188,161 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 37202}
     - Class: 114
-      Script: {instanceID: 47924}
+      Script: {instanceID: 47928}
     - Class: 114
-      Script: {instanceID: 42818}
+      Script: {instanceID: 42820}
     - Class: 114
-      Script: {instanceID: 51538}
+      Script: {instanceID: 51542}
     - Class: 114
-      Script: {instanceID: 47720}
+      Script: {instanceID: 47724}
     - Class: 114
-      Script: {instanceID: 40130}
+      Script: {instanceID: 40132}
     - Class: 114
-      Script: {instanceID: 51254}
+      Script: {instanceID: 51258}
     - Class: 114
-      Script: {instanceID: 43022}
+      Script: {instanceID: 43024}
     - Class: 114
-      Script: {instanceID: 46888}
+      Script: {instanceID: 46892}
     - Class: 114
-      Script: {instanceID: 40764}
+      Script: {instanceID: 40766}
     - Class: 114
-      Script: {instanceID: 21028}
+      Script: {instanceID: 45840}
     - Class: 114
-      Script: {instanceID: 46732}
+      Script: {instanceID: 46736}
     - Class: 114
-      Script: {instanceID: 51732}
+      Script: {instanceID: 51736}
     - Class: 114
       Script: {instanceID: 38688}
     - Class: 114
+      Script: {instanceID: 38180}
+    - Class: 114
+      Script: {instanceID: 50532}
+    - Class: 114
       Script: {instanceID: 37296}
     - Class: 114
-      Script: {instanceID: 39518}
+      Script: {instanceID: 39520}
     - Class: 114
-      Script: {instanceID: 40852}
+      Script: {instanceID: 40854}
     - Class: 114
-      Script: {instanceID: 50666}
+      Script: {instanceID: 50670}
     - Class: 114
-      Script: {instanceID: 42364}
+      Script: {instanceID: 42366}
     - Class: 114
       Script: {instanceID: 37922}
     - Class: 114
-      Script: {instanceID: 40136}
+      Script: {instanceID: 49412}
     - Class: 114
-      Script: {instanceID: 50744}
+      Script: {instanceID: 47548}
     - Class: 114
-      Script: {instanceID: 43852}
+      Script: {instanceID: 44004}
     - Class: 114
-      Script: {instanceID: 43712}
+      Script: {instanceID: 40812}
+    - Class: 114
+      Script: {instanceID: 51116}
+    - Class: 114
+      Script: {instanceID: 44266}
+    - Class: 114
+      Script: {instanceID: 40656}
+    - Class: 114
+      Script: {instanceID: 43902}
+    - Class: 114
+      Script: {instanceID: 44112}
+    - Class: 114
+      Script: {instanceID: 38522}
+    - Class: 114
+      Script: {instanceID: 40760}
+    - Class: 114
+      Script: {instanceID: 38768}
+    - Class: 114
+      Script: {instanceID: 49346}
+    - Class: 114
+      Script: {instanceID: 40268}
+    - Class: 114
+      Script: {instanceID: 37524}
+    - Class: 114
+      Script: {instanceID: 43292}
+    - Class: 114
+      Script: {instanceID: 37858}
+    - Class: 114
+      Script: {instanceID: 39980}
+    - Class: 114
+      Script: {instanceID: 45474}
+    - Class: 114
+      Script: {instanceID: 49762}
+    - Class: 114
+      Script: {instanceID: 51080}
+    - Class: 114
+      Script: {instanceID: 43404}
+    - Class: 114
+      Script: {instanceID: 38370}
+    - Class: 114
+      Script: {instanceID: 52014}
+    - Class: 114
+      Script: {instanceID: 50668}
+    - Class: 114
+      Script: {instanceID: 45472}
+    - Class: 114
+      Script: {instanceID: 45336}
+    - Class: 114
+      Script: {instanceID: 43362}
+    - Class: 114
+      Script: {instanceID: 46754}
+    - Class: 114
+      Script: {instanceID: 50968}
+    - Class: 114
+      Script: {instanceID: 40702}
+    - Class: 114
+      Script: {instanceID: 51316}
+    - Class: 114
+      Script: {instanceID: 48828}
+    - Class: 114
+      Script: {instanceID: 40138}
+    - Class: 114
+      Script: {instanceID: 50748}
+    - Class: 114
+      Script: {instanceID: 43854}
+    - Class: 114
+      Script: {instanceID: 43714}
     - Class: 114
       Script: {instanceID: 38452}
     - Class: 114
-      Script: {instanceID: 47346}
+      Script: {instanceID: 47350}
     - Class: 114
-      Script: {instanceID: 40050}
+      Script: {instanceID: 40052}
     - Class: 114
-      Script: {instanceID: 50800}
+      Script: {instanceID: 50804}
     - Class: 114
-      Script: {instanceID: 45772}
+      Script: {instanceID: 40544}
     - Class: 114
-      Script: {instanceID: 38916}
+      Script: {instanceID: 45774}
     - Class: 114
-      Script: {instanceID: 41962}
+      Script: {instanceID: 39236}
+    - Class: 114
+      Script: {instanceID: 38918}
+    - Class: 114
+      Script: {instanceID: 41964}
+    - Class: 114
+      Script: {instanceID: 51642}
     - Class: 114
       Script: {instanceID: 38366}
     - Class: 114
-      Script: {instanceID: 43636}
+      Script: {instanceID: 43638}
     - Class: 114
-      Script: {instanceID: 46796}
+      Script: {instanceID: 46800}
+    - Class: 114
+      Script: {instanceID: 49966}
+    - Class: 114
+      Script: {instanceID: 45066}
     - Class: 114
       Script: {instanceID: 38702}
+    - Class: 114
+      Script: {instanceID: 49844}
+    - Class: 114
+      Script: {instanceID: 52214}
+    - Class: 114
+      Script: {instanceID: 42378}
+    - Class: 114
+      Script: {instanceID: 38878}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1170,159 +1363,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 328
       Script: {instanceID: 0}
-    - Class: 329
-      Script: {instanceID: 0}
-    Assets/Scenes/StartScreen.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 47668}
-    - Class: 114
-      Script: {instanceID: 51732}
-    - Class: 114
-      Script: {instanceID: 38180}
-    - Class: 114
-      Script: {instanceID: 50528}
-    - Class: 114
-      Script: {instanceID: 37296}
-    - Class: 114
-      Script: {instanceID: 39518}
-    - Class: 114
-      Script: {instanceID: 40852}
-    - Class: 114
-      Script: {instanceID: 50666}
-    - Class: 114
-      Script: {instanceID: 42364}
-    - Class: 114
-      Script: {instanceID: 37922}
-    - Class: 114
-      Script: {instanceID: 49408}
-    - Class: 114
-      Script: {instanceID: 47544}
-    - Class: 114
-      Script: {instanceID: 44002}
-    - Class: 114
-      Script: {instanceID: 40810}
-    - Class: 114
-      Script: {instanceID: 51112}
-    - Class: 114
-      Script: {instanceID: 44264}
-    - Class: 114
-      Script: {instanceID: 40654}
-    - Class: 114
-      Script: {instanceID: 43900}
-    - Class: 114
-      Script: {instanceID: 44110}
-    - Class: 114
-      Script: {instanceID: 38522}
-    - Class: 114
-      Script: {instanceID: 40758}
-    - Class: 114
-      Script: {instanceID: 38768}
-    - Class: 114
-      Script: {instanceID: 49342}
-    - Class: 114
-      Script: {instanceID: 40266}
-    - Class: 114
-      Script: {instanceID: 37524}
-    - Class: 114
-      Script: {instanceID: 43290}
-    - Class: 114
-      Script: {instanceID: 37858}
-    - Class: 114
-      Script: {instanceID: 39978}
-    - Class: 114
-      Script: {instanceID: 45472}
-    - Class: 114
-      Script: {instanceID: 49758}
-    - Class: 114
-      Script: {instanceID: 51076}
-    - Class: 114
-      Script: {instanceID: 43402}
-    - Class: 114
-      Script: {instanceID: 38370}
-    - Class: 114
-      Script: {instanceID: 52010}
-    - Class: 114
-      Script: {instanceID: 50664}
-    - Class: 114
-      Script: {instanceID: 45470}
-    - Class: 114
-      Script: {instanceID: 45334}
-    - Class: 114
-      Script: {instanceID: 43360}
-    - Class: 114
-      Script: {instanceID: 46750}
-    - Class: 114
-      Script: {instanceID: 50964}
-    - Class: 114
-      Script: {instanceID: 40700}
-    - Class: 114
-      Script: {instanceID: 51312}
-    - Class: 114
-      Script: {instanceID: 48824}
-    - Class: 114
-      Script: {instanceID: 43712}
-    - Class: 114
-      Script: {instanceID: 40050}
-    - Class: 114
-      Script: {instanceID: 50800}
-    - Class: 114
-      Script: {instanceID: 40542}
-    - Class: 114
-      Script: {instanceID: 45772}
-    - Class: 114
-      Script: {instanceID: 39234}
-    - Class: 114
-      Script: {instanceID: 38916}
-    - Class: 114
-      Script: {instanceID: 41962}
-    - Class: 114
-      Script: {instanceID: 51638}
-    - Class: 114
-      Script: {instanceID: 49962}
-    - Class: 114
-      Script: {instanceID: 45064}
-    - Class: 114
-      Script: {instanceID: 49840}
-    - Class: 114
-      Script: {instanceID: 52210}
-    - Class: 114
-      Script: {instanceID: 42376}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -1330,12 +1370,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: UniversalRenderPipelineAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 9f93ef7cb440195f4904fe9758e22b77
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ScreenChange
   - hash:
       serializedVersion: 2
       Hash: 95c8a8c68e664d4868755f06e7c55997
@@ -1614,6 +1648,12 @@ ScriptsOnlyBuild:
     className: SpriteLibraryAsset
   - hash:
       serializedVersion: 2
+      Hash: d3b8fcee1b90a8808d50d7d2c2d66be0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: WebGLVideo
+  - hash:
+      serializedVersion: 2
       Hash: dd9dda1dfd39e605c49e72003342ef5d
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -1878,7 +1918,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerHBox
   - hash:
       serializedVersion: 2
-      Hash: 8c1620738b9d9776dc1b979732c91869
+      Hash: 5f28784925e8a761ae97a8c4eef1dc5a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ResourceManager
@@ -2118,7 +2158,7 @@ ScriptsOnlyBuild:
     className: PlayerInputManagerEditor
   - hash:
       serializedVersion: 2
-      Hash: 05acc3d6ddbe45fb6e6a618d2c7cbd59
+      Hash: 3b9fa8faea1df88661ffaedb12d57fb6
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ImageScroll
@@ -2464,6 +2504,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnControllerColliderHitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: c9faa6130c6d61d58428be4831e51b21
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ScreenChange
   - hash:
       serializedVersion: 2
       Hash: 1ce63d97d1ca25cba2d91d5f32fd5f79
@@ -3228,7 +3274,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
-  - Assets/Scenes/StartScreen.unity
   - Assets/Scenes/Game.unity
   nativeClasses: 
   playerPath: C:/Users/HP/Documents/GitHub/VietnamSimulation/VietnamSimulation/Build_02/VietnamSimulation.exe

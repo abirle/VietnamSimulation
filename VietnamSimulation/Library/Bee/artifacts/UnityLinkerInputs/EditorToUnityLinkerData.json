@@ -1198,21 +1198,19 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "VideoClip",
-            "fullManagedTypeName": "UnityEngine.Video.VideoClip",
-            "moduleName": "Video",
-            "usedInScenes": [
-                "Assets/Scenes/Game.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "VideoPlayer",
             "fullManagedTypeName": "UnityEngine.Video.VideoPlayer",
             "moduleName": "Video",
             "usedInScenes": [
                 "Assets/Scenes/Game.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "WebGLVideo",
+            "moduleName": "",
+            "usedInScenes": []
         }
     ],
     "allNativeTypes": [
@@ -3934,13 +3932,8 @@
     ],
     "forceExcludeModules": [
         "AMD",
-        "AR",
-        "ClusterInput",
-        "ClusterRenderer",
         "Hierarchy",
-        "Insights",
-        "NVIDIA",
-        "VirtualTexturing"
+        "NVIDIA"
     ],
     "dynamicModuleDependencies": []
 }

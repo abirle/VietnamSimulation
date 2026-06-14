@@ -6,6 +6,9 @@
 		<type fullname="UnityEngine.InputSystem.InputControlScheme" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.InputControlScheme/DeviceRequirement" preserve="nothing" serialized="true"/>
 	</assembly>
+	<assembly fullname="Unity.PathTracing.Runtime">
+		<type fullname="UnityEngine.PathTracing.Core.WorldRenderPipelineResources" preserve="nothing" serialized="true"/>
+	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
 		<type fullname="UnityEngine.Rendering.APVLeakReductionModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.BoolParameter" preserve="nothing" serialized="true"/>
@@ -97,6 +100,9 @@
 		<type fullname="TMPro.TMP_InputField/TouchScreenKeyboardEvent" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_Style" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true"/>
+	</assembly>
+	<assembly fullname="Unity.UnifiedRayTracing.Runtime">
+		<type fullname="UnityEngine.Rendering.UnifiedRayTracing.RayTracingRenderPipelineResources" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="UnityEngine.CoreModule">
 		<type fullname="UnityEngine.Bounds" preserve="nothing" serialized="true"/>
