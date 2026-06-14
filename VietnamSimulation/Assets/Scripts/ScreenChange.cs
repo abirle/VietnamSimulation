@@ -188,6 +188,7 @@ public class ScreenChange : MonoBehaviour
         resourceManager = gameManager.GetComponent<ResourceManager>();
 
         AllScreensActive();
+        //pauseScreen.SetActive(false);
 
     }
 
