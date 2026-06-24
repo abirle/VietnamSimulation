@@ -106,7 +106,7 @@ public class ResourceManager : MonoBehaviour
     public GameObject[] militaryQuestionsArray;
 
     public static int domesticPointsInvestigated = 0;
-    public static int domesticPointsThreshold = 2;
+    public static int domesticPointsThreshold = 4;
     public GameObject phoneNotification;
     public bool domesticAdvisorAvailable = false;
     public GameObject[] domesticQuestionsArray;

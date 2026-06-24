@@ -41,6 +41,7 @@ public class SliderUpdate: MonoBehaviour
         paperSlide = audioSource.clip;
         penWriting = screenChange.writingSound;
 
+        //screenChange.pauseScreen.SetActive(false);
 
     }
 

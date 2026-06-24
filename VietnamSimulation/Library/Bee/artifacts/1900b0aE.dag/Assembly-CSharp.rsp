@@ -517,6 +517,7 @@
 "Assets/Scripts/PointOfInterest.cs"
 "Assets/Scripts/RadioPlayPause.cs"
 "Assets/Scripts/ResourceManager.cs"
+"Assets/Scripts/ResultScroll.cs"
 "Assets/Scripts/SceneTransition.cs"
 "Assets/Scripts/ScreenChange.cs"
 "Assets/Scripts/SliderUpdate.cs"
