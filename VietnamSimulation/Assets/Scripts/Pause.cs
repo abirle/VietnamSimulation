@@ -11,12 +11,13 @@ public class Pause : MonoBehaviour
     public GameObject pauseSliders;
     public GameObject[] slidersArray;
     int activeSlidersIndex = 1;
+    public ScreenChange screenChange;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        screenChange.pauseScreen.SetActive(false);
     }
 
     // Update is called once per frame

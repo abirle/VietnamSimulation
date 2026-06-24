@@ -119,6 +119,23 @@ public class PointOfInterest : MonoBehaviour
     }
 
 
+    public void IncrementPointsInvestigated()
+    {
+        if (room == "War Tent")
+        {
+            ResourceManager.militaryPointsInvestigated++;
+        }
+        else if (room == "Campaign Office")
+        {
+            ResourceManager.domesticPointsInvestigated++;
+        }
+        if (room == "State Department")
+        {
+            ResourceManager.diplomaticPointsInvestigated++;
+        }
+    }
+
+
     public void Hovered()
     {
         if (!poiClicked)

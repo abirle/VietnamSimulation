@@ -102,3 +102,12 @@ InitTestScene*.unity*
 /VietnamSimulation/Assets/StreamingAssets
 /VietnamSimulation/Build_02
 /VietnamSimulation/WebBuild
+VietnamSimulation/Library/Bee/artifacts/WebGL/il2cppOutput/build/GameAssembly.a
+VietnamSimulation/Library/Bee/artifacts/WebGL/GameAssembly/master_WebGL_wasm/GameAssembly.a
+VietnamSimulation/Library/Bee/artifacts/WebGL/webgl.data
+VietnamSimulation/Library/PlayerDataCache/WebGL1/Data/sharedassets0.resource
+VietnamSimulation/Library/PlayerDataCache/Win642/Data/sharedassets0.assets
+VietnamSimulation/Library/PlayerDataCache/Win642/Data/sharedassets0.resource
+VietnamSimulation/Library/PlayerDataCache/Win642/Data/sharedassets0.assets.resS
+VietnamSimulation/Library/PlayerDataCache/Win642/Data/sharedassets0.assets
+VietnamSimulation/Library/PlayerDataCache/WebGL1/Data/data.unity3d
