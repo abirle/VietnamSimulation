@@ -166,6 +166,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "ResultScroll",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "RuntimeInitializeOnLoadManager",
             "fullManagedTypeName": "",
@@ -3932,8 +3939,13 @@
     ],
     "forceExcludeModules": [
         "AMD",
+        "AR",
+        "ClusterInput",
+        "ClusterRenderer",
         "Hierarchy",
-        "NVIDIA"
+        "Insights",
+        "NVIDIA",
+        "VirtualTexturing"
     ],
     "dynamicModuleDependencies": []
 }

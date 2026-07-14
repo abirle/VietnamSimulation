@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - PointOfInterest
     - RadioPlayPause
     - ResourceManager
+    - ResultScroll
     - ScreenChange
     - SliderUpdate
     - WebGLVideo
@@ -107,6 +108,7 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
+    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -278,6 +280,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: TeletypeZoomOut
+  - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
   - assembly: Assembly-CSharp
@@ -293,11 +298,29 @@ ScriptsOnlyBuild:
     fullTypeName: SliderUpdate
     methodName: UpdateSlider
   - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: UpdateInputField
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: SliderReleased
+  - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: UpdateSlider
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: UpdateInputField
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: SliderReleased
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: UpdateInputField
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: SliderReleased
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
@@ -314,14 +337,20 @@ ScriptsOnlyBuild:
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
   - assembly: Assembly-CSharp
+    fullTypeName: Pause
+    methodName: previousSliders
+  - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
-    methodName: PhoneZoomOut
+    methodName: RecorderZoomOut
   - assembly: UnityEngine.VideoModule
     fullTypeName: UnityEngine.Video.VideoPlayer
     methodName: Play
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: POIPrevious
@@ -337,6 +366,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: RadioZoomOut
@@ -346,9 +378,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: RadioPlayPause
     methodName: RadioClicked
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
-    methodName: PhoneZoomOut
+    methodName: RecorderZoomOut
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
@@ -416,8 +454,14 @@ ScriptsOnlyBuild:
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
   - assembly: Assembly-CSharp
+    fullTypeName: Pause
+    methodName: ClosePauseMenu
+  - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: BackToLobby
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
@@ -427,6 +471,21 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ImageScroll
     methodName: ScrollLeft
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: ViewResults
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: UpdateInputField
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: SliderReleased
+  - assembly: Assembly-CSharp
+    fullTypeName: ImageScroll
+    methodName: ScrollRight
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -443,6 +502,9 @@ ScriptsOnlyBuild:
     fullTypeName: PointOfInterest
     methodName: Unhovered
   - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: ViewResults
+  - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
   - assembly: Assembly-CSharp
@@ -455,6 +517,12 @@ ScriptsOnlyBuild:
     fullTypeName: PointOfInterest
     methodName: Unhovered
   - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: InputFieldEntered
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: UpdateSlider
+  - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
   - assembly: Assembly-CSharp
@@ -463,6 +531,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: Unhovered
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: UpdateInputField
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: SliderReleased
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
@@ -475,12 +549,30 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: PointofInterestClick
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: Hovered
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: Unhovered
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: InputFieldEntered
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: UpdateSlider
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
@@ -499,6 +591,18 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.VideoModule
     fullTypeName: UnityEngine.Video.VideoPlayer
     methodName: Play
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
@@ -545,6 +649,12 @@ ScriptsOnlyBuild:
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
   - assembly: Assembly-CSharp
+    fullTypeName: ImageScroll
+    methodName: ScrollRight
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
   - assembly: Assembly-CSharp
@@ -553,6 +663,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: UpdateSlider
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: MapZoomOut
@@ -569,8 +688,17 @@ ScriptsOnlyBuild:
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
   - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: InputFieldEntered
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: UpdateSlider
+  - assembly: Assembly-CSharp
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: PointofInterestClose
   - assembly: Assembly-CSharp
     fullTypeName: ImageScroll
     methodName: ScrollLeft
@@ -592,6 +720,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: IncrementPointsInvestigated
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
@@ -619,6 +750,27 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: ViewResults
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: UpdateInputField
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: SliderReleased
+  - assembly: Assembly-CSharp
+    fullTypeName: MoreInfoButton
+    methodName: MoreInfo
+  - assembly: Assembly-CSharp
+    fullTypeName: MoreInfoButton
+    methodName: MoreInfo
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
@@ -658,6 +810,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: PhoneZoomOut
@@ -724,6 +879,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: MilitaryScene
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: POINext
@@ -749,6 +907,18 @@ ScriptsOnlyBuild:
     fullTypeName: ScreenChange
     methodName: ChalkboardZoomIn
   - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: IncrementPointsInvestigated
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: PointofInterestClose
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: InputFieldEntered
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: UpdateSlider
+  - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
   - assembly: Assembly-CSharp
@@ -757,6 +927,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ImageScroll
     methodName: ScrollLeft
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: InputFieldEntered
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: UpdateSlider
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
@@ -793,6 +969,9 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: set_mute
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: IncrementPointsInvestigated
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
@@ -869,6 +1048,9 @@ ScriptsOnlyBuild:
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
   - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: TeletypeZoomIn
+  - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
   - assembly: Assembly-CSharp
@@ -914,6 +1096,21 @@ ScriptsOnlyBuild:
     fullTypeName: SliderUpdate
     methodName: UpdateSlider
   - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: PointofInterestClick
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: Hovered
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: Unhovered
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: UpdateInputField
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: SliderReleased
+  - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
   - assembly: Assembly-CSharp
@@ -925,6 +1122,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: TypewriterZoomIn
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: InputFieldEntered
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: UpdateSlider
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
@@ -937,9 +1146,21 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: InputFieldEntered
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: UpdateSlider
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: UpdateInputField
+  - assembly: Assembly-CSharp
+    fullTypeName: InputFieldUpdate
+    methodName: SliderReleased
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
@@ -962,6 +1183,18 @@ ScriptsOnlyBuild:
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
   - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: InputFieldEntered
+  - assembly: Assembly-CSharp
+    fullTypeName: SliderUpdate
+    methodName: UpdateSlider
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_mute
+  - assembly: Assembly-CSharp
+    fullTypeName: PointOfInterest
+    methodName: PointofInterestClose
+  - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
   - assembly: Assembly-CSharp
@@ -974,11 +1207,26 @@ ScriptsOnlyBuild:
     fullTypeName: PointOfInterest
     methodName: POINext
   - assembly: Assembly-CSharp
+    fullTypeName: ImageScroll
+    methodName: ScrollLeft
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: EnterStateDepartment
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MoreInfoButton
+    methodName: MoreInfo
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
+  - assembly: Assembly-CSharp
+    fullTypeName: MoreInfoButton
+    methodName: MoreInfo
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: TelevisionZoomOut
@@ -994,6 +1242,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: LedgerZoomOut
+  - assembly: Assembly-CSharp
+    fullTypeName: Pause
+    methodName: nextSliders
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: PhoneZoomIn
@@ -1022,6 +1273,9 @@ ScriptsOnlyBuild:
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
   - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: PhoneZoomIn
+  - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: POINext
   - assembly: Assembly-CSharp
@@ -1033,6 +1287,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: UpdateSlider
+  - assembly: Assembly-CSharp
+    fullTypeName: ImageScroll
+    methodName: ScrollLeft
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IntroSkip
     methodName: Continue
@@ -1099,9 +1359,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: BackToLobby
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -1173,163 +1439,165 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 37204}
+      Script: {instanceID: 37206}
     - Class: 114
-      Script: {instanceID: 47928}
+      Script: {instanceID: 47932}
     - Class: 114
-      Script: {instanceID: 42822}
+      Script: {instanceID: 42826}
     - Class: 114
-      Script: {instanceID: 51542}
+      Script: {instanceID: 51546}
     - Class: 114
-      Script: {instanceID: 47724}
+      Script: {instanceID: 47728}
     - Class: 114
-      Script: {instanceID: 40134}
+      Script: {instanceID: 40136}
     - Class: 114
-      Script: {instanceID: 51258}
+      Script: {instanceID: 51262}
     - Class: 114
-      Script: {instanceID: 43026}
+      Script: {instanceID: 43030}
     - Class: 114
-      Script: {instanceID: 46892}
+      Script: {instanceID: 46896}
     - Class: 114
-      Script: {instanceID: 40768}
-    - Class: 114
-      Script: {instanceID: 21028}
-    - Class: 114
-      Script: {instanceID: 46736}
-    - Class: 114
-      Script: {instanceID: 51736}
-    - Class: 114
-      Script: {instanceID: 38690}
-    - Class: 114
-      Script: {instanceID: 38182}
-    - Class: 114
-      Script: {instanceID: 50532}
-    - Class: 114
-      Script: {instanceID: 37298}
-    - Class: 114
-      Script: {instanceID: 39522}
-    - Class: 114
-      Script: {instanceID: 40856}
-    - Class: 114
-      Script: {instanceID: 50670}
+      Script: {instanceID: 40770}
     - Class: 114
       Script: {instanceID: 42368}
     - Class: 114
-      Script: {instanceID: 37924}
+      Script: {instanceID: 21028}
     - Class: 114
-      Script: {instanceID: 49412}
+      Script: {instanceID: 46740}
     - Class: 114
-      Script: {instanceID: 47548}
+      Script: {instanceID: 51740}
     - Class: 114
-      Script: {instanceID: 44006}
+      Script: {instanceID: 38692}
     - Class: 114
-      Script: {instanceID: 40814}
+      Script: {instanceID: 38184}
     - Class: 114
-      Script: {instanceID: 51116}
+      Script: {instanceID: 50536}
     - Class: 114
-      Script: {instanceID: 44268}
+      Script: {instanceID: 37300}
     - Class: 114
-      Script: {instanceID: 40658}
+      Script: {instanceID: 39524}
     - Class: 114
-      Script: {instanceID: 43904}
+      Script: {instanceID: 40858}
     - Class: 114
-      Script: {instanceID: 44114}
+      Script: {instanceID: 50674}
     - Class: 114
-      Script: {instanceID: 38524}
+      Script: {instanceID: 42372}
     - Class: 114
-      Script: {instanceID: 40762}
+      Script: {instanceID: 37926}
     - Class: 114
-      Script: {instanceID: 38770}
+      Script: {instanceID: 49416}
     - Class: 114
-      Script: {instanceID: 49346}
+      Script: {instanceID: 47552}
     - Class: 114
-      Script: {instanceID: 40270}
+      Script: {instanceID: 44010}
     - Class: 114
-      Script: {instanceID: 37526}
+      Script: {instanceID: 40816}
     - Class: 114
-      Script: {instanceID: 43294}
+      Script: {instanceID: 51120}
     - Class: 114
-      Script: {instanceID: 37860}
+      Script: {instanceID: 44272}
     - Class: 114
-      Script: {instanceID: 39982}
+      Script: {instanceID: 40660}
     - Class: 114
-      Script: {instanceID: 45476}
+      Script: {instanceID: 43908}
     - Class: 114
-      Script: {instanceID: 49762}
+      Script: {instanceID: 44118}
     - Class: 114
-      Script: {instanceID: 51080}
+      Script: {instanceID: 38526}
     - Class: 114
-      Script: {instanceID: 43406}
+      Script: {instanceID: 40764}
     - Class: 114
-      Script: {instanceID: 38372}
+      Script: {instanceID: 38772}
     - Class: 114
-      Script: {instanceID: 52014}
+      Script: {instanceID: 49350}
     - Class: 114
-      Script: {instanceID: 50668}
+      Script: {instanceID: 40272}
     - Class: 114
-      Script: {instanceID: 45474}
+      Script: {instanceID: 37528}
     - Class: 114
-      Script: {instanceID: 45338}
+      Script: {instanceID: 43298}
     - Class: 114
-      Script: {instanceID: 43364}
+      Script: {instanceID: 37862}
     - Class: 114
-      Script: {instanceID: 46754}
+      Script: {instanceID: 39984}
     - Class: 114
-      Script: {instanceID: 50968}
+      Script: {instanceID: 45480}
     - Class: 114
-      Script: {instanceID: 40704}
+      Script: {instanceID: 49766}
     - Class: 114
-      Script: {instanceID: 51316}
+      Script: {instanceID: 51084}
     - Class: 114
-      Script: {instanceID: 48828}
+      Script: {instanceID: 43410}
     - Class: 114
-      Script: {instanceID: 40140}
+      Script: {instanceID: 38374}
     - Class: 114
-      Script: {instanceID: 50748}
+      Script: {instanceID: 52018}
     - Class: 114
-      Script: {instanceID: 43856}
+      Script: {instanceID: 50672}
     - Class: 114
-      Script: {instanceID: 43716}
+      Script: {instanceID: 45478}
     - Class: 114
-      Script: {instanceID: 38454}
+      Script: {instanceID: 45342}
     - Class: 114
-      Script: {instanceID: 47350}
+      Script: {instanceID: 43368}
     - Class: 114
-      Script: {instanceID: 40054}
+      Script: {instanceID: 46758}
     - Class: 114
-      Script: {instanceID: 50804}
+      Script: {instanceID: 50972}
     - Class: 114
-      Script: {instanceID: 40546}
+      Script: {instanceID: 40706}
     - Class: 114
-      Script: {instanceID: 45776}
+      Script: {instanceID: 51320}
     - Class: 114
-      Script: {instanceID: 39238}
+      Script: {instanceID: 48832}
     - Class: 114
-      Script: {instanceID: 38920}
+      Script: {instanceID: 40142}
     - Class: 114
-      Script: {instanceID: 41966}
+      Script: {instanceID: 50752}
     - Class: 114
-      Script: {instanceID: 51642}
+      Script: {instanceID: 43860}
     - Class: 114
-      Script: {instanceID: 38368}
+      Script: {instanceID: 43720}
     - Class: 114
-      Script: {instanceID: 43640}
+      Script: {instanceID: 38456}
     - Class: 114
-      Script: {instanceID: 46800}
+      Script: {instanceID: 47354}
     - Class: 114
-      Script: {instanceID: 49966}
+      Script: {instanceID: 40056}
     - Class: 114
-      Script: {instanceID: 45068}
+      Script: {instanceID: 50808}
     - Class: 114
-      Script: {instanceID: 38704}
+      Script: {instanceID: 40548}
     - Class: 114
-      Script: {instanceID: 49844}
+      Script: {instanceID: 45780}
     - Class: 114
-      Script: {instanceID: 52214}
+      Script: {instanceID: 39240}
     - Class: 114
-      Script: {instanceID: 42380}
+      Script: {instanceID: 38922}
     - Class: 114
-      Script: {instanceID: 38880}
+      Script: {instanceID: 41968}
+    - Class: 114
+      Script: {instanceID: 51646}
+    - Class: 114
+      Script: {instanceID: 38370}
+    - Class: 114
+      Script: {instanceID: 43644}
+    - Class: 114
+      Script: {instanceID: 46804}
+    - Class: 114
+      Script: {instanceID: 49970}
+    - Class: 114
+      Script: {instanceID: 45072}
+    - Class: 114
+      Script: {instanceID: 38706}
+    - Class: 114
+      Script: {instanceID: 49848}
+    - Class: 114
+      Script: {instanceID: 52218}
+    - Class: 114
+      Script: {instanceID: 42384}
+    - Class: 114
+      Script: {instanceID: 38882}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1359,7 +1627,7 @@ ScriptsOnlyBuild:
     className: UniversalRenderPipelineAsset
   - hash:
       serializedVersion: 2
-      Hash: d2fc3774610bc2a4e65ea2a10b9c985b
+      Hash: 888b0190879c3caf0df0543e4211bd81
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ScreenChange
@@ -2107,6 +2375,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.EnhancedTouch
     className: TouchSimulation
+  - hash:
+      serializedVersion: 2
+      Hash: 88be90fd30d6b52c080446dbf9c5b4b7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ResultScroll
   - hash:
       serializedVersion: 2
       Hash: 33eb495d99aa9bea4dbe8b4c4e02c7bb
@@ -3135,7 +3409,7 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreak2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 18378f60eed87e9fccb9362e4df356f6
+      Hash: 7615fc7d397448078f9e3678f20314f1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Pause

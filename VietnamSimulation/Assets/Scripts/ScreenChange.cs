@@ -75,17 +75,19 @@ public class ScreenChange : MonoBehaviour
     bool isFadingInOnStateDepartment = false;
     bool isZoomingInOnTeletype = false;
     bool isZoomingOutOnTeletype = false;
+    bool isZoomingInOnRecorder = false;
+    bool isZoomingOutOnRecorder = false;
 
     Vector3 cameraCenter = new Vector3(1288, 725, -1500);
     Vector3 cameraMap = new Vector3(1283, 722, -1500);
     Vector3 cameraCorkboard = new Vector3(1284, (float)725.7, -1500);
     Vector3 cameraLedger = new Vector3((float)1297.2, 725, -1500);
     Vector3 cameraRadio = new Vector3((float)1286.74, (float)723.66, -1500);
-    Vector3 cameraPhone = new Vector3((float)1291.95, (float)723.8, -1500);
+    Vector3 cameraPhone = new Vector3((float)1291.95, (float)723.9, -1500);
     Vector3 cameraTypewriter = new Vector3((float)1284.52, (float)722.29, -1500);
     Vector3 cameraTelevision = new Vector3((float)1290.4, 726, -1500);
     Vector3 cameraChalkboard = new Vector3((float)1282.8, (float)726.21, -1500);
-    Vector3 cameraRecorder = new Vector3((float)1288.08, (float)722.46, -1500);
+    Vector3 cameraRecorder = new Vector3((float)1287.75, (float)722.38, -1500);
     Vector3 cameraTeletype = new Vector3((float)1284.52, (float)722.29, -1500);
 
     float timeElapsed = 0f;
@@ -137,9 +139,12 @@ public class ScreenChange : MonoBehaviour
     public AudioClip[] deterioratingClips;
     public AudioClip[] failureClips;
 
-    public Sprite[] successImages;
-    public Sprite[] deterioratingImages;
-    public Sprite[] failureImages;
+    public GameObject[] successImages;
+    public GameObject[] deterioratingImages;
+    public GameObject[] failureImages;
+
+    public TMP_Text resultsText;
+    public ResultScroll resultScroll;
 
     public void AllScreensActive()
     {
@@ -339,7 +344,7 @@ public class ScreenChange : MonoBehaviour
             {
                 //ResourceManager.pointsInvestigated = 0;
                 militaryAdvisor.SetActive(true);
-                militaryAdvisorText.text = "I've got a meeting with Wheeler in five minutes. You have one question. Go ahead.";
+                militaryAdvisorText.text = "I've got a meeting with Wheeler in five minutes. Make it quick -- go ahead.";
                 resourceManager.militaryAdvisorAvailable = false;
                 resourceManager.radioNotification.SetActive(false);
                 isZoomingInOnRadio = false;
@@ -356,7 +361,6 @@ public class ScreenChange : MonoBehaviour
             float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
             camera.transform.position = Vector3.Lerp(cameraRadio, cameraCenter, zoomProgress);
             camera.orthographicSize = Mathf.Lerp((float)1.5, 5, zoomProgress);
-            Debug.Log(camera.orthographicSize);
 
             if (zoomProgress == 1f)
             {
@@ -578,7 +582,7 @@ public class ScreenChange : MonoBehaviour
             {
                 //ResourceManager.pointsInvestigated = 0;
                 domesticAdvisor.SetActive(true);
-                domesticAdvisorText.text = "Listen, I'm due on air shortly, but I've got a minute if you need me. One question, and then I've gotta go.";
+                domesticAdvisorText.text = "Listen, I'm due on air shortly, but I've got a minute if you need me. What's on your mind?";
                 resourceManager.domesticAdvisorAvailable = false;
                 resourceManager.phoneNotification.SetActive(false);
                 isZoomingInOnPhone = false;
@@ -601,6 +605,43 @@ public class ScreenChange : MonoBehaviour
                 InputSystem.EnableDevice(Mouse.current);
             }
         }
+
+        //FIXME
+        else if (isZoomingInOnRecorder)
+        {
+            timeElapsed += Time.deltaTime;
+            float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
+            camera.transform.position = Vector3.Lerp(cameraCenter, cameraRecorder, zoomProgress);
+            camera.orthographicSize = Mathf.Lerp(5, (float)1.5, zoomProgress);
+
+            if (zoomProgress == 1f)
+            {
+                ResourceManager.diplomaticPointsInvestigated = 0;
+                diplomaticAdvisor.SetActive(true);
+                diplomaticAdvisorText.text = "You found the reel. Good. I set down my thoughts on a few pressing matters. Spool to the one you want and let it run.";
+                resourceManager.diplomaticAdvisorAvailable = false;
+                resourceManager.recorderNotification.SetActive(false);
+                isZoomingInOnRecorder = false;
+                audioSource.PlayOneShot(diplomaticQuestionIntro);
+                InputSystem.EnableDevice(Mouse.current);
+
+            }
+        }
+
+        else if (isZoomingOutOnRecorder)
+        {
+            timeElapsed += Time.deltaTime;
+            float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
+            camera.transform.position = Vector3.Lerp(cameraRecorder, cameraCenter, zoomProgress);
+            camera.orthographicSize = Mathf.Lerp((float)1.5, 5, zoomProgress);
+
+            if (zoomProgress == 1f)
+            {
+                isZoomingOutOnRecorder = false;
+                InputSystem.EnableDevice(Mouse.current);
+            }
+        }
+
 
         else if (isZoomingInOnTypewriter)
         {
@@ -818,7 +859,7 @@ public class ScreenChange : MonoBehaviour
         {
             timeElapsed += Time.deltaTime;
 
-            if (timeElapsed >= 1)
+            if (timeElapsed >= 1.5f)
             {
                 radioCrackling = false;
                 if (!viewingResults)
@@ -841,6 +882,22 @@ public class ScreenChange : MonoBehaviour
                 {
                     audioSource.PlayOneShot(domesticIntro01);
                     listeningToDomesticIntro01 = true;
+                    timeElapsed = 0;
+                }
+            }
+        }
+
+        else if (tapeRecording)
+        {
+            timeElapsed += Time.deltaTime;
+
+            if (timeElapsed >= 1.5f)
+            {
+                tapeRecording = false;
+                if (!viewingResults)
+                {
+                    audioSource.PlayOneShot(diplomaticIntro01);
+                    listeningToDiplomaticIntro01 = true;
                     timeElapsed = 0;
                 }
             }
@@ -872,6 +929,22 @@ public class ScreenChange : MonoBehaviour
                 listeningToDomesticIntro01 = false;
                 InputSystem.EnableDevice(Mouse.current);
                 audioSource.PlayOneShot(rotaryPhone);
+
+            }
+        }
+
+
+        else if (listeningToDiplomaticIntro01)
+        {
+            timeElapsed += Time.deltaTime;
+            //InputSystem.DisableDevice(Mouse.current);
+
+            if (timeElapsed >= 26)
+            {
+                diplomaticContinueButton.interactable = true;
+                listeningToDiplomaticIntro01 = false;
+                InputSystem.EnableDevice(Mouse.current);
+                audioSource.PlayOneShot(tapeRecorder);
 
             }
         }
@@ -1191,6 +1264,37 @@ public class ScreenChange : MonoBehaviour
     }
 
 
+    public void RecorderZoomIn()
+    {
+        if (resourceManager.diplomaticAdvisorAvailable && !isZoomingInOnRecorder)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingInOnRecorder = true;
+        }
+    }
+
+    public void RecorderZoomOut()
+    {
+        diplomaticAdvisor.SetActive(false);
+
+        if (!isZoomingOutOnRecorder)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingOutOnRecorder = true;
+        }
+    }
+
+
     public void EnterStateDepartment()
     {
         audioSource.PlayOneShot(transitionSound);
@@ -1226,16 +1330,18 @@ public class ScreenChange : MonoBehaviour
         resourceManager.CalculateResults();
         resourceManager.FinalizeResults();
 
-        militaryContinueButton.gameObject.SetActive(false);
-        militaryCloseButton.SetActive(false);
-        militaryNextButton.SetActive(true);
-        militaryImage.gameObject.SetActive(true);
+        resultsScreen.SetActive(true);
 
-        resourceManager.radioNotification.SetActive(false);
-        foreach (GameObject question in resourceManager.militaryQuestionsArray)
-        {
-            question.SetActive(false);
-        }
+        //militaryContinueButton.gameObject.SetActive(false);
+        //militaryCloseButton.SetActive(false);
+        //militaryNextButton.SetActive(true);
+        //militaryImage.gameObject.SetActive(true);
+        
+        //resourceManager.radioNotification.SetActive(false);
+        //foreach (GameObject question in resourceManager.militaryQuestionsArray)
+        //{
+        //    question.SetActive(false);
+        //}
 
         decisionScreen.SetActive(false);
         viewingResults = true;
@@ -1244,91 +1350,127 @@ public class ScreenChange : MonoBehaviour
 
         if (numResultsViewed == 0)
         {
-            if (!isFadingInOnWarRoom)
-            {
-                timeElapsed = 0f;
-                secondTimeElapsed = 0f;
-                isFadingInOnWarRoom = true;
-            }
+            //if (!isFadingInOnWarRoom)
+            //{
+            //    timeElapsed = 0f;
+            //    secondTimeElapsed = 0f;
+            //    isFadingInOnWarRoom = true;
+            //}
 
             if (ResourceManager.successCalculatedM1)
             {
-                militaryAdvisorText.text = "I believe the resource commitment here has been, at least under the present circumstances, the right call. U.S.and ARVN forces are holding the major cities. The countryside is still contested, but it remains under government control. The Viet Cong took heavy losses during Tet, and Hanoi has not been able to achieve a decisive breakthrough. Our credibility with our allies is intact, and South Vietnam continues to function as a state.Now, I want to be clear: the cost has been immense.Troop levels are up, casualties are significant, and this war is far from over.But the central objective — preventing a communist takeover — has held. That is the foundation everything else sits on.";
+                //militaryAdvisorText.text = "I believe the resource commitment here has been, at least under the present circumstances, the right call. U.S.and ARVN forces are holding the major cities. The countryside is still contested, but it remains under government control. The Viet Cong took heavy losses during Tet, and Hanoi has not been able to achieve a decisive breakthrough. Our credibility with our allies is intact, and South Vietnam continues to function as a state.Now, I want to be clear: the cost has been immense.Troop levels are up, casualties are significant, and this war is far from over.But the central objective — preventing a communist takeover — has held. That is the foundation everything else sits on.";
+                resultsText.text = "The most important result went our way. The central objective — keeping South Vietnam from falling to the communists — has held. And that is what makes everything else possible.\r\n\r\nU.S. and ARVN forces are holding the major cities. The countryside is still contested, but it remains under government control. The Viet Cong took heavy losses during Tet, and Hanoi has not been able to achieve a decisive breakthrough. Our credibility with our allies is intact, and South Vietnam continues to function as a state.\r\n\r\nNow, the important point to recognize is the cost — and it has been immense. Troop levels are up, casualties are significant, and this war is far from over. But this was the one outcome we could not afford to lose, and you held it. This is the rare case where what we committed purchased the real thing — usable strategic power, not the facade of it. We could not have held this line for less.\r\n";
                 audioSource.PlayOneShot(successClips[0]);
-                militaryImage.sprite = successImages[0];
+                successImages[0].SetActive(true);
+                //militaryImage.sprite = successImages[0];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedM1)
             {
-                militaryAdvisorText.text = "I have to be direct with you. South Vietnam is surviving, but only barely, and that is not a position I'm comfortable reporting. The Viet Cong and North Vietnamese forces have infiltrated much of the countryside. The ARVN is struggling to maintain control outside the cities. Pacification programs are collapsing in rural areas, and refugees are flooding into Saigon and the urban centers. I believe I'm correct in saying that international observers now see a government that is formally in power but effectively besieged. We have prevented total collapse — for now. But this situation cannot hold. Allies are beginning to question our staying power, and I would tell you that the resources allocated here were not sufficient for what we are facing. This is a very serious problem, and it is getting worse.";
+                //militaryAdvisorText.text = "I have to be direct with you. South Vietnam is surviving, but only barely, and that is not a position I'm comfortable reporting. The Viet Cong and North Vietnamese forces have infiltrated much of the countryside. The ARVN is struggling to maintain control outside the cities. Pacification programs are collapsing in rural areas, and refugees are flooding into Saigon and the urban centers. I believe I'm correct in saying that international observers now see a government that is formally in power but effectively besieged. We have prevented total collapse — for now. But this situation cannot hold. Allies are beginning to question our staying power, and I would tell you that the resources allocated here were not sufficient for what we are facing. This is a very serious problem, and it is getting worse.";
+                resultsText.text = "South Vietnam is surviving — but only barely, and that is not a position I'm comfortable reporting.\r\n\r\nThe Viet Cong and North Vietnamese forces have infiltrated much of the countryside. The ARVN is struggling to maintain control outside the cities. Pacification programs are collapsing in rural areas, and refugees are flooding into Saigon and the urban centers. I believe I'm correct in saying that international observers now see a government that is formally in power but effectively besieged.\r\nWe have prevented total collapse — for now — and that still leaves something to build on. But a near-thing only becomes the foundation for a future success if the commitment behind it changes. Allies are beginning to question our staying power, and at the present level, this cannot hold.\r\n";
                 audioSource.PlayOneShot(deterioratingClips[0]);
-                militaryImage.sprite = deterioratingImages[0];
+                deterioratingImages[0].SetActive(true);
+                //militaryImage.sprite = deterioratingImages[0];
+                resultScroll.Scroll();
             }
             else
             {
-                militaryAdvisorText.text = "Let me be absolutely clear on what has happened here. South Vietnam is disintegrating. Communist forces, emboldened by their battlefield gains, have overrun large parts of the countryside and are moving on the major cities. The Thieu government is on the edge of collapse — it cannot inspire loyalty, it cannot command its own security forces, and it cannot govern. We are now confronting what I would have considered, six months ago, unthinkable: after everything this country has invested — the troops, the resources, the lives — we are facing the prospect of outright defeat. And I will tell you something else: this does not stay in Vietnam. The fall of South Vietnam is triggering a crisis of credibility across the globe. Every ally we have is watching, and every adversary is taking note. The resources committed to this objective were wholly inadequate, and the consequences of that decision are now playing out in front of us.";
+                //militaryAdvisorText.text = "Let me be absolutely clear on what has happened here. South Vietnam is disintegrating. Communist forces, emboldened by their battlefield gains, have overrun large parts of the countryside and are moving on the major cities. The Thieu government is on the edge of collapse — it cannot inspire loyalty, it cannot command its own security forces, and it cannot govern. We are now confronting what I would have considered, six months ago, unthinkable: after everything this country has invested — the troops, the resources, the lives — we are facing the prospect of outright defeat. And I will tell you something else: this does not stay in Vietnam. The fall of South Vietnam is triggering a crisis of credibility across the globe. Every ally we have is watching, and every adversary is taking note. The resources committed to this objective were wholly inadequate, and the consequences of that decision are now playing out in front of us.";
+                resultsText.text = "South Vietnam is disintegrating. Communist forces, emboldened by their battlefield gains, have overrun large parts of the countryside and are moving on the major cities. The Thieu government is on the edge of collapse — it cannot inspire loyalty, it cannot command its own security forces, and it cannot govern.\r\nAnd this does not end in Vietnam. This was the objective the whole structure was built on, and as it goes down it is pulling the rest with it — the fall of South Vietnam is triggering a crisis of credibility across the globe. Every ally we have is watching, and every adversary is taking note.\r\nWe told ourselves the cost of losing here would be bearable. We were wrong — and now we are only beginning to measure how wrong.\r\n";
                 audioSource.PlayOneShot(failureClips[0]);
-                militaryImage.sprite = failureImages[0];
+                failureImages[0].SetActive(true);
+                //militaryImage.sprite = failureImages[0];
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 1) 
         {
             if (ResourceManager.successCalculatedM2)
             {
-                militaryAdvisorText.text = "I believe I'm correct in saying that the resource allocation here has allowed our forces to mount effective counteroffensives after Tet. Major Viet Cong units have been badly degraded — on the order of several thousand casualties in key engagements — and North Vietnamese regulars have been pushed back from areas they held just weeks ago. Our commanders can point to clear tactical victories, and the data suggests momentum is shifting in our favor. Now, I want to be careful here. These successes are measured in battles won, not in war-ending progress. The enemy retreats, regroups, and prepares for the next round. That is the nature of what we're dealing with. But at least under the present circumstances, our troops on the ground feel they have regained the initiative, and that is not nothing. ";
+                //militaryAdvisorText.text = "I believe I'm correct in saying that the resource allocation here has allowed our forces to mount effective counteroffensives after Tet. Major Viet Cong units have been badly degraded — on the order of several thousand casualties in key engagements — and North Vietnamese regulars have been pushed back from areas they held just weeks ago. Our commanders can point to clear tactical victories, and the data suggests momentum is shifting in our favor. Now, I want to be careful here. These successes are measured in battles won, not in war-ending progress. The enemy retreats, regroups, and prepares for the next round. That is the nature of what we're dealing with. But at least under the present circumstances, our troops on the ground feel they have regained the initiative, and that is not nothing. ";
+                resultsText.text = "I have the after-action reporting in front of me, and it is clear: our forces have mounted effective counteroffensives since Tet.\r\n\r\nMajor Viet Cong units have been badly degraded — on the order of several thousand casualties in key engagements — and North Vietnamese regulars have been pushed back from areas they held just weeks ago. Our commanders can point to clear tactical victories, and the data suggests momentum is shifting in our favor.\r\nNow, these successes are real, but I'd not read more into them than the facts will bear: they are measured in battles won, not in war-ending progress. The enemy retreats, regroups, and prepares for the next round. But as things stand, the men in the field believe they've regained the initiative — and that is not nothing.\r\n";
                 audioSource.PlayOneShot(successClips[1]);
-                militaryImage.sprite = successImages[1];
+                successImages[1].SetActive(true);
+                //militaryImage.sprite = successImages[1];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedM2)
             {
-                militaryAdvisorText.text = "I have to be direct with you about the situation in the field. Our forces are holding their ground, but they cannot decisively beat back the Viet Cong or the North Vietnamese. Battles are dragging on inconclusively. We are inflicting heavy casualties — I believe the ratio is still in our favor — but the enemy seems capable of replenishing its ranks at a rate we did not anticipate. Soldiers on the ground are growing frustrated. Familiar villages are being fought over again and again. The military picture, frankly, is one of stalemate: neither side can declare victory. And I will tell you that the American public is increasingly questioning whether what we call \"progress\" has any meaning. The resources allocated here were not adequate to achieve what we needed, and we are now living with the consequences of that. ...";
+                //militaryAdvisorText.text = "I have to be direct with you about the situation in the field. Our forces are holding their ground, but they cannot decisively beat back the Viet Cong or the North Vietnamese. Battles are dragging on inconclusively. We are inflicting heavy casualties — I believe the ratio is still in our favor — but the enemy seems capable of replenishing its ranks at a rate we did not anticipate. Soldiers on the ground are growing frustrated. Familiar villages are being fought over again and again. The military picture, frankly, is one of stalemate: neither side can declare victory. And I will tell you that the American public is increasingly questioning whether what we call \"progress\" has any meaning. The resources allocated here were not adequate to achieve what we needed, and we are now living with the consequences of that. ...";
+                resultsText.text = "I have to be direct with you about the situation in the field.\r\n\r\nOur forces are holding their ground, but they cannot decisively beat back the Viet Cong or the North Vietnamese. Battles are dragging on inconclusively. We are inflicting heavy casualties — I believe the ratio is still in our favor — but the enemy seems capable of replenishing its ranks at a rate we did not anticipate. The soldiers are growing frustrated as familiar villages are fought over again and again.\r\n\r\nThe picture is one of stalemate. We are counting casualties and calling it progress — but the tolerances on those numbers are refined far beyond the accuracy of the assumptions behind them. The American public has begun to sense that what we call \"progress\" may not mean what we say it means. They are not wrong.\r\n";
                 audioSource.PlayOneShot(deterioratingClips[1]);
-                militaryImage.sprite = deterioratingImages[1];
+                deterioratingImages[1].SetActive(true);
+                //militaryImage.sprite = deterioratingImages[1];
+                resultScroll.Scroll();
             }
             else
             {
-                militaryAdvisorText.text = "Let me be absolutely clear about what has happened. With insufficient resources devoted to combat operations, our forces have been outmaneuvered. The Viet Cong have launched coordinated attacks across multiple provinces, and North Vietnamese units are exploiting gaps in our lines that should never have existed. Casualties are mounting. Morale is dropping. Even bases we considered secure now feel vulnerable. And every evening, the American public is watching images of setbacks and bloody fighting on their television sets, and the perception — I would say the accurate perception — is that we are losing this war. I can't overstate the seriousness of this. Military failure on this scale deepens every political crisis we face, in Saigon and in Washington, and it leaves us with very little room to turn things around. The resources committed here were wholly inadequate, and we are now paying for that in American lives.";
+                //militaryAdvisorText.text = "Let me be absolutely clear about what has happened. With insufficient resources devoted to combat operations, our forces have been outmaneuvered. The Viet Cong have launched coordinated attacks across multiple provinces, and North Vietnamese units are exploiting gaps in our lines that should never have existed. Casualties are mounting. Morale is dropping. Even bases we considered secure now feel vulnerable. And every evening, the American public is watching images of setbacks and bloody fighting on their television sets, and the perception — I would say the accurate perception — is that we are losing this war. I can't overstate the seriousness of this. Military failure on this scale deepens every political crisis we face, in Saigon and in Washington, and it leaves us with very little room to turn things around. The resources committed here were wholly inadequate, and we are now paying for that in American lives.";
+                resultsText.text = "With too little behind our combat operations, our forces have been outmaneuvered, and there's no reading it otherwise.\r\n\r\nThe Viet Cong have launched coordinated attacks across multiple provinces, and North Vietnamese units are exploiting gaps in our lines that should never have existed. Casualties are mounting, and morale is going down with them. Even bases we considered secure now feel vulnerable.\r\n\r\nAnd every evening, the American public is watching images of setbacks and bloody fighting on their television sets — and the perception, which I would call the accurate one, is that we are losing this war. What we fielded here was an unusable form of military power. A failure on this scale deepens every political crisis we face, in Saigon and in Washington, and it leaves very little room to turn things around.\r\n";
                 audioSource.PlayOneShot(failureClips[1]);
-                militaryImage.sprite = failureImages[1];
+                failureImages[1].SetActive(true);
+                //militaryImage.sprite = failureImages[1];
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 2)
         {
             if (ResourceManager.successCalculatedM3)
             {
-                militaryAdvisorText.text = "The resource commitment to pacification is showing measurable results. Villages that were, not long ago, firmly under Viet Cong control now have functioning local militias. Schools and clinics are reopening under government protection. Roads are becoming safer for commerce, and farmers are beginning to feel secure enough to plant crops and revive local markets. You can see the effect of the hearts and minds programs -- they are making tangible progress on the ground. Now, communist cadres still operate in the shadows. Their grip has weakened, but they have not disappeared. Rural South Vietnam is showing flickers of stability for the first time in years, but I want to be clear: these gains are fragile and costly to maintain. At least under present circumstances, the resource allocation here was the right decision. Don't let that slip.";
+                //militaryAdvisorText.text = "The resource commitment to pacification is showing measurable results. Villages that were, not long ago, firmly under Viet Cong control now have functioning local militias. Schools and clinics are reopening under government protection. Roads are becoming safer for commerce, and farmers are beginning to feel secure enough to plant crops and revive local markets. You can see the effect of the hearts and minds programs -- they are making tangible progress on the ground. Now, communist cadres still operate in the shadows. Their grip has weakened, but they have not disappeared. Rural South Vietnam is showing flickers of stability for the first time in years, but I want to be clear: these gains are fragile and costly to maintain. At least under present circumstances, the resource allocation here was the right decision. Don't let that slip.";
+                resultsText.text = "Out in the countryside, the indicators are finally moving in our direction.\r\n\r\nVillages that were, not long ago, firmly under Viet Cong control now have functioning local militias. Schools and clinics are reopening under government protection. Roads are becoming safer for commerce, and farmers are beginning to feel secure enough to plant crops and revive local markets. You can see the effect of the hearts and minds programs — they are making tangible progress on the ground.\r\n\r\nNow, the communist cadres still operate in the shadows. Their grip has weakened, but they have not disappeared, and it is obvious, to our commanders as much as to me, that these gains are fragile and costly to maintain. On the present evidence, the weight you put here was the right call. Don't let it slip.\r\n";
                 audioSource.PlayOneShot(successClips[2]);
-                militaryImage.sprite = successImages[2];
+                successImages[2].SetActive(true);
+                //militaryImage.sprite = successImages[2];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedM3)
             {
-                militaryAdvisorText.text = "I have to give you an honest assessment of the pacification effort. The results are mixed, and in many areas they are failing. U.S. and ARVN units clear villages during the day. The Viet Cong come back at night. Strategic Hamlets are falling into disrepair. Corruption among local officials is alienating the very peasants we are trying to protect. Refugees from contested zones are flooding into the cities and straining resources we do not have to spare. Rural families are living in constant fear, unsure which side to trust, and many are hedging -- offering food and shelter to both our forces and the Viet Cong. You can see the heavy drain upon our position here. The countryside has become a patchwork of zones under tenuous control, and the overall situation is stagnant and unstable. The resources allocated to pacification were not adequate for the scale of what we are dealing with, and we are living with that now. ";
+                //militaryAdvisorText.text = "I have to give you an honest assessment of the pacification effort. The results are mixed, and in many areas they are failing. U.S. and ARVN units clear villages during the day. The Viet Cong come back at night. Strategic Hamlets are falling into disrepair. Corruption among local officials is alienating the very peasants we are trying to protect. Refugees from contested zones are flooding into the cities and straining resources we do not have to spare. Rural families are living in constant fear, unsure which side to trust, and many are hedging -- offering food and shelter to both our forces and the Viet Cong. You can see the heavy drain upon our position here. The countryside has become a patchwork of zones under tenuous control, and the overall situation is stagnant and unstable. The resources allocated to pacification were not adequate for the scale of what we are dealing with, and we are living with that now. ";
+                resultsText.text = "The pacification effort is coming apart in the middle. It holds in some places but is failing in many.\r\n\r\nU.S. and ARVN units clear villages during the day. The Viet Cong come back at night. Strategic Hamlets are falling into disrepair. Corruption among local officials is alienating the very peasants we are trying to protect. Refugees from contested zones are flooding into the cities and straining resources we do not have to spare. Rural families live in constant fear, unsure which side to trust, and many are hedging — offering food and shelter to both our forces and the Viet Cong.\r\n\r\nThe countryside has become a patchwork of zones under tenuous control. What this needed was steady reinforcement — filling the valleys, not just holding a few peaks — and that reallocation never came. We are living with the result.\r\n";
                 audioSource.PlayOneShot(deterioratingClips[2]);
-                militaryImage.sprite = deterioratingImages[2];
+                deterioratingImages[2].SetActive(true);
+                //militaryImage.sprite = deterioratingImages[2];
+                resultScroll.Scroll();
             }
             else
             {
-                militaryAdvisorText.text = "I want there to be no misunderstanding about what has happened here. The South Vietnamese countryside has slipped decisively into communist hands. U.S. patrols rarely venture beyond their bases. ARVN units are either absent or ineffective. Viet Cong tax collectors and political officers are operating openly in villages, while government representatives have been driven out or killed. Farmers are fleeing en masse to the urban centers, creating a humanitarian crisis that is compounding every other problem we face. The South Vietnamese state has shrunk to what I would describe as an archipelago of insecure cities surrounded by hostile territory. For the ordinary Vietnamese peasant, the war has already been decided. And I will tell you something else: this was not inevitable. The resources committed to pacification were wholly inadequate, and the consequences are now visible to everyone.";
+                //militaryAdvisorText.text = "I want there to be no misunderstanding about what has happened here. The South Vietnamese countryside has slipped decisively into communist hands. U.S. patrols rarely venture beyond their bases. ARVN units are either absent or ineffective. Viet Cong tax collectors and political officers are operating openly in villages, while government representatives have been driven out or killed. Farmers are fleeing en masse to the urban centers, creating a humanitarian crisis that is compounding every other problem we face. The South Vietnamese state has shrunk to what I would describe as an archipelago of insecure cities surrounded by hostile territory. For the ordinary Vietnamese peasant, the war has already been decided. And I will tell you something else: this was not inevitable. The resources committed to pacification were wholly inadequate, and the consequences are now visible to everyone.";
+                resultsText.text = "This one went badly — we have lost the countryside.\r\n\r\nU.S. patrols rarely venture beyond their bases. ARVN units are either absent or ineffective. Viet Cong tax collectors and political officers are operating openly in villages, while government representatives have been driven out or killed. Farmers are fleeing en masse to the urban centers, creating a humanitarian crisis that compounds every other problem we face.\r\n\r\nThe South Vietnamese state has shrunk to an archipelago of insecure cities surrounded by hostile territory. For the ordinary Vietnamese peasant, the war has already been decided. And I'll say this plainly: it was not inevitable. Trying to hold the countryside on what we committed to it was, in a true sense, a bankrupt strategy — and the result is now visible to everyone.\r\n";
                 audioSource.PlayOneShot(failureClips[2]);
-                militaryImage.sprite = failureImages[2];
+                failureImages[2].SetActive(true);
+                //militaryImage.sprite = failureImages[2];
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 3)
         {
             if (ResourceManager.successCalculatedM4)
             {
-                militaryAdvisorText.text = "The resource allocation to political stabilization has produced what I would call measurable, if limited, progress. President Thieu has consolidated his position. Corruption has been curbed -- not eliminated, but curbed. Elections were stage-managed, I think we all understand that, but they were broadly accepted. Government ministries are beginning to function with greater efficiency. And here is what matters operationally: ARVN morale is improving. Soldiers feel they are fighting for a government that has some legitimacy. Saigon appears, at least for now, capable of governing. U.S. officials can point to genuine progress and make the case that Vietnamization might eventually succeed. Now, the war itself remains unresolved. But the political foundation -- which is what everything else depends on -- is holding. That's the situation.";
+                //militaryAdvisorText.text = "The resource allocation to political stabilization has produced what I would call measurable, if limited, progress. President Thieu has consolidated his position. Corruption has been curbed -- not eliminated, but curbed. Elections were stage-managed, I think we all understand that, but they were broadly accepted. Government ministries are beginning to function with greater efficiency. And here is what matters operationally: ARVN morale is improving. Soldiers feel they are fighting for a government that has some legitimacy. Saigon appears, at least for now, capable of governing. U.S. officials can point to genuine progress and make the case that Vietnamization might eventually succeed. Now, the war itself remains unresolved. But the political foundation -- which is what everything else depends on -- is holding. That's the situation.";
+                resultsText.text = "Saigon has turned a corner — the political picture there is stronger than I expected.\r\n\r\nPresident Thieu has consolidated his position. Corruption has been curbed — not eliminated, but curbed. Elections were stage-managed, I think we all understand that, but they were broadly accepted. Government ministries are beginning to function with greater efficiency. And operationally, this is what counts: ARVN morale is improving. Soldiers feel they are fighting for a government that has some legitimacy.\r\n\r\nSaigon appears, at least for now, capable of governing, and our officials can make the case that Vietnamization might eventually succeed. The war itself remains unresolved. But the political foundation is holding — and that counts for a great deal.\r\n";
                 audioSource.PlayOneShot(successClips[3]);
+                successImages[3].SetActive(true);
                 //militaryImage.sprite = successImages[3];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedM4)
             {
-                militaryAdvisorText.text = "Frankly, the political situation in Saigon is not where it needs to be. The Thieu government is limping along, riven by corruption and factional rivalries. Civil servants are skimming U.S. aid. ARVN officers are selling weapons on the black market. In the rural areas, government officials are seen not as protectors but as parasites. Thieu is clinging to power, but I believe I'm correct in saying that his legitimacy rests almost entirely on American money and American soldiers. Both the South Vietnamese public and international observers are beginning to ask the question we do not want asked: whether Saigon is a government worth defending. It's a problem with which we are seized, and I would tell you that the resources allocated here were not sufficient to build the kind of political stability this situation demands.";
+                //militaryAdvisorText.text = "Frankly, the political situation in Saigon is not where it needs to be. The Thieu government is limping along, riven by corruption and factional rivalries. Civil servants are skimming U.S. aid. ARVN officers are selling weapons on the black market. In the rural areas, government officials are seen not as protectors but as parasites. Thieu is clinging to power, but I believe I'm correct in saying that his legitimacy rests almost entirely on American money and American soldiers. Both the South Vietnamese public and international observers are beginning to ask the question we do not want asked: whether Saigon is a government worth defending. It's a problem with which we are seized, and I would tell you that the resources allocated here were not sufficient to build the kind of political stability this situation demands.";
+                resultsText.text = "Frankly, the political situation in Saigon is not where it needs to be.\r\n\r\nThe Thieu government is limping along, riven by corruption and factional rivalries. Civil servants are skimming U.S. aid. ARVN officers are selling weapons on the black market. In the rural areas, government officials are seen not as protectors but as parasites. Thieu is clinging to power, but his legitimacy rests almost entirely on American money and American soldiers.\r\n\r\nSaigon is now a facade of a government rather than the reality of one. Both the South Vietnamese public and international observers have begun to ask the question we least want asked — whether Saigon is a government worth defending.\r\n";
                 audioSource.PlayOneShot(deterioratingClips[3]);
+                deterioratingImages[3].SetActive(true);
+                resultScroll.Scroll();
             }
             else
             {
-                militaryAdvisorText.text = "What has happened here is a political failure of the first order, and I want to be precise about what that means. The South Vietnamese state has collapsed in credibility. Rival generals are plotting against Thieu. Corruption scandals are exploding in the press. Ordinary citizens view their government as hopelessly illegitimate. ARVN units are deserting in large numbers. Those who remain are fighting half-heartedly, and they know why -- their leaders are corrupt and disconnected from the war they are being asked to fight. And here is what should concern you most: for many villagers, the Viet Cong -- despite their brutality -- now appear more disciplined and more reliable than Saigon's own officials. U.S. strategy is unraveling because Washington is propping up a government that scarcely exists outside the walls of the presidential palace. The resources committed to political stabilization were wholly inadequate. That is the fact of the matter.";
+                //militaryAdvisorText.text = "What has happened here is a political failure of the first order, and I want to be precise about what that means. The South Vietnamese state has collapsed in credibility. Rival generals are plotting against Thieu. Corruption scandals are exploding in the press. Ordinary citizens view their government as hopelessly illegitimate. ARVN units are deserting in large numbers. Those who remain are fighting half-heartedly, and they know why -- their leaders are corrupt and disconnected from the war they are being asked to fight. And here is what should concern you most: for many villagers, the Viet Cong -- despite their brutality -- now appear more disciplined and more reliable than Saigon's own officials. U.S. strategy is unraveling because Washington is propping up a government that scarcely exists outside the walls of the presidential palace. The resources committed to political stabilization were wholly inadequate. That is the fact of the matter.";
+                resultsText.text = "What has happened here is a political failure of the first order.\r\n\r\nThe South Vietnamese state has collapsed in credibility. Rival generals are plotting against Thieu. Corruption scandals are exploding in the press. Ordinary citizens view their government as hopelessly illegitimate. ARVN units are deserting in large numbers, and those who remain are fighting half-heartedly — they know their leaders are corrupt and disconnected from the war they are being asked to fight.\r\n\r\nAnd here is what should concern you most: for many villagers, the Viet Cong, despite their brutality, now appear more disciplined and more reliable than Saigon's own officials. Our strategy is unraveling because we are propping up a government that scarcely exists outside the walls of the presidential palace. I won't lay this anywhere but where it belongs — this government could have been made to stand, and you chose not to back it.\r\n";
+                failureImages[3].SetActive(true);
                 audioSource.PlayOneShot(failureClips[3]);
+                resultScroll.Scroll();
             }
             //militaryAdvisorText.text = "Classification: " + ResourceManager.classification;
         }
@@ -1336,233 +1478,314 @@ public class ScreenChange : MonoBehaviour
         {
             if (ResourceManager.successCalculatedM5)
             {
-                militaryAdvisorText.text = "It's always a balancing of gains and losses in terms of U.S. lives, and I believe the resource allocation here has tipped that balance in the right direction. Investments in equipment, mobility, and defensive planning are keeping casualties relatively low. Helicopters are providing rapid evacuation. Bases have been hardened against attack. Patrols are better supplied and better supported. The soldiers on the ground feel -- and this matters -- that their commanders are taking their safety seriously. That sustains morale in the field. At home, casualty figures are no longer dominating the evening news in the same way, and that has eased some of the public anger. The war continues. But the perception is growing that American lives are not being wasted carelessly, and that perception has a basis in fact.";
+                //militaryAdvisorText.text = "It's always a balancing of gains and losses in terms of U.S. lives, and I believe the resource allocation here has tipped that balance in the right direction. Investments in equipment, mobility, and defensive planning are keeping casualties relatively low. Helicopters are providing rapid evacuation. Bases have been hardened against attack. Patrols are better supplied and better supported. The soldiers on the ground feel -- and this matters -- that their commanders are taking their safety seriously. That sustains morale in the field. At home, casualty figures are no longer dominating the evening news in the same way, and that has eased some of the public anger. The war continues. But the perception is growing that American lives are not being wasted carelessly, and that perception has a basis in fact.";
+                resultsText.text = "You put real weight into protecting our troops, and it's working — we are losing far fewer men than we otherwise would.\r\n\r\nInvestments in equipment, mobility, and defensive planning are keeping casualties relatively low. Helicopters are providing rapid evacuation. Bases have been hardened against attack. Patrols are better supplied and better supported. The soldiers on the ground feel that their commanders are taking their safety seriously, and that sustains morale in the field.\r\n\r\nAt home, casualty figures are no longer dominating the evening news in the same way, and that has eased some of the public anger. At home, casualty figures are no longer dominating the evening news, and that has eased some of the public anger. American lives are not being spent carelessly.\r\n";
                 audioSource.PlayOneShot(successClips[4]);
+                successImages[4].SetActive(true);
                 //militaryImage.sprite = successImages[4];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedM5)
             {
-                militaryAdvisorText.text = "I can't be satisfied with what I'm seeing on troop protection, and I have to tell you why. The measures are inconsistent. Some units are receiving adequate support and evacuation capability. Others are being left exposed in dangerous zones with nothing close to what they need. Ambushes and mines are taking a steady toll. Casualty numbers are rising month by month. Soldiers are beginning to doubt the wisdom of operations that put them at risk for battles that don't appear to change the overall situation. Morale is dropping as men watch their friends wounded or killed. And this does not stay in the field. The rising body count is fueling antiwar demonstrations at home and eroding public confidence in the government's strategy. I would tell you that the resources allocated to protecting our forces were not sufficient, and the price of that is being paid in American lives.";
+                //militaryAdvisorText.text = "I can't be satisfied with what I'm seeing on troop protection, and I have to tell you why. The measures are inconsistent. Some units are receiving adequate support and evacuation capability. Others are being left exposed in dangerous zones with nothing close to what they need. Ambushes and mines are taking a steady toll. Casualty numbers are rising month by month. Soldiers are beginning to doubt the wisdom of operations that put them at risk for battles that don't appear to change the overall situation. Morale is dropping as men watch their friends wounded or killed. And this does not stay in the field. The rising body count is fueling antiwar demonstrations at home and eroding public confidence in the government's strategy. I would tell you that the resources allocated to protecting our forces were not sufficient, and the price of that is being paid in American lives.";
+                resultsText.text = "I can't be satisfied with what I'm seeing on troop protection.\r\n\r\nThere is an utter lack of balance in it. Some units are receiving adequate support and evacuation capability. Others are being left exposed in dangerous zones with nothing close to what they need. Ambushes and mines are taking a steady toll, casualty numbers are rising month by month, and soldiers are beginning to doubt the wisdom of operations that put them at risk for battles that don't appear to change anything. And they are losing friends doing it.\r\n\r\nBut the damage doesn't stop at the front. The rising body count is fueling antiwar demonstrations at home and eroding public confidence in the government's strategy.\r\n";
                 audioSource.PlayOneShot(deterioratingClips[4]);
+                deterioratingImages[4].SetActive(true);
+                resultScroll.Scroll();
             }
             else
             {
-                militaryAdvisorText.text = "Let me be absolutely clear on this point. Casualties are soaring. Poorly supported patrols are walking into ambushes. Bases are being shelled nightly. Medical evacuations cannot keep pace with battlefield injuries. Our soldiers have come to believe -- and I cannot tell you they are wrong -- that their lives are being squandered for a war with no end in sight. Desertions are climbing. Drug use is climbing. Morale has collapsed in the ranks. And every evening, American families are watching flag-draped coffins and grieving widows on their television sets. Public outrage has spiked. Congress is growing restless. Even our allies abroad are asking how long we can sustain losses at this rate. To obtain our political objective -- which is a very limited objective -- at as small as possible cost in American life: that was the standard. The resources committed to troop protection were wholly inadequate by that standard, and the consequences are measured in lives.";
+                //militaryAdvisorText.text = "Let me be absolutely clear on this point. Casualties are soaring. Poorly supported patrols are walking into ambushes. Bases are being shelled nightly. Medical evacuations cannot keep pace with battlefield injuries. Our soldiers have come to believe -- and I cannot tell you they are wrong -- that their lives are being squandered for a war with no end in sight. Desertions are climbing. Drug use is climbing. Morale has collapsed in the ranks. And every evening, American families are watching flag-draped coffins and grieving widows on their television sets. Public outrage has spiked. Congress is growing restless. Even our allies abroad are asking how long we can sustain losses at this rate. To obtain our political objective -- which is a very limited objective -- at as small as possible cost in American life: that was the standard. The resources committed to troop protection were wholly inadequate by that standard, and the consequences are measured in lives.";
+                resultsText.text = "I won't dress this up. This is a failure measured in lives.\r\n\r\nCasualties are soaring. Poorly supported patrols are walking into ambushes. Bases are being shelled nightly. Medical evacuations cannot keep pace with battlefield injuries. Our soldiers have come to believe — and I cannot say they are mistaken — that their lives are being squandered for a war with no end in sight. Desertions are climbing. Drug use is climbing. Morale has collapsed in the ranks.\r\n\r\nAnd it is in front of the country every night — flag-draped coffins, grieving widows. Public outrage has spiked. Congress is growing restless. Even our allies abroad are asking how long we can sustain losses at this rate.\r\n\r\nThe standard here was a simple one: to obtain a limited political objective at the lowest possible cost in American life. By that standard, we failed.\r\n";
+                failureImages[4].SetActive(true);
                 audioSource.PlayOneShot(failureClips[4]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 5)
         {
-            domesticContinueButton.gameObject.SetActive(false);
-            domesticCloseButton.SetActive(false);
-            domesticNextButton.SetActive(true);
-            domesticImage.gameObject.SetActive(true);
+            //domesticContinueButton.gameObject.SetActive(false);
+            //domesticCloseButton.SetActive(false);
+            //domesticNextButton.SetActive(true);
+            //domesticImage.gameObject.SetActive(true);
 
-            if (!isFadingInOnCampaignOffice)
-            {
-                timeElapsed = 0f;
-                secondTimeElapsed = 0f;
-                isFadingInOnCampaignOffice = true;
-            }
+            //if (!isFadingInOnCampaignOffice)
+            //{
+            //    timeElapsed = 0f;
+            //    secondTimeElapsed = 0f;
+            //    isFadingInOnCampaignOffice = true;
+            //}
 
             if (ResourceManager.successCalculatedDo10)
             {
-                domesticAdvisorText.text = "Listen, I wanted to call because for once I have something good to report.\r\n\r\nWhatever you're doing over there with the messaging, it's working. The party is holding together. I've talked to half a dozen state chairs this week, and they're telling me the same thing -- Humphrey looks credible, the constituencies are lining up, and the campaign has found a way to talk about Vietnam that doesn't drive the moderates out the door. The bombing pauses and concessions have convinced the antiwar people that someone is listening, and the loyalists still see a firm commitment to American credibility abroad.\r\n\r\nI spoke with the President this morning. He's noticing it too. The polling in the key states looks competitive, and the ground operation is actually mobilizing the way it's supposed to. People are showing up. Steady leadership abroad, continued progress at home -- that's the message getting through.\r\n\r\nYou've preserved enough political capital to keep Washington functioning. The polls are reflecting it, and tonight's broadcasts will too. \r\n";
+                //domesticAdvisorText.text = "Listen, I wanted to call because for once I have something good to report.\r\n\r\nWhatever you're doing over there with the messaging, it's working. The party is holding together. I've talked to half a dozen state chairs this week, and they're telling me the same thing -- Humphrey looks credible, the constituencies are lining up, and the campaign has found a way to talk about Vietnam that doesn't drive the moderates out the door. The bombing pauses and concessions have convinced the antiwar people that someone is listening, and the loyalists still see a firm commitment to American credibility abroad.\r\n\r\nI spoke with the President this morning. He's noticing it too. The polling in the key states looks competitive, and the ground operation is actually mobilizing the way it's supposed to. People are showing up. Steady leadership abroad, continued progress at home -- that's the message getting through.\r\n\r\nYou've preserved enough political capital to keep Washington functioning. The polls are reflecting it, and tonight's broadcasts will too. \r\n";
+                resultsText.text = "Listen, I wanted to call because for once I have something good to report.\r\n\r\nWhatever you're doing over there with the messaging, it's working. The party is holding together. I've talked to half a dozen state chairs this week, and they're telling me the same thing -- Humphrey looks credible, the constituencies are lining up, and the campaign has found a way to talk about Vietnam that doesn't drive the moderates out the door. The bombing pauses and concessions have convinced the antiwar people that someone is listening, and the loyalists still see a firm commitment to American credibility abroad.\r\n\r\nI spoke with the President this morning. He's noticing it too. The polling in the key states looks competitive, and the ground operation is actually mobilizing the way it's supposed to. People are showing up. Steady leadership abroad, continued progress at home -- that's the message getting through.\r\n\r\nYou've preserved enough political capital to keep Washington functioning. The polls are reflecting it, and tonight's broadcasts will too. \r\n";
                 audioSource.PlayOneShot(successClips[5]);
+                successImages[5].SetActive(true);
                 //domesticImage.sprite = successImages[5];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDo10)
             {
-                domesticAdvisorText.text = "I wish I were calling with better news.\r\n\r\nThe unity is fraying, and it's not just behind closed doors anymore. I'm watching Democrats break publicly from the administration's Vietnam policy -- on camera, in interviews, on this convention floor. The antiwar activists are rallying against the candidate, and the campaign can't seem to settle on a message. Voters don't know where the party stands, and that uncertainty is killing you in the battleground states.\r\n\r\nI'm hearing from people on the ground that grassroots mobilization is uneven at best, and the opposition is picking up momentum in exactly the places you can't afford to lose.\r\n\r\nThe internal divisions are making it harder to control the narrative and harder to influence policy. The numbers are moving in the wrong direction, and every night the evening news is showing a party at war with itself. That's what the American people are taking away from this.\r\n";
+                //domesticAdvisorText.text = "I wish I were calling with better news.\r\n\r\nThe unity is fraying, and it's not just behind closed doors anymore. I'm watching Democrats break publicly from the administration's Vietnam policy -- on camera, in interviews, on this convention floor. The antiwar activists are rallying against the candidate, and the campaign can't seem to settle on a message. Voters don't know where the party stands, and that uncertainty is killing you in the battleground states.\r\n\r\nI'm hearing from people on the ground that grassroots mobilization is uneven at best, and the opposition is picking up momentum in exactly the places you can't afford to lose.\r\n\r\nThe internal divisions are making it harder to control the narrative and harder to influence policy. The numbers are moving in the wrong direction, and every night the evening news is showing a party at war with itself. That's what the American people are taking away from this.\r\n";
+                resultsText.text = "I wish I were calling with better news.\r\n\r\nThe unity is fraying, and it's not just behind closed doors anymore. I'm watching Democrats break publicly from the administration's Vietnam policy -- on camera, in interviews, on this convention floor. The antiwar activists are rallying against the candidate, and the campaign can't seem to settle on a message. Voters don't know where the party stands, and that uncertainty is killing you in the battleground states.\r\n\r\nI'm hearing from people on the ground that grassroots mobilization is uneven at best, and the opposition is picking up momentum in exactly the places you can't afford to lose.\r\n\r\nThe internal divisions are making it harder to control the narrative and harder to influence policy. The numbers are moving in the wrong direction, and every night the evening news is showing a party at war with itself. That's what the American people are taking away from this. \r\n";
+                deterioratingImages[5].SetActive(true);
                 audioSource.PlayOneShot(deterioratingClips[5]);
+                resultScroll.Scroll();
             }
             else
             {
-                domesticAdvisorText.text = "I don't know how else to say this -- the party is coming apart.\r\n\r\nKey figures are defecting. I've watched people I've known for twenty years go on the record criticizing the administration's Vietnam strategy, and the candidate is standing out there politically isolated. The antiwar protests are dominating every broadcast -- mine included -- and the opposition is consolidating support among moderates and disaffected voters faster than I've ever seen.\r\n\r\nOn the ground, the campaign infrastructure is barely functioning. They can't get volunteers, they can't organize rallies, and voter mobilization has collapsed in the states that matter. I spoke with the President this morning, and I could hear it in his voice -- he knows what this means.\r\n\r\nWashington's credibility is damaged, the ability to conduct this war is constrained by the chaos here, and what allies and adversaries are seeing on their television screens is American political leadership falling apart. Turn on any channel tonight and that's the story.\r\n";
+                //domesticAdvisorText.text = "I don't know how else to say this -- the party is coming apart.\r\n\r\nKey figures are defecting. I've watched people I've known for twenty years go on the record criticizing the administration's Vietnam strategy, and the candidate is standing out there politically isolated. The antiwar protests are dominating every broadcast -- mine included -- and the opposition is consolidating support among moderates and disaffected voters faster than I've ever seen.\r\n\r\nOn the ground, the campaign infrastructure is barely functioning. They can't get volunteers, they can't organize rallies, and voter mobilization has collapsed in the states that matter. I spoke with the President this morning, and I could hear it in his voice -- he knows what this means.\r\n\r\nWashington's credibility is damaged, the ability to conduct this war is constrained by the chaos here, and what allies and adversaries are seeing on their television screens is American political leadership falling apart. Turn on any channel tonight and that's the story.\r\n";
+                resultsText.text = "I don't know how else to say this -- the party is coming apart.\r\n\r\nKey figures are defecting. I've watched people I've known for twenty years go on the record criticizing the administration's Vietnam strategy, and the candidate is standing out there politically isolated. The antiwar protests are dominating every broadcast -- mine included -- and the opposition is consolidating support among moderates and disaffected voters faster than I've ever seen.\r\n\r\nOn the ground, the campaign infrastructure is barely functioning. They can't get volunteers, they can't organize rallies, and voter mobilization has collapsed in the states that matter. I spoke with the President this morning, and I could hear it in his voice -- he knows what this means.\r\n\r\nWashington's credibility is damaged, the ability to conduct this war is constrained by the chaos here, and what allies and adversaries are seeing on their television screens is American political leadership falling apart. Turn on any channel tonight and that's the story.\r\n";
+                failureImages[5].SetActive(true);
                 audioSource.PlayOneShot(failureClips[5]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 6)
         {
             if (ResourceManager.successCalculatedDo11)
             {
-                domesticAdvisorText.text = "I have to tell you, I'm pleased to report this one.\r\n\r\nThe administration has handled the public on this war better than I thought possible. The press briefings have been sharp, the speeches have hit the right notes, and those selective concessions have convinced a lot of Americans that the government actually understands what people are feeling without making us look weak.\r\n\r\nThe protests are still out there, but they've stayed largely peaceful and contained. I've talked to people in Senator Mansfield's office this week, and they're saying the same thing I'm hearing from sources across the country -- public opinion has stabilized, and some say it's even shifted slightly in favor of continued, measured engagement. Families of soldiers are writing letters that say support from home feels steadier.\r\n\r\nPolicymakers can actually focus on strategy now instead of spending every waking hour on damage control. That's what the right messaging buys you -- and it shows in the polling. Keep it there.\r\n";
+                //domesticAdvisorText.text = "I have to tell you, I'm pleased to report this one.\r\n\r\nThe administration has handled the public on this war better than I thought possible. The press briefings have been sharp, the speeches have hit the right notes, and those selective concessions have convinced a lot of Americans that the government actually understands what people are feeling without making us look weak.\r\n\r\nThe protests are still out there, but they've stayed largely peaceful and contained. I've talked to people in Senator Mansfield's office this week, and they're saying the same thing I'm hearing from sources across the country -- public opinion has stabilized, and some say it's even shifted slightly in favor of continued, measured engagement. Families of soldiers are writing letters that say support from home feels steadier.\r\n\r\nPolicymakers can actually focus on strategy now instead of spending every waking hour on damage control. That's what the right messaging buys you -- and it shows in the polling. Keep it there.\r\n";
+                resultsText.text = "I have to tell you, I'm pleased to report this one.\r\n\r\nThe administration has handled the public on this war better than I thought possible. The press briefings have been sharp, the speeches have hit the right notes, and those selective concessions have convinced a lot of Americans that the government actually understands what people are feeling without making us look weak.\r\n\r\nThe protests are still out there, but they've stayed largely peaceful and contained. I've talked to people in Senator Mansfield's office this week, and they're saying the same thing I'm hearing from sources across the country -- public opinion has stabilized, and some say it's even shifted slightly in favor of continued, measured engagement. Families of soldiers are writing letters that say support from home feels steadier.\r\n\r\nPolicymakers can actually focus on strategy now instead of spending every waking hour on damage control. That's what the right messaging buys you -- and it shows in the polling. Keep it there.\r\n";
                 audioSource.PlayOneShot(successClips[6]);
+                successImages[6].SetActive(true);
                 //domesticImage.sprite = successImages[6];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDo11)
             {
-                domesticAdvisorText.text = "Listen, I need you to hear this.\r\n\r\nPublic dissatisfaction is growing, and the protests are getting harder to ignore. The antiwar activists are dominating my broadcasts and everyone else's -- civilian casualties, bloody battles, government mismanagement. That's what Americans are seeing every night in their living rooms. The administration is still putting out statements and making minor adjustments, but it reads as indecisive, and the public is losing confidence.\r\n\r\nI'm hearing from soldiers' families that morale is slipping because support from home feels uncertain. And the political people can't figure out how to coordinate domestic messaging with what's happening overseas. One feeds the other.\r\n\r\nThe approval numbers are sliding, and every evening broadcast is leading with the protests. That's the picture America is getting of this administration.\r\n";
+                //domesticAdvisorText.text = "Listen, I need you to hear this.\r\n\r\nPublic dissatisfaction is growing, and the protests are getting harder to ignore. The antiwar activists are dominating my broadcasts and everyone else's -- civilian casualties, bloody battles, government mismanagement. That's what Americans are seeing every night in their living rooms. The administration is still putting out statements and making minor adjustments, but it reads as indecisive, and the public is losing confidence.\r\n\r\nI'm hearing from soldiers' families that morale is slipping because support from home feels uncertain. And the political people can't figure out how to coordinate domestic messaging with what's happening overseas. One feeds the other.\r\n\r\nThe approval numbers are sliding, and every evening broadcast is leading with the protests. That's the picture America is getting of this administration.\r\n";
+                resultsText.text = "Listen, I need you to hear this.\r\n\r\nPublic dissatisfaction is growing, and the protests are getting harder to ignore. The antiwar activists are dominating my broadcasts and everyone else's -- civilian casualties, bloody battles, government mismanagement. That's what Americans are seeing every night in their living rooms. The administration is still putting out statements and making minor adjustments, but it reads as indecisive, and the public is losing confidence.\r\n\r\nI'm hearing from soldiers' families that morale is slipping because support from home feels uncertain. And the political people can't figure out how to coordinate domestic messaging with what's happening overseas. One feeds the other.\r\n\r\nThe approval numbers are sliding, and every evening broadcast is leading with the protests. That's the picture America is getting of this administration.\r\n";
+                deterioratingImages[6].SetActive(true);
                 audioSource.PlayOneShot(deterioratingClips[6]);
+                resultScroll.Scroll();
             }
             else
             {
-                domesticAdvisorText.text = "What I'm seeing out here is a crisis, and I need you to understand that.\r\n\r\nThe antiwar movement has surged past anything we anticipated. It's dominating every headline, and there is nothing the administration can do right now to get ahead of it. Large-scale protests, strikes, campus unrest across the country -- policymakers are completely on the defensive.\r\n\r\nSoldiers' families are telling me they're afraid to put on the evening news. The hostility from home is real, and morale is collapsing. Congress is under enormous pressure to limit funding or push for withdrawal. I've talked to Senator Fulbright's people, and they say the votes for restrictions are closer than anyone in the White House wants to admit.\r\n\r\nCronkite said it last month, and the numbers are proving him right -- the American public has turned on this war. Every night that story gets louder on every channel in the country, and there is nothing coming out of this convention that can compete with it.\r\n";
+                //domesticAdvisorText.text = "What I'm seeing out here is a crisis, and I need you to understand that.\r\n\r\nThe antiwar movement has surged past anything we anticipated. It's dominating every headline, and there is nothing the administration can do right now to get ahead of it. Large-scale protests, strikes, campus unrest across the country -- policymakers are completely on the defensive.\r\n\r\nSoldiers' families are telling me they're afraid to put on the evening news. The hostility from home is real, and morale is collapsing. Congress is under enormous pressure to limit funding or push for withdrawal. I've talked to Senator Fulbright's people, and they say the votes for restrictions are closer than anyone in the White House wants to admit.\r\n\r\nCronkite said it last month, and the numbers are proving him right -- the American public has turned on this war. Every night that story gets louder on every channel in the country, and there is nothing coming out of this convention that can compete with it.\r\n";
+                resultsText.text = "What I'm seeing out here is a crisis, and I need you to understand that.\r\n\r\nThe antiwar movement has surged past anything we anticipated. It's dominating every headline, and there is nothing the administration can do right now to get ahead of it. Large-scale protests, strikes, campus unrest across the country -- policymakers are completely on the defensive.\r\n\r\nSoldiers' families are telling me they're afraid to put on the evening news. The hostility from home is real, and morale is collapsing. Congress is under enormous pressure to limit funding or push for withdrawal. I've talked to Senator Fulbright's people, and they say the votes for restrictions are closer than anyone in the White House wants to admit.\r\n\r\nCronkite said it last month, and the numbers are proving him right -- the American public has turned on this war. Every night that story gets louder on every channel in the country, and there is nothing coming out of this convention that can compete with it.\r\n";
+                failureImages[6].SetActive(true);
                 audioSource.PlayOneShot(failureClips[6]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 7)
         {
             if (ResourceManager.successCalculatedDo12)
             {
-                domesticAdvisorText.text = "I wanted to call with some good news for a change. Congress is holding. The key committees approved the funding without major amendments, the partisan attacks have stayed muted, and the leadership is backing Vietnam out loud -- which steadies our allies and tells the soldiers in the field the country is behind them. And it's reaching them: with the money flowing, commanders are getting what they need, and the pacification programs and troop rotations are moving without getting hung up in Washington.\r\n\r\nI spoke with the President this morning, and he's relieved -- Congress is steady enough that he can run the war and protect the domestic agenda at once. The story on the evening news tonight is unity, not division, and that's worth more than people in this building realize. \r\n";
+                //domesticAdvisorText.text = "I wanted to call with some good news for a change. Congress is holding. The key committees approved the funding without major amendments, the partisan attacks have stayed muted, and the leadership is backing Vietnam out loud -- which steadies our allies and tells the soldiers in the field the country is behind them. And it's reaching them: with the money flowing, commanders are getting what they need, and the pacification programs and troop rotations are moving without getting hung up in Washington.\r\n\r\nI spoke with the President this morning, and he's relieved -- Congress is steady enough that he can run the war and protect the domestic agenda at once. The story on the evening news tonight is unity, not division, and that's worth more than people in this building realize. \r\n";
+                resultsText.text = "I wanted to call with some good news for a change. \r\n\r\nCongress is holding. The key committees approved the funding without major amendments, the partisan attacks have stayed muted, and the leadership is backing Vietnam out loud -- which steadies our allies and tells the soldiers in the field the country is behind them. And it's reaching them: with the money flowing, commanders are getting what they need, and the pacification programs and troop rotations are moving without getting hung up in Washington.\r\n\r\nI spoke with the President this morning, and he's relieved -- Congress is steady enough that he can run the war and protect the domestic agenda at once. The story on the evening news tonight is unity, not division, and that's worth more than people in this building realize.\r\n";
                 //audioSource.PlayOneShot(successClips[7]);
+                successImages[7].SetActive(true);
                 //domesticImage.sprite = successImages[7];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDo12)
             {
-                domesticAdvisorText.text = "I need to tell you what I'm hearing on the Hill, because it's not good. Support in Congress is getting uneven -- legislators demanding more oversight, dragging their feet on funding, attaching conditions that tie the administration's hands. The hearings are swallowed up by Vietnam, and the uncertainty is spilling into the policy and the planning. It's reaching the field, too: I'm hearing commanders are hitting sporadic shortages and restrictions, and the men out there read it as Washington not knowing what it wants. The White House is stuck running the war while it fights the Hill for the means to run it.\r\n\r\nFamilies of soldiers are noticing, the allies see the discord -- diplomatic sources tell me it's making people nervous -- and congressional approval keeps sliding every time a contentious hearing hits the evening news. And that's what worries me -- the confidence holding this administration together is wearing thin, and it won't take much more to crack it.\r\n";
+                //domesticAdvisorText.text = "I need to tell you what I'm hearing on the Hill, because it's not good. Support in Congress is getting uneven -- legislators demanding more oversight, dragging their feet on funding, attaching conditions that tie the administration's hands. The hearings are swallowed up by Vietnam, and the uncertainty is spilling into the policy and the planning. It's reaching the field, too: I'm hearing commanders are hitting sporadic shortages and restrictions, and the men out there read it as Washington not knowing what it wants. The White House is stuck running the war while it fights the Hill for the means to run it.\r\n\r\nFamilies of soldiers are noticing, the allies see the discord -- diplomatic sources tell me it's making people nervous -- and congressional approval keeps sliding every time a contentious hearing hits the evening news. And that's what worries me -- the confidence holding this administration together is wearing thin, and it won't take much more to crack it.\r\n";
+                resultsText.text = "I need to tell you what I'm hearing on the Hill, because it's not good. \r\n\r\nSupport in Congress is getting uneven -- legislators demanding more oversight, dragging their feet on funding, attaching conditions that tie the administration's hands. The hearings are swallowed up by Vietnam, and the uncertainty is spilling into the policy and the planning. It's reaching the field, too: I'm hearing commanders are hitting sporadic shortages and restrictions, and the men out there read it as Washington not knowing what it wants. The White House is stuck running the war while it fights the Hill for the means to run it.\r\n\r\nFamilies of soldiers are noticing, the allies see the discord -- diplomatic sources tell me it's making people nervous -- and congressional approval keeps sliding every time a contentious hearing hits the evening news. And that's what worries me -- the confidence holding this administration together is wearing thin, and it won't take much more to crack it.\r\n";
+                deterioratingImages[7].SetActive(true);
                 //audioSource.PlayOneShot(deterioratingClips[7]);
+                resultScroll.Scroll();
             }
             else
             {
-                domesticAdvisorText.text = "Listen, what's happening on the Hill right now is exactly what I was afraid of. Congress is actively working against the strategy -- funding delayed and cut, oversight committees going after the war effort on camera. I talked to Senator Gore's and Senator Fulbright's offices, and there's a real push for withdrawal or hard limits that nobody thinks can be stopped. And it's gutting the war itself: I'm hearing the shortfalls have hit the field, commanders can't mount the offensives, the pacification operations are stalling.\r\n\r\nThe families are watching Congress and the White House go at each other on television, seeing a government that can't agree the war is worth fighting. The President's furious, but he knows the damage is done. Allies and adversaries alike are reading American resolve coming apart -- and tonight every channel's lead story is a divided Washington. \r\n";
+                //domesticAdvisorText.text = "Listen, what's happening on the Hill right now is exactly what I was afraid of. Congress is actively working against the strategy -- funding delayed and cut, oversight committees going after the war effort on camera. I talked to Senator Gore's and Senator Fulbright's offices, and there's a real push for withdrawal or hard limits that nobody thinks can be stopped. And it's gutting the war itself: I'm hearing the shortfalls have hit the field, commanders can't mount the offensives, the pacification operations are stalling.\r\n\r\nThe families are watching Congress and the White House go at each other on television, seeing a government that can't agree the war is worth fighting. The President's furious, but he knows the damage is done. Allies and adversaries alike are reading American resolve coming apart -- and tonight every channel's lead story is a divided Washington. \r\n";
+                resultsText.text = "Listen, what's happening on the Hill right now is exactly what I was afraid of.\r\n\r\nCongress is actively working against the strategy -- funding delayed and cut, oversight committees going after the war effort on camera. I talked to Senator Gore's and Senator Fulbright's offices, and there's a real push for withdrawal or hard limits that nobody thinks can be stopped. And it's gutting the war itself: I'm hearing the shortfalls have hit the field, commanders can't mount the offensives, the pacification operations are stalling.\r\n\r\nThe families are watching Congress and the White House go at each other on television, seeing a government that can't agree the war is worth fighting. The President's furious, but he knows the damage is done. Allies and adversaries alike are reading American resolve coming apart -- and tonight every channel's lead story is a divided Washington. \r\n";
+                failureImages[7].SetActive(true);
                 //audioSource.PlayOneShot(failureClips[7]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 8)
         {
             if (ResourceManager.successCalculatedDo13)
             {
-                domesticAdvisorText.text = "I have to say, you've managed something I wasn't sure was possible.\r\n\r\nThe administration has kept inflation and unemployment under control despite what this war is costing. Defense spending is being balanced with domestic programs, and the public actually believes the government knows how to handle guns and butter at the same time. And it carries through to the men over there -- the steady funding keeps the equipment, the supplies, the support flowing without interruption.\r\n\r\nI've talked to families across the country this week, and the mood is cautiously optimistic -- people feel like the government has a handle on things. The President told me this morning that confidence in Washington is steady, and that's keeping the public willing to tolerate the war.\r\n\r\nThe polling reflects it. Keep the resources where they are.\r\n";
+                //domesticAdvisorText.text = "I have to say, you've managed something I wasn't sure was possible.\r\n\r\nThe administration has kept inflation and unemployment under control despite what this war is costing. Defense spending is being balanced with domestic programs, and the public actually believes the government knows how to handle guns and butter at the same time. And it carries through to the men over there -- the steady funding keeps the equipment, the supplies, the support flowing without interruption.\r\n\r\nI've talked to families across the country this week, and the mood is cautiously optimistic -- people feel like the government has a handle on things. The President told me this morning that confidence in Washington is steady, and that's keeping the public willing to tolerate the war.\r\n\r\nThe polling reflects it. Keep the resources where they are.\r\n";
+                resultsText.text = "I have to say, you've managed something I wasn't sure was possible.\r\n\r\nThe administration has kept inflation and unemployment under control despite what this war is costing. Defense spending is being balanced with domestic programs, and the public actually believes the government knows how to handle guns and butter at the same time. And it carries through to the men over there -- the steady funding keeps the equipment, the supplies, the support flowing without interruption.\r\n\r\nI've talked to families across the country this week, and the mood is cautiously optimistic -- people feel like the government has a handle on things. The President told me this morning that confidence in Washington is steady, and that's keeping the public willing to tolerate the war.\r\n\r\nThe polling reflects it. Keep the resources where they are.\r\n";
                 //audioSource.PlayOneShot(successClips[8]);
+                successImages[8].SetActive(true);
                 //domesticImage.sprite = successImages[8];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDo13)
             {
-                domesticAdvisorText.text = "I'm calling because the economic picture is starting to worry me, and it should worry you too.\r\n\r\nInflation is climbing, consumer confidence is shaky, and the budget fight between military and domestic spending is getting ugly. I'm hearing from people in labor and on the Hill that prices for basic goods are going up, and unrest is showing up where it hadn't before -- sporadic strikes, walkouts, real frustration from people whose wages aren't keeping up. And the squeeze is reaching the field: I'm told the logistics and support start to falter whenever the budget tightens, and the men notice.\r\n\r\nFamilies are feeling it too, and they're connecting it to the war. Every night the evening news runs another story about rising prices alongside footage from Vietnam, and people draw their own conclusions.\r\n\r\nThe approval numbers on the economy are sliding, and the administration can't hold the line on a story that says both the war and the economy are under control.\r\n";
+                //domesticAdvisorText.text = "I'm calling because the economic picture is starting to worry me, and it should worry you too.\r\n\r\nInflation is climbing, consumer confidence is shaky, and the budget fight between military and domestic spending is getting ugly. I'm hearing from people in labor and on the Hill that prices for basic goods are going up, and unrest is showing up where it hadn't before -- sporadic strikes, walkouts, real frustration from people whose wages aren't keeping up. And the squeeze is reaching the field: I'm told the logistics and support start to falter whenever the budget tightens, and the men notice.\r\n\r\nFamilies are feeling it too, and they're connecting it to the war. Every night the evening news runs another story about rising prices alongside footage from Vietnam, and people draw their own conclusions.\r\n\r\nThe approval numbers on the economy are sliding, and the administration can't hold the line on a story that says both the war and the economy are under control.\r\n";
+                resultsText.text = "I'm calling because the economic picture is starting to worry me, and it should worry you too.\r\n\r\nInflation is climbing, consumer confidence is shaky, and the budget fight between military and domestic spending is getting ugly. I'm hearing from people in labor and on the Hill that prices for basic goods are going up, and unrest is showing up where it hadn't before -- sporadic strikes, walkouts, real frustration from people whose wages aren't keeping up. And the squeeze is reaching the field: I'm told the logistics and support start to falter whenever the budget tightens, and the men notice.\r\n\r\nFamilies are feeling it too, and they're connecting it to the war. Every night the evening news runs another story about rising prices alongside footage from Vietnam, and people draw their own conclusions.\r\n\r\nThe approval numbers on the economy are sliding, and the administration can't hold the line on a story that says both the war and the economy are under control. \r\n";
+                deterioratingImages[8].SetActive(true);
                 //audioSource.PlayOneShot(deterioratingClips[8]);
+                resultScroll.Scroll();
             }
             else
             {
-                domesticAdvisorText.text = "I don't know how to soften this, so I won't try.\r\n\r\nThe economy is failing under the weight of this war. Inflation has spiked, unemployment is rising, and there are shortages of essential goods people can see and feel every single day. Great Society programs are being cut or delayed, and the public is furious -- I've talked to people across this country who feel abandoned by their government. And it's bleeding into the war itself: I'm hearing the men are short on supplies, reinforcements are running late, the support just isn't there on the battlefield.\r\n\r\nFamilies of soldiers are writing letters about what they can't afford at home while their sons are fighting overseas. Trust in Washington is collapsing, and opposition to this war is louder than it has ever been.\r\n\r\nI spoke with the President this morning. He knows that allies and adversaries alike are reading the economic turmoil as a sign of American weakness. The numbers don't lie, and neither does the nightly news. \r\n";
+                //domesticAdvisorText.text = "I don't know how to soften this, so I won't try.\r\n\r\nThe economy is failing under the weight of this war. Inflation has spiked, unemployment is rising, and there are shortages of essential goods people can see and feel every single day. Great Society programs are being cut or delayed, and the public is furious -- I've talked to people across this country who feel abandoned by their government. And it's bleeding into the war itself: I'm hearing the men are short on supplies, reinforcements are running late, the support just isn't there on the battlefield.\r\n\r\nFamilies of soldiers are writing letters about what they can't afford at home while their sons are fighting overseas. Trust in Washington is collapsing, and opposition to this war is louder than it has ever been.\r\n\r\nI spoke with the President this morning. He knows that allies and adversaries alike are reading the economic turmoil as a sign of American weakness. The numbers don't lie, and neither does the nightly news. \r\n";
+                resultsText.text = "I don't know how to soften this, so I won't try.\r\n\r\nThe economy is failing under the weight of this war. Inflation has spiked, unemployment is rising, and there are shortages of essential goods people can see and feel every single day. Great Society programs are being cut or delayed, and the public is furious -- I've talked to people across this country who feel abandoned by their government. And it's bleeding into the war itself: I'm hearing the men are short on supplies, reinforcements are running late, the support just isn't there on the battlefield.\r\n\r\nFamilies of soldiers are writing letters about what they can't afford at home while their sons are fighting overseas. Trust in Washington is collapsing, and opposition to this war is louder than it has ever been.\r\n\r\nI spoke with the President this morning. He knows that allies and adversaries alike are reading the economic turmoil as a sign of American weakness. The numbers don't lie, and neither does the nightly news. \r\n";
+                failureImages[8].SetActive(true);
                 //audioSource.PlayOneShot(failureClips[8]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 9)
         {
             if (ResourceManager.successCalculatedDo14)
             {
-                domesticAdvisorText.text = "14: Success";
+                resultsText.text = "14: Success";
                 //audioSource.PlayOneShot(successClips[9]);
+                successImages[9].SetActive(true);
                 //domesticImage.sprite = successImages[9];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDo14)
             {
-                domesticAdvisorText.text = "14: Situation Deteriorating";
+                resultsText.text = "14: Situation Deteriorating";
+                deterioratingImages[9].SetActive(true);
                 //audioSource.PlayOneShot(deterioratingClips[9]);
+                resultScroll.Scroll();
             }
             else
             {
-                domesticAdvisorText.text = "14: Failure";
+                resultsText.text = "14: Failure";
+                failureImages[9].SetActive(true);
                 //audioSource.PlayOneShot(failureClips[9]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 10)
         {
             if (ResourceManager.successCalculatedDo15)
             {
-                domesticAdvisorText.text = "15: Success";
+                resultsText.text = "15: Success";
                 //audioSource.PlayOneShot(successClips[10]);
+                successImages[10].SetActive(true);
                 //domesticImage.sprite = successImages[10];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDo15)
             {
-                domesticAdvisorText.text = "15: Situation Deteriorating";
+                resultsText.text = "15: Situation Deteriorating";
+                deterioratingImages[10].SetActive(true);
                 //audioSource.PlayOneShot(deterioratingClips[10]);
+                resultScroll.Scroll();
             }
             else
             {
-                domesticAdvisorText.text = "15: Failure";
+                resultsText.text = "15: Failure";
+                failureImages[10].SetActive(true);
                 //audioSource.PlayOneShot(failureClips[10]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 11)
         {
-            diplomaticContinueButton.gameObject.SetActive(false);
-            diplomaticCloseButton.SetActive(false);
-            diplomaticNextButton.SetActive(true);
-            diplomaticImage.gameObject.SetActive(true);
+            //diplomaticContinueButton.gameObject.SetActive(false);
+            //diplomaticCloseButton.SetActive(false);
+            //diplomaticNextButton.SetActive(true);
+            //diplomaticImage.gameObject.SetActive(true);
 
-            if (!isFadingInOnStateDepartment)
-            {
-                timeElapsed = 0f;
-                secondTimeElapsed = 0f;
-                isFadingInOnStateDepartment = true;
-            }
+            //if (!isFadingInOnStateDepartment)
+            //{
+            //    timeElapsed = 0f;
+            //    secondTimeElapsed = 0f;
+            //    isFadingInOnStateDepartment = true;
+            //}
 
             if (ResourceManager.successCalculatedDi6)
             {
-                diplomaticAdvisorText.text = "6: Success";
+                resultsText.text = "6: Success";
                 //audioSource.PlayOneShot(successClips[11]);
+                successImages[11].SetActive(true);
                 //diplomaticImage.sprite = successImages[11];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDi6)
             {
-                diplomaticAdvisorText.text = "6: Situation Deteriorating";
+                resultsText.text = "6: Situation Deteriorating";
+                deterioratingImages[11].SetActive(true);
                 //audioSource.PlayOneShot(deterioratingClips[11]);
+                resultScroll.Scroll();
             }
             else
             {
-                diplomaticAdvisorText.text = "6: Failure";
+                resultsText.text = "6: Failure";
+                failureImages[11].SetActive(true);
                 //audioSource.PlayOneShot(failureClips[11]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 12)
         {
             if (ResourceManager.successCalculatedDi7)
             {
-                diplomaticAdvisorText.text = "7: Success";
+                resultsText.text = "7: Success";
                 //audioSource.PlayOneShot(successClips[12]);
+                successImages[12].SetActive(true);
                 //diplomaticImage.sprite = successImages[12];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDi7)
             {
-                diplomaticAdvisorText.text = "7: Situation Deteriorating";
+                resultsText.text = "7: Situation Deteriorating";
+                deterioratingImages[12].SetActive(true);
                 //audioSource.PlayOneShot(deterioratingClips[12]);
+                resultScroll.Scroll();
             }
             else
             {
-                diplomaticAdvisorText.text = "7: Failure";
+                resultsText.text = "7: Failure";
+                failureImages[12].SetActive(true);
                 //audioSource.PlayOneShot(failureClips[12]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 13)
         {
             if (ResourceManager.successCalculatedDi8)
             {
-                diplomaticAdvisorText.text = "8: Success";
+                resultsText.text = "8: Success";
                 //audioSource.PlayOneShot(successClips[13]);
+                successImages[13].SetActive(true);
                 //diplomaticImage.sprite = successImages[13];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDi8)
             {
-                diplomaticAdvisorText.text = "8: Situation Deteriorating";
+                resultsText.text = "8: Situation Deteriorating";
+                deterioratingImages[13].SetActive(true);
                 //audioSource.PlayOneShot(deterioratingClips[13]);
+                resultScroll.Scroll();
             }
             else
             {
-                diplomaticAdvisorText.text = "8: Failure";
+                resultsText.text = "8: Failure";
+                failureImages[13].SetActive(true);
                 //audioSource.PlayOneShot(failureClips[13]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 14)
         {
             if (ResourceManager.successCalculatedDi9)
             {
-                diplomaticAdvisorText.text = "9: Success";
+                resultsText.text = "9: Success";
                 //audioSource.PlayOneShot(successClips[14]);
+                successImages[14].SetActive(true);
                 //diplomaticImage.sprite = successImages[14];
+                resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDi9)
             {
-                diplomaticAdvisorText.text = "9: Situation Deteriorating";
+                resultsText.text = "9: Situation Deteriorating";
+                deterioratingImages[14].SetActive(true);
                 //audioSource.PlayOneShot(deterioratingClips[14]);
+                resultScroll.Scroll();
             }
             else
             {
-                diplomaticAdvisorText.text = "9: Failure";
+                resultsText.text = "9: Failure";
+                failureImages[14].SetActive(true);
                 //audioSource.PlayOneShot(failureClips[14]);
+                resultScroll.Scroll();
             }
         }
         else if (numResultsViewed == 15)
@@ -1581,27 +1804,47 @@ public class ScreenChange : MonoBehaviour
             lobbyFile.SetActive(true);
 
             ResourceManager resourceManager = gameManager.GetComponent<ResourceManager>();
-
-            string allResourcesText = resourceManager.GetAllResourcesText();
-
-            lobbyText.text = allResourcesText;
+            //string allResourcesText = resourceManager.GetAllResourcesText();
+            //lobbyText.text = allResourcesText;
+            lobbyText.text = resourceManager.resultsText.text;
         }
         else if (numResultsViewed == 16)
         {
-            if (ResourceManager.classification == "Warrior")
+            if (ResourceManager.classification == "Fence-Sitter")
             {
-                lobbyText.text = "Classification: Warrior";
+                lobbyText.text = "Classification: Fence-Sitter\r\n\r\nYou were quite evenly split amongst our three fronts: military, diplomatic, and domestic. Pulled in three directions, you decided no area deserved to be neglected, and saw that a successful policy can a balanced one.";
+                lobbyImage.sprite = classificationImages[3];
+            }
+            else if (ResourceManager.classification == "Warrior")
+            {
+                lobbyText.text = "Classification: Warrior\r\n\r\nYour mind is focused on one thing: victory. You have prioritized winning the war over all else, seeing the defeat of Communism as your ultimate goal. The message you wish the United States to send is one of strength.";
                 lobbyImage.sprite = classificationImages[0];
             }
             else if (ResourceManager.classification == "Politician")
             {
-                lobbyText.text = "Classification: Politician";
+                lobbyText.text = "Classification: Politician\r\n\r\nTo find the strength of the United States, you looked inward to the situation at home. Stability in the White House and domestic policies are what's important to you, seeing the real power residing in the American people.";
                 lobbyImage.sprite = classificationImages[1];
             }
             else if (ResourceManager.classification == "Diplomat")
             {
-                lobbyText.text = "Classification: Diplomat";
+                lobbyText.text = "Classification: Diplomat\r\n\r\nYou value our international relations above all else, and see importance in maintaining a credible image as a nation. You look to the future, moving forward with the knowledge that our allies and enemies are watching us closely.";
                 lobbyImage.sprite = classificationImages[2];
+            }
+        }
+        else if (numResultsViewed == 17)
+        {
+            lobbyNextButton.SetActive(false);
+            lobbyCloseButton.SetActive(true);
+
+            if (ResourceManager.roomsComplete == 3)
+            {
+                lobbyText.text = "Recognition: Student of History\r\n\r\nCongratulations! You are a thorough decisionmaker filled with curiosity and a thirst for knowledge. You have explored every element at play, every piece of context before making an informed decision about your allocations.";
+                lobbyImage.sprite = classificationImages[4];
+            }
+            if (ResourceManager.researched == false)
+            {
+                lobbyText.text = "Charge: Dereliction of Duty\r\n\r\nYou have been found guilty for dereliction of duty. No research or curiosity has been a part of your decision making, and as such your results shall be marked as hastily and recklessly concluded.";
+                lobbyImage.sprite = classificationImages[5];
             }
         }
 

@@ -6,9 +6,9 @@ public class ResultScroll : MonoBehaviour
 {
     bool isScrolling;
     float timeElapsed = 0;
-    public float scrollDuration = 20;
+    public float scrollDuration = 60;
     Vector3 startingTextPosition = new Vector3(-44.7f, -137.2f, 0);
-    Vector3 endingTextPosition = new Vector3(-44.7f, 100f, 0);
+    Vector3 endingTextPosition = new Vector3(-44.7f, 200f, 0);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,9 +35,10 @@ public class ResultScroll : MonoBehaviour
 
     }
 
-    void OnEnable()
+    public void Scroll()
     {
         timeElapsed = 0;
         isScrolling = true;
+        Debug.Log("scroll function entered");
     }
 }

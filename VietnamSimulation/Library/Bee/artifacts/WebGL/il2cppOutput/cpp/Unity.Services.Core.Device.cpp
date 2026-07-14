@@ -260,23 +260,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId__ctor_mD8E8D5B7A72C54F251
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_GetOrCreateIdentifier_mB808E735A25CB3357E33337F9A4B737DDAB6B40F (InstallationId_tA5712B394172DB4DBA3B5F9A67D5522D37E2B873* __this, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
+	String_t* V_1 = NULL;
 	{
 		String_t* L_0 = __this->___Identifier;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
-		if (!L_1)
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
 		{
-			goto IL_0013;
+			goto IL_0017;
 		}
 	}
 	{
 		InstallationId_CreateIdentifier_mC089486FCD96983C9186689C41D1D75E36EFB90C(__this, NULL);
 	}
 
-IL_0013:
+IL_0017:
 	{
-		String_t* L_2 = __this->___Identifier;
-		return L_2;
+		String_t* L_3 = __this->___Identifier;
+		V_1 = L_3;
+		goto IL_0020;
+	}
+
+IL_0020:
+	{
+		String_t* L_4 = V_1;
+		return L_4;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId_CreateIdentifier_mC089486FCD96983C9186689C41D1D75E36EFB90C (InstallationId_tA5712B394172DB4DBA3B5F9A67D5522D37E2B873* __this, const RuntimeMethod* method) 
@@ -290,6 +301,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId_CreateIdentifier_mC089486
 	String_t* V_0 = NULL;
 	String_t* V_1 = NULL;
 	String_t* V_2 = NULL;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	bool V_8 = false;
 	{
 		String_t* L_0;
 		L_0 = InstallationId_ReadIdentifierFromFile_m126AF7B4F947DBB382AA8848D51FEA52C91C3E7C(NULL);
@@ -298,123 +315,135 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId_CreateIdentifier_mC089486
 		String_t* L_1 = __this->___Identifier;
 		bool L_2;
 		L_2 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_1, NULL);
-		if (L_2)
+		V_3 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_3;
+		if (!L_3)
 		{
-			goto IL_0019;
+			goto IL_0024;
 		}
 	}
 	{
-		return;
+		goto IL_00fd;
 	}
 
-IL_0019:
+IL_0024:
 	{
-		RuntimeObject* L_3 = __this->___UnityEngineIdentifierProvider;
-		String_t* L_4;
-		L_4 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_3);
-		V_0 = L_4;
-		String_t* L_5 = V_0;
-		bool L_6;
-		L_6 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_5, NULL);
-		if (L_6)
+		RuntimeObject* L_4 = __this->___UnityEngineIdentifierProvider;
+		String_t* L_5;
+		L_5 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_4);
+		V_0 = L_5;
+		String_t* L_6 = V_0;
+		bool L_7;
+		L_7 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_6, NULL);
+		V_4 = (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
+		bool L_8 = V_4;
+		if (!L_8)
 		{
-			goto IL_0040;
+			goto IL_0058;
 		}
 	}
 	{
-		String_t* L_7 = V_0;
-		__this->___Identifier = L_7;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_7);
-		String_t* L_8 = __this->___Identifier;
-		InstallationId_WriteIdentifierToFile_m67273AD8773FDBEE468B0BB7F502B3383AB9A6C4(L_8, NULL);
-		return;
+		String_t* L_9 = V_0;
+		__this->___Identifier = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_9);
+		String_t* L_10 = __this->___Identifier;
+		InstallationId_WriteIdentifierToFile_m67273AD8773FDBEE468B0BB7F502B3383AB9A6C4(L_10, NULL);
+		goto IL_00fd;
 	}
 
-IL_0040:
+IL_0058:
 	{
-		RuntimeObject* L_9 = __this->___UnityAnalyticsIdentifierProvider;
-		String_t* L_10;
-		L_10 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_9);
-		V_1 = L_10;
-		RuntimeObject* L_11 = __this->___UnityAdsIdentifierProvider;
+		RuntimeObject* L_11 = __this->___UnityAnalyticsIdentifierProvider;
 		String_t* L_12;
 		L_12 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_11);
-		V_2 = L_12;
-		String_t* L_13 = V_1;
-		bool L_14;
-		L_14 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_13, NULL);
-		if (L_14)
-		{
-			goto IL_0069;
-		}
-	}
-	{
+		V_1 = L_12;
+		RuntimeObject* L_13 = __this->___UnityAdsIdentifierProvider;
+		String_t* L_14;
+		L_14 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_13);
+		V_2 = L_14;
 		String_t* L_15 = V_1;
-		__this->___Identifier = L_15;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_15);
-		goto IL_0085;
-	}
-
-IL_0069:
-	{
-		String_t* L_16 = V_2;
-		bool L_17;
-		L_17 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_16, NULL);
-		if (L_17)
+		bool L_16;
+		L_16 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_15, NULL);
+		V_5 = (bool)((((int32_t)L_16) == ((int32_t)0))? 1 : 0);
+		bool L_17 = V_5;
+		if (!L_17)
 		{
-			goto IL_007a;
+			goto IL_008a;
 		}
 	}
 	{
-		String_t* L_18 = V_2;
+		String_t* L_18 = V_1;
 		__this->___Identifier = L_18;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_18);
-		goto IL_0085;
+		goto IL_00b1;
 	}
 
-IL_007a:
+IL_008a:
 	{
-		String_t* L_19;
-		L_19 = InstallationId_GenerateGuid_m7220D8C5AE5B4DCA4F4C01A6F921FF66C23E855A(NULL);
-		__this->___Identifier = L_19;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_19);
-	}
-
-IL_0085:
-	{
-		String_t* L_20 = __this->___Identifier;
-		InstallationId_WriteIdentifierToFile_m67273AD8773FDBEE468B0BB7F502B3383AB9A6C4(L_20, NULL);
-		String_t* L_21 = V_1;
-		bool L_22;
-		L_22 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_21, NULL);
-		if (!L_22)
+		String_t* L_19 = V_2;
+		bool L_20;
+		L_20 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_19, NULL);
+		V_6 = (bool)((((int32_t)L_20) == ((int32_t)0))? 1 : 0);
+		bool L_21 = V_6;
+		if (!L_21)
 		{
-			goto IL_00a9;
+			goto IL_00a4;
 		}
 	}
 	{
-		RuntimeObject* L_23 = __this->___UnityAnalyticsIdentifierProvider;
-		String_t* L_24 = __this->___Identifier;
-		InterfaceActionInvoker1< String_t* >::Invoke(1, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_23, L_24);
+		String_t* L_22 = V_2;
+		__this->___Identifier = L_22;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_22);
+		goto IL_00b1;
 	}
 
-IL_00a9:
+IL_00a4:
 	{
-		String_t* L_25 = V_2;
+		String_t* L_23;
+		L_23 = InstallationId_GenerateGuid_m7220D8C5AE5B4DCA4F4C01A6F921FF66C23E855A(NULL);
+		__this->___Identifier = L_23;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_23);
+	}
+
+IL_00b1:
+	{
+		String_t* L_24 = __this->___Identifier;
+		InstallationId_WriteIdentifierToFile_m67273AD8773FDBEE468B0BB7F502B3383AB9A6C4(L_24, NULL);
+		String_t* L_25 = V_1;
 		bool L_26;
 		L_26 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_25, NULL);
-		if (!L_26)
+		V_7 = L_26;
+		bool L_27 = V_7;
+		if (!L_27)
 		{
-			goto IL_00c2;
+			goto IL_00dd;
 		}
 	}
 	{
-		RuntimeObject* L_27 = __this->___UnityAdsIdentifierProvider;
-		String_t* L_28 = __this->___Identifier;
-		InterfaceActionInvoker1< String_t* >::Invoke(1, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_27, L_28);
+		RuntimeObject* L_28 = __this->___UnityAnalyticsIdentifierProvider;
+		String_t* L_29 = __this->___Identifier;
+		InterfaceActionInvoker1< String_t* >::Invoke(1, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_28, L_29);
 	}
 
-IL_00c2:
+IL_00dd:
+	{
+		String_t* L_30 = V_2;
+		bool L_31;
+		L_31 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_30, NULL);
+		V_8 = L_31;
+		bool L_32 = V_8;
+		if (!L_32)
+		{
+			goto IL_00fd;
+		}
+	}
+	{
+		RuntimeObject* L_33 = __this->___UnityAdsIdentifierProvider;
+		String_t* L_34 = __this->___Identifier;
+		InterfaceActionInvoker1< String_t* >::Invoke(1, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_33, L_34);
+	}
+
+IL_00fd:
 	{
 		return;
 	}
@@ -427,10 +456,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_ReadIdentifierFromFi
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9802A0C242B6B1F11EC74461BB2DF09CE62B8035);
 		s_Il2CppMethodInitialized = true;
 	}
+	String_t* V_0 = NULL;
 	{
 		String_t* L_0;
 		L_0 = PlayerPrefs_GetString_mA4C9F842BF77E5572AB20EA087C7048F870D02AE(_stringLiteral9802A0C242B6B1F11EC74461BB2DF09CE62B8035, NULL);
-		return L_0;
+		V_0 = L_0;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		String_t* L_1 = V_0;
+		return L_1;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId_WriteIdentifierToFile_m67273AD8773FDBEE468B0BB7F502B3383AB9A6C4 (String_t* ___0_identifier, const RuntimeMethod* method) 
@@ -452,13 +489,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_GenerateGuid_m7220D8
 {
 	Guid_t V_0;
 	memset((&V_0), 0, sizeof(V_0));
+	String_t* V_1 = NULL;
 	{
 		Guid_t L_0;
 		L_0 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		V_0 = L_0;
 		String_t* L_1;
 		L_1 = Guid_ToString_m2BFFD5FA726E03FA707AAFCCF065896C46D5290C((&V_0), NULL);
-		return L_1;
+		V_1 = L_1;
+		goto IL_0017;
+	}
+
+IL_0017:
+	{
+		String_t* L_2 = V_1;
+		return L_2;
 	}
 }
 #ifdef __clang__
@@ -471,8 +516,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_GenerateGuid_m7220D8
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityAdsIdentifier_get_UserId_m4E41B6AEB6405B6BFA7D4E52FE3F66478A18D90A (UnityAdsIdentifier_t8D3A8D6DB9A1FB469E2E7F3D58B30C3D0D71DA56* __this, const RuntimeMethod* method) 
 {
+	String_t* V_0 = NULL;
 	{
-		return (String_t*)NULL;
+		V_0 = (String_t*)NULL;
+		goto IL_0005;
+	}
+
+IL_0005:
+	{
+		String_t* L_0 = V_0;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAdsIdentifier_set_UserId_mA2519CC19694D24C35D6E2E72B79E2CE34DACA4F (UnityAdsIdentifier_t8D3A8D6DB9A1FB469E2E7F3D58B30C3D0D71DA56* __this, String_t* ___0_value, const RuntimeMethod* method) 
@@ -519,31 +572,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAnalyticsIdentifier_set_UserId_m275
 		s_Il2CppMethodInitialized = true;
 	}
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	{
+	}
 	try
 	{
 		String_t* L_0 = ___0_value;
 		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral20353326ACF03BB4112F3080DBCA0AC47DBC7BB2, L_0, NULL);
 		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
-		goto IL_0015;
+		goto IL_001c;
 	}
 	catch(Il2CppExceptionWrapper& e)
 	{
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_0012;
+			goto CATCH_0017;
 		}
 		throw e;
 	}
 
-CATCH_0012:
+CATCH_0017:
 	{
 		Exception_t* L_1 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-		goto IL_0015;
+		goto IL_001c;
 	}
 
-IL_0015:
+IL_001c:
 	{
 		return;
 	}
@@ -565,10 +620,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAnalyticsIdentifier__ctor_mE19B73CB
 #endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityEngineIdentifier_get_UserId_m34135DB2F190D05C1B89D8BA6BC2344C8F18C796 (UnityEngineIdentifier_t1EB294A627497D2103614B8365E7861F72E0DA83* __this, const RuntimeMethod* method) 
 {
+	String_t* V_0 = NULL;
 	{
 		String_t* L_0;
 		L_0 = Identifiers_get_installationId_mD3ECC6BF716CA29158D977D82861214A105AA6B9(NULL);
-		return L_0;
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		String_t* L_1 = V_0;
+		return L_1;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEngineIdentifier_set_UserId_mCA38EC3A0364B91D605849C3390177F6006B0E99 (UnityEngineIdentifier_t1EB294A627497D2103614B8365E7861F72E0DA83* __this, String_t* ___0_value, const RuntimeMethod* method) 
