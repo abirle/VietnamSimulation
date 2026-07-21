@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: f621ee17a8f22444bb52a4241aec5ab4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6872290807038522623
+    second: Fence Sitter Result Stamp_0
+  - first:
+      213: -5151820399451410526
+    second: Fence Sitter Result Stamp_1
+  - first:
+      213: -5232785019196178594
+    second: Fence Sitter Result Stamp_2
+  - first:
+      213: -6102781804941973386
+    second: Fence Sitter Result Stamp_3
+  - first:
+      213: -7087989000642300732
+    second: Fence Sitter Result Stamp_4
+  - first:
+      213: 2403768418485261833
+    second: Fence Sitter Result Stamp_5
+  - first:
+      213: -4288639108248107597
+    second: Fence Sitter Result Stamp_6
+  - first:
+      213: -1721311190930374643
+    second: Fence Sitter Result Stamp_7
+  - first:
+      213: -4448973962613203976
+    second: Fence Sitter Result Stamp_8
+  - first:
+      213: -4210544962642789510
+    second: Fence Sitter Result Stamp_9
+  - first:
+      213: 3065522730272798635
+    second: Fence Sitter Result Stamp_10
+  - first:
+      213: -6885426182356393512
+    second: Fence Sitter Result Stamp_11
+  - first:
+      213: -4587868687496273179
+    second: Fence Sitter Result Stamp_12
+  - first:
+      213: -2990617783260468785
+    second: Fence Sitter Result Stamp_13
+  - first:
+      213: -3409961038549511179
+    second: Fence Sitter Result Stamp_14
+  - first:
+      213: -4857950729697132872
+    second: Fence Sitter Result Stamp_15
+  - first:
+      213: 1388505308540847561
+    second: Fence Sitter Result Stamp_16
+  - first:
+      213: 8857737824408506280
+    second: Fence Sitter Result Stamp_17
+  - first:
+      213: -6358991336104656771
+    second: Fence Sitter Result Stamp_18
+  - first:
+      213: -4861102247076797148
+    second: Fence Sitter Result Stamp_19
+  - first:
+      213: 517849478087330435
+    second: Fence Sitter Result Stamp_20
+  - first:
+      213: 8275966830841066338
+    second: Fence Sitter Result Stamp_21
+  - first:
+      213: 3500231476191001522
+    second: Fence Sitter Result Stamp_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 214
+        width: 310
+        height: 1712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b49450ce7b0a0a0800000000000000
+      internalID: -6872290807038522623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_1
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 957
+        width: 232
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af661864ae0188b0800000000000000
+      internalID: -5151820399451410526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_2
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1464
+        width: 310
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f73d0efb96167b0800000000000000
+      internalID: -5232785019196178594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_3
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1455
+        width: 312
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67867b648409e4ba0800000000000000
+      internalID: -6102781804941973386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_4
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 1440
+        width: 312
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4f6d4ce8762ad90800000000000000
+      internalID: -7087989000642300732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_5
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 1438
+        width: 310
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906dd1214a6eb5120800000000000000
+      internalID: 2403768418485261833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_6
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 214
+        width: 313
+        height: 1712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b506070471bb74c0800000000000000
+      internalID: -4288639108248107597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_7
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 951
+        width: 265
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d00c0bc779cac18e0800000000000000
+      internalID: -1721311190930374643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_8
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 955
+        width: 264
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb5a7fa0c11242c0800000000000000
+      internalID: -4448973962613203976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_9
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 951
+        width: 264
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7bbdd63aa32195c0800000000000000
+      internalID: -4210544962642789510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_10
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 952
+        width: 264
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7bbcc6eacea8a20800000000000000
+      internalID: 3065522730272798635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_11
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 386
+        width: 280
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d129712e5d0270a0800000000000000
+      internalID: -6885426182356393512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_12
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 856
+        width: 110
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2a5ad7cbd9450c0800000000000000
+      internalID: -4587868687496273179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_13
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 390
+        width: 221
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc92bc998f03f76d0800000000000000
+      internalID: -2990617783260468785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_14
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 388
+        width: 222
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3955f80826da0d0800000000000000
+      internalID: -3409961038549511179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_15
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 388
+        width: 113
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be7d04cc87159cb0800000000000000
+      internalID: -4857950729697132872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_16
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 382
+        width: 260
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c54254b836f44310800000000000000
+      internalID: 1388505308540847561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_17
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 390
+        width: 259
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af0969fe910dea70800000000000000
+      internalID: 8857737824408506280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_18
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 214
+        width: 311
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7002b9321350c7a0800000000000000
+      internalID: -6358991336104656771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_19
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 214
+        width: 313
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4256222f245e98cb0800000000000000
+      internalID: -4861102247076797148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_20
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 214
+        width: 313
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a448c4b55cf2700800000000000000
+      internalID: 517849478087330435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_21
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 215
+        width: 309
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26372351cf32ad270800000000000000
+      internalID: 8275966830841066338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence Sitter Result Stamp_22
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 215
+        width: 85
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb710a8bf1539030800000000000000
+      internalID: 3500231476191001522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Fence Sitter Result Stamp_0: -6872290807038522623
+      Fence Sitter Result Stamp_1: -5151820399451410526
+      Fence Sitter Result Stamp_10: 3065522730272798635
+      Fence Sitter Result Stamp_11: -6885426182356393512
+      Fence Sitter Result Stamp_12: -4587868687496273179
+      Fence Sitter Result Stamp_13: -2990617783260468785
+      Fence Sitter Result Stamp_14: -3409961038549511179
+      Fence Sitter Result Stamp_15: -4857950729697132872
+      Fence Sitter Result Stamp_16: 1388505308540847561
+      Fence Sitter Result Stamp_17: 8857737824408506280
+      Fence Sitter Result Stamp_18: -6358991336104656771
+      Fence Sitter Result Stamp_19: -4861102247076797148
+      Fence Sitter Result Stamp_2: -5232785019196178594
+      Fence Sitter Result Stamp_20: 517849478087330435
+      Fence Sitter Result Stamp_21: 8275966830841066338
+      Fence Sitter Result Stamp_22: 3500231476191001522
+      Fence Sitter Result Stamp_3: -6102781804941973386
+      Fence Sitter Result Stamp_4: -7087989000642300732
+      Fence Sitter Result Stamp_5: 2403768418485261833
+      Fence Sitter Result Stamp_6: -4288639108248107597
+      Fence Sitter Result Stamp_7: -1721311190930374643
+      Fence Sitter Result Stamp_8: -4448973962613203976
+      Fence Sitter Result Stamp_9: -4210544962642789510
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

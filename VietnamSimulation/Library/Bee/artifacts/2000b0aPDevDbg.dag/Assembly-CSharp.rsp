@@ -366,15 +366,20 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.4.0f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.4.0f1/Editor/Data/Tools/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Scripts/AdvisorQuestions.cs"
+"Assets/Scripts/ChangeChannel.cs"
+"Assets/Scripts/ImageScroll.cs"
 "Assets/Scripts/InputFieldUpdate.cs"
+"Assets/Scripts/IntroSkip.cs"
 "Assets/Scripts/MoreInfoButton.cs"
 "Assets/Scripts/Pause.cs"
 "Assets/Scripts/PointOfInterest.cs"
 "Assets/Scripts/RadioPlayPause.cs"
 "Assets/Scripts/ResourceManager.cs"
+"Assets/Scripts/ResultScroll.cs"
 "Assets/Scripts/SceneTransition.cs"
 "Assets/Scripts/ScreenChange.cs"
 "Assets/Scripts/SliderUpdate.cs"
+"Assets/Scripts/WebGLVideo.cs"
 -langversion:9.0
 /deterministic
 /optimize-

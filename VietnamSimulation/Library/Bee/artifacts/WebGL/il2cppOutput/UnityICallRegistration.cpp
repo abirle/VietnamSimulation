@@ -510,6 +510,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_Unity_Profiling_ProfilerRecorder_GetValid_Injected();
 		Register_Unity_Profiling_ProfilerRecorder_GetValid_Injected();
 
+		//System.Int32 Unity.Profiling.ProfilerRecorder::CopyTo_Pointer_Injected(Unity.Profiling.ProfilerRecorder&,Unity.Profiling.ProfilerRecorderSample*,System.Int32,System.Boolean)
+		void Register_Unity_Profiling_ProfilerRecorder_CopyTo_Pointer_Injected();
+		Register_Unity_Profiling_ProfilerRecorder_CopyTo_Pointer_Injected();
+
 		//System.Int32 Unity.Profiling.ProfilerRecorder::GetCount_Injected(Unity.Profiling.ProfilerRecorder&,Unity.Profiling.ProfilerRecorder/CountOptions)
 		void Register_Unity_Profiling_ProfilerRecorder_GetCount_Injected();
 		Register_Unity_Profiling_ProfilerRecorder_GetCount_Injected();
@@ -1880,6 +1884,18 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Font
 
+	//Start Registrations for type : UnityEngine.FrameDebugger
+
+		//System.Boolean UnityEngine.FrameDebugger::IsLocalEnabled()
+		void Register_UnityEngine_FrameDebugger_IsLocalEnabled();
+		Register_UnityEngine_FrameDebugger_IsLocalEnabled();
+
+		//System.Boolean UnityEngine.FrameDebugger::IsRemoteEnabled()
+		void Register_UnityEngine_FrameDebugger_IsRemoteEnabled();
+		Register_UnityEngine_FrameDebugger_IsRemoteEnabled();
+
+	//End Registrations for type : UnityEngine.FrameDebugger
+
 	//Start Registrations for type : UnityEngine.FrameTimingManager
 
 		//System.UInt32 UnityEngine.FrameTimingManager::GetLatestTimings_Injected(System.UInt32,UnityEngine.Bindings.ManagedSpanWrapper&)
@@ -2362,6 +2378,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_GUIStyle_get_font_Injected();
 		Register_UnityEngine_GUIStyle_get_font_Injected();
 
+		//System.Single UnityEngine.GUIStyle::Internal_CalcHeight_Injected(System.IntPtr,UnityEngine.GUIContent,System.Single)
+		void Register_UnityEngine_GUIStyle_Internal_CalcHeight_Injected();
+		Register_UnityEngine_GUIStyle_Internal_CalcHeight_Injected();
+
 		//System.Single UnityEngine.GUIStyle::get_fixedHeight_Injected(System.IntPtr)
 		void Register_UnityEngine_GUIStyle_get_fixedHeight_Injected();
 		Register_UnityEngine_GUIStyle_get_fixedHeight_Injected();
@@ -2369,6 +2389,14 @@ void RegisterAllStrippedInternalCalls()
 		//System.Single UnityEngine.GUIStyle::get_fixedWidth_Injected(System.IntPtr)
 		void Register_UnityEngine_GUIStyle_get_fixedWidth_Injected();
 		Register_UnityEngine_GUIStyle_get_fixedWidth_Injected();
+
+		//System.Void UnityEngine.GUIStyle::Internal_CalcMinMaxWidth_Injected(System.IntPtr,UnityEngine.GUIContent,UnityEngine.Vector2&)
+		void Register_UnityEngine_GUIStyle_Internal_CalcMinMaxWidth_Injected();
+		Register_UnityEngine_GUIStyle_Internal_CalcMinMaxWidth_Injected();
+
+		//System.Void UnityEngine.GUIStyle::Internal_CalcSizeWithConstraints_Injected(System.IntPtr,UnityEngine.GUIContent,UnityEngine.Vector2&,UnityEngine.Vector2&)
+		void Register_UnityEngine_GUIStyle_Internal_CalcSizeWithConstraints_Injected();
+		Register_UnityEngine_GUIStyle_Internal_CalcSizeWithConstraints_Injected();
 
 		//System.Void UnityEngine.GUIStyle::Internal_Destroy(System.IntPtr)
 		void Register_UnityEngine_GUIStyle_Internal_Destroy();
@@ -3546,6 +3574,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_set_subMeshCount_Injected();
 		Register_UnityEngine_Mesh_set_subMeshCount_Injected();
 
+		//UnityEngine.Rendering.IndexFormat UnityEngine.Mesh::get_indexFormat_Injected(System.IntPtr)
+		void Register_UnityEngine_Mesh_get_indexFormat_Injected();
+		Register_UnityEngine_Mesh_get_indexFormat_Injected();
+
 	//End Registrations for type : UnityEngine.Mesh
 
 	//Start Registrations for type : UnityEngine.MeshFilter
@@ -4062,6 +4094,14 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Profiling_Profiler_GetRuntimeMemorySizeLong_Injected();
 		Register_UnityEngine_Profiling_Profiler_GetRuntimeMemorySizeLong_Injected();
 
+		//System.Void UnityEngine.Profiling.Profiler::BeginSampleImpl_Injected(UnityEngine.Bindings.ManagedSpanWrapper&,System.IntPtr)
+		void Register_UnityEngine_Profiling_Profiler_BeginSampleImpl_Injected();
+		Register_UnityEngine_Profiling_Profiler_BeginSampleImpl_Injected();
+
+		//System.Void UnityEngine.Profiling.Profiler::EndSample()
+		void Register_UnityEngine_Profiling_Profiler_EndSample();
+		Register_UnityEngine_Profiling_Profiler_EndSample();
+
 	//End Registrations for type : UnityEngine.Profiling.Profiler
 
 	//Start Registrations for type : UnityEngine.PropertyNameUtils
@@ -4542,6 +4582,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Rendering_CommandBuffer_BeginSample_Injected();
 		Register_UnityEngine_Rendering_CommandBuffer_BeginSample_Injected();
 
+		//System.Void UnityEngine.Rendering.CommandBuffer::BeginSample_ProfilerMarker_Injected(System.IntPtr,System.IntPtr)
+		void Register_UnityEngine_Rendering_CommandBuffer_BeginSample_ProfilerMarker_Injected();
+		Register_UnityEngine_Rendering_CommandBuffer_BeginSample_ProfilerMarker_Injected();
+
 		//System.Void UnityEngine.Rendering.CommandBuffer::ClearRandomWriteTargets_Injected(System.IntPtr)
 		void Register_UnityEngine_Rendering_CommandBuffer_ClearRandomWriteTargets_Injected();
 		Register_UnityEngine_Rendering_CommandBuffer_ClearRandomWriteTargets_Injected();
@@ -4633,6 +4677,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Rendering.CommandBuffer::EndSample_Injected(System.IntPtr,UnityEngine.Bindings.ManagedSpanWrapper&)
 		void Register_UnityEngine_Rendering_CommandBuffer_EndSample_Injected();
 		Register_UnityEngine_Rendering_CommandBuffer_EndSample_Injected();
+
+		//System.Void UnityEngine.Rendering.CommandBuffer::EndSample_ProfilerMarker_Injected(System.IntPtr,System.IntPtr)
+		void Register_UnityEngine_Rendering_CommandBuffer_EndSample_ProfilerMarker_Injected();
+		Register_UnityEngine_Rendering_CommandBuffer_EndSample_ProfilerMarker_Injected();
 
 		//System.Void UnityEngine.Rendering.CommandBuffer::GetTemporaryRT_Injected(System.IntPtr,System.Int32,System.Int32,System.Int32,UnityEngine.FilterMode,UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.GraphicsFormat,System.Int32,System.Boolean,UnityEngine.RenderTextureMemoryless,System.Boolean,UnityEngine.Rendering.ShadowSamplingMode)
 		void Register_UnityEngine_Rendering_CommandBuffer_GetTemporaryRT_Injected();

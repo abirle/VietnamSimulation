@@ -10,6 +10,7 @@
 		<type fullname="PointOfInterest" preserve="nothing"/>
 		<type fullname="RadioPlayPause" preserve="nothing"/>
 		<type fullname="ResourceManager" preserve="nothing"/>
+		<type fullname="ResultScroll" preserve="nothing"/>
 		<type fullname="ScreenChange" preserve="nothing"/>
 		<type fullname="SliderUpdate" preserve="nothing"/>
 		<type fullname="WebGLVideo" preserve="nothing"/>

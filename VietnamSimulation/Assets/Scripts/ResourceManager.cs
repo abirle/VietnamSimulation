@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Resources;
 using TMPro;
 using Unity.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.Audio.ProcessorInstance;
@@ -112,12 +113,15 @@ public class ResourceManager : MonoBehaviour
     public GameObject[] domesticQuestionsArray;
 
     public static int diplomaticPointsInvestigated = 0;
-    public static int diplomaticPointsThreshold = 2;
+    public static int diplomaticPointsThreshold = 11;
     public GameObject recorderNotification;
     public bool diplomaticAdvisorAvailable = false;
     public GameObject[] diplomaticQuestionsArray;
 
     public static string classification = "";
+
+    public static int roomsComplete = 0;
+    public static bool researched = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -131,6 +135,11 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (militaryPointsInvestigated > 0 || domesticPointsInvestigated > 0 || diplomaticPointsInvestigated > 0)
+        {
+            researched = true;
+        }
+
         if (militaryAdvisorAvailable)
         {
             foreach (GameObject question in militaryQuestionsArray) 
@@ -170,12 +179,12 @@ public class ResourceManager : MonoBehaviour
             }
 
             militaryPointsInvestigated = 0;
+            roomsComplete++;
         }
 
         if (domesticPointsInvestigated >= domesticPointsThreshold)
         {
             phoneNotification.SetActive(true);
-            Debug.Log("notified");
             domesticAdvisorAvailable = true;
 
             foreach (GameObject question in domesticQuestionsArray)
@@ -188,6 +197,7 @@ public class ResourceManager : MonoBehaviour
             }
 
             domesticPointsInvestigated = 0;
+            roomsComplete++;
         }
 
         if (diplomaticPointsInvestigated >= diplomaticPointsThreshold)
@@ -205,6 +215,7 @@ public class ResourceManager : MonoBehaviour
             }
 
             diplomaticPointsInvestigated = 0;
+            roomsComplete++;
         }
 
         if (ScreenChange.viewingResults)
@@ -1345,7 +1356,7 @@ public class ResourceManager : MonoBehaviour
         //          failure: -5 to #11
 
         // Win the 1968 Presidential Election / Maintain Democratic party Unity
-        if (numDo10Resources < 12)
+        if (numDo10Resources < 25)
         {
             //failure
 
@@ -1370,36 +1381,36 @@ public class ResourceManager : MonoBehaviour
                 return;
             }
         }
-        else if (numDo10Resources < 25)
-        {
-            //situation deteriorating
+        //else if (numDo10Resources < 25)
+        //{
+        //    //situation deteriorating
 
-            if (!deterioratingCalculatedDo10)
-            {
-                Debug.Log("Do10: SITUATION DETERIORATING");
-                PrintResources();
+        //    if (!deterioratingCalculatedDo10)
+        //    {
+        //        Debug.Log("Do10: SITUATION DETERIORATING");
+        //        PrintResources();
 
-                if (successCalculatedDo10)
-                {
-                    numDo12Resources -= 3;
+        //        if (successCalculatedDo10)
+        //        {
+        //            numDo12Resources -= 3;
 
-                    Debug.Log("*previous Do10 success fix; Do12 -3");
-                    PrintResources();
-                }
-                if (failureCalculatedDo10)
-                {
-                    numDo11Resources += 5;
+        //            Debug.Log("*previous Do10 success fix; Do12 -3");
+        //            PrintResources();
+        //        }
+        //        if (failureCalculatedDo10)
+        //        {
+        //            numDo11Resources += 5;
 
-                    Debug.Log("*previous Do10 failure fix; Do11 +5");
-                    PrintResources();
-                }
-                deterioratingCalculatedDo10 = true;
-                failureCalculatedDo10 = false;
-                successCalculatedDo10 = false;
-                CalculateResults();
-                return;
-            }
-        }
+        //            Debug.Log("*previous Do10 failure fix; Do11 +5");
+        //            PrintResources();
+        //        }
+        //        deterioratingCalculatedDo10 = true;
+        //        failureCalculatedDo10 = false;
+        //        successCalculatedDo10 = false;
+        //        CalculateResults();
+        //        return;
+        //    }
+        //}
         else
         {
             //success
@@ -1900,71 +1911,71 @@ public class ResourceManager : MonoBehaviour
         // Prevent a Communist takeover of South Vietnam
         if (numM1Resources < 15)
         {
-            resultsText.text = "M1: failure - " + numM1Resources;
+            resultsText.text = "M1: failure - " + numM1Resources + "\r\n\r\n";
         }
         else if (numM1Resources < 30)
         {
-            resultsText.text = "M1: situation deteriorating - " + numM1Resources;
+            resultsText.text = "M1: situation deteriorating - " + numM1Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text = "M1: success - " + numM1Resources;
+            resultsText.text = "M1: success - " + numM1Resources + "\r\n\r\n";
         }
 
         // Achieve military success in the field
         if (numM2Resources < 12)
         {
-            resultsText.text += " M2: failure - " + numM2Resources;
+            resultsText.text += " M2: failure - " + numM2Resources + "\r\n\r\n";
         }
         else if (numM2Resources < 25)
         {
-            resultsText.text += " M2: situation deteriorating - " + numM2Resources;
+            resultsText.text += " M2: situation deteriorating - " + numM2Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " M2: success - " + numM2Resources;
+            resultsText.text += " M2: success - " + numM2Resources + "\r\n\r\n";
         }
 
         // Secure South Vietnamese countryside (pacification)
         if (numM3Resources < 12)
         {
-            resultsText.text += " M3: failure - " + numM3Resources;
+            resultsText.text += " M3: failure - " + numM3Resources + "\r\n\r\n";
         }
         else if (numM3Resources < 25)
         {
-            resultsText.text += " M3: situation deteriorating - " + numM3Resources;
+            resultsText.text += " M3: situation deteriorating - " + numM3Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " M3: success - " + numM3Resources;
+            resultsText.text += " M3: success - " + numM3Resources + "\r\n\r\n";
         }
 
         // Stabilize and strengthen the South Vietnamese government
         if (numM4Resources < 10)
         {
-            resultsText.text += " M4: failure - " + numM4Resources;
+            resultsText.text += " M4: failure - " + numM4Resources + "\r\n\r\n";
         }
         else if (numM4Resources < 20)
         {
-            resultsText.text += " M4: situation deteriorating - " + numM4Resources;
+            resultsText.text += " M4: situation deteriorating - " + numM4Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " M4: success - " + numM4Resources;
+            resultsText.text += " M4: success - " + numM4Resources + "\r\n\r\n";
         }
 
         // Protect U.S. troops and minimize casualties
         if (numM5Resources < 10)
         {
-            resultsText.text += " M5: failure - " + numM5Resources;
+            resultsText.text += " M5: failure - " + numM5Resources + "\r\n\r\n";
         }
         else if (numM5Resources < 20)
         {
-            resultsText.text += " M5: situation deteriorating - " + numM5Resources;
+            resultsText.text += " M5: situation deteriorating - " + numM5Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " M5: success - " + numM5Resources;
+            resultsText.text += " M5: success - " + numM5Resources + "\r\n\r\n";
         }
 
 
@@ -1976,15 +1987,15 @@ public class ResourceManager : MonoBehaviour
         // Preserve American global credibility
         if (numDi6Resources < 7)
         {
-            resultsText.text += " Di6: failure - " + numDi6Resources;
+            resultsText.text += " Di6: failure - " + numDi6Resources + "\r\n\r\n";
         }
         else if (numDi6Resources < 15)
         {
-            resultsText.text += " Di6: situation deteriorating - " + numDi6Resources;
+            resultsText.text += " Di6: situation deteriorating - " + numDi6Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " Di6: success - " + numDi6Resources;
+            resultsText.text += " Di6: success - " + numDi6Resources + "\r\n\r\n";
         }
 
 
@@ -1996,15 +2007,15 @@ public class ResourceManager : MonoBehaviour
         // Open peace negotiations with North Vietnam
         if (numDi7Resources < 10)
         {
-            resultsText.text += " Di7: failure - " + numDi7Resources;
+            resultsText.text += " Di7: failure - " + numDi7Resources + "\r\n\r\n";
         }
         else if (numDi7Resources < 20)
         {
-            resultsText.text += " Di7: situation deteriorating - " + numDi7Resources;
+            resultsText.text += " Di7: situation deteriorating - " + numDi7Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " Di7: success - " + numDi7Resources;
+            resultsText.text += " Di7: success - " + numDi7Resources + "\r\n\r\n";
         }
 
 
@@ -2016,15 +2027,15 @@ public class ResourceManager : MonoBehaviour
         // Maintain allied support
         if (numDi8Resources < 7)
         {
-            resultsText.text += " Di8: failure - " + numDi8Resources;
+            resultsText.text += " Di8: failure - " + numDi8Resources + "\r\n\r\n";
         }
         else if (numDi8Resources < 15)
         {
-            resultsText.text += " Di8: situation deteriorating - " + numDi8Resources;
+            resultsText.text += " Di8: situation deteriorating - " + numDi8Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " Di8: success - " + numDi8Resources;
+            resultsText.text += " Di8: success - " + numDi8Resources + "\r\n\r\n";
         }
 
 
@@ -2036,15 +2047,15 @@ public class ResourceManager : MonoBehaviour
         // Manage relations with the Soviet Union and China
         if (numDi9Resources < 10)
         {
-            resultsText.text += " Di9: failure - " + numDi9Resources;
+            resultsText.text += " Di9: failure - " + numDi9Resources + "\r\n\r\n";
         }
         else if (numDi9Resources < 20)
         {
-            resultsText.text += " Di9: situation deteriorating - " + numDi9Resources;
+            resultsText.text += " Di9: situation deteriorating - " + numDi9Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " Di9: success - " + numDi9Resources;
+            resultsText.text += " Di9: success - " + numDi9Resources + "\r\n\r\n";
         }
 
 
@@ -2056,15 +2067,15 @@ public class ResourceManager : MonoBehaviour
         // Win the 1968 Presidential Election / Maintain Democratic party Unity
         if (numDo10Resources < 12)
         {
-            resultsText.text += " Do10: failure - " + numDo10Resources;
+            resultsText.text += " Do10: failure - " + numDo10Resources + "\r\n\r\n";
         }
         else if (numDo10Resources < 25)
         {
-            resultsText.text += " Do10: situation deteriorating - " + numDo10Resources;
+            resultsText.text += " Do10: situation deteriorating - " + numDo10Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " Do10: success - " + numDo10Resources;
+            resultsText.text += " Do10: success - " + numDo10Resources + "\r\n\r\n";
         }
 
 
@@ -2076,15 +2087,15 @@ public class ResourceManager : MonoBehaviour
         // Respond to growing antiwar movement and public opinion
         if (numDo11Resources < 10)
         {
-            resultsText.text += " Do11: failure - " + numDo11Resources;
+            resultsText.text += " Do11: failure - " + numDo11Resources + "\r\n\r\n";
         }
         else if (numDo11Resources < 20)
         {
-            resultsText.text += " Do11: situation deteriorating - " + numDo11Resources;
+            resultsText.text += " Do11: situation deteriorating - " + numDo11Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " Do11: success - " + numDo11Resources;
+            resultsText.text += " Do11: success - " + numDo11Resources + "\r\n\r\n";
         }
 
         //Do12: Maintain confidence of Congress
@@ -2095,15 +2106,15 @@ public class ResourceManager : MonoBehaviour
         // Maintain confidence of Congress
         if (numDo12Resources < 7)
         {
-            resultsText.text += " Do12: failure - " + numDo12Resources;
+            resultsText.text += " Do12: failure - " + numDo12Resources + "\r\n\r\n";
         }
         else if (numDo12Resources < 15)
         {
-            resultsText.text += " Do12: situation deteriorating - " + numDo12Resources;
+            resultsText.text += " Do12: situation deteriorating - " + numDo12Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " Do12: success - " + numDo12Resources;
+            resultsText.text += " Do12: success - " + numDo12Resources + "\r\n\r\n";
         }
 
 
@@ -2115,15 +2126,15 @@ public class ResourceManager : MonoBehaviour
         // Manage U.S. economy
         if (numDo13Resources < 10)
         {
-            resultsText.text += " Do13: failure - " + numDo13Resources;
+            resultsText.text += " Do13: failure - " + numDo13Resources + "\r\n\r\n";
         }
         else if (numDo13Resources < 20)
         {
-            resultsText.text += " Do13: situation deteriorating - " + numDo13Resources;
+            resultsText.text += " Do13: situation deteriorating - " + numDo13Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " Do13: success - " + numDo13Resources;
+            resultsText.text += " Do13: success - " + numDo13Resources + "\r\n\r\n";
         }
 
 
@@ -2135,15 +2146,15 @@ public class ResourceManager : MonoBehaviour
         // Preserve Johnson's domestic "Great Society" programs
         if (numDo14Resources < 10)
         {
-            resultsText.text += " Do14: failure - " + numDo14Resources;
+            resultsText.text += " Do14: failure - " + numDo14Resources + "\r\n\r\n";
         }
         else if (numDo14Resources < 20)
         {
-            resultsText.text += " Do14: situation deteriorating - " + numDo14Resources;
+            resultsText.text += " Do14: situation deteriorating - " + numDo14Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " Do14: success - " + numDo14Resources;
+            resultsText.text += " Do14: success - " + numDo14Resources + "\r\n\r\n";
         }
 
 
@@ -2155,15 +2166,15 @@ public class ResourceManager : MonoBehaviour
         // Preserve Johnson's domestic "Great Society" programs
         if (numDo15Resources < 7)
         {
-            resultsText.text += " Do15: failure - " + numDo15Resources;
+            resultsText.text += " Do15: failure - " + numDo15Resources + "\r\n\r\n";
         }
         else if (numDo15Resources < 15)
         {
-            resultsText.text += " Do15: situation deteriorating - " + numDo15Resources;
+            resultsText.text += " Do15: situation deteriorating - " + numDo15Resources + "\r\n\r\n";
         }
         else
         {
-            resultsText.text += " Do15: success - " + numDo15Resources;
+            resultsText.text += " Do15: success - " + numDo15Resources + "\r\n\r\n";
         }
 
 
@@ -2177,8 +2188,23 @@ public class ResourceManager : MonoBehaviour
         int diplomaticResources = numDi6Resources + numDi7Resources + numDi8Resources + numDi9Resources;
         float diplomaticResourcesAverage = diplomaticResources / 4;
 
+        float militaryDomesticDifference = militaryResourcesAverage - domesticResourcesAverage;
+        militaryDomesticDifference = (militaryDomesticDifference * 2) / 2;
+        float domesticDiplomaticDifference = domesticResourcesAverage - diplomaticResourcesAverage;
+        domesticDiplomaticDifference = (domesticDiplomaticDifference * 2) / 2;
+        float diplomaticMilitaryDifference = diplomaticResourcesAverage - militaryResourcesAverage;
+        diplomaticMilitaryDifference = (diplomaticMilitaryDifference * 2) / 2;
+        Debug.Log(militaryDomesticDifference);
+        Debug.Log(domesticDiplomaticDifference);
+        Debug.Log(diplomaticMilitaryDifference);
+
+        //Military ~= Domestic ~= Diplomatic
+        if (militaryDomesticDifference <= 15 && domesticDiplomaticDifference <= 15 && diplomaticMilitaryDifference <= 15)
+        {
+            classification = "Fence-Sitter";
+        }
         //Military > Domestic
-        if (militaryResourcesAverage > domesticResourcesAverage)
+        else if (militaryResourcesAverage > domesticResourcesAverage)
         {
             //Military > Domestic > Diplomatic
             if (domesticResourcesAverage > diplomaticResourcesAverage) 
