@@ -113,7 +113,7 @@ public class ResourceManager : MonoBehaviour
     public GameObject[] domesticQuestionsArray;
 
     public static int diplomaticPointsInvestigated = 0;
-    public static int diplomaticPointsThreshold = 2;
+    public static int diplomaticPointsThreshold = 11;
     public GameObject recorderNotification;
     public bool diplomaticAdvisorAvailable = false;
     public GameObject[] diplomaticQuestionsArray;

@@ -19,6 +19,9 @@ public class IntroSkip : MonoBehaviour
 
     public GameObject closeButton;
     public GameObject nextButton;
+    public GameObject ballRedactedIntro01;
+    public GameObject ballRedactedIntro02;
+    public GameObject ballRedactedIntro03;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -178,7 +181,7 @@ public class IntroSkip : MonoBehaviour
 
             }
 
-            if (numClicked == 1)
+            else if (numClicked == 1)
             {
                 introText.text = "I know you've got military and diplomatic people fighting for these same resources, and I'm not telling you they're wrong. But what happens at home is what people see every night, and come November it's what they'll be voting on. I've covered enough of these to tell you — when the country stops believing an administration, that's the ballgame.\r\n\r\nSo before you decide, do yourself a favor and turn on the television, see what the country's actually watching tonight, and take a good look at where the polling is. You don't have to take my word for it — it's all right there, and you'll want to see it for yourself before you decide where this goes. \r\n";
                 audioSource.PlayOneShot(crackle);
@@ -198,7 +201,10 @@ public class IntroSkip : MonoBehaviour
         {
             if (numClicked == 0)
             {
-                introText.text = "Understand first what is being tested. It is the credibility of our commitments and our prestige around the world, and it is being tested now as never before. Our friends abroad — the Australians, the South Koreans, the Filipinos — have sent troops and stood with us, and that counts for a great deal. But the NATO capitals and the neutral ones are watching, and they have begun to doubt that we can sustain a commitment of this size; the longer they watch, the more critical of us the world becomes.\r\n\r\nI watched the French exhaust themselves on this same ground at Dien Bien Phu. No one has demonstrated that an outside power can win another people's war there by force alone — which does not mean we cannot succeed, only that we cannot yet be sure.\r\n";
+                //introText.text = "Understand first what is being tested. It is the credibility of our commitments and our prestige around the world, and it is being tested now as never before. Our friends abroad — the Australians, the South Koreans, the Filipinos — have sent troops and stood with us, and that counts for a great deal. But the NATO capitals and the neutral ones are watching, and they have begun to doubt that we can sustain a commitment of this size; the longer they watch, the more critical of us the world becomes.\r\n\r\nI watched the French exhaust themselves on this same ground at Dien Bien Phu. No one has demonstrated that an outside power can win another people's war there by force alone — which does not mean we cannot succeed, only that we cannot yet be sure.\r\n";
+                introText.text = "";
+                ballRedactedIntro01.SetActive(false);
+                ballRedactedIntro02.SetActive(true);
                 audioSource.PlayOneShot(crackle);
                 numClicked++;
                 nextButton.GetComponent<Button>().interactable = false;
@@ -208,9 +214,12 @@ public class IntroSkip : MonoBehaviour
 
             }
 
-            if (numClicked == 1)
+            else if (numClicked == 1)
             {
-                introText.text = "Moscow and Peking read that same doubt, and they are answering it: more weapons, more advisers, more support to Hanoi, to test our resolve and widen the war if they can. Unless we give the Soviets a political alternative they can support, they have no reason to hold back. The instruments that will decide this are diplomatic, and they must be used while we still have the freedom of maneuver to use them.\r\n\r\nSo before you commit anything, read what your people put in front of you, and listen to the recordings — mine and the others at your disposal. They will tell you how we are seen abroad. After that, it is a matter of judgment. Not all things are the same size, and you cannot chase every one of them. Set your order of priorities, and spend your resources where they will do the most. \r\n";
+                //introText.text = "Moscow and Peking read that same doubt, and they are answering it: more weapons, more advisers, more support to Hanoi, to test our resolve and widen the war if they can. Unless we give the Soviets a political alternative they can support, they have no reason to hold back. The instruments that will decide this are diplomatic, and they must be used while we still have the freedom of maneuver to use them.\r\n\r\nSo before you commit anything, read what your people put in front of you, and listen to the recordings — mine and the others at your disposal. They will tell you how we are seen abroad. After that, it is a matter of judgment. Not all things are the same size, and you cannot chase every one of them. Set your order of priorities, and spend your resources where they will do the most. \r\n";
+                introText.text = "";
+                ballRedactedIntro02.SetActive(false);
+                ballRedactedIntro03.SetActive(true);
                 audioSource.PlayOneShot(crackle);
                 numClicked++;
                 nextButton.SetActive(false);

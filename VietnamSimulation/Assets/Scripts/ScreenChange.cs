@@ -22,6 +22,7 @@ public class ScreenChange : MonoBehaviour
     public GameObject typewriterScreen;
     public GameObject diplomaticScreen;
     public GameObject teletypeScreen;
+    public GameObject posterboardScreen;
 
     public GameObject militaryAdvisor;
     public TMP_Text militaryAdvisorText;
@@ -77,6 +78,8 @@ public class ScreenChange : MonoBehaviour
     bool isZoomingOutOnTeletype = false;
     bool isZoomingInOnRecorder = false;
     bool isZoomingOutOnRecorder = false;
+    bool isZoomingInOnPosterboard = false;
+    bool isZoomingOutOnPosterboard = false;
 
     Vector3 cameraCenter = new Vector3(1288, 725, -1500);
     Vector3 cameraMap = new Vector3(1283, 722, -1500);
@@ -89,6 +92,9 @@ public class ScreenChange : MonoBehaviour
     Vector3 cameraChalkboard = new Vector3((float)1282.8, (float)726.21, -1500);
     Vector3 cameraRecorder = new Vector3((float)1287.75, (float)722.38, -1500);
     Vector3 cameraTeletype = new Vector3((float)1284.52, (float)722.29, -1500);
+    Vector3 cameraPosterboard = new Vector3((float)1285.72, (float)725.53, -1500);
+
+
 
     float timeElapsed = 0f;
     float secondTimeElapsed = 0f;
@@ -146,6 +152,10 @@ public class ScreenChange : MonoBehaviour
     public TMP_Text resultsText;
     public ResultScroll resultScroll;
 
+    public GameObject tvButton;
+    public GameObject ballRedactedIntro01;
+    public GameObject ballRedactedQuestionIntro;
+
     public void AllScreensActive()
     {
         militaryScreen.SetActive(true);
@@ -162,6 +172,7 @@ public class ScreenChange : MonoBehaviour
         chalkboardScreen.SetActive(true);
         diplomaticScreen.SetActive(true);
         teletypeScreen.SetActive(true);
+        posterboardScreen.SetActive(true);
         
     }
 
@@ -182,6 +193,7 @@ public class ScreenChange : MonoBehaviour
         chalkboardScreen.SetActive(false);
         diplomaticScreen.SetActive(false);
         teletypeScreen.SetActive(false);
+        posterboardScreen.SetActive(false);
 
     }
 
@@ -557,6 +569,7 @@ public class ScreenChange : MonoBehaviour
                 {
                     isFadingInOnCampaignOffice = false;
                     InputSystem.EnableDevice(Mouse.current);
+                    tvButton.SetActive(true);
 
                     if (camera.orthographicSize == (float)1.5)
                     {
@@ -565,6 +578,7 @@ public class ScreenChange : MonoBehaviour
                         audioSource.PlayOneShot(rotaryPhone);
                         phoneSpinning = true;
                         timeElapsed = 0;
+
                     }
                 }
             }
@@ -618,7 +632,9 @@ public class ScreenChange : MonoBehaviour
             {
                 ResourceManager.diplomaticPointsInvestigated = 0;
                 diplomaticAdvisor.SetActive(true);
-                diplomaticAdvisorText.text = "You found the reel. Good. I set down my thoughts on a few pressing matters. Spool to the one you want and let it run.";
+                //diplomaticAdvisorText.text = "You found the reel. Good. I set down my thoughts on a few pressing matters. Spool to the one you want and let it run.";
+                diplomaticAdvisorText.text = "";
+                ballRedactedQuestionIntro.SetActive(true);
                 resourceManager.diplomaticAdvisorAvailable = false;
                 resourceManager.recorderNotification.SetActive(false);
                 isZoomingInOnRecorder = false;
@@ -799,7 +815,60 @@ public class ScreenChange : MonoBehaviour
             }
         }
 
+
         //FIXME
+        else if (isZoomingInOnPosterboard)
+        {
+            timeElapsed += Time.deltaTime;
+            float zoomProgress = Mathf.Clamp01(timeElapsed / zoomDuration);
+            float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
+            camera.transform.position = Vector3.Lerp(cameraCenter, cameraPosterboard, zoomProgress);
+            camera.orthographicSize = Mathf.Lerp(5, 2, zoomProgress);
+            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+
+            if (zoomProgress == 1f)
+            {
+                secondTimeElapsed += Time.deltaTime;
+                diplomaticScreen.SetActive(false);
+                posterboardScreen.SetActive(true);
+                camera.transform.position = cameraCenter;
+                camera.orthographicSize = 5;
+                float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
+                float extraTimeProgress = Mathf.Clamp01(secondTimeElapsed / (fadeInDuration + 1));
+                blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
+
+                if (extraTimeProgress == 1f)
+                {
+                    isZoomingInOnPosterboard = false;
+                    InputSystem.EnableDevice(Mouse.current);
+                }
+            }
+        }
+
+        else if (isZoomingOutOnPosterboard)
+        {
+            timeElapsed += Time.deltaTime;
+            float fadeOutProgress = Mathf.Clamp01(timeElapsed / fadeOutDuration);
+            float extraTimeProgress = Mathf.Clamp01(timeElapsed / (fadeOutDuration + 1));
+            blackscreen.color = Color.Lerp(transparent, Color.black, fadeOutProgress);
+
+            if (extraTimeProgress == 1f)
+            {
+                secondTimeElapsed += Time.deltaTime;
+                posterboardScreen.SetActive(false);
+                diplomaticScreen.SetActive(true);
+                float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
+                blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
+
+                if (fadeInProgress == 1f)
+                {
+                    isZoomingOutOnPosterboard = false;
+                    InputSystem.EnableDevice(Mouse.current);
+                }
+            }
+        }
+
+
 
         else if (isZoomingInOnTeletype)
         {
@@ -1234,6 +1303,34 @@ public class ScreenChange : MonoBehaviour
         }
     }
 
+
+    public void PosterboardZoomIn()
+    {
+        if (!isZoomingInOnPosterboard)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingInOnPosterboard = true;
+        }
+    }
+
+    public void PosterboardZoomOut()
+    {
+        if (!isZoomingOutOnPosterboard)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+
+            audioSource.PlayOneShot(transitionSound);
+
+            timeElapsed = 0f;
+            secondTimeElapsed = 0f;
+            isZoomingOutOnPosterboard = true;
+        }
+    }
 
     public void TeletypeZoomIn()
     {

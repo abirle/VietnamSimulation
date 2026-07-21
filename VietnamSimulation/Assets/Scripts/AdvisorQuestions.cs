@@ -27,6 +27,11 @@ public class AdvisorQuestions : MonoBehaviour
     bool dialing = false;
     bool reeling = false;
     public Button closeButton;
+    public GameObject ballRedactedQuestionIntro;
+    public GameObject ballRedactedQuestion01;
+    public GameObject ballRedactedQuestion02;
+    public GameObject ballRedactedQuestion03;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -196,7 +201,9 @@ public class AdvisorQuestions : MonoBehaviour
         {
             if (numQuestion == 1)
             {
-                screenChange.diplomaticAdvisorText.text = "It is our own reputation. In my judgment the whole of our position rests on a single thing: whether other governments believe we will do what we have said we will do. \r\nNo one can assure you that good intentions, kept to ourselves, count for anything abroad; what counts is what we have actually done, and whether the world reads it as resolve. The foundation is our standing in the world — our prestige, and whether our word is still believed.";
+                //screenChange.diplomaticAdvisorText.text = "It is our own reputation. In my judgment the whole of our position rests on a single thing: whether other governments believe we will do what we have said we will do. \r\nNo one can assure you that good intentions, kept to ourselves, count for anything abroad; what counts is what we have actually done, and whether the world reads it as resolve. The foundation is our standing in the world — our prestige, and whether our word is still believed.";
+                screenChange.diplomaticAdvisorText.text = "";
+                ballRedactedQuestion01.SetActive(true);
                 questionTime = 37;
                 timeElapsed = 0;
                 reeling = true;
@@ -206,7 +213,9 @@ public class AdvisorQuestions : MonoBehaviour
             }
             else if (numQuestion == 2)
             {
-                screenChange.diplomaticAdvisorText.text = "Yes. Open peace talks, or manage our relations with Moscow and Peking, and you add to our standing in the world. The other side does not deal seriously with a government it judges unreliable, and the capitals watching take their measure of us from whether we can bring an adversary to terms. I would urge you to put your influence there.";
+                //screenChange.diplomaticAdvisorText.text = "Yes. Open peace talks, or manage our relations with Moscow and Peking, and you add to our standing in the world. The other side does not deal seriously with a government it judges unreliable, and the capitals watching take their measure of us from whether we can bring an adversary to terms. I would urge you to put your influence there.";
+                screenChange.diplomaticAdvisorText.text = "";
+                ballRedactedQuestion02.SetActive(true);
                 questionTime = 21;
                 timeElapsed = 0;
                 reeling = true;
@@ -216,7 +225,9 @@ public class AdvisorQuestions : MonoBehaviour
             }
             else if (numQuestion == 3)
             {
-                screenChange.diplomaticAdvisorText.text = "Everything. The answer involves a judgment as to the costs to the United States. When Australia, New Zealand, Thailand, Taiwan, South Korea, and the Philippines stand with us, we are stronger in the field and stronger in the world; when they fall away, we are weaker in both. And the calendar matters here too. A serious opening toward talks before November could change how the war looks to the country, which counts for a good deal in an election year. What happens abroad is felt at home soon enough. \r\n";
+                //screenChange.diplomaticAdvisorText.text = "Everything. The answer involves a judgment as to the costs to the United States. When Australia, New Zealand, Thailand, Taiwan, South Korea, and the Philippines stand with us, we are stronger in the field and stronger in the world; when they fall away, we are weaker in both. And the calendar matters here too. A serious opening toward talks before November could change how the war looks to the country, which counts for a good deal in an election year. What happens abroad is felt at home soon enough. \r\n";
+                screenChange.diplomaticAdvisorText.text = "";
+                ballRedactedQuestion03.SetActive(true);
                 questionTime = 33;
                 timeElapsed = 0;
                 reeling = true;

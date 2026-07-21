@@ -49423,6 +49423,7 @@ struct AdvisorQuestions_tE7B645A4CBAB149D473515535446F4DB85E718F2  : public Mono
 	bool ___listening;
 	bool ___crackling;
 	bool ___dialing;
+	bool ___reeling;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___closeButton;
 };
 struct AllocateBinsPerBatch_t5239CCD1592A1183C158D7DBFBCB38CFB8A65904 
@@ -50058,6 +50059,7 @@ struct ScreenChange_t3331B21CDE5B1964A85DF95AE3B4B4D283DFBC74  : public MonoBeha
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___typewriterScreen;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___diplomaticScreen;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___teletypeScreen;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___posterboardScreen;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___militaryAdvisor;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___militaryAdvisorText;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___militaryCloseButton;
@@ -50107,6 +50109,8 @@ struct ScreenChange_t3331B21CDE5B1964A85DF95AE3B4B4D283DFBC74  : public MonoBeha
 	bool ___isZoomingOutOnTeletype;
 	bool ___isZoomingInOnRecorder;
 	bool ___isZoomingOutOnRecorder;
+	bool ___isZoomingInOnPosterboard;
+	bool ___isZoomingOutOnPosterboard;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cameraCenter;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cameraMap;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cameraCorkboard;
@@ -50118,6 +50122,7 @@ struct ScreenChange_t3331B21CDE5B1964A85DF95AE3B4B4D283DFBC74  : public MonoBeha
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cameraChalkboard;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cameraRecorder;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cameraTeletype;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cameraPosterboard;
 	float ___timeElapsed;
 	float ___secondTimeElapsed;
 	float ___zoomDuration;

@@ -1,0 +1,7800 @@
+fileFormatVersion: 2
+guid: d319efc37931dd547bb67837c75abcfd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6412594159788734402
+    second: Ball Question 2_0
+  - first:
+      213: -2637898960591357925
+    second: Ball Question 2_1
+  - first:
+      213: 2588366344283837690
+    second: Ball Question 2_2
+  - first:
+      213: 4179368711878054277
+    second: Ball Question 2_3
+  - first:
+      213: 470179648043501475
+    second: Ball Question 2_4
+  - first:
+      213: 7493678972942422448
+    second: Ball Question 2_5
+  - first:
+      213: -1091117293073731410
+    second: Ball Question 2_6
+  - first:
+      213: 1505552813271819415
+    second: Ball Question 2_7
+  - first:
+      213: -7564613536064493470
+    second: Ball Question 2_8
+  - first:
+      213: 3169708879910302243
+    second: Ball Question 2_9
+  - first:
+      213: 8986198616092744005
+    second: Ball Question 2_10
+  - first:
+      213: 5993461437731212792
+    second: Ball Question 2_11
+  - first:
+      213: 3660497157995606223
+    second: Ball Question 2_12
+  - first:
+      213: 7303899555494236685
+    second: Ball Question 2_13
+  - first:
+      213: -4936092008311022906
+    second: Ball Question 2_14
+  - first:
+      213: 8774076127420897357
+    second: Ball Question 2_15
+  - first:
+      213: -4005868325814793305
+    second: Ball Question 2_16
+  - first:
+      213: -903313639734891540
+    second: Ball Question 2_17
+  - first:
+      213: 6744099142219442133
+    second: Ball Question 2_18
+  - first:
+      213: -4456759655819889382
+    second: Ball Question 2_19
+  - first:
+      213: -3959627635347405440
+    second: Ball Question 2_20
+  - first:
+      213: 5353399734871374608
+    second: Ball Question 2_21
+  - first:
+      213: -7979120331120431158
+    second: Ball Question 2_22
+  - first:
+      213: -3807512426124760494
+    second: Ball Question 2_23
+  - first:
+      213: -6103684837406198028
+    second: Ball Question 2_24
+  - first:
+      213: -4641497799478863319
+    second: Ball Question 2_25
+  - first:
+      213: -3144904749784716152
+    second: Ball Question 2_26
+  - first:
+      213: 5439212872940392779
+    second: Ball Question 2_27
+  - first:
+      213: 2003726827827125320
+    second: Ball Question 2_28
+  - first:
+      213: -91757429927657834
+    second: Ball Question 2_29
+  - first:
+      213: 2631917764744087452
+    second: Ball Question 2_30
+  - first:
+      213: 7933035298227926593
+    second: Ball Question 2_31
+  - first:
+      213: 444880726608672008
+    second: Ball Question 2_32
+  - first:
+      213: -5090900123395246871
+    second: Ball Question 2_33
+  - first:
+      213: 7301009654331233887
+    second: Ball Question 2_34
+  - first:
+      213: -4091607712490647250
+    second: Ball Question 2_35
+  - first:
+      213: 8291426037311973681
+    second: Ball Question 2_36
+  - first:
+      213: 8943919424987452170
+    second: Ball Question 2_37
+  - first:
+      213: -5686134750781120332
+    second: Ball Question 2_38
+  - first:
+      213: -7515889363571160438
+    second: Ball Question 2_39
+  - first:
+      213: -3038483916646920910
+    second: Ball Question 2_40
+  - first:
+      213: -7004262771389153353
+    second: Ball Question 2_41
+  - first:
+      213: 1767660793316774321
+    second: Ball Question 2_42
+  - first:
+      213: 8223321981592381423
+    second: Ball Question 2_43
+  - first:
+      213: -6203892915917534627
+    second: Ball Question 2_44
+  - first:
+      213: 6329482034371191829
+    second: Ball Question 2_45
+  - first:
+      213: 2199938059695518682
+    second: Ball Question 2_46
+  - first:
+      213: -6602378432471525640
+    second: Ball Question 2_47
+  - first:
+      213: -233891259567460701
+    second: Ball Question 2_48
+  - first:
+      213: 8017852582976141629
+    second: Ball Question 2_49
+  - first:
+      213: 658481250708058321
+    second: Ball Question 2_50
+  - first:
+      213: 2841273485057211376
+    second: Ball Question 2_51
+  - first:
+      213: -7175236292409867192
+    second: Ball Question 2_52
+  - first:
+      213: 6204728806357276845
+    second: Ball Question 2_53
+  - first:
+      213: 6404832493386111470
+    second: Ball Question 2_54
+  - first:
+      213: -5710942361269314854
+    second: Ball Question 2_55
+  - first:
+      213: 4079126140914646919
+    second: Ball Question 2_56
+  - first:
+      213: -7459895758122334362
+    second: Ball Question 2_57
+  - first:
+      213: 8270065790460458518
+    second: Ball Question 2_58
+  - first:
+      213: -44774175142897302
+    second: Ball Question 2_59
+  - first:
+      213: -2875407463010552125
+    second: Ball Question 2_60
+  - first:
+      213: -5011206658906025417
+    second: Ball Question 2_61
+  - first:
+      213: 7367316218098200176
+    second: Ball Question 2_62
+  - first:
+      213: 1740253098668888886
+    second: Ball Question 2_63
+  - first:
+      213: -316751777611681172
+    second: Ball Question 2_64
+  - first:
+      213: -4381208716582716151
+    second: Ball Question 2_65
+  - first:
+      213: -2791833145839506711
+    second: Ball Question 2_66
+  - first:
+      213: -507124443506953854
+    second: Ball Question 2_67
+  - first:
+      213: 4189576307355548799
+    second: Ball Question 2_68
+  - first:
+      213: -674218691175164684
+    second: Ball Question 2_69
+  - first:
+      213: 8841142456781762232
+    second: Ball Question 2_70
+  - first:
+      213: -8062086639781628526
+    second: Ball Question 2_71
+  - first:
+      213: 25536254612898348
+    second: Ball Question 2_72
+  - first:
+      213: -5039191747140806343
+    second: Ball Question 2_73
+  - first:
+      213: 3262265675774616451
+    second: Ball Question 2_74
+  - first:
+      213: 7924818332847033302
+    second: Ball Question 2_75
+  - first:
+      213: 5400549098322348966
+    second: Ball Question 2_76
+  - first:
+      213: -8593725136223225509
+    second: Ball Question 2_77
+  - first:
+      213: -3214383939741099419
+    second: Ball Question 2_78
+  - first:
+      213: 3524099787455065087
+    second: Ball Question 2_79
+  - first:
+      213: 7618954704763929387
+    second: Ball Question 2_80
+  - first:
+      213: -1385611771856072800
+    second: Ball Question 2_81
+  - first:
+      213: 46453892906721739
+    second: Ball Question 2_82
+  - first:
+      213: -4734768610107296421
+    second: Ball Question 2_83
+  - first:
+      213: 1551571020331760310
+    second: Ball Question 2_84
+  - first:
+      213: 1409750224753941629
+    second: Ball Question 2_85
+  - first:
+      213: -983285675678588089
+    second: Ball Question 2_86
+  - first:
+      213: -3013572249737366864
+    second: Ball Question 2_87
+  - first:
+      213: -3595551352100983594
+    second: Ball Question 2_88
+  - first:
+      213: -860465352921453213
+    second: Ball Question 2_89
+  - first:
+      213: 5181420910540598574
+    second: Ball Question 2_90
+  - first:
+      213: 5780435741606182712
+    second: Ball Question 2_91
+  - first:
+      213: 5285456132591384277
+    second: Ball Question 2_92
+  - first:
+      213: -3257517907856076073
+    second: Ball Question 2_93
+  - first:
+      213: -2913430950062684181
+    second: Ball Question 2_94
+  - first:
+      213: 4218327777953141192
+    second: Ball Question 2_95
+  - first:
+      213: 6883105213844957372
+    second: Ball Question 2_96
+  - first:
+      213: -5760273060713553138
+    second: Ball Question 2_97
+  - first:
+      213: 8469457868669519107
+    second: Ball Question 2_98
+  - first:
+      213: -4524423748293755132
+    second: Ball Question 2_99
+  - first:
+      213: 1306283215444999388
+    second: Ball Question 2_100
+  - first:
+      213: 9070732586497098993
+    second: Ball Question 2_101
+  - first:
+      213: -8343872139682068492
+    second: Ball Question 2_102
+  - first:
+      213: 999308177013753047
+    second: Ball Question 2_103
+  - first:
+      213: 8335057937562068529
+    second: Ball Question 2_104
+  - first:
+      213: 7235424199091560620
+    second: Ball Question 2_105
+  - first:
+      213: -132867794521635729
+    second: Ball Question 2_106
+  - first:
+      213: -853758686469202937
+    second: Ball Question 2_107
+  - first:
+      213: 6806066609621228255
+    second: Ball Question 2_108
+  - first:
+      213: 6417336712423224083
+    second: Ball Question 2_109
+  - first:
+      213: 2212986015356126093
+    second: Ball Question 2_110
+  - first:
+      213: -9051668324196498211
+    second: Ball Question 2_111
+  - first:
+      213: 3619545276263356566
+    second: Ball Question 2_112
+  - first:
+      213: -6645105284400571014
+    second: Ball Question 2_113
+  - first:
+      213: -4944672735126237248
+    second: Ball Question 2_114
+  - first:
+      213: -3528492072710594053
+    second: Ball Question 2_115
+  - first:
+      213: 7668045960885520187
+    second: Ball Question 2_116
+  - first:
+      213: -5191162842869285410
+    second: Ball Question 2_117
+  - first:
+      213: -1850338714838576317
+    second: Ball Question 2_118
+  - first:
+      213: 8658151498678195211
+    second: Ball Question 2_119
+  - first:
+      213: -6315759274339393639
+    second: Ball Question 2_120
+  - first:
+      213: 5874328295667983999
+    second: Ball Question 2_121
+  - first:
+      213: -695179720918236878
+    second: Ball Question 2_122
+  - first:
+      213: 3968930286159022165
+    second: Ball Question 2_123
+  - first:
+      213: -4330258439937639166
+    second: Ball Question 2_124
+  - first:
+      213: -8553129500841418440
+    second: Ball Question 2_125
+  - first:
+      213: -1292302399721226727
+    second: Ball Question 2_126
+  - first:
+      213: -3817515513390943485
+    second: Ball Question 2_127
+  - first:
+      213: 4552629238261873682
+    second: Ball Question 2_128
+  - first:
+      213: 8117232497177900635
+    second: Ball Question 2_129
+  - first:
+      213: 8645231987724749160
+    second: Ball Question 2_130
+  - first:
+      213: -1611798395921467951
+    second: Ball Question 2_131
+  - first:
+      213: 2997835807607576700
+    second: Ball Question 2_132
+  - first:
+      213: 8891717802773684207
+    second: Ball Question 2_133
+  - first:
+      213: 8774269600289472042
+    second: Ball Question 2_134
+  - first:
+      213: -7693858538057256723
+    second: Ball Question 2_135
+  - first:
+      213: -5959203381574459041
+    second: Ball Question 2_136
+  - first:
+      213: -3557478461872058923
+    second: Ball Question 2_137
+  - first:
+      213: 22649866689410587
+    second: Ball Question 2_138
+  - first:
+      213: 2926595223277352646
+    second: Ball Question 2_139
+  - first:
+      213: -6524412389459210357
+    second: Ball Question 2_140
+  - first:
+      213: -4336761075777701147
+    second: Ball Question 2_141
+  - first:
+      213: -1445005248813027421
+    second: Ball Question 2_142
+  - first:
+      213: -8643726856886323475
+    second: Ball Question 2_143
+  - first:
+      213: 2866034917469490212
+    second: Ball Question 2_144
+  - first:
+      213: 8289548929446895684
+    second: Ball Question 2_145
+  - first:
+      213: -6416440288870833592
+    second: Ball Question 2_146
+  - first:
+      213: 6544755038664435709
+    second: Ball Question 2_147
+  - first:
+      213: -7275249187948415711
+    second: Ball Question 2_148
+  - first:
+      213: -243639058277950504
+    second: Ball Question 2_149
+  - first:
+      213: 260118238530236470
+    second: Ball Question 2_150
+  - first:
+      213: 9075735622169749167
+    second: Ball Question 2_151
+  - first:
+      213: -4770746604439100930
+    second: Ball Question 2_152
+  - first:
+      213: 4635383718863201192
+    second: Ball Question 2_153
+  - first:
+      213: 5897148469490753101
+    second: Ball Question 2_154
+  - first:
+      213: 3713300413618591228
+    second: Ball Question 2_155
+  - first:
+      213: 6073780508964446403
+    second: Ball Question 2_156
+  - first:
+      213: 3664868575024276877
+    second: Ball Question 2_157
+  - first:
+      213: 3191786227544178004
+    second: Ball Question 2_158
+  - first:
+      213: -6972744084894247594
+    second: Ball Question 2_159
+  - first:
+      213: 8138381406922945441
+    second: Ball Question 2_160
+  - first:
+      213: -6024831130189206538
+    second: Ball Question 2_161
+  - first:
+      213: -3458135488071264549
+    second: Ball Question 2_162
+  - first:
+      213: -7223117693750570993
+    second: Ball Question 2_163
+  - first:
+      213: 8408182948974320254
+    second: Ball Question 2_164
+  - first:
+      213: -709496231598730761
+    second: Ball Question 2_165
+  - first:
+      213: -601010148002348152
+    second: Ball Question 2_166
+  - first:
+      213: -983520711979930164
+    second: Ball Question 2_167
+  - first:
+      213: -2071044578574944899
+    second: Ball Question 2_168
+  - first:
+      213: -3635738596124973630
+    second: Ball Question 2_169
+  - first:
+      213: -4790503308100146939
+    second: Ball Question 2_170
+  - first:
+      213: -7879838362418129104
+    second: Ball Question 2_171
+  - first:
+      213: 7532511991452749584
+    second: Ball Question 2_172
+  - first:
+      213: -5524852829451414516
+    second: Ball Question 2_173
+  - first:
+      213: 9017123335945133265
+    second: Ball Question 2_174
+  - first:
+      213: 6297956970628806506
+    second: Ball Question 2_175
+  - first:
+      213: -7411978938422556141
+    second: Ball Question 2_176
+  - first:
+      213: -8774438399747984190
+    second: Ball Question 2_177
+  - first:
+      213: 2134901986480424757
+    second: Ball Question 2_178
+  - first:
+      213: -7418230880320579329
+    second: Ball Question 2_179
+  - first:
+      213: -4353927319320101585
+    second: Ball Question 2_180
+  - first:
+      213: 5906285729378489072
+    second: Ball Question 2_181
+  - first:
+      213: -5812715491856511625
+    second: Ball Question 2_182
+  - first:
+      213: 8185149071015379541
+    second: Ball Question 2_183
+  - first:
+      213: -3818438195632248813
+    second: Ball Question 2_184
+  - first:
+      213: 32600582816258353
+    second: Ball Question 2_185
+  - first:
+      213: 874743299424370559
+    second: Ball Question 2_186
+  - first:
+      213: 4215425517791699870
+    second: Ball Question 2_187
+  - first:
+      213: 4760534960217545964
+    second: Ball Question 2_188
+  - first:
+      213: 460469295592573068
+    second: Ball Question 2_189
+  - first:
+      213: -4922619136142158470
+    second: Ball Question 2_190
+  - first:
+      213: -4235740983610259371
+    second: Ball Question 2_191
+  - first:
+      213: -3799210837094986229
+    second: Ball Question 2_192
+  - first:
+      213: 4134506345614739247
+    second: Ball Question 2_193
+  - first:
+      213: -4478807521492215371
+    second: Ball Question 2_194
+  - first:
+      213: -5401880506333556083
+    second: Ball Question 2_195
+  - first:
+      213: 5465214025226463632
+    second: Ball Question 2_196
+  - first:
+      213: 8168537197706678403
+    second: Ball Question 2_197
+  - first:
+      213: -1025391190992412912
+    second: Ball Question 2_198
+  - first:
+      213: -6769978602674494699
+    second: Ball Question 2_199
+  - first:
+      213: 8709340542549027666
+    second: Ball Question 2_200
+  - first:
+      213: 6426955877630028208
+    second: Ball Question 2_201
+  - first:
+      213: 2639785089215546719
+    second: Ball Question 2_202
+  - first:
+      213: -1341574290596097466
+    second: Ball Question 2_203
+  - first:
+      213: 6430471579722845121
+    second: Ball Question 2_204
+  - first:
+      213: -4123327137574577347
+    second: Ball Question 2_205
+  - first:
+      213: 1624863933457902617
+    second: Ball Question 2_206
+  - first:
+      213: -3791969022056693712
+    second: Ball Question 2_207
+  - first:
+      213: -7695343216732494315
+    second: Ball Question 2_208
+  - first:
+      213: -1643739185711345724
+    second: Ball Question 2_209
+  - first:
+      213: 5974019514485506074
+    second: Ball Question 2_210
+  - first:
+      213: 6192343536198343739
+    second: Ball Question 2_211
+  - first:
+      213: -2643831013651240580
+    second: Ball Question 2_212
+  - first:
+      213: -5816955249640415641
+    second: Ball Question 2_213
+  - first:
+      213: 4012110411867690462
+    second: Ball Question 2_214
+  - first:
+      213: 4427067762910105714
+    second: Ball Question 2_215
+  - first:
+      213: 7537870265246448460
+    second: Ball Question 2_216
+  - first:
+      213: -3350060751727994451
+    second: Ball Question 2_217
+  - first:
+      213: 4346026215557990129
+    second: Ball Question 2_218
+  - first:
+      213: 2120524615299037448
+    second: Ball Question 2_219
+  - first:
+      213: -8011142621123117630
+    second: Ball Question 2_220
+  - first:
+      213: 6322763750941921663
+    second: Ball Question 2_221
+  - first:
+      213: -4371616335823347109
+    second: Ball Question 2_222
+  - first:
+      213: 7825583516069653250
+    second: Ball Question 2_223
+  - first:
+      213: 1164875252871708933
+    second: Ball Question 2_224
+  - first:
+      213: 8701078466149394103
+    second: Ball Question 2_225
+  - first:
+      213: -8916450066913467969
+    second: Ball Question 2_226
+  - first:
+      213: -2229095142088860243
+    second: Ball Question 2_227
+  - first:
+      213: 5364781437620473879
+    second: Ball Question 2_228
+  - first:
+      213: 1968764233398625415
+    second: Ball Question 2_229
+  - first:
+      213: -4504288614155679111
+    second: Ball Question 2_230
+  - first:
+      213: -8694367623960261913
+    second: Ball Question 2_231
+  - first:
+      213: 8293435606207626609
+    second: Ball Question 2_232
+  - first:
+      213: -9183214082893035045
+    second: Ball Question 2_233
+  - first:
+      213: -3176169716958543870
+    second: Ball Question 2_234
+  - first:
+      213: -2453755978431949253
+    second: Ball Question 2_235
+  - first:
+      213: -2054949870955291377
+    second: Ball Question 2_236
+  - first:
+      213: 6134335520252245715
+    second: Ball Question 2_237
+  - first:
+      213: 1038411679846654840
+    second: Ball Question 2_238
+  - first:
+      213: -1045640588898852242
+    second: Ball Question 2_239
+  - first:
+      213: 3235503404815198605
+    second: Ball Question 2_240
+  - first:
+      213: -3950149912514986412
+    second: Ball Question 2_241
+  - first:
+      213: -3025250316116570880
+    second: Ball Question 2_242
+  - first:
+      213: -6602168308383835070
+    second: Ball Question 2_243
+  - first:
+      213: -6269991228734877623
+    second: Ball Question 2_244
+  - first:
+      213: 1751969326509237830
+    second: Ball Question 2_245
+  - first:
+      213: -8304159002358918964
+    second: Ball Question 2_246
+  - first:
+      213: 8103661504657675244
+    second: Ball Question 2_247
+  - first:
+      213: 3301097140717308881
+    second: Ball Question 2_248
+  - first:
+      213: 1226900100263601186
+    second: Ball Question 2_249
+  - first:
+      213: 7110942729359644571
+    second: Ball Question 2_250
+  - first:
+      213: 3633300043704269366
+    second: Ball Question 2_251
+  - first:
+      213: -4227241842931361194
+    second: Ball Question 2_252
+  - first:
+      213: -4530597605018575524
+    second: Ball Question 2_253
+  - first:
+      213: -9152693183664560391
+    second: Ball Question 2_254
+  - first:
+      213: -5112729570937408342
+    second: Ball Question 2_255
+  - first:
+      213: 8638795099121704444
+    second: Ball Question 2_256
+  - first:
+      213: 7658009267375072269
+    second: Ball Question 2_257
+  - first:
+      213: 9217956678716055137
+    second: Ball Question 2_258
+  - first:
+      213: -2042188590468637627
+    second: Ball Question 2_259
+  - first:
+      213: -2949578299594103833
+    second: Ball Question 2_260
+  - first:
+      213: -95176090392482554
+    second: Ball Question 2_261
+  - first:
+      213: 2984971239450999741
+    second: Ball Question 2_262
+  - first:
+      213: -3268979275907546377
+    second: Ball Question 2_263
+  - first:
+      213: 1217735669771237972
+    second: Ball Question 2_264
+  - first:
+      213: -900501220581414346
+    second: Ball Question 2_265
+  - first:
+      213: 1498540948780206276
+    second: Ball Question 2_266
+  - first:
+      213: -4344663089104515043
+    second: Ball Question 2_267
+  - first:
+      213: 6120001324493831083
+    second: Ball Question 2_268
+  - first:
+      213: 1782226224456496856
+    second: Ball Question 2_269
+  - first:
+      213: 608150634903445356
+    second: Ball Question 2_270
+  - first:
+      213: -3244024795526620143
+    second: Ball Question 2_271
+  - first:
+      213: 654222080750156145
+    second: Ball Question 2_272
+  - first:
+      213: 1378974963961816874
+    second: Ball Question 2_273
+  - first:
+      213: -8612248001859127185
+    second: Ball Question 2_274
+  - first:
+      213: -5970550061381821484
+    second: Ball Question 2_275
+  - first:
+      213: 7036013112307449099
+    second: Ball Question 2_276
+  - first:
+      213: 4197105169290812937
+    second: Ball Question 2_277
+  - first:
+      213: -7185415599175107222
+    second: Ball Question 2_278
+  - first:
+      213: -4913333131612622115
+    second: Ball Question 2_279
+  - first:
+      213: -3171318529349763058
+    second: Ball Question 2_280
+  - first:
+      213: -6694672604832797404
+    second: Ball Question 2_281
+  - first:
+      213: 8206401546326081388
+    second: Ball Question 2_282
+  - first:
+      213: -2167350390415744441
+    second: Ball Question 2_283
+  - first:
+      213: 4786759831026676497
+    second: Ball Question 2_284
+  - first:
+      213: 3976338207516434759
+    second: Ball Question 2_285
+  - first:
+      213: 7289766804091303826
+    second: Ball Question 2_286
+  - first:
+      213: -2439028492724134526
+    second: Ball Question 2_287
+  - first:
+      213: 3567126950391926918
+    second: Ball Question 2_288
+  - first:
+      213: -1778166398815625483
+    second: Ball Question 2_289
+  - first:
+      213: -6520158676918497724
+    second: Ball Question 2_290
+  - first:
+      213: -8588081449714425419
+    second: Ball Question 2_291
+  - first:
+      213: 4461944931878402003
+    second: Ball Question 2_292
+  - first:
+      213: -7880132459686727321
+    second: Ball Question 2_293
+  - first:
+      213: 3337927177266356970
+    second: Ball Question 2_294
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ball Question 2_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1656
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7b3f6b96c1ef850800000000000000
+      internalID: 6412594159788734402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1654
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b18749c1fdc446bd0800000000000000
+      internalID: -2637898960591357925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1654
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af45d93f979bbe320800000000000000
+      internalID: 2588366344283837690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_3
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1654
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5819fd043b9100a30800000000000000
+      internalID: 4179368711878054277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_4
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1621
+        width: 3083
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7404616e9668600800000000000000
+      internalID: 470179648043501475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1468
+        width: 492
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b11c0b9255eef760800000000000000
+      internalID: 7493678972942422448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_6
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1481
+        width: 138
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0fd0a5a929bd0f0800000000000000
+      internalID: -1091117293073731410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_7
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 1501
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79428a19e4cc4e410800000000000000
+      internalID: 1505552813271819415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_8
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 1503
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268a3c76118150790800000000000000
+      internalID: -7564613536064493470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_9
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 1503
+        width: 67
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3227474be611dfb20800000000000000
+      internalID: 3169708879910302243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_10
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 1503
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5499059c70465bc70800000000000000
+      internalID: 8986198616092744005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_11
+      rect:
+        serializedVersion: 2
+        x: 3087
+        y: 1501
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd88f24c6d0d2350800000000000000
+      internalID: 5993461437731212792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_12
+      rect:
+        serializedVersion: 2
+        x: 3174
+        y: 1563
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0b7a365c2bcc230800000000000000
+      internalID: 3660497157995606223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_13
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 1563
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d021e50b2f9ac5560800000000000000
+      internalID: 7303899555494236685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_14
+      rect:
+        serializedVersion: 2
+        x: 3647
+        y: 1501
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ca1af1987a7f7bb0800000000000000
+      internalID: -4936092008311022906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_15
+      rect:
+        serializedVersion: 2
+        x: 3710
+        y: 1503
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d48582730c7c3c970800000000000000
+      internalID: 8774076127420897357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_16
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1501
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab02de4bfb4868c0800000000000000
+      internalID: -4005868325814793305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_17
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1503
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb26d6d709c673f0800000000000000
+      internalID: -903313639734891540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_18
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1481
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7a106207ad79d50800000000000000
+      internalID: 6744099142219442133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_19
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1501
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a153099b4b86622c0800000000000000
+      internalID: -4456759655819889382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_20
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 1501
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0854c4805a39c09c0800000000000000
+      internalID: -3959627635347405440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_21
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1501
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01bbda102b81b4a40800000000000000
+      internalID: 5353399734871374608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_22
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 1501
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf28738558744190800000000000000
+      internalID: -7979120331120431158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_23
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 1501
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25aa2fa1f9ff82bc0800000000000000
+      internalID: -3807512426124760494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_24
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 1501
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f63775aafa5b4ba0800000000000000
+      internalID: -6103684837406198028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_25
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 1484
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a1e44d756169fb0800000000000000
+      internalID: -4641497799478863319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_26
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 1501
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ca4a0eacd0b54d0800000000000000
+      internalID: -3144904749784716152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_27
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 1503
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41185d2a47fb7b40800000000000000
+      internalID: 5439212872940392779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_28
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 1501
+        width: 144
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c5e870feaaecb10800000000000000
+      internalID: 2003726827827125320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_29
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 1503
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69eb8a78a130abef0800000000000000
+      internalID: -91757429927657834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_30
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 1501
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c978c953343768420800000000000000
+      internalID: 2631917764744087452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_31
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 1481
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146b28d929dc71e60800000000000000
+      internalID: 7933035298227926593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_32
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 1501
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8057dece9a88c2600800000000000000
+      internalID: 444880726608672008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_33
+      rect:
+        serializedVersion: 2
+        x: 2523
+        y: 1501
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4b80e7f4d7959b0800000000000000
+      internalID: -5090900123395246871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_34
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 1501
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f565c142995625560800000000000000
+      internalID: 7301009654331233887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_35
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 1503
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e211fb8b670b737c0800000000000000
+      internalID: -4091607712490647250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_36
+      rect:
+        serializedVersion: 2
+        x: 2804
+        y: 1503
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139a7631d00111370800000000000000
+      internalID: 8291426037311973681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_37
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 1501
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03d712845f2f1c70800000000000000
+      internalID: 8943919424987452170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_38
+      rect:
+        serializedVersion: 2
+        x: 3013
+        y: 1501
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0efa2129ac611b0800000000000000
+      internalID: -5686134750781120332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_39
+      rect:
+        serializedVersion: 2
+        x: 3155
+        y: 1503
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a4439d17232b790800000000000000
+      internalID: -7515889363571160438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_40
+      rect:
+        serializedVersion: 2
+        x: 3223
+        y: 1501
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23dc584f9f225d5d0800000000000000
+      internalID: -3038483916646920910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_41
+      rect:
+        serializedVersion: 2
+        x: 3291
+        y: 1503
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf3bdd9e1cdbce90800000000000000
+      internalID: -7004262771389153353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_42
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 1501
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b11805402ef78810800000000000000
+      internalID: 1767660793316774321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_43
+      rect:
+        serializedVersion: 2
+        x: 3498
+        y: 1503
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe7a972f5cb1f1270800000000000000
+      internalID: 8223321981592381423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_44
+      rect:
+        serializedVersion: 2
+        x: 3575
+        y: 1503
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a4c2a334857e9a0800000000000000
+      internalID: -6203892915917534627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1350
+        width: 75
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51469ee0066d6d750800000000000000
+      internalID: 6329482034371191829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_46
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1348
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad373007200c78e10800000000000000
+      internalID: 2199938059695518682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_47
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1350
+        width: 65
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f695dbebc3af54a0800000000000000
+      internalID: -6602378432471525640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_48
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1350
+        width: 67
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aea96d732d01ccf0800000000000000
+      internalID: -233891259567460701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_49
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1410
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39bdbd9172254f60800000000000000
+      internalID: 8017852582976141629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_50
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 1348
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d075bf6535632900800000000000000
+      internalID: 658481250708058321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_51
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 1348
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb32925e2b3e6720800000000000000
+      internalID: 2841273485057211376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_52
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 1348
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8444b6bab907c6c90800000000000000
+      internalID: -7175236292409867192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_53
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 1348
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da81f8ea9ff9b1650800000000000000
+      internalID: 6204728806357276845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_54
+      rect:
+        serializedVersion: 2
+        x: 2737
+        y: 1348
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee9982ee73982e850800000000000000
+      internalID: 6404832493386111470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_55
+      rect:
+        serializedVersion: 2
+        x: 2942
+        y: 1348
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adadfc72e28aeb0b0800000000000000
+      internalID: -5710942361269314854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_56
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 1410
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f3a3fec97fb9830800000000000000
+      internalID: 4079126140914646919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_57
+      rect:
+        serializedVersion: 2
+        x: 3314
+        y: 1410
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667ccab0550297890800000000000000
+      internalID: -7459895758122334362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_58
+      rect:
+        serializedVersion: 2
+        x: 3507
+        y: 1348
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 616718d050d25c270800000000000000
+      internalID: 8270065790460458518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_59
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 1350
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a691f7bff1ee06ff0800000000000000
+      internalID: -44774175142897302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_60
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1348
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c6bfbe95208818d0800000000000000
+      internalID: -2875407463010552125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_61
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1348
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73295df181e947ab0800000000000000
+      internalID: -5011206658906025417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_62
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1348
+        width: 63
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ea7bf0117fd3660800000000000000
+      internalID: 7367316218098200176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_63
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1348
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6339e6519fe962810800000000000000
+      internalID: 1740253098668888886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_64
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1350
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c627b7dbfebaa9bf0800000000000000
+      internalID: -316751777611681172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_65
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1348
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90dfd3982e1d233c0800000000000000
+      internalID: -4381208716582716151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_66
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1350
+        width: 68
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea231eab8a6149d0800000000000000
+      internalID: -2791833145839506711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_67
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 1348
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281b9d7610556f8f0800000000000000
+      internalID: -507124443506953854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_68
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 1350
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7cf157447d542a30800000000000000
+      internalID: 4189576307355548799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_69
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1350
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4539b2ca1b4a6f0800000000000000
+      internalID: -674218691175164684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_70
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1328
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bee919d83c02ba70800000000000000
+      internalID: 8841142456781762232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_71
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 1331
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295b4677ae6bd1090800000000000000
+      internalID: -8062086639781628526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_72
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 1348
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2288199619ba5000800000000000000
+      internalID: 25536254612898348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_73
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 1350
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93997940ec1311ab0800000000000000
+      internalID: -5039191747140806343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_74
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 1328
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 383ee7f0955e54d20800000000000000
+      internalID: 3262265675774616451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_75
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1348
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbc9d6494c9afd60800000000000000
+      internalID: 7924818332847033302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_76
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1348
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab4f85aaca92fa40800000000000000
+      internalID: 5400549098322348966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_77
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 1348
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59b1162584fcb880800000000000000
+      internalID: -8593725136223225509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_78
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 1348
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ad20c56d63463d0800000000000000
+      internalID: -3214383939741099419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_79
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 1348
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffbe940d51e18e030800000000000000
+      internalID: 3524099787455065087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_80
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 1348
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b23ce31efe6fbb960800000000000000
+      internalID: 7618954704763929387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_81
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 1350
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af4bed4f6155cce0800000000000000
+      internalID: -1385611771856072800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_82
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 1348
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1a329c19905a000800000000000000
+      internalID: 46453892906721739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_83
+      rect:
+        serializedVersion: 2
+        x: 2803
+        y: 1348
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5572e4f809ba4eb0800000000000000
+      internalID: -4734768610107296421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_84
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 1350
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba3aa65f99488510800000000000000
+      internalID: 1551571020331760310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_85
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 1350
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c5c783c50709310800000000000000
+      internalID: 1409750224753941629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_86
+      rect:
+        serializedVersion: 2
+        x: 3081
+        y: 1350
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743a27c33eaaa52f0800000000000000
+      internalID: -983285675678588089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_87
+      rect:
+        serializedVersion: 2
+        x: 3152
+        y: 1328
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2fd656104ad26d0800000000000000
+      internalID: -3013572249737366864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_88
+      rect:
+        serializedVersion: 2
+        x: 3295
+        y: 1350
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc685668190a1ec0800000000000000
+      internalID: -3595551352100983594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_89
+      rect:
+        serializedVersion: 2
+        x: 3361
+        y: 1350
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36de59902530f04f0800000000000000
+      internalID: -860465352921453213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_90
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 1348
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2dad84adda18e740800000000000000
+      internalID: 5181420910540598574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1197
+        width: 71
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f78615eab383050800000000000000
+      internalID: 5780435741606182712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_92
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1195
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6f40b5956b95940800000000000000
+      internalID: 5285456132591384277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_93
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1197
+        width: 65
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2d3ccc8b8fac2d0800000000000000
+      internalID: -3257517907856076073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_94
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1197
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be782e7acf96197d0800000000000000
+      internalID: -2913430950062684181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_95
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1195
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c15f0fa3c28a8a30800000000000000
+      internalID: 4218327777953141192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_96
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1195
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb82ed649b3b58f50800000000000000
+      internalID: 6883105213844957372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_97
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1162
+        width: 2453
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03aae6ab266f00b0800000000000000
+      internalID: -5760273060713553138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_98
+      rect:
+        serializedVersion: 2
+        x: 3013
+        y: 1197
+        width: 65
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3050f26fe0f898570800000000000000
+      internalID: 8469457868669519107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_99
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1197
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ffb9582940631c0800000000000000
+      internalID: -4524423748293755132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_100
+      rect:
+        serializedVersion: 2
+        x: 3152
+        y: 1195
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc77a8d9a9d02210800000000000000
+      internalID: 1306283215444999388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_101
+      rect:
+        serializedVersion: 2
+        x: 3293
+        y: 1195
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f448b68a37b1ed70800000000000000
+      internalID: 9070732586497098993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_102
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 1195
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7c8f62f7c943c80800000000000000
+      internalID: -8343872139682068492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_103
+      rect:
+        serializedVersion: 2
+        x: 3430
+        y: 1197
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d44c001e714edd00800000000000000
+      internalID: 999308177013753047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_104
+      rect:
+        serializedVersion: 2
+        x: 3502
+        y: 1195
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 136efae78031ca370800000000000000
+      internalID: 8335057937562068529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_105
+      rect:
+        serializedVersion: 2
+        x: 3574
+        y: 1197
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca02e1269f3696460800000000000000
+      internalID: 7235424199091560620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_106
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1104
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f64c271e175f72ef0800000000000000
+      internalID: -132867794521635729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_107
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1042
+        width: 71
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c59118ff6d624f0800000000000000
+      internalID: -853758686469202937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_108
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1042
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdade187581047e50800000000000000
+      internalID: 6806066609621228255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_109
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1042
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3133f0c4db5fe0950800000000000000
+      internalID: 6417336712423224083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_110
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1042
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83853a5e0b16be10800000000000000
+      internalID: 2212986015356126093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_111
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1044
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4cc9fed93026280800000000000000
+      internalID: -9051668324196498211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_112
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1104
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698de1860453b3230800000000000000
+      internalID: 3619545276263356566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_113
+      rect:
+        serializedVersion: 2
+        x: 1825
+        y: 1044
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d9b3c73f7d7c3a0800000000000000
+      internalID: -6645105284400571014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_114
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 1104
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cfcd3c685ef06bb0800000000000000
+      internalID: -4944672735126237248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_115
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 1042
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1ad459727480fc0800000000000000
+      internalID: -3528492072710594053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_116
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 1044
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3743f3ac2f5a6a60800000000000000
+      internalID: 7668045960885520187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_117
+      rect:
+        serializedVersion: 2
+        x: 3157
+        y: 1042
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eddb19bf5e845f7b0800000000000000
+      internalID: -5191162842869285410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_118
+      rect:
+        serializedVersion: 2
+        x: 3314
+        y: 1104
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343d4eb0eb64256e0800000000000000
+      internalID: -1850338714838576317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_119
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 1042
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04da3a4aeee72870800000000000000
+      internalID: 8658151498678195211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_120
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1042
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f1f1ef66ae958a0800000000000000
+      internalID: -6315759274339393639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_121
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1044
+        width: 60
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76e05d167ec58150800000000000000
+      internalID: 5874328295667983999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_122
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1042
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2310d9f1ab93a56f0800000000000000
+      internalID: -695179720918236878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_123
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1042
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5584cc42119741730800000000000000
+      internalID: 3968930286159022165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_124
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 1042
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d31ed34e4d7e3c0800000000000000
+      internalID: -4330258439937639166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_125
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1042
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 831ee60190e2d4980800000000000000
+      internalID: -8553129500841418440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_126
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1044
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e3b3a70d1d01ee0800000000000000
+      internalID: -1292302399721226727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_127
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1042
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3033acbddd5750bc0800000000000000
+      internalID: -3817515513390943485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_128
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1042
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21cf7acdb203e2f30800000000000000
+      internalID: 4552629238261873682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_129
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 1042
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56bb8103f336a070800000000000000
+      internalID: 8117232497177900635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_130
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 1042
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8698d2d30b80af770800000000000000
+      internalID: 8645231987724749160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_131
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 1042
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d57e8906edb1a9e0800000000000000
+      internalID: -1611798395921467951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_132
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 1044
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c785567a8c37a9920800000000000000
+      internalID: 2997835807607576700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_133
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 1044
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef97553b3ab56b70800000000000000
+      internalID: 8891717802773684207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_134
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 1042
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e33c0a6b774c970800000000000000
+      internalID: 8774269600289472042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_135
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1042
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0bdf66c6ce93590800000000000000
+      internalID: -7693858538057256723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_136
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 1042
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51a2f00918ac4da0800000000000000
+      internalID: -5959203381574459041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_137
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1022
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd4300ff2c41aec0800000000000000
+      internalID: -3557478461872058923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_138
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 1044
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b167b3a0fe7705000800000000000000
+      internalID: 22649866689410587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_139
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 1044
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c63dcc89da5d9820800000000000000
+      internalID: 2926595223277352646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_140
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 1042
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f4026ef71a475a0800000000000000
+      internalID: -6524412389459210357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_141
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 1022
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea778a57cab0d3c0800000000000000
+      internalID: -4336761075777701147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_142
+      rect:
+        serializedVersion: 2
+        x: 2593
+        y: 1042
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aface5d16f42fbe0800000000000000
+      internalID: -1445005248813027421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_143
+      rect:
+        serializedVersion: 2
+        x: 2659
+        y: 1044
+        width: 73
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de679c758305b0880800000000000000
+      internalID: -8643726856886323475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_144
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 1042
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c82a1929336c720800000000000000
+      internalID: 2866034917469490212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_145
+      rect:
+        serializedVersion: 2
+        x: 2804
+        y: 1044
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440e6e7d4d46a0370800000000000000
+      internalID: 8289548929446895684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_146
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 1044
+        width: 145
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84269539d8934f6a0800000000000000
+      internalID: -6416440288870833592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_147
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 1042
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df7aa853804a3da50800000000000000
+      internalID: 6544755038664435709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_148
+      rect:
+        serializedVersion: 2
+        x: 3081
+        y: 1044
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125b2e3d86f190b90800000000000000
+      internalID: -7275249187948415711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_149
+      rect:
+        serializedVersion: 2
+        x: 3295
+        y: 1044
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db9eed319b6e9cf0800000000000000
+      internalID: -243639058277950504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_150
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 951
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630f137e8202c9300800000000000000
+      internalID: 260118238530236470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_151
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 889
+        width: 71
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa669ca867d73fd70800000000000000
+      internalID: 9075735622169749167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_152
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 891
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1a1016d37eacdb0800000000000000
+      internalID: -4770746604439100930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_153
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 951
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a36878dee0345040800000000000000
+      internalID: 4635383718863201192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_154
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 889
+        width: 137
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e1cbfd941e6d150800000000000000
+      internalID: 5897148469490753101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_155
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 891
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf51c026d0b488330800000000000000
+      internalID: 3713300413618591228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_156
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 889
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0648051376a4450800000000000000
+      internalID: 6073780508964446403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_157
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 889
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8560da3d8a3cd230800000000000000
+      internalID: 3664868575024276877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_158
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 891
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d31c3c9a08b4c20800000000000000
+      internalID: 3191786227544178004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_159
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 951
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6551c2ea236db3f90800000000000000
+      internalID: -6972744084894247594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_160
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 889
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3394645c651f070800000000000000
+      internalID: 8138381406922945441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_161
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 891
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb6b5d0200836ca0800000000000000
+      internalID: -6024831130189206538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_162
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 889
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd61758781c3200d0800000000000000
+      internalID: -3458135488071264549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_163
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 891
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00982d2ab452cb90800000000000000
+      internalID: -7223117693750570993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_164
+      rect:
+        serializedVersion: 2
+        x: 2894
+        y: 951
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a5c18f7dddfa470800000000000000
+      internalID: 8408182948974320254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_165
+      rect:
+        serializedVersion: 2
+        x: 3157
+        y: 889
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1541abfec5726f0800000000000000
+      internalID: -709496231598730761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_166
+      rect:
+        serializedVersion: 2
+        x: 3292
+        y: 891
+        width: 67
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8834ae56478c8a7f0800000000000000
+      internalID: -601010148002348152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_167
+      rect:
+        serializedVersion: 2
+        x: 3507
+        y: 889
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd62359f15d952f0800000000000000
+      internalID: -983520711979930164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_168
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 891
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75ba0cbdeb2243e0800000000000000
+      internalID: -2071044578574944899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_169
+      rect:
+        serializedVersion: 2
+        x: 3734
+        y: 951
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c52bc182034b8dc0800000000000000
+      internalID: -3635738596124973630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_170
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 869
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5096b595f96b48db0800000000000000
+      internalID: -4790503308100146939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_171
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 889
+        width: 69
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 037529032c035a290800000000000000
+      internalID: -7879838362418129104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_172
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 869
+        width: 69
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f49ec4fbbd88860800000000000000
+      internalID: 7532511991452749584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_173
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 889
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c049c30af97c353b0800000000000000
+      internalID: -5524852829451414516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_174
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 889
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc15e636e1432d70800000000000000
+      internalID: 9017123335945133265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_175
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 889
+        width: 69
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67760d2f76d66750800000000000000
+      internalID: 6297956970628806506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_176
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 891
+        width: 68
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a85a40d6c532990800000000000000
+      internalID: -7411978938422556141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_177
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 891
+        width: 65
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4797fa3ceea3680800000000000000
+      internalID: -8774438399747984190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_178
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 889
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5370176ab02b0ad10800000000000000
+      internalID: 2134901986480424757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_179
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 891
+        width: 60
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff898ac51562d0990800000000000000
+      internalID: -7418230880320579329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_180
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 889
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d7e02db2eb393c0800000000000000
+      internalID: -4353927319320101585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_181
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 872
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f25099f39757f150800000000000000
+      internalID: 5906285729378489072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_182
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 889
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d8b77ae06155fa0800000000000000
+      internalID: -5812715491856511625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_183
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 891
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5528d7b96bd779170800000000000000
+      internalID: 8185149071015379541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_184
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 889
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3186e8821be220bc0800000000000000
+      internalID: -3818438195632248813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_185
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 889
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139db3eae02d37000800000000000000
+      internalID: 32600582816258353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_186
+      rect:
+        serializedVersion: 2
+        x: 1963
+        y: 889
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7fb7df6566b32c00800000000000000
+      internalID: 874743299424370559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_187
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 869
+        width: 73
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9367159c23308a30800000000000000
+      internalID: 4215425517791699870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_188
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 891
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec589ce251d01240800000000000000
+      internalID: 4760534960217545964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_189
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 889
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8805c9726ae36600800000000000000
+      internalID: 460469295592573068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_190
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 889
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75d4b11af75fabb0800000000000000
+      internalID: -4922619136142158470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_191
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 891
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558c85f6400a735c0800000000000000
+      internalID: -4235740983610259371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_192
+      rect:
+        serializedVersion: 2
+        x: 2593
+        y: 889
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e832c6fdd764bc0800000000000000
+      internalID: -3799210837094986229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_193
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 889
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2707f3ad97b06930800000000000000
+      internalID: 4134506345614739247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_194
+      rect:
+        serializedVersion: 2
+        x: 2875
+        y: 891
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9db18f94418d1c0800000000000000
+      internalID: -4478807521492215371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_195
+      rect:
+        serializedVersion: 2
+        x: 2941
+        y: 891
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8291e4cc4aa805b0800000000000000
+      internalID: -5401880506333556083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_196
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 869
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0992b13333758db40800000000000000
+      internalID: 5465214025226463632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_197
+      rect:
+        serializedVersion: 2
+        x: 3223
+        y: 889
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3801fd37d497c5170800000000000000
+      internalID: 8168537197706678403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_198
+      rect:
+        serializedVersion: 2
+        x: 3362
+        y: 889
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f1511052415c1f0800000000000000
+      internalID: -1025391190992412912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_199
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 889
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513679a64543c02a0800000000000000
+      internalID: -6769978602674494699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_200
+      rect:
+        serializedVersion: 2
+        x: 3715
+        y: 891
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25bea82541bcdd870800000000000000
+      internalID: 8709340542549027666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_201
+      rect:
+        serializedVersion: 2
+        x: 3784
+        y: 891
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b92f39b152213950800000000000000
+      internalID: 6426955877630028208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_202
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 737
+        width: 63
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f55c01e6d8662a420800000000000000
+      internalID: 2639785089215546719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_203
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 737
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64219396a45c16de0800000000000000
+      internalID: -1341574290596097466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_204
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 737
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb00a7e4df9d3950800000000000000
+      internalID: 6430471579722845121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_205
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 735
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b932090dff6c6c0800000000000000
+      internalID: -4123327137574577347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_206
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 737
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c2a1a732dac8610800000000000000
+      internalID: 1624863933457902617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_207
+      rect:
+        serializedVersion: 2
+        x: 2377
+        y: 735
+        width: 73
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0308601e348306bc0800000000000000
+      internalID: -3791969022056693712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_208
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 797
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516a2f5bd16a43590800000000000000
+      internalID: -7695343216732494315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_209
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 735
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf09446be34039e0800000000000000
+      internalID: -1643739185711345724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_210
+      rect:
+        serializedVersion: 2
+        x: 3717
+        y: 735
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a100922c81bf7e250800000000000000
+      internalID: 5974019514485506074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_211
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 737
+        width: 75
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3cd94243af9fe550800000000000000
+      internalID: 6192343536198343739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_212
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 735
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79282163b93f4bd0800000000000000
+      internalID: -2643831013651240580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_213
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 735
+        width: 66
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ed6de1506064fa0800000000000000
+      internalID: -5816955249640415641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_214
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 735
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed5150b9921eda730800000000000000
+      internalID: 4012110411867690462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_215
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 735
+        width: 69
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27017dcbcaa107d30800000000000000
+      internalID: 4427067762910105714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_216
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 737
+        width: 65
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b7ef2a115eb9860800000000000000
+      internalID: 7537870265246448460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_217
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 735
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da95645ee713281d0800000000000000
+      internalID: -3350060751727994451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_218
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 735
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f68eda11df205c30800000000000000
+      internalID: 4346026215557990129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_219
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 735
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809fe5017ed9d6d10800000000000000
+      internalID: 2120524615299037448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_220
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 735
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cdf6fe1b34b2d090800000000000000
+      internalID: -8011142621123117630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_221
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 737
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f711c9dc128feb750800000000000000
+      internalID: 6322763750941921663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_222
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 735
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5264f8ba16e453c0800000000000000
+      internalID: -4371616335823347109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_223
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 737
+        width: 80
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20beb730fbe0a9c60800000000000000
+      internalID: 7825583516069653250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_224
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 737
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501cf07eed77a2010800000000000000
+      internalID: 1164875252871708933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_225
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 735
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6a2a1c3c070c870800000000000000
+      internalID: 8701078466149394103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_226
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 735
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb16d10d7e7624480800000000000000
+      internalID: -8916450066913467969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_227
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 737
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad9e3d47c9a011e0800000000000000
+      internalID: -2229095142088860243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_228
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 737
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7105afe2b48837a40800000000000000
+      internalID: 5364781437620473879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_229
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 735
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784283aa3a4725b10800000000000000
+      internalID: 1968764233398625415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_230
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 735
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a0a63ce5d8d71c0800000000000000
+      internalID: -4504288614155679111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_231
+      rect:
+        serializedVersion: 2
+        x: 2173
+        y: 735
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea0133f5b6675780800000000000000
+      internalID: -8694367623960261913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_232
+      rect:
+        serializedVersion: 2
+        x: 2241
+        y: 737
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17df49b4eb3381370800000000000000
+      internalID: 8293435606207626609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_233
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 737
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9cbc4427bae8080800000000000000
+      internalID: -9183214082893035045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_234
+      rect:
+        serializedVersion: 2
+        x: 2525
+        y: 737
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2004552787afbe3d0800000000000000
+      internalID: -3176169716958543870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_235
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 737
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b36921c20f182fdd0800000000000000
+      internalID: -2453755978431949253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_236
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 715
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d997edaf95b73e0800000000000000
+      internalID: -2054949870955291377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_237
+      rect:
+        serializedVersion: 2
+        x: 2803
+        y: 735
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d632b197a9812550800000000000000
+      internalID: 6134335520252245715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_238
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 737
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87360ebcbed296e00800000000000000
+      internalID: 1038411679846654840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_239
+      rect:
+        serializedVersion: 2
+        x: 3013
+        y: 735
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6224f7ac632d71f0800000000000000
+      internalID: -1045640588898852242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_240
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 737
+        width: 73
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89a3994431d6ec20800000000000000
+      internalID: 3235503404815198605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_241
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 735
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ef007559f3e29c0800000000000000
+      internalID: -3950149912514986412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_242
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 737
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00dcb3fadd62406d0800000000000000
+      internalID: -3025250316116570880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_243
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 735
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c907f37e26064a0800000000000000
+      internalID: -6602168308383835070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_244
+      rect:
+        serializedVersion: 2
+        x: 3433
+        y: 735
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940517282348cf8a0800000000000000
+      internalID: -6269991228734877623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_245
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 737
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646a6f3f1de305810800000000000000
+      internalID: 1751969326509237830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_246
+      rect:
+        serializedVersion: 2
+        x: 3571
+        y: 715
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0d80a7263b1cc80800000000000000
+      internalID: -8304159002358918964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_247
+      rect:
+        serializedVersion: 2
+        x: 3783
+        y: 735
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce3d025143df57070800000000000000
+      internalID: 8103661504657675244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_248
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 582
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db43890c5adfcd20800000000000000
+      internalID: 3301097140717308881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_249
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 582
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2246a1b0423d60110800000000000000
+      internalID: 1226900100263601186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_250
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 584
+        width: 141
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97d0a9acb42fa260800000000000000
+      internalID: 7110942729359644571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_251
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 582
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a7763c3231c6230800000000000000
+      internalID: 3633300043704269366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_252
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 582
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a9864d0f1d555c0800000000000000
+      internalID: -4227241842931361194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_253
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 549
+        width: 2733
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dd1ac7b751021c0800000000000000
+      internalID: -4530597605018575524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_254
+      rect:
+        serializedVersion: 2
+        x: 3289
+        y: 549
+        width: 283
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6e881ea0a1bf080800000000000000
+      internalID: -9152693183664560391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_255
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 396
+        width: 3782
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa4f3ab2b8feb09b0800000000000000
+      internalID: -5112729570937408342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_256
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 243
+        width: 702
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdd8825f5a23e770800000000000000
+      internalID: 8638795099121704444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_257
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 278
+        width: 55
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d046a84dad6b64a60800000000000000
+      internalID: 7658009267375072269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_258
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 278
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e5fcda2c2ccef70800000000000000
+      internalID: 9217956678716055137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_259
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 276
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cd2c40c40b8a3e0800000000000000
+      internalID: -2042188590468637627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_260
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 276
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e32e7ff92ef017d0800000000000000
+      internalID: -2949578299594103833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_261
+      rect:
+        serializedVersion: 2
+        x: 2317
+        y: 276
+        width: 65
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60dab0d99ddddaef0800000000000000
+      internalID: -95176090392482554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_262
+      rect:
+        serializedVersion: 2
+        x: 2824
+        y: 338
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbbfb38f68fbc6920800000000000000
+      internalID: 2984971239450999741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_263
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 278
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2ca691ba042a2d0800000000000000
+      internalID: -3268979275907546377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_264
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 278
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a790bc32446e010800000000000000
+      internalID: 1217735669771237972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_265
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 278
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a607339e6c083f0800000000000000
+      internalID: -900501220581414346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_266
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 276
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8cb65ad03ebc410800000000000000
+      internalID: 1498540948780206276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_267
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 276
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d109c2180f7a4b3c0800000000000000
+      internalID: -4344663089104515043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_268
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 276
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: babff5b87cc9ee450800000000000000
+      internalID: 6120001324493831083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_269
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 278
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d67d1afe4dbbb810800000000000000
+      internalID: 1782226224456496856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_270
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 256
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f1953c7c5907800800000000000000
+      internalID: 608150634903445356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_271
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 276
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c9314d2a8eaf2d0800000000000000
+      internalID: -3244024795526620143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_272
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 256
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17974572483441900800000000000000
+      internalID: 654222080750156145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_273
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 276
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a27e9117c6a132310800000000000000
+      internalID: 1378974963961816874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_274
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 276
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f687e9b62162b7880800000000000000
+      internalID: -8612248001859127185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_275
+      rect:
+        serializedVersion: 2
+        x: 2033
+        y: 276
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db56ad3a58542da0800000000000000
+      internalID: -5970550061381821484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_276
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 256
+        width: 73
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d7312b5a0f4a160800000000000000
+      internalID: 7036013112307449099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_277
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 276
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ed88c0aec1f3a30800000000000000
+      internalID: 4197105169290812937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_278
+      rect:
+        serializedVersion: 2
+        x: 2451
+        y: 256
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6dfd9f1596484c90800000000000000
+      internalID: -7185415599175107222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_279
+      rect:
+        serializedVersion: 2
+        x: 2523
+        y: 276
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2721b7c8550dbb0800000000000000
+      internalID: -4913333131612622115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_280
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 276
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e004e7499963df3d0800000000000000
+      internalID: -3171318529349763058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_281
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 278
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42de66d5cbeb713a0800000000000000
+      internalID: -6694672604832797404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_282
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 278
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f7bfc1abef2e170800000000000000
+      internalID: 8206401546326081388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_283
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 278
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74227739d460ce1e0800000000000000
+      internalID: -2167350390415744441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_284
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 276
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 113347974bcfd6240800000000000000
+      internalID: 4786759831026676497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_285
+      rect:
+        serializedVersion: 2
+        x: 3152
+        y: 276
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 741a4dd388ace2730800000000000000
+      internalID: 3976338207516434759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_286
+      rect:
+        serializedVersion: 2
+        x: 3221
+        y: 278
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297fb4519447a2560800000000000000
+      internalID: 7289766804091303826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_287
+      rect:
+        serializedVersion: 2
+        x: 3295
+        y: 276
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d1f162284d62ed0800000000000000
+      internalID: -2439028492724134526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_288
+      rect:
+        serializedVersion: 2
+        x: 3362
+        y: 276
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68055dadf0bf08130800000000000000
+      internalID: 3567126950391926918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_289
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 123
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe1f07d41fa257e0800000000000000
+      internalID: -1778166398815625483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_290
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 125
+        width: 70
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e87178a3eb385a0800000000000000
+      internalID: -6520158676918497724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_291
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 123
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b166af4c6101d880800000000000000
+      internalID: -8588081449714425419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_292
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 125
+        width: 65
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d777ff66430ced30800000000000000
+      internalID: 4461944931878402003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_293
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 123
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761f855574524a290800000000000000
+      internalID: -7880132459686727321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ball Question 2_294
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 123
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae265172513b25e20800000000000000
+      internalID: 3337927177266356970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ball Question 2_0: 6412594159788734402
+      Ball Question 2_1: -2637898960591357925
+      Ball Question 2_10: 8986198616092744005
+      Ball Question 2_100: 1306283215444999388
+      Ball Question 2_101: 9070732586497098993
+      Ball Question 2_102: -8343872139682068492
+      Ball Question 2_103: 999308177013753047
+      Ball Question 2_104: 8335057937562068529
+      Ball Question 2_105: 7235424199091560620
+      Ball Question 2_106: -132867794521635729
+      Ball Question 2_107: -853758686469202937
+      Ball Question 2_108: 6806066609621228255
+      Ball Question 2_109: 6417336712423224083
+      Ball Question 2_11: 5993461437731212792
+      Ball Question 2_110: 2212986015356126093
+      Ball Question 2_111: -9051668324196498211
+      Ball Question 2_112: 3619545276263356566
+      Ball Question 2_113: -6645105284400571014
+      Ball Question 2_114: -4944672735126237248
+      Ball Question 2_115: -3528492072710594053
+      Ball Question 2_116: 7668045960885520187
+      Ball Question 2_117: -5191162842869285410
+      Ball Question 2_118: -1850338714838576317
+      Ball Question 2_119: 8658151498678195211
+      Ball Question 2_12: 3660497157995606223
+      Ball Question 2_120: -6315759274339393639
+      Ball Question 2_121: 5874328295667983999
+      Ball Question 2_122: -695179720918236878
+      Ball Question 2_123: 3968930286159022165
+      Ball Question 2_124: -4330258439937639166
+      Ball Question 2_125: -8553129500841418440
+      Ball Question 2_126: -1292302399721226727
+      Ball Question 2_127: -3817515513390943485
+      Ball Question 2_128: 4552629238261873682
+      Ball Question 2_129: 8117232497177900635
+      Ball Question 2_13: 7303899555494236685
+      Ball Question 2_130: 8645231987724749160
+      Ball Question 2_131: -1611798395921467951
+      Ball Question 2_132: 2997835807607576700
+      Ball Question 2_133: 8891717802773684207
+      Ball Question 2_134: 8774269600289472042
+      Ball Question 2_135: -7693858538057256723
+      Ball Question 2_136: -5959203381574459041
+      Ball Question 2_137: -3557478461872058923
+      Ball Question 2_138: 22649866689410587
+      Ball Question 2_139: 2926595223277352646
+      Ball Question 2_14: -4936092008311022906
+      Ball Question 2_140: -6524412389459210357
+      Ball Question 2_141: -4336761075777701147
+      Ball Question 2_142: -1445005248813027421
+      Ball Question 2_143: -8643726856886323475
+      Ball Question 2_144: 2866034917469490212
+      Ball Question 2_145: 8289548929446895684
+      Ball Question 2_146: -6416440288870833592
+      Ball Question 2_147: 6544755038664435709
+      Ball Question 2_148: -7275249187948415711
+      Ball Question 2_149: -243639058277950504
+      Ball Question 2_15: 8774076127420897357
+      Ball Question 2_150: 260118238530236470
+      Ball Question 2_151: 9075735622169749167
+      Ball Question 2_152: -4770746604439100930
+      Ball Question 2_153: 4635383718863201192
+      Ball Question 2_154: 5897148469490753101
+      Ball Question 2_155: 3713300413618591228
+      Ball Question 2_156: 6073780508964446403
+      Ball Question 2_157: 3664868575024276877
+      Ball Question 2_158: 3191786227544178004
+      Ball Question 2_159: -6972744084894247594
+      Ball Question 2_16: -4005868325814793305
+      Ball Question 2_160: 8138381406922945441
+      Ball Question 2_161: -6024831130189206538
+      Ball Question 2_162: -3458135488071264549
+      Ball Question 2_163: -7223117693750570993
+      Ball Question 2_164: 8408182948974320254
+      Ball Question 2_165: -709496231598730761
+      Ball Question 2_166: -601010148002348152
+      Ball Question 2_167: -983520711979930164
+      Ball Question 2_168: -2071044578574944899
+      Ball Question 2_169: -3635738596124973630
+      Ball Question 2_17: -903313639734891540
+      Ball Question 2_170: -4790503308100146939
+      Ball Question 2_171: -7879838362418129104
+      Ball Question 2_172: 7532511991452749584
+      Ball Question 2_173: -5524852829451414516
+      Ball Question 2_174: 9017123335945133265
+      Ball Question 2_175: 6297956970628806506
+      Ball Question 2_176: -7411978938422556141
+      Ball Question 2_177: -8774438399747984190
+      Ball Question 2_178: 2134901986480424757
+      Ball Question 2_179: -7418230880320579329
+      Ball Question 2_18: 6744099142219442133
+      Ball Question 2_180: -4353927319320101585
+      Ball Question 2_181: 5906285729378489072
+      Ball Question 2_182: -5812715491856511625
+      Ball Question 2_183: 8185149071015379541
+      Ball Question 2_184: -3818438195632248813
+      Ball Question 2_185: 32600582816258353
+      Ball Question 2_186: 874743299424370559
+      Ball Question 2_187: 4215425517791699870
+      Ball Question 2_188: 4760534960217545964
+      Ball Question 2_189: 460469295592573068
+      Ball Question 2_19: -4456759655819889382
+      Ball Question 2_190: -4922619136142158470
+      Ball Question 2_191: -4235740983610259371
+      Ball Question 2_192: -3799210837094986229
+      Ball Question 2_193: 4134506345614739247
+      Ball Question 2_194: -4478807521492215371
+      Ball Question 2_195: -5401880506333556083
+      Ball Question 2_196: 5465214025226463632
+      Ball Question 2_197: 8168537197706678403
+      Ball Question 2_198: -1025391190992412912
+      Ball Question 2_199: -6769978602674494699
+      Ball Question 2_2: 2588366344283837690
+      Ball Question 2_20: -3959627635347405440
+      Ball Question 2_200: 8709340542549027666
+      Ball Question 2_201: 6426955877630028208
+      Ball Question 2_202: 2639785089215546719
+      Ball Question 2_203: -1341574290596097466
+      Ball Question 2_204: 6430471579722845121
+      Ball Question 2_205: -4123327137574577347
+      Ball Question 2_206: 1624863933457902617
+      Ball Question 2_207: -3791969022056693712
+      Ball Question 2_208: -7695343216732494315
+      Ball Question 2_209: -1643739185711345724
+      Ball Question 2_21: 5353399734871374608
+      Ball Question 2_210: 5974019514485506074
+      Ball Question 2_211: 6192343536198343739
+      Ball Question 2_212: -2643831013651240580
+      Ball Question 2_213: -5816955249640415641
+      Ball Question 2_214: 4012110411867690462
+      Ball Question 2_215: 4427067762910105714
+      Ball Question 2_216: 7537870265246448460
+      Ball Question 2_217: -3350060751727994451
+      Ball Question 2_218: 4346026215557990129
+      Ball Question 2_219: 2120524615299037448
+      Ball Question 2_22: -7979120331120431158
+      Ball Question 2_220: -8011142621123117630
+      Ball Question 2_221: 6322763750941921663
+      Ball Question 2_222: -4371616335823347109
+      Ball Question 2_223: 7825583516069653250
+      Ball Question 2_224: 1164875252871708933
+      Ball Question 2_225: 8701078466149394103
+      Ball Question 2_226: -8916450066913467969
+      Ball Question 2_227: -2229095142088860243
+      Ball Question 2_228: 5364781437620473879
+      Ball Question 2_229: 1968764233398625415
+      Ball Question 2_23: -3807512426124760494
+      Ball Question 2_230: -4504288614155679111
+      Ball Question 2_231: -8694367623960261913
+      Ball Question 2_232: 8293435606207626609
+      Ball Question 2_233: -9183214082893035045
+      Ball Question 2_234: -3176169716958543870
+      Ball Question 2_235: -2453755978431949253
+      Ball Question 2_236: -2054949870955291377
+      Ball Question 2_237: 6134335520252245715
+      Ball Question 2_238: 1038411679846654840
+      Ball Question 2_239: -1045640588898852242
+      Ball Question 2_24: -6103684837406198028
+      Ball Question 2_240: 3235503404815198605
+      Ball Question 2_241: -3950149912514986412
+      Ball Question 2_242: -3025250316116570880
+      Ball Question 2_243: -6602168308383835070
+      Ball Question 2_244: -6269991228734877623
+      Ball Question 2_245: 1751969326509237830
+      Ball Question 2_246: -8304159002358918964
+      Ball Question 2_247: 8103661504657675244
+      Ball Question 2_248: 3301097140717308881
+      Ball Question 2_249: 1226900100263601186
+      Ball Question 2_25: -4641497799478863319
+      Ball Question 2_250: 7110942729359644571
+      Ball Question 2_251: 3633300043704269366
+      Ball Question 2_252: -4227241842931361194
+      Ball Question 2_253: -4530597605018575524
+      Ball Question 2_254: -9152693183664560391
+      Ball Question 2_255: -5112729570937408342
+      Ball Question 2_256: 8638795099121704444
+      Ball Question 2_257: 7658009267375072269
+      Ball Question 2_258: 9217956678716055137
+      Ball Question 2_259: -2042188590468637627
+      Ball Question 2_26: -3144904749784716152
+      Ball Question 2_260: -2949578299594103833
+      Ball Question 2_261: -95176090392482554
+      Ball Question 2_262: 2984971239450999741
+      Ball Question 2_263: -3268979275907546377
+      Ball Question 2_264: 1217735669771237972
+      Ball Question 2_265: -900501220581414346
+      Ball Question 2_266: 1498540948780206276
+      Ball Question 2_267: -4344663089104515043
+      Ball Question 2_268: 6120001324493831083
+      Ball Question 2_269: 1782226224456496856
+      Ball Question 2_27: 5439212872940392779
+      Ball Question 2_270: 608150634903445356
+      Ball Question 2_271: -3244024795526620143
+      Ball Question 2_272: 654222080750156145
+      Ball Question 2_273: 1378974963961816874
+      Ball Question 2_274: -8612248001859127185
+      Ball Question 2_275: -5970550061381821484
+      Ball Question 2_276: 7036013112307449099
+      Ball Question 2_277: 4197105169290812937
+      Ball Question 2_278: -7185415599175107222
+      Ball Question 2_279: -4913333131612622115
+      Ball Question 2_28: 2003726827827125320
+      Ball Question 2_280: -3171318529349763058
+      Ball Question 2_281: -6694672604832797404
+      Ball Question 2_282: 8206401546326081388
+      Ball Question 2_283: -2167350390415744441
+      Ball Question 2_284: 4786759831026676497
+      Ball Question 2_285: 3976338207516434759
+      Ball Question 2_286: 7289766804091303826
+      Ball Question 2_287: -2439028492724134526
+      Ball Question 2_288: 3567126950391926918
+      Ball Question 2_289: -1778166398815625483
+      Ball Question 2_29: -91757429927657834
+      Ball Question 2_290: -6520158676918497724
+      Ball Question 2_291: -8588081449714425419
+      Ball Question 2_292: 4461944931878402003
+      Ball Question 2_293: -7880132459686727321
+      Ball Question 2_294: 3337927177266356970
+      Ball Question 2_3: 4179368711878054277
+      Ball Question 2_30: 2631917764744087452
+      Ball Question 2_31: 7933035298227926593
+      Ball Question 2_32: 444880726608672008
+      Ball Question 2_33: -5090900123395246871
+      Ball Question 2_34: 7301009654331233887
+      Ball Question 2_35: -4091607712490647250
+      Ball Question 2_36: 8291426037311973681
+      Ball Question 2_37: 8943919424987452170
+      Ball Question 2_38: -5686134750781120332
+      Ball Question 2_39: -7515889363571160438
+      Ball Question 2_4: 470179648043501475
+      Ball Question 2_40: -3038483916646920910
+      Ball Question 2_41: -7004262771389153353
+      Ball Question 2_42: 1767660793316774321
+      Ball Question 2_43: 8223321981592381423
+      Ball Question 2_44: -6203892915917534627
+      Ball Question 2_45: 6329482034371191829
+      Ball Question 2_46: 2199938059695518682
+      Ball Question 2_47: -6602378432471525640
+      Ball Question 2_48: -233891259567460701
+      Ball Question 2_49: 8017852582976141629
+      Ball Question 2_5: 7493678972942422448
+      Ball Question 2_50: 658481250708058321
+      Ball Question 2_51: 2841273485057211376
+      Ball Question 2_52: -7175236292409867192
+      Ball Question 2_53: 6204728806357276845
+      Ball Question 2_54: 6404832493386111470
+      Ball Question 2_55: -5710942361269314854
+      Ball Question 2_56: 4079126140914646919
+      Ball Question 2_57: -7459895758122334362
+      Ball Question 2_58: 8270065790460458518
+      Ball Question 2_59: -44774175142897302
+      Ball Question 2_6: -1091117293073731410
+      Ball Question 2_60: -2875407463010552125
+      Ball Question 2_61: -5011206658906025417
+      Ball Question 2_62: 7367316218098200176
+      Ball Question 2_63: 1740253098668888886
+      Ball Question 2_64: -316751777611681172
+      Ball Question 2_65: -4381208716582716151
+      Ball Question 2_66: -2791833145839506711
+      Ball Question 2_67: -507124443506953854
+      Ball Question 2_68: 4189576307355548799
+      Ball Question 2_69: -674218691175164684
+      Ball Question 2_7: 1505552813271819415
+      Ball Question 2_70: 8841142456781762232
+      Ball Question 2_71: -8062086639781628526
+      Ball Question 2_72: 25536254612898348
+      Ball Question 2_73: -5039191747140806343
+      Ball Question 2_74: 3262265675774616451
+      Ball Question 2_75: 7924818332847033302
+      Ball Question 2_76: 5400549098322348966
+      Ball Question 2_77: -8593725136223225509
+      Ball Question 2_78: -3214383939741099419
+      Ball Question 2_79: 3524099787455065087
+      Ball Question 2_8: -7564613536064493470
+      Ball Question 2_80: 7618954704763929387
+      Ball Question 2_81: -1385611771856072800
+      Ball Question 2_82: 46453892906721739
+      Ball Question 2_83: -4734768610107296421
+      Ball Question 2_84: 1551571020331760310
+      Ball Question 2_85: 1409750224753941629
+      Ball Question 2_86: -983285675678588089
+      Ball Question 2_87: -3013572249737366864
+      Ball Question 2_88: -3595551352100983594
+      Ball Question 2_89: -860465352921453213
+      Ball Question 2_9: 3169708879910302243
+      Ball Question 2_90: 5181420910540598574
+      Ball Question 2_91: 5780435741606182712
+      Ball Question 2_92: 5285456132591384277
+      Ball Question 2_93: -3257517907856076073
+      Ball Question 2_94: -2913430950062684181
+      Ball Question 2_95: 4218327777953141192
+      Ball Question 2_96: 6883105213844957372
+      Ball Question 2_97: -5760273060713553138
+      Ball Question 2_98: 8469457868669519107
+      Ball Question 2_99: -4524423748293755132
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

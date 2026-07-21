@@ -112,6 +112,8 @@ extern void ScreenChange_TelevisionZoomIn_m95C7E6C3E1473496A1FBCF03028E9BE86DA4C
 extern void ScreenChange_TelevisionZoomOut_m531DFC6B9D90518703F100334100142BCBCCC06B (void);
 extern void ScreenChange_ChalkboardZoomIn_mED6BC4B5689FA9905049048BE63E5B1F1114CF8C (void);
 extern void ScreenChange_ChalkboardZoomOut_m7E57F4BE71B7CD8FE41C0FFA9C354FB8AC7FA20F (void);
+extern void ScreenChange_PosterboardZoomIn_mDFC5C122D296E57342B76202A09F649F18EAE707 (void);
+extern void ScreenChange_PosterboardZoomOut_m316916AF8CDAB3758584655D2434DF419C7979C0 (void);
 extern void ScreenChange_TeletypeZoomIn_mD28E62938DAAB2FD03F1604230D7D854226858F3 (void);
 extern void ScreenChange_TeletypeZoomOut_m501FC6B87C48E1AAA3F36B6113DEA7F64AD8ABE5 (void);
 extern void ScreenChange_RecorderZoomIn_m17C94AEB995274A599840641DD6CBE9F9E6F005B (void);
@@ -131,7 +133,7 @@ extern void WebGLVideo_Update_m1AAFD58041D488E07A94740DF89A1F439E48AFC7 (void);
 extern void WebGLVideo__ctor_mC501C27037E7F142F58F0EEEE313AFC55CFA1717 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[124] = 
+static Il2CppMethodPointer s_methodPointers[126] = 
 {
 	AdvisorQuestions_Start_m281F67D3AD111259F729ED747B887B4552280FC4,
 	AdvisorQuestions_Update_m0A848064EE9FABC253AB3A4493209198A79DC7D6,
@@ -238,6 +240,8 @@ static Il2CppMethodPointer s_methodPointers[124] =
 	ScreenChange_TelevisionZoomOut_m531DFC6B9D90518703F100334100142BCBCCC06B,
 	ScreenChange_ChalkboardZoomIn_mED6BC4B5689FA9905049048BE63E5B1F1114CF8C,
 	ScreenChange_ChalkboardZoomOut_m7E57F4BE71B7CD8FE41C0FFA9C354FB8AC7FA20F,
+	ScreenChange_PosterboardZoomIn_mDFC5C122D296E57342B76202A09F649F18EAE707,
+	ScreenChange_PosterboardZoomOut_m316916AF8CDAB3758584655D2434DF419C7979C0,
 	ScreenChange_TeletypeZoomIn_mD28E62938DAAB2FD03F1604230D7D854226858F3,
 	ScreenChange_TeletypeZoomOut_m501FC6B87C48E1AAA3F36B6113DEA7F64AD8ABE5,
 	ScreenChange_RecorderZoomIn_m17C94AEB995274A599840641DD6CBE9F9E6F005B,
@@ -258,7 +262,7 @@ static Il2CppMethodPointer s_methodPointers[124] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[124] = 
+static const int32_t s_InvokerIndices[126] = 
 {
 	4686,
 	4686,
@@ -376,6 +380,8 @@ static const int32_t s_InvokerIndices[124] =
 	4686,
 	4686,
 	4686,
+	4686,
+	4686,
 	3935,
 	3935,
 	4686,
@@ -389,7 +395,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	124,
+	126,
 	s_methodPointers,
 	0,
 	NULL,
