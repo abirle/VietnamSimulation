@@ -45,6 +45,8 @@ public class ScreenChange : MonoBehaviour
     public GameObject lobbyFile;
     public TMP_Text lobbyText;
     public Image lobbyImage;
+    public GameObject allResultsFile;
+    public TMP_Text allResultsText;
     public Sprite[] classificationImages;
     public GameObject lobbyCloseButton;
     public GameObject lobbyNextButton;
@@ -91,7 +93,7 @@ public class ScreenChange : MonoBehaviour
     Vector3 cameraTelevision = new Vector3((float)1290.4, 726, -1500);
     Vector3 cameraChalkboard = new Vector3((float)1282.8, (float)726.21, -1500);
     Vector3 cameraRecorder = new Vector3((float)1287.75, (float)722.38, -1500);
-    Vector3 cameraTeletype = new Vector3((float)1284.52, (float)722.29, -1500);
+    Vector3 cameraTeletype = new Vector3((float)1284.52, (float)725.29, -1500);
     Vector3 cameraPosterboard = new Vector3((float)1285.72, (float)725.53, -1500);
 
 
@@ -108,6 +110,8 @@ public class ScreenChange : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip transitionSound;
     public AudioClip writingSound;
+    public AudioClip typingSound;
+    public AudioClip teleSound;
     public AudioClip tvStatic;
     public AudioSource radioSource;
 
@@ -514,6 +518,7 @@ public class ScreenChange : MonoBehaviour
                 blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
                 camera.transform.position = cameraCenter;
                 camera.orthographicSize = 5;
+                tvButton.SetActive(false);
 
 
                 if (fadeInProgress == 1f)
@@ -562,6 +567,7 @@ public class ScreenChange : MonoBehaviour
                 secondTimeElapsed += Time.deltaTime;
                 AllScreensInactive();
                 domesticScreen.SetActive(true);
+                tvButton.SetActive(true);
                 float fadeInProgress = Mathf.Clamp01(secondTimeElapsed / fadeInDuration);
                 blackscreen.color = Color.Lerp(Color.black, transparent, fadeInProgress);
 
@@ -569,7 +575,7 @@ public class ScreenChange : MonoBehaviour
                 {
                     isFadingInOnCampaignOffice = false;
                     InputSystem.EnableDevice(Mouse.current);
-                    tvButton.SetActive(true);
+                    
 
                     if (camera.orthographicSize == (float)1.5)
                     {
@@ -977,7 +983,7 @@ public class ScreenChange : MonoBehaviour
             timeElapsed += Time.deltaTime;
             //InputSystem.DisableDevice(Mouse.current);
 
-            if (timeElapsed >= 42)
+            if (timeElapsed >= 56)
             {
                 militaryContinueButton.interactable = true;
                 listeningToMilitaryIntro01 = false;
@@ -992,7 +998,7 @@ public class ScreenChange : MonoBehaviour
             timeElapsed += Time.deltaTime;
             //InputSystem.DisableDevice(Mouse.current);
 
-            if (timeElapsed >= 53)
+            if (timeElapsed >= 31)
             {
                 domesticContinueButton.interactable = true;
                 listeningToDomesticIntro01 = false;
@@ -1024,7 +1030,7 @@ public class ScreenChange : MonoBehaviour
     public void MilitaryScene()
     {
         
-        audioSource.PlayOneShot(transitionSound);
+        //audioSource.PlayOneShot(transitionSound);
 
         if (!isFadingInOnWarRoom)
         {
@@ -1163,7 +1169,7 @@ public class ScreenChange : MonoBehaviour
         {
             InputSystem.DisableDevice(Mouse.current);
 
-            audioSource.PlayOneShot(transitionSound);
+            //audioSource.PlayOneShot(transitionSound);
 
             timeElapsed = 0f;
             secondTimeElapsed = 0f;
@@ -1175,7 +1181,7 @@ public class ScreenChange : MonoBehaviour
     public void EnterCampaignOffice()
     {
 
-        audioSource.PlayOneShot(transitionSound);
+        //audioSource.PlayOneShot(transitionSound);
 
         if (!isFadingInOnCampaignOffice)
         {
@@ -1394,7 +1400,7 @@ public class ScreenChange : MonoBehaviour
 
     public void EnterStateDepartment()
     {
-        audioSource.PlayOneShot(transitionSound);
+        //audioSource.PlayOneShot(transitionSound);
 
         if (!isFadingInOnStateDepartment)
         {
@@ -1424,26 +1430,30 @@ public class ScreenChange : MonoBehaviour
 
     public void ViewResults()
     {
-        resourceManager.CalculateResults();
-        resourceManager.FinalizeResults();
+        if (!viewingResults)
+        {
+            resourceManager.SetOriginalInputs();
+            resourceManager.CalculateResults();
+            resourceManager.FinalizeResults();
 
-        resultsScreen.SetActive(true);
+            resultsScreen.SetActive(true);
+            decisionScreen.SetActive(false);
+            viewingResults = true;
+
+        }
 
         //militaryContinueButton.gameObject.SetActive(false);
         //militaryCloseButton.SetActive(false);
         //militaryNextButton.SetActive(true);
         //militaryImage.gameObject.SetActive(true);
-        
+
         //resourceManager.radioNotification.SetActive(false);
         //foreach (GameObject question in resourceManager.militaryQuestionsArray)
         //{
         //    question.SetActive(false);
         //}
 
-        decisionScreen.SetActive(false);
-        viewingResults = true;
         audioSource.Stop();
-        audioSource.PlayOneShot(transitionSound);
 
         if (numResultsViewed == 0)
         {
@@ -1673,7 +1683,7 @@ public class ScreenChange : MonoBehaviour
             {
                 //domesticAdvisorText.text = "I wanted to call with some good news for a change. Congress is holding. The key committees approved the funding without major amendments, the partisan attacks have stayed muted, and the leadership is backing Vietnam out loud -- which steadies our allies and tells the soldiers in the field the country is behind them. And it's reaching them: with the money flowing, commanders are getting what they need, and the pacification programs and troop rotations are moving without getting hung up in Washington.\r\n\r\nI spoke with the President this morning, and he's relieved -- Congress is steady enough that he can run the war and protect the domestic agenda at once. The story on the evening news tonight is unity, not division, and that's worth more than people in this building realize. \r\n";
                 resultsText.text = "I wanted to call with some good news for a change. \r\n\r\nCongress is holding. The key committees approved the funding without major amendments, the partisan attacks have stayed muted, and the leadership is backing Vietnam out loud -- which steadies our allies and tells the soldiers in the field the country is behind them. And it's reaching them: with the money flowing, commanders are getting what they need, and the pacification programs and troop rotations are moving without getting hung up in Washington.\r\n\r\nI spoke with the President this morning, and he's relieved -- Congress is steady enough that he can run the war and protect the domestic agenda at once. The story on the evening news tonight is unity, not division, and that's worth more than people in this building realize.\r\n";
-                //audioSource.PlayOneShot(successClips[7]);
+                audioSource.PlayOneShot(successClips[7]);
                 successImages[7].SetActive(true);
                 //domesticImage.sprite = successImages[7];
                 resultScroll.Scroll();
@@ -1683,7 +1693,7 @@ public class ScreenChange : MonoBehaviour
                 //domesticAdvisorText.text = "I need to tell you what I'm hearing on the Hill, because it's not good. Support in Congress is getting uneven -- legislators demanding more oversight, dragging their feet on funding, attaching conditions that tie the administration's hands. The hearings are swallowed up by Vietnam, and the uncertainty is spilling into the policy and the planning. It's reaching the field, too: I'm hearing commanders are hitting sporadic shortages and restrictions, and the men out there read it as Washington not knowing what it wants. The White House is stuck running the war while it fights the Hill for the means to run it.\r\n\r\nFamilies of soldiers are noticing, the allies see the discord -- diplomatic sources tell me it's making people nervous -- and congressional approval keeps sliding every time a contentious hearing hits the evening news. And that's what worries me -- the confidence holding this administration together is wearing thin, and it won't take much more to crack it.\r\n";
                 resultsText.text = "I need to tell you what I'm hearing on the Hill, because it's not good. \r\n\r\nSupport in Congress is getting uneven -- legislators demanding more oversight, dragging their feet on funding, attaching conditions that tie the administration's hands. The hearings are swallowed up by Vietnam, and the uncertainty is spilling into the policy and the planning. It's reaching the field, too: I'm hearing commanders are hitting sporadic shortages and restrictions, and the men out there read it as Washington not knowing what it wants. The White House is stuck running the war while it fights the Hill for the means to run it.\r\n\r\nFamilies of soldiers are noticing, the allies see the discord -- diplomatic sources tell me it's making people nervous -- and congressional approval keeps sliding every time a contentious hearing hits the evening news. And that's what worries me -- the confidence holding this administration together is wearing thin, and it won't take much more to crack it.\r\n";
                 deterioratingImages[7].SetActive(true);
-                //audioSource.PlayOneShot(deterioratingClips[7]);
+                audioSource.PlayOneShot(deterioratingClips[7]);
                 resultScroll.Scroll();
             }
             else
@@ -1691,7 +1701,7 @@ public class ScreenChange : MonoBehaviour
                 //domesticAdvisorText.text = "Listen, what's happening on the Hill right now is exactly what I was afraid of. Congress is actively working against the strategy -- funding delayed and cut, oversight committees going after the war effort on camera. I talked to Senator Gore's and Senator Fulbright's offices, and there's a real push for withdrawal or hard limits that nobody thinks can be stopped. And it's gutting the war itself: I'm hearing the shortfalls have hit the field, commanders can't mount the offensives, the pacification operations are stalling.\r\n\r\nThe families are watching Congress and the White House go at each other on television, seeing a government that can't agree the war is worth fighting. The President's furious, but he knows the damage is done. Allies and adversaries alike are reading American resolve coming apart -- and tonight every channel's lead story is a divided Washington. \r\n";
                 resultsText.text = "Listen, what's happening on the Hill right now is exactly what I was afraid of.\r\n\r\nCongress is actively working against the strategy -- funding delayed and cut, oversight committees going after the war effort on camera. I talked to Senator Gore's and Senator Fulbright's offices, and there's a real push for withdrawal or hard limits that nobody thinks can be stopped. And it's gutting the war itself: I'm hearing the shortfalls have hit the field, commanders can't mount the offensives, the pacification operations are stalling.\r\n\r\nThe families are watching Congress and the White House go at each other on television, seeing a government that can't agree the war is worth fighting. The President's furious, but he knows the damage is done. Allies and adversaries alike are reading American resolve coming apart -- and tonight every channel's lead story is a divided Washington. \r\n";
                 failureImages[7].SetActive(true);
-                //audioSource.PlayOneShot(failureClips[7]);
+                audioSource.PlayOneShot(failureClips[7]);
                 resultScroll.Scroll();
             }
         }
@@ -1701,7 +1711,7 @@ public class ScreenChange : MonoBehaviour
             {
                 //domesticAdvisorText.text = "I have to say, you've managed something I wasn't sure was possible.\r\n\r\nThe administration has kept inflation and unemployment under control despite what this war is costing. Defense spending is being balanced with domestic programs, and the public actually believes the government knows how to handle guns and butter at the same time. And it carries through to the men over there -- the steady funding keeps the equipment, the supplies, the support flowing without interruption.\r\n\r\nI've talked to families across the country this week, and the mood is cautiously optimistic -- people feel like the government has a handle on things. The President told me this morning that confidence in Washington is steady, and that's keeping the public willing to tolerate the war.\r\n\r\nThe polling reflects it. Keep the resources where they are.\r\n";
                 resultsText.text = "I have to say, you've managed something I wasn't sure was possible.\r\n\r\nThe administration has kept inflation and unemployment under control despite what this war is costing. Defense spending is being balanced with domestic programs, and the public actually believes the government knows how to handle guns and butter at the same time. And it carries through to the men over there -- the steady funding keeps the equipment, the supplies, the support flowing without interruption.\r\n\r\nI've talked to families across the country this week, and the mood is cautiously optimistic -- people feel like the government has a handle on things. The President told me this morning that confidence in Washington is steady, and that's keeping the public willing to tolerate the war.\r\n\r\nThe polling reflects it. Keep the resources where they are.\r\n";
-                //audioSource.PlayOneShot(successClips[8]);
+                audioSource.PlayOneShot(successClips[8]);
                 successImages[8].SetActive(true);
                 //domesticImage.sprite = successImages[8];
                 resultScroll.Scroll();
@@ -1711,7 +1721,7 @@ public class ScreenChange : MonoBehaviour
                 //domesticAdvisorText.text = "I'm calling because the economic picture is starting to worry me, and it should worry you too.\r\n\r\nInflation is climbing, consumer confidence is shaky, and the budget fight between military and domestic spending is getting ugly. I'm hearing from people in labor and on the Hill that prices for basic goods are going up, and unrest is showing up where it hadn't before -- sporadic strikes, walkouts, real frustration from people whose wages aren't keeping up. And the squeeze is reaching the field: I'm told the logistics and support start to falter whenever the budget tightens, and the men notice.\r\n\r\nFamilies are feeling it too, and they're connecting it to the war. Every night the evening news runs another story about rising prices alongside footage from Vietnam, and people draw their own conclusions.\r\n\r\nThe approval numbers on the economy are sliding, and the administration can't hold the line on a story that says both the war and the economy are under control.\r\n";
                 resultsText.text = "I'm calling because the economic picture is starting to worry me, and it should worry you too.\r\n\r\nInflation is climbing, consumer confidence is shaky, and the budget fight between military and domestic spending is getting ugly. I'm hearing from people in labor and on the Hill that prices for basic goods are going up, and unrest is showing up where it hadn't before -- sporadic strikes, walkouts, real frustration from people whose wages aren't keeping up. And the squeeze is reaching the field: I'm told the logistics and support start to falter whenever the budget tightens, and the men notice.\r\n\r\nFamilies are feeling it too, and they're connecting it to the war. Every night the evening news runs another story about rising prices alongside footage from Vietnam, and people draw their own conclusions.\r\n\r\nThe approval numbers on the economy are sliding, and the administration can't hold the line on a story that says both the war and the economy are under control. \r\n";
                 deterioratingImages[8].SetActive(true);
-                //audioSource.PlayOneShot(deterioratingClips[8]);
+                audioSource.PlayOneShot(deterioratingClips[8]);
                 resultScroll.Scroll();
             }
             else
@@ -1719,7 +1729,7 @@ public class ScreenChange : MonoBehaviour
                 //domesticAdvisorText.text = "I don't know how to soften this, so I won't try.\r\n\r\nThe economy is failing under the weight of this war. Inflation has spiked, unemployment is rising, and there are shortages of essential goods people can see and feel every single day. Great Society programs are being cut or delayed, and the public is furious -- I've talked to people across this country who feel abandoned by their government. And it's bleeding into the war itself: I'm hearing the men are short on supplies, reinforcements are running late, the support just isn't there on the battlefield.\r\n\r\nFamilies of soldiers are writing letters about what they can't afford at home while their sons are fighting overseas. Trust in Washington is collapsing, and opposition to this war is louder than it has ever been.\r\n\r\nI spoke with the President this morning. He knows that allies and adversaries alike are reading the economic turmoil as a sign of American weakness. The numbers don't lie, and neither does the nightly news. \r\n";
                 resultsText.text = "I don't know how to soften this, so I won't try.\r\n\r\nThe economy is failing under the weight of this war. Inflation has spiked, unemployment is rising, and there are shortages of essential goods people can see and feel every single day. Great Society programs are being cut or delayed, and the public is furious -- I've talked to people across this country who feel abandoned by their government. And it's bleeding into the war itself: I'm hearing the men are short on supplies, reinforcements are running late, the support just isn't there on the battlefield.\r\n\r\nFamilies of soldiers are writing letters about what they can't afford at home while their sons are fighting overseas. Trust in Washington is collapsing, and opposition to this war is louder than it has ever been.\r\n\r\nI spoke with the President this morning. He knows that allies and adversaries alike are reading the economic turmoil as a sign of American weakness. The numbers don't lie, and neither does the nightly news. \r\n";
                 failureImages[8].SetActive(true);
-                //audioSource.PlayOneShot(failureClips[8]);
+                audioSource.PlayOneShot(failureClips[8]);
                 resultScroll.Scroll();
             }
         }
@@ -1727,24 +1737,24 @@ public class ScreenChange : MonoBehaviour
         {
             if (ResourceManager.successCalculatedDo14)
             {
-                resultsText.text = "14: Success";
-                //audioSource.PlayOneShot(successClips[9]);
+                resultsText.text = "The Great Society is coming through in one piece -- and I'm glad to be the one telling you this.\r\n\r\nThe funding is holding, largely intact. Medicare and the education reforms are still moving, and the civil rights initiatives with them. Schools are getting the resources they need, and people are seeing tangible progress in their communities -- that's what's keeping public support for this administration alive despite the war.\r\n\r\nIt reaches the men in Vietnam too. The news from home isn't all riots and protests for once -- the country's still functioning and still investing in its future, and that steadies morale.\r\n\r\nAnd the political capital is preserved -- the President can still move on the domestic front and abroad. My producers went looking for a domestic story this week, and this is the one we're putting on the air.\r\n";
+                audioSource.PlayOneShot(successClips[9]);
                 successImages[9].SetActive(true);
                 //domesticImage.sprite = successImages[9];
                 resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDo14)
             {
-                resultsText.text = "14: Situation Deteriorating";
+                resultsText.text = "The Great Society is a patchier story, and I don't think you'll like where it's headed.\r\n\r\nSome programs are holding, but others are getting cut or stalled by budget fights and bureaucratic delays -- and the implementation is uneven. One community gets what it was promised, the next one doesn't, and people are starting to ask whether Washington can carry domestic welfare and a war at the same time. Senator Mansfield's office tells me the constituent letters put it plainly: cut the war or cut the programs. Even the men in Vietnam can see the country straining under competing priorities.\r\n\r\nThe gains are fragile, and the administration is spending more time defending its choices than making progress. The evening news keeps finding another community that was promised help and isn't getting it -- that's the coverage that sticks. \r\n";
                 deterioratingImages[9].SetActive(true);
-                //audioSource.PlayOneShot(deterioratingClips[9]);
+                audioSource.PlayOneShot(deterioratingClips[9]);
                 resultScroll.Scroll();
             }
             else
             {
-                resultsText.text = "14: Failure";
+                resultsText.text = "I've covered this administration since the beginning, and I never expected to report the Great Society collapsing.\r\n\r\nBut that's what's happening -- the programs are giving way under war spending and the strain on the economy. Schools and health clinics are taking severe cuts, some closing outright, and the social services people depend on are going with them. People are hurting and they're resentful, and they're in the streets over it -- protesting the war and the administration in the same breath. The men in Vietnam feel it too, knowing the nation at home is in turmoil.\r\n\r\nThe President's political allies are deserting the agenda. His legacy and his credibility at home are critically damaged, and the government is weakened on all fronts. I put a version of this story on the air last night, and it was the hardest one I've read in years. \r\n";
                 failureImages[9].SetActive(true);
-                //audioSource.PlayOneShot(failureClips[9]);
+                audioSource.PlayOneShot(failureClips[9]);
                 resultScroll.Scroll();
             }
         }
@@ -1752,24 +1762,24 @@ public class ScreenChange : MonoBehaviour
         {
             if (ResourceManager.successCalculatedDo15)
             {
-                resultsText.text = "15: Success";
-                //audioSource.PlayOneShot(successClips[10]);
+                resultsText.text = "On civil rights and the cities, the news is good -- they're holding, and this year that's no small thing.\r\n\r\nThe coordination is working -- federal authorities and the local governments are talking to each other, the community leaders are at the table, and together they've kept the major violence from happening. The demonstrations go on, but they've stayed largely peaceful, and the civil rights gains are actually reaching people -- in the schools and the housing, and in hiring too. People see a government that's responsive and fair, and that takes the fuel out of the unrest before it starts. And where order's been kept, it's been kept with judgment.\r\n\r\nThat legitimacy is worth a great deal -- it frees the administration's hands, political and military both, for Vietnam. Our crews have been out in the cities all week, and the film they're bringing back is calm streets. \r\n";
+                audioSource.PlayOneShot(successClips[10]);
                 successImages[10].SetActive(true);
                 //domesticImage.sprite = successImages[10];
                 resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDo15)
             {
-                resultsText.text = "15: Situation Deteriorating";
+                resultsText.text = "The cities are flaring up again, and it's getting worse.\r\n\r\nRiots in some cities, strikes and demonstrations in others, and most of it starts the same way, with people who see injustice and no real progress on civil rights. The response has been inconsistent -- harsh in one place, lenient in the next -- and it's leaving frustration on every side. People are losing confidence that the government is competent to handle this, and the coverage amplifies it -- every night the footage makes the country look more chaotic than the day before.\r\n\r\nAnd it's pulling the administration off everything else. Attention that should be on Vietnam is going to containing the crises here, and the resources and the political credibility are both straining under it.\r\n";
                 deterioratingImages[10].SetActive(true);
-                //audioSource.PlayOneShot(deterioratingClips[10]);
+                audioSource.PlayOneShot(deterioratingClips[10]);
                 resultScroll.Scroll();
             }
             else
             {
-                resultsText.text = "15: Failure";
+                resultsText.text = "The cities have gone past unrest, and it breaks my heart to see it.\r\n\r\nThe tensions have erupted into widespread violence -- prolonged rioting in the major cities, running clashes with police and the National Guard. Casualties are mounting while businesses, whole blocks, are destroyed. A large part of this country now feels shut out of its own government. The coverage shows disorder, a leadership that's failed -- the instability feeds on itself.\r\n\r\nWhat can I say -- the administration poured its resources elsewhere, and this is the cost. The men in Vietnam hear the reports from home constantly, morale over there is suffering for it, and the government's ability to manage this war has been severely compromised. We sent three crews out last night. Every one of them came back with the same picture, a city on fire. \r\n";
                 failureImages[10].SetActive(true);
-                //audioSource.PlayOneShot(failureClips[10]);
+                audioSource.PlayOneShot(failureClips[10]);
                 resultScroll.Scroll();
             }
         }
@@ -1789,24 +1799,24 @@ public class ScreenChange : MonoBehaviour
 
             if (ResourceManager.successCalculatedDi6)
             {
-                resultsText.text = "6: Success";
-                //audioSource.PlayOneShot(successClips[11]);
+                resultsText.text = "Credibility held. Johnson and his cabinet made the speeches that reassured our allies we would honor our commitments, while measured military actions demonstrated that Washington is willing to defend its interests.\r\n\r\nSo the message was believed: our NATO partners still trust our leadership, the neutrals have marked our determination, and Moscow and Peking tread carefully, having judged that testing us would cost them.\r\n\r\nIn my judgment that is what this investment bought: the world still believes we can sustain a commitment of this size — in Vietnam and everywhere else we have given our word. But credibility is spent faster than it is earned. Hold on to it.\r\n";
+                audioSource.PlayOneShot(successClips[11]);
                 successImages[11].SetActive(true);
                 //diplomaticImage.sprite = successImages[11];
                 resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDi6)
             {
-                resultsText.text = "6: Situation Deteriorating";
+                resultsText.text = "Our credibility has gone uneven. The promises are still made, but they are no longer fully backed by action, and the mounting costs of this war — an open-ended commitment of US forces, with no end the world can see — have set our partners wondering about Washington's stamina.\r\n\r\nThat gap is read quickly abroad: allies have begun to hedge their bets, and Moscow and Peking probe to learn where this administration will hold firm and where it will give way.\r\n\r\nIn any political approaches so far, we have been the prisoners of whatever South Vietnamese Government was momentarily in power, and thus our word abroad has risen and fallen with theirs.\r\n";
                 deterioratingImages[11].SetActive(true);
-                //audioSource.PlayOneShot(deterioratingClips[11]);
+                audioSource.PlayOneShot(deterioratingClips[11]);
                 resultScroll.Scroll();
             }
             else
             {
-                resultsText.text = "6: Failure";
+                resultsText.text = "Our credibility has collapsed in the theaters where it counted. Allies now question whether we will honor what we promised, and their coordination and support fall off with the doubt.\r\n\r\nThe neutral nations meet our statements with open skepticism, and Moscow and Peking, reading weakness, grow bolder by the month. The bitter part is that even victories in the field are discounted now, and what remains looks to the world like national humiliation — no matter what we may wish it to be.\r\n\r\nUnderstand where this came from. We have tended greatly to exaggerate the costs involved in a compromise settlement, and so the diplomacy that would have preserved our word went unfunded. This does not mean that we cannot succeed — but our influence abroad has suffered a lasting blow.\r\n";
                 failureImages[11].SetActive(true);
-                //audioSource.PlayOneShot(failureClips[11]);
+                audioSource.PlayOneShot(failureClips[11]);
                 resultScroll.Scroll();
             }
         }
@@ -1814,24 +1824,24 @@ public class ScreenChange : MonoBehaviour
         {
             if (ResourceManager.successCalculatedDi7)
             {
-                resultsText.text = "7: Success";
-                //audioSource.PlayOneShot(successClips[12]);
+                resultsText.text = "The negotiating track is open. The serious diplomatic feelers you funded secured a credible opening for talks in Paris, and both sides have now agreed to discuss terms. Progress at this level lays the basis for a multi-national conference.\r\n\r\nOn the ground, the partial bombing pause has eased the suffering in contested areas; attacks have fallen off in some sectors, and ARVN units have used the quiet to stabilize villages.\r\n\r\nAt home, the administration can point at last to a way out with reduced long-term costs. What you have is an opening that did not exist a season ago.\r\n";
+                audioSource.PlayOneShot(successClips[12]);
                 successImages[12].SetActive(true);
                 //diplomaticImage.sprite = successImages[12];
                 resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDi7)
             {
-                resultsText.text = "7: Situation Deteriorating";
+                resultsText.text = "The talks are inconsistent and largely symbolic, and I would not call them more than that. Hanoi attends but resists compromise, using the table mainly to buy time and gain propaganda victories.\r\n\r\nThe bombing halts are sporadic, and the confusion reaches the ground: our forces cannot predict when they will be safe from attack, and the civilians have grown cynical about promises of peace.\r\n\r\nThe administration touts progress; what the world sees is stalemate and equivocation. We have not given the other side a reason to believe there is any flexibility in our negotiating approach, and so there is no assurance of a satisfactory solution. The war drags on.\r\n";
                 deterioratingImages[12].SetActive(true);
-                //audioSource.PlayOneShot(deterioratingClips[12]);
+                audioSource.PlayOneShot(deterioratingClips[12]);
                 resultScroll.Scroll();
             }
             else
             {
-                resultsText.text = "7: Failure";
+                resultsText.text = "The effort to open talks has collapsed. Hanoi refused to engage seriously, reading our thin overtures as weak or insincere.\r\n\r\nThe bombing continues without pause — and I have watched before how bombing the North consolidated their purpose rather than bend it. The fighting intensifies across multiple fronts, our soldiers demoralized by a war without a clear political horizon for their sacrifices, and in the South the villages are destroyed or abandoned.\r\n\r\nAntiwar sentiment has escalated sharply at home, and our allies have lost confidence in American leadership. The administration now faces a dual crisis: military and moral.\r\n";
                 failureImages[12].SetActive(true);
-                //audioSource.PlayOneShot(failureClips[12]);
+                audioSource.PlayOneShot(failureClips[12]);
                 resultScroll.Scroll();
             }
         }
@@ -1839,24 +1849,24 @@ public class ScreenChange : MonoBehaviour
         {
             if (ResourceManager.successCalculatedDi8)
             {
-                resultsText.text = "8: Success";
-                //audioSource.PlayOneShot(successClips[13]);
+                resultsText.text = "The allies responded. South Korea, Australia, and the Philippines maintained or increased their troop contributions, and the NATO partners reaffirmed their support for our commitments in Europe.\r\n\r\nOn the ground, allied forces provide reinforcements, intelligence, and logistical support, easing the burden on our own troops.\r\n\r\nWashington has demonstrated that it can coordinate a multinational coalition — and at some point obviously that is what the neutral countries and our adversaries alike are measuring: with the allies fully brought on board, our credibility is strengthened, and the communist powers are deterred from testing American resolve.\r\n";
+                audioSource.PlayOneShot(successClips[13]);
                 successImages[13].SetActive(true);
                 //diplomaticImage.sprite = successImages[13];
                 resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDi8)
             {
-                resultsText.text = "8: Situation Deteriorating";
+                resultsText.text = "Allied support wavers. Some partners have reduced their troop numbers or offer only limited logistical aid; others voice their concerns about the political and human costs of this war.\r\n\r\nOur commanders struggle with gaps in manpower and intelligence, and the mixed signals undermine coordination, giving communist forces openings to exploit weak sectors.\r\n\r\nThis, I confess, has disturbed me very much: Washington faces mounting diplomatic friction, and in the final analysis the capitals have begun to doubt our ability to lead a global coalition — an alliance drifting, toward a war nobody wants to share.\r\n";
                 deterioratingImages[13].SetActive(true);
-                //audioSource.PlayOneShot(deterioratingClips[13]);
+                audioSource.PlayOneShot(deterioratingClips[13]);
                 resultScroll.Scroll();
             }
             else
             {
-                resultsText.text = "8: Failure";
+                resultsText.text = "The allies are withdrawing support, some openly criticizing our strategy. Troop contributions have been slashed, intelligence-sharing has slowed, and logistical coordination has collapsed.\r\n\r\nOur commanders face critical shortages on the battlefield, forcing risky improvisation and increasing casualties. Abroad, the neutral nations doubt American commitment, the communist powers escalate their pressure in Vietnam and elsewhere, and we slide toward an over-all world atmosphere highly critical of our position.\r\n\r\nAt home the accusation is that we have alienated our friends and can no longer manage coalition warfare. These were the probable costs of an alliance left unattended, and now they have come due. \r\n";
                 failureImages[13].SetActive(true);
-                //audioSource.PlayOneShot(failureClips[13]);
+                audioSource.PlayOneShot(failureClips[13]);
                 resultScroll.Scroll();
             }
         }
@@ -1864,24 +1874,24 @@ public class ScreenChange : MonoBehaviour
         {
             if (ResourceManager.successCalculatedDi9)
             {
-                resultsText.text = "9: Success";
-                //audioSource.PlayOneShot(successClips[14]);
+                resultsText.text = "You signaled resolve while avoiding unnecessary provocation, and Moscow and Peking, judging that escalation could be costly, have limited their support to Hanoi to avoid a direct confrontation.\r\n\r\nOn the ground, that restraint means less heavy weaponry reaching North Vietnam and less intensity behind its coordinated offensives.\r\n\r\nThe principle held: unless we provide the Soviets a political alternative they can support, they have no reason to hold back. You gave them one. Washington can now draw on these relationships for tentative cooperation, or at least neutrality, in the broader Cold War — firmness balanced with prudence. \r\n ";
+                audioSource.PlayOneShot(successClips[14]);
                 successImages[14].SetActive(true);
                 //diplomaticImage.sprite = successImages[14];
                 resultScroll.Scroll();
             }
             else if (ResourceManager.deterioratingCalculatedDi9)
             {
-                resultsText.text = "9: Situation Deteriorating";
+                resultsText.text = "Our relations with Moscow and Peking are tense and unpredictable. Both powers go on supplying Hanoi in earnest, and from time to time they test us — a threat in one place, a small provocation in another — to see what we will do.\r\n\r\nOur forces feel each test as a surge of enemy activity no commander in the field could have anticipated or prevented. Part of the trouble is our own making: announcements that should have been strictly construed were not, and the inconsistency leaves friend and adversary guessing alike.\r\n\r\nPeking's decision may well turn upon its estimate of Soviet support, and we have given Moscow too little reason to withhold it. None of this is beyond recovery — but continue this way and we will have started a well-nigh irreversible process. Half-measures with the great powers invite escalation, and our men in the field suffer it.\r\n";
                 deterioratingImages[14].SetActive(true);
-                //audioSource.PlayOneShot(deterioratingClips[14]);
+                audioSource.PlayOneShot(deterioratingClips[14]);
                 resultScroll.Scroll();
             }
             else
             {
-                resultsText.text = "9: Failure";
+                resultsText.text = "U.S. mismanagement has led to open deterioration of relations with Moscow and Peking. We gave them no reason for restraint, and both powers have poured aid and technical help into Hanoi. Enemy units are better equipped, and our casualty rates climb.\r\n\r\nAbroad we look overextended, and our isolation grows. I must warn you of something: there is a serious danger of escalation at the end of this road. A proxy contest could widen into a confrontation far larger than the war we are in, and what began as a limited engagement could end in a global conflagration no one intended.\r\n\r\nAt home and among the allies, confidence in America's ability to steer the Cold War has faltered. The moment to seek a compromise settlement and thus cut our losses has passed. By accepting some short-term costs, we might have avoided what may well be a long-term catastrophe.\r\n";
                 failureImages[14].SetActive(true);
-                //audioSource.PlayOneShot(failureClips[14]);
+                audioSource.PlayOneShot(failureClips[14]);
                 resultScroll.Scroll();
             }
         }
@@ -1894,19 +1904,25 @@ public class ScreenChange : MonoBehaviour
                 isFadingInOnLobby = true;
             }
 
-            lobbyContinueButton.gameObject.SetActive(false);
-            lobbyCloseButton.SetActive(false);
-            lobbyNextButton.SetActive(true);
+            //lobbyContinueButton.gameObject.SetActive(false);
+            //lobbyCloseButton.SetActive(false);
+            //lobbyNextButton.SetActive(true);
+            //lobbyFile.SetActive(true);
 
-            lobbyFile.SetActive(true);
+            allResultsFile.SetActive(true);
 
             ResourceManager resourceManager = gameManager.GetComponent<ResourceManager>();
-            //string allResourcesText = resourceManager.GetAllResourcesText();
-            //lobbyText.text = allResourcesText;
-            lobbyText.text = resourceManager.resultsText.text;
+            string allResourcesText = resourceManager.GetAllResourcesText();
+            allResultsText.text = allResourcesText;
+            //allResultsText.text = resourceManager.resultsText.text;
         }
         else if (numResultsViewed == 16)
         {
+            //lobbyContinueButton.gameObject.SetActive(false);
+            //lobbyCloseButton.SetActive(false);
+            //lobbyNextButton.SetActive(true);
+            //lobbyFile.SetActive(true);
+
             if (ResourceManager.classification == "Fence-Sitter")
             {
                 lobbyText.text = "Classification: Fence-Sitter\r\n\r\nYou were quite evenly split amongst our three fronts: military, diplomatic, and domestic. Pulled in three directions, you decided no area deserved to be neglected, and saw that a successful policy can a balanced one.";

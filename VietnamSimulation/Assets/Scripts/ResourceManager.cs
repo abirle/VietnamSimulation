@@ -34,6 +34,23 @@ public class ResourceManager : MonoBehaviour
     int numDo14Resources = 0;
     int numDo15Resources = 0;
 
+    int inputM1 = 0;
+    int inputM2 = 0;
+    int inputM3 = 0;
+    int inputM4 = 0;
+    int inputM5 = 0;
+    int inputDi6 = 0;
+    int inputDi7 = 0;
+    int inputDi8 = 0;
+    int inputDi9 = 0;
+    int inputDo10 = 0;
+    int inputDo11 = 0;
+    int inputDo12 = 0;
+    int inputDo13 = 0;
+    int inputDo14 = 0;
+    int inputDo15 = 0;
+
+
     int numSliders = 15;
 
     bool hasClickedM1 = false;
@@ -266,24 +283,25 @@ public class ResourceManager : MonoBehaviour
 
     public string GetAllResourcesText()
     {
-        string allResourcesText = "---RESOURCE STATUS--- \r\nM1: " + numM1Resources
-                                    + " \r\nM2: " + numM2Resources
-                                    + " \r\nM3: " + numM3Resources
-                                    + " \r\nM4: " + numM4Resources
-                                    + " \r\nM5: " + numM5Resources
-                                    + " \r\nDi6: " + numDi6Resources
-                                    + " \r\nDi7: " + numDi7Resources
-                                    + " \r\nDi8: " + numDi8Resources
-                                    + " \r\nDi9: " + numDi9Resources
-                                    + " \r\nDo10: " + numDo10Resources
-                                    + " \r\nDo11: " + numDo11Resources
-                                    + " \r\nDo12: " + numDo12Resources
-                                    + " \r\nDo13: " + numDo13Resources
-                                    + " \r\nDo14: " + numDo14Resources
-                                    + " \r\nDo15: " + numDo15Resources;
+        string allResourcesText = "MILITARY OBJECTIVES \r\nPrevent Communist Takeover: " + numM1Resources
+                                    + " \r\nAchieve Military Success: " + numM2Resources
+                                    + " \r\nSecure South Vietnamese Countryside: " + numM3Resources
+                                    + " \r\nStabilize South Vietnamese Government: " + numM4Resources
+                                    + " \r\nProtect Troops, Minimize Casualties: " + numM5Resources
+                                    + " \r\n\r\nDIPLOMATIC OBJECTIVES"
+                                    + " \r\nPreserve American Global Credibility: " + numDi6Resources
+                                    + " \r\nOpen Peace Negotiations: " + numDi7Resources
+                                    + " \r\nMaintain Allied Support: " + numDi8Resources
+                                    + " \r\nManage USSR and China: " + numDi9Resources
+                                    + " \r\n\r\nDOMESTIC OBJECTIVES"
+                                    + " \r\nWin 1968 Election, Democratic Unity: " + numDo10Resources
+                                    + " \r\nRespond to Antiwar Movement, Public Opinion: " + numDo11Resources
+                                    + " \r\nMaintain Confidence of Congress: " + numDo12Resources
+                                    + " \r\nManage U.S. Economy: " + numDo13Resources
+                                    + " \r\nPreserve Great Society Programs: " + numDo14Resources
+                                    + " \r\nHandle Civil Rights/Urban Unrest: " + numDo15Resources;
         return allResourcesText;
     }
-
 
     public void PrintResources()
     {
@@ -498,6 +516,26 @@ public class ResourceManager : MonoBehaviour
             hasClickedDo15 = true;
             numSliders--;
         }
+    }
+
+
+    public void SetOriginalInputs()
+    {
+        inputM1 = numM1Resources;
+        inputM2 = numM2Resources;
+        inputM3 = numM3Resources;
+        inputM4 = numM4Resources;
+        inputM5 = numM5Resources;
+        inputDi6 = numDi6Resources;
+        inputDi7 = numDi7Resources;
+        inputDi8 = numDi8Resources;
+        inputDi9 = numDi9Resources;
+        inputDo10 = numDo10Resources;
+        inputDo11 = numDo11Resources;
+        inputDo12 = numDo12Resources;
+        inputDo13 = numDo13Resources;
+        inputDo14 = numDo14Resources;
+        inputDo15 = numDo15Resources;
     }
 
 
@@ -2179,13 +2217,13 @@ public class ResourceManager : MonoBehaviour
 
 
 
-        int militaryResources = numM1Resources + numM2Resources + numM3Resources + numM4Resources + numM5Resources;
+        int militaryResources = inputM1 + inputM2 + inputM3 + inputM4 + inputM5;
         float militaryResourcesAverage = militaryResources / 5;
 
-        int domesticResources = numDo10Resources + numDo11Resources + numDo12Resources + numDo13Resources + numDo14Resources + numDo15Resources;
+        int domesticResources = inputDo10 + inputDo11 + inputDo12 + inputDo13 + inputDo14 + inputDo15;
         float domesticResourcesAverage = domesticResources / 6;
 
-        int diplomaticResources = numDi6Resources + numDi7Resources + numDi8Resources + numDi9Resources;
+        int diplomaticResources = inputDi6 + inputDi7 + inputDi8 + inputDi9;
         float diplomaticResourcesAverage = diplomaticResources / 4;
 
         float militaryDomesticDifference = militaryResourcesAverage - domesticResourcesAverage;

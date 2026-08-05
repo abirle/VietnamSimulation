@@ -385,6 +385,7 @@ inline int32_t ReadOnlySpan_1_get_Length_m36BD32453530B535FE60A8123643219FEAABC3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManagedSpanWrapper__ctor_mB29647A21BB87EA4DF859E5C2FA2207F47E525D2 (ManagedSpanWrapper_tE7FC4BBB631B130757F8DEB15853D98FD3D5DC0E* __this, void* ___0_begin, int32_t ___1_length, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_set_url_Injected_m4A150A878AD11372E0FC794F53B7FC310222E9EC (intptr_t ___0__unity_self, ManagedSpanWrapper_tE7FC4BBB631B130757F8DEB15853D98FD3D5DC0E* ___1_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Play_Injected_m6AB297C015723C8F94E805F269EF8A03D1E7835A (intptr_t ___0__unity_self, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Pause_Injected_m32C748E0C23A6B8FA856C5C18BD4982FC6B78D41 (intptr_t ___0__unity_self, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_SetDirectAudioMute_Injected_m8172215B9CA80DDB60237A7D2D0338B4A690E31D (intptr_t ___0__unity_self, uint16_t ___1_trackIndex, bool ___2_mute, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EventHandler_Invoke_m8A3288B6DF1FE2699A58EA22D0B830BB20E94E15_inline (EventHandler_tE1FA51515FC895E3A02E317912FBDCDCF390A411* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FrameReadyEventHandler_Invoke_m73FF71F81A620194421226D8A98C64FB82E7B235_inline (FrameReadyEventHandler_tDEDADF060B051C2953122274EBF3896AF48735E8* __this, VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* ___0_source, int64_t ___1_frameIdx, const RuntimeMethod* method) ;
@@ -690,6 +691,40 @@ IL_000f:
 		return;
 	}
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Pause_m1975BF6BEE27064602EEB8191C963888CF5B226E (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MarshalledUnityObject_MarshalNotNull_TisVideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3_mC76A4EEDE342A5DC1DD7AE4403DE7FC697122BB6_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	intptr_t G_B2_0;
+	memset((&G_B2_0), 0, sizeof(G_B2_0));
+	intptr_t G_B1_0;
+	memset((&G_B1_0), 0, sizeof(G_B1_0));
+	{
+		intptr_t L_0;
+		L_0 = MarshalledUnityObject_MarshalNotNull_TisVideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3_mC76A4EEDE342A5DC1DD7AE4403DE7FC697122BB6_inline(__this, MarshalledUnityObject_MarshalNotNull_TisVideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3_mC76A4EEDE342A5DC1DD7AE4403DE7FC697122BB6_RuntimeMethod_var);
+		intptr_t L_1 = L_0;
+		if (L_1)
+		{
+			G_B2_0 = L_1;
+			goto IL_000f;
+		}
+		G_B1_0 = L_1;
+	}
+	{
+		ThrowHelper_ThrowNullReferenceException_mA9C7629D32240EE0218631933DAC647668CA63CF(__this, NULL);
+		G_B2_0 = G_B1_0;
+	}
+
+IL_000f:
+	{
+		VideoPlayer_Pause_Injected_m32C748E0C23A6B8FA856C5C18BD4982FC6B78D41(G_B2_0, NULL);
+		return;
+	}
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_SetDirectAudioMute_mA22511B44579744FD391D6EF2DC5C75A3AF97E8A (VideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3* __this, uint16_t ___0_trackIndex, bool ___1_mute, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -926,6 +961,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Play_Injected_m6AB297C015723
 	static VideoPlayer_Play_Injected_m6AB297C015723C8F94E805F269EF8A03D1E7835A_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (VideoPlayer_Play_Injected_m6AB297C015723C8F94E805F269EF8A03D1E7835A_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Video.VideoPlayer::Play_Injected(System.IntPtr)");
+	_il2cpp_icall_func(___0__unity_self);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_Pause_Injected_m32C748E0C23A6B8FA856C5C18BD4982FC6B78D41 (intptr_t ___0__unity_self, const RuntimeMethod* method) 
+{
+	typedef void (*VideoPlayer_Pause_Injected_m32C748E0C23A6B8FA856C5C18BD4982FC6B78D41_ftn) (intptr_t);
+	static VideoPlayer_Pause_Injected_m32C748E0C23A6B8FA856C5C18BD4982FC6B78D41_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (VideoPlayer_Pause_Injected_m32C748E0C23A6B8FA856C5C18BD4982FC6B78D41_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Video.VideoPlayer::Pause_Injected(System.IntPtr)");
 	_il2cpp_icall_func(___0__unity_self);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VideoPlayer_SetDirectAudioMute_Injected_m8172215B9CA80DDB60237A7D2D0338B4A690E31D (intptr_t ___0__unity_self, uint16_t ___1_trackIndex, bool ___2_mute, const RuntimeMethod* method) 

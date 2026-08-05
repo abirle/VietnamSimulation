@@ -23,6 +23,14 @@ public class SliderUpdate: MonoBehaviour
     bool penPlaying;
     float penDuration = 3f;
 
+    AudioClip typeWriting;
+    bool typePlaying;
+    float typeDuration = 5f;
+
+    AudioClip teleTyping;
+    bool telePlaying;
+    float teleDuration = 2f;
+
     int resourcesAllocated;
     GameObject gameManager;
     ResourceManager resourceManager;
@@ -40,6 +48,8 @@ public class SliderUpdate: MonoBehaviour
         screenChange = gameManager.GetComponent<ScreenChange>();
         paperSlide = audioSource.clip;
         penWriting = screenChange.writingSound;
+        typeWriting = screenChange.typingSound;
+        teleTyping = screenChange.teleSound;
 
         //screenChange.pauseScreen.SetActive(false);
 
@@ -50,9 +60,10 @@ public class SliderUpdate: MonoBehaviour
     void Update()
     {
         timeElapsed += Time.deltaTime;
+
         float slideProgress = Mathf.Clamp01(timeElapsed / slideDuration);
 
-        if (slideProgress == 1f)
+        if (slidePlaying && slideProgress >= 1f)
         {
             slidePlaying = false;
             timeElapsed = 0f;
@@ -61,11 +72,29 @@ public class SliderUpdate: MonoBehaviour
 
         float penProgress = Mathf.Clamp01(timeElapsed / penDuration);
 
-        if (penProgress == 1f)
+        if (penPlaying && penProgress >= 1f)
         {
             penPlaying = false;
             timeElapsed = 0f;
             penProgress = 0f;
+        }
+
+        float typeProgress = Mathf.Clamp01(timeElapsed / typeDuration);
+
+        if (typePlaying && typeProgress >= 1f)
+        {
+            typePlaying = false;
+            timeElapsed = 0f;
+            typeProgress = 0f;
+        }
+
+        float teleProgress = Mathf.Clamp01(timeElapsed / teleDuration);
+
+        if (telePlaying && teleProgress >= 1f)
+        {
+            telePlaying = false;
+            timeElapsed = 0f;
+            teleProgress = 0f;
         }
 
     }
@@ -168,13 +197,30 @@ public class SliderUpdate: MonoBehaviour
         {
             audioSource.PlayOneShot(paperSlide);
             audioSource.pitch = 0.5f;
+            timeElapsed = 0f;
             slidePlaying = true;
         }
         else if (!penPlaying && (fieldNum == 3 || fieldNum == 4))
         {
             audioSource.PlayOneShot(penWriting);
             audioSource.pitch = 1f;
+            timeElapsed = 0f;
             penPlaying = true;
+        }
+        //FIXME
+        else if (!typePlaying && (fieldNum == 10 || fieldNum == 11 || fieldNum == 12 || fieldNum == 13 || fieldNum == 14 || fieldNum == 15))
+        {
+            audioSource.PlayOneShot(typeWriting);
+            audioSource.pitch = 1f;
+            timeElapsed = 0f;
+            typePlaying = true;
+        }
+        else if (!telePlaying && (fieldNum == 6 || fieldNum == 7 || fieldNum == 8 || fieldNum == 9))
+        {
+            audioSource.PlayOneShot(teleTyping);
+            audioSource.pitch = 0.5f;
+            timeElapsed = 0f;
+            telePlaying = true;
         }
 
         if (fieldNum == 1)

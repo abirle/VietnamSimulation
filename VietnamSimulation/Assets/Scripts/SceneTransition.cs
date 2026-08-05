@@ -17,8 +17,13 @@ public class SceneTransition : MonoBehaviour
         
     }
 
-    public void StartClicked()
+    public void LoadGameScene()
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

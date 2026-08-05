@@ -5,6 +5,7 @@ public class Pause : MonoBehaviour
 {
     public GameObject pauseMenu;
     bool paused = false;
+    bool pauseButtonClicked = false;
     public Camera mainCamera;
     Vector3 previousCameraPosition;
     float previousCameraOrthographic;
@@ -23,7 +24,7 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.escapeKey.wasPressedThisFrame || pauseButtonClicked)
         {
             if (!paused)
             {
@@ -42,6 +43,7 @@ public class Pause : MonoBehaviour
                 mainCamera.orthographicSize = 5;
                 pauseMenu.SetActive(true);
                 paused = true;
+                pauseButtonClicked = false;
             }
             else if (paused)
             {
@@ -49,6 +51,7 @@ public class Pause : MonoBehaviour
                 mainCamera.transform.position = previousCameraPosition;
                 pauseMenu.SetActive(false);
                 paused = false;
+                pauseButtonClicked = false;
             }
         }
     }
@@ -87,6 +90,13 @@ public class Pause : MonoBehaviour
             slidersArray[1].SetActive(true);
             activeSlidersIndex = 1;
         }
+    }
+
+
+    public void PauseClicked()
+    {
+        pauseMenu.SetActive(true);
+        pauseButtonClicked = true;
     }
 
     public void ClosePauseMenu()

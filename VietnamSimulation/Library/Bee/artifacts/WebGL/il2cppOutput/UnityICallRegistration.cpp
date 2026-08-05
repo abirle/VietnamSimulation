@@ -666,6 +666,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_OpenURL_Injected();
 		Register_UnityEngine_Application_OpenURL_Injected();
 
+		//System.Void UnityEngine.Application::Quit(System.Int32)
+		void Register_UnityEngine_Application_Quit();
+		Register_UnityEngine_Application_Quit();
+
 		//System.Void UnityEngine.Application::get_absoluteURL_Injected(UnityEngine.Bindings.ManagedSpanWrapper&)
 		void Register_UnityEngine_Application_get_absoluteURL_Injected();
 		Register_UnityEngine_Application_get_absoluteURL_Injected();
@@ -737,6 +741,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.AudioSource::PlayOneShotHelper_Injected(System.IntPtr,System.IntPtr,System.Single)
 		void Register_UnityEngine_AudioSource_PlayOneShotHelper_Injected();
 		Register_UnityEngine_AudioSource_PlayOneShotHelper_Injected();
+
+		//System.Void UnityEngine.AudioSource::Play_Injected(System.IntPtr,System.Double)
+		void Register_UnityEngine_AudioSource_Play_Injected();
+		Register_UnityEngine_AudioSource_Play_Injected();
 
 		//System.Void UnityEngine.AudioSource::SetPitch_Injected(System.IntPtr,System.Single)
 		void Register_UnityEngine_AudioSource_SetPitch_Injected();
@@ -7701,6 +7709,10 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.VFX.VisualEffect
 
 	//Start Registrations for type : UnityEngine.Video.VideoPlayer
+
+		//System.Void UnityEngine.Video.VideoPlayer::Pause_Injected(System.IntPtr)
+		void Register_UnityEngine_Video_VideoPlayer_Pause_Injected();
+		Register_UnityEngine_Video_VideoPlayer_Pause_Injected();
 
 		//System.Void UnityEngine.Video.VideoPlayer::Play_Injected(System.IntPtr)
 		void Register_UnityEngine_Video_VideoPlayer_Play_Injected();

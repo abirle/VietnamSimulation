@@ -119,3 +119,10 @@ VietnamSimulation/Library/PlayerDataCache/Win642/Data/sharedassets0.assets.resS
 VietnamSimulation/Library/ArtifactDB
 VietnamSimulation/Library/PlayerDataCache/Win642/Data/sharedassets0.assets.resS
 VietnamSimulation/Library/PlayerDataCache/Win642/Data/sharedassets0.assets
+VietnamSimulation/Library/ArtifactDB
+VietnamSimulation/Library/PlayerDataCache/Win642/Data/sharedassets0.assets.resS
+VietnamSimulation/Library/PlayerDataCache/Win642/Data/sharedassets0.assets
+*.zip
+VietnamSimulation/WebBuild.zip
+*.resS
+*.assets

@@ -17,6 +17,12 @@ public class ChangeChannel : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip staticClip;
 
+    public AudioSource video01AudioSource;
+
+    int channelsViewed = 0;
+
+    bool tvScrolled = false;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,6 +52,10 @@ public class ChangeChannel : MonoBehaviour
                 tvStatic.GetComponent<RawImage>().enabled = false;
                 channels[currentChannelIndex].GetComponent<RawImage>().enabled = true;
                 channels[currentChannelIndex].GetComponent<VideoPlayer>().SetDirectAudioMute(0, false);
+                if (currentChannelIndex == 4)
+                {
+                    video01AudioSource.mute = false;
+                }
 
                 changingChannelNext = false;
             }
@@ -68,9 +78,20 @@ public class ChangeChannel : MonoBehaviour
                 tvStatic.GetComponent<RawImage>().enabled = false;
                 channels[currentChannelIndex].GetComponent<RawImage>().enabled = true;
                 channels[currentChannelIndex].GetComponent<VideoPlayer>().SetDirectAudioMute(0, false);
+                if (currentChannelIndex == 4)
+                {
+                    video01AudioSource.mute = false;
+                }
 
                 changingChannelPrevious = false;
             }
+        }
+
+        //FIXME
+        if (!tvScrolled && (channelsViewed >=4 || channelsViewed <= -4))
+        {
+            ResourceManager.domesticPointsInvestigated++;
+            tvScrolled = true;
         }
         
     }
@@ -79,9 +100,14 @@ public class ChangeChannel : MonoBehaviour
     {
         channels[currentChannelIndex].GetComponent<RawImage>().enabled = false;
         channels[currentChannelIndex].GetComponent<VideoPlayer>().SetDirectAudioMute(0, true);
+        if (currentChannelIndex == 4) 
+        {
+            video01AudioSource.mute = true;
+        }
         timeElapsed = 0;
         audioSource.PlayOneShot(staticClip);
         changingChannelNext = true;
+        channelsViewed++;
 
     }
 
@@ -90,9 +116,14 @@ public class ChangeChannel : MonoBehaviour
     {
         channels[currentChannelIndex].GetComponent<RawImage>().enabled = false;
         channels[currentChannelIndex].GetComponent<VideoPlayer>().SetDirectAudioMute(0, true);
+        if (currentChannelIndex == 4)
+        {
+            video01AudioSource.mute = true;
+        }
         timeElapsed = 0;
         audioSource.PlayOneShot(staticClip);
         changingChannelPrevious = true;
+        channelsViewed--;
 
     }
 

@@ -13,11 +13,11 @@
 		</type>
 		<type fullname="ChangeChannel">
 			<method name="NextChannel"/>
-			<method name="NextChannel"/>
-			<method name="PreviousChannel"/>
 			<method name="PreviousChannel"/>
 		</type>
 		<type fullname="ImageScroll">
+			<method name="Open"/>
+			<method name="Open"/>
 			<method name="Open"/>
 			<method name="Open"/>
 			<method name="Open"/>
@@ -125,6 +125,7 @@
 		<type fullname="Pause">
 			<method name="ClosePauseMenu"/>
 			<method name="nextSliders"/>
+			<method name="PauseClicked"/>
 			<method name="previousSliders"/>
 		</type>
 		<type fullname="PointOfInterest">
@@ -155,10 +156,8 @@
 			<method name="Hovered"/>
 			<method name="Hovered"/>
 			<method name="Hovered"/>
-			<method name="Hovered"/>
 			<method name="IncrementPointsInvestigated"/>
 			<method name="IncrementPointsInvestigated"/>
-			<method name="IncrementPointsInvestigated"/>
 			<method name="POINext"/>
 			<method name="POINext"/>
 			<method name="POINext"/>
@@ -195,8 +194,6 @@
 			<method name="PointofInterestClick"/>
 			<method name="PointofInterestClick"/>
 			<method name="PointofInterestClick"/>
-			<method name="PointofInterestClick"/>
-			<method name="PointofInterestClose"/>
 			<method name="PointofInterestClose"/>
 			<method name="PointofInterestClose"/>
 			<method name="PointofInterestClose"/>
@@ -234,7 +231,6 @@
 			<method name="POIPrevious"/>
 			<method name="POIPrevious"/>
 			<method name="POIPrevious"/>
-			<method name="Unhovered"/>
 			<method name="Unhovered"/>
 			<method name="Unhovered"/>
 			<method name="Unhovered"/>
@@ -268,7 +264,18 @@
 			<method name="RadioClicked"/>
 			<method name="RadioClicked"/>
 		</type>
+		<type fullname="ResultScroll">
+			<method name="ChangePositions"/>
+			<method name="Scroll"/>
+		</type>
+		<type fullname="SceneTransition">
+			<method name="LoadGameScene"/>
+			<method name="LoadGameScene"/>
+			<method name="Quit"/>
+			<method name="Quit"/>
+		</type>
 		<type fullname="ScreenChange">
+			<method name="BackToLobby"/>
 			<method name="BackToLobby"/>
 			<method name="BackToLobby"/>
 			<method name="BackToLobby"/>
@@ -302,6 +309,7 @@
 			<method name="TelevisionZoomOut"/>
 			<method name="TypewriterZoomIn"/>
 			<method name="TypewriterZoomOut"/>
+			<method name="ViewResults"/>
 			<method name="ViewResults"/>
 			<method name="ViewResults"/>
 			<method name="ViewResults"/>
@@ -401,6 +409,16 @@
 	</assembly>
 	<assembly fullname="UnityEngine.AudioModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.AudioSource">
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="PlayOneShot"/>
+			<method name="PlayOneShot"/>
+			<method name="PlayOneShot"/>
+			<method name="PlayOneShot"/>
+			<method name="PlayOneShot"/>
+			<method name="PlayOneShot"/>
+			<method name="PlayOneShot"/>
+			<method name="PlayOneShot"/>
 			<method name="PlayOneShot"/>
 			<method name="PlayOneShot"/>
 			<method name="PlayOneShot"/>
@@ -422,6 +440,15 @@
 			<method name="set_mute"/>
 			<method name="set_mute"/>
 			<method name="set_mute"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
+			<method name="Stop"/>
 			<method name="Stop"/>
 			<method name="Stop"/>
 			<method name="Stop"/>
@@ -464,14 +491,53 @@
 			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
 		</type>
 	</assembly>
 	<assembly fullname="UnityEngine.VideoModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.Video.VideoPlayer">
-			<method name="Play"/>
-			<method name="Play"/>
-			<method name="Play"/>
-			<method name="Play"/>
+			<method name="Pause"/>
 			<method name="Play"/>
 			<method name="Play"/>
 			<method name="Play"/>

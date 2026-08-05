@@ -422,6 +422,21 @@ struct ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E  : public MonoB
 	int32_t ___numDo13Resources;
 	int32_t ___numDo14Resources;
 	int32_t ___numDo15Resources;
+	int32_t ___inputM1;
+	int32_t ___inputM2;
+	int32_t ___inputM3;
+	int32_t ___inputM4;
+	int32_t ___inputM5;
+	int32_t ___inputDi6;
+	int32_t ___inputDi7;
+	int32_t ___inputDi8;
+	int32_t ___inputDi9;
+	int32_t ___inputDo10;
+	int32_t ___inputDo11;
+	int32_t ___inputDo12;
+	int32_t ___inputDo13;
+	int32_t ___inputDo14;
+	int32_t ___inputDo15;
 	int32_t ___numSliders;
 	bool ___hasClickedM1;
 	bool ___hasClickedM2;
@@ -483,6 +498,8 @@ struct ScreenChange_t3331B21CDE5B1964A85DF95AE3B4B4D283DFBC74  : public MonoBeha
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___lobbyFile;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___lobbyText;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___lobbyImage;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___allResultsFile;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___allResultsText;
 	SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* ___classificationImages;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___lobbyCloseButton;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___lobbyNextButton;
@@ -539,6 +556,8 @@ struct ScreenChange_t3331B21CDE5B1964A85DF95AE3B4B4D283DFBC74  : public MonoBeha
 	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audioSource;
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___transitionSound;
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___writingSound;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___typingSound;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___teleSound;
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___tvStatic;
 	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___radioSource;
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___militaryIntro01;
@@ -571,6 +590,9 @@ struct ScreenChange_t3331B21CDE5B1964A85DF95AE3B4B4D283DFBC74  : public MonoBeha
 	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___failureImages;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___resultsText;
 	ResultScroll_tF88C82A801AA5C34500A62CF60B79543E86B4C58* ___resultScroll;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___tvButton;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ballRedactedIntro01;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ballRedactedQuestionIntro;
 };
 struct SliderUpdate_t8194D63488FB62E44C2E5C2D9E91DE6473C5DA29  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -585,6 +607,12 @@ struct SliderUpdate_t8194D63488FB62E44C2E5C2D9E91DE6473C5DA29  : public MonoBeha
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___penWriting;
 	bool ___penPlaying;
 	float ___penDuration;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___typeWriting;
+	bool ___typePlaying;
+	float ___typeDuration;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___teleTyping;
+	bool ___telePlaying;
+	float ___teleDuration;
 	int32_t ___resourcesAllocated;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___gameManager;
 	ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* ___resourceManager;
@@ -956,6 +984,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SliderUpdate_Start_m5A35319D1DCCFBC96A2D
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_10 = L_9->___writingSound;
 		__this->___penWriting = L_10;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___penWriting), (void*)L_10);
+		ScreenChange_t3331B21CDE5B1964A85DF95AE3B4B4D283DFBC74* L_11 = __this->___screenChange;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_12 = L_11->___typingSound;
+		__this->___typeWriting = L_12;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___typeWriting), (void*)L_12);
+		ScreenChange_t3331B21CDE5B1964A85DF95AE3B4B4D283DFBC74* L_13 = __this->___screenChange;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_14 = L_13->___teleSound;
+		__this->___teleTyping = L_14;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___teleTyping), (void*)L_14);
 		return;
 	}
 }
@@ -963,8 +999,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SliderUpdate_Update_m91AAE3C60232E212602
 {
 	float V_0 = 0.0f;
 	float V_1 = 0.0f;
-	bool V_2 = false;
-	bool V_3 = false;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	int32_t G_B3_0 = 0;
+	int32_t G_B8_0 = 0;
+	int32_t G_B13_0 = 0;
+	int32_t G_B18_0 = 0;
 	{
 		float L_0 = __this->___timeElapsed;
 		float L_1;
@@ -975,12 +1019,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SliderUpdate_Update_m91AAE3C60232E212602
 		float L_4;
 		L_4 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_2/L_3)), NULL);
 		V_0 = L_4;
-		float L_5 = V_0;
-		V_2 = (bool)((((float)L_5) == ((float)(1.0f)))? 1 : 0);
-		bool L_6 = V_2;
-		if (!L_6)
+		bool L_5 = __this->___slidePlaying;
+		if (!L_5)
 		{
-			goto IL_004c;
+			goto IL_003b;
+		}
+	}
+	{
+		float L_6 = V_0;
+		G_B3_0 = ((((int32_t)((!(((float)L_6) >= ((float)(1.0f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_003c;
+	}
+
+IL_003b:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_003c:
+	{
+		V_4 = (bool)G_B3_0;
+		bool L_7 = V_4;
+		if (!L_7)
+		{
+			goto IL_005c;
 		}
 	}
 	{
@@ -989,19 +1051,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SliderUpdate_Update_m91AAE3C60232E212602
 		V_0 = (0.0f);
 	}
 
-IL_004c:
+IL_005c:
 	{
-		float L_7 = __this->___timeElapsed;
-		float L_8 = __this->___penDuration;
-		float L_9;
-		L_9 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_7/L_8)), NULL);
-		V_1 = L_9;
-		float L_10 = V_1;
-		V_3 = (bool)((((float)L_10) == ((float)(1.0f)))? 1 : 0);
-		bool L_11 = V_3;
+		float L_8 = __this->___timeElapsed;
+		float L_9 = __this->___penDuration;
+		float L_10;
+		L_10 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_8/L_9)), NULL);
+		V_1 = L_10;
+		bool L_11 = __this->___penPlaying;
 		if (!L_11)
 		{
-			goto IL_0085;
+			goto IL_0084;
+		}
+	}
+	{
+		float L_12 = V_1;
+		G_B8_0 = ((((int32_t)((!(((float)L_12) >= ((float)(1.0f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_0085;
+	}
+
+IL_0084:
+	{
+		G_B8_0 = 0;
+	}
+
+IL_0085:
+	{
+		V_5 = (bool)G_B8_0;
+		bool L_13 = V_5;
+		if (!L_13)
+		{
+			goto IL_00a5;
 		}
 	}
 	{
@@ -1010,7 +1090,85 @@ IL_004c:
 		V_1 = (0.0f);
 	}
 
-IL_0085:
+IL_00a5:
+	{
+		float L_14 = __this->___timeElapsed;
+		float L_15 = __this->___typeDuration;
+		float L_16;
+		L_16 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_14/L_15)), NULL);
+		V_2 = L_16;
+		bool L_17 = __this->___typePlaying;
+		if (!L_17)
+		{
+			goto IL_00cd;
+		}
+	}
+	{
+		float L_18 = V_2;
+		G_B13_0 = ((((int32_t)((!(((float)L_18) >= ((float)(1.0f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_00ce;
+	}
+
+IL_00cd:
+	{
+		G_B13_0 = 0;
+	}
+
+IL_00ce:
+	{
+		V_6 = (bool)G_B13_0;
+		bool L_19 = V_6;
+		if (!L_19)
+		{
+			goto IL_00ee;
+		}
+	}
+	{
+		__this->___typePlaying = (bool)0;
+		__this->___timeElapsed = (0.0f);
+		V_2 = (0.0f);
+	}
+
+IL_00ee:
+	{
+		float L_20 = __this->___timeElapsed;
+		float L_21 = __this->___teleDuration;
+		float L_22;
+		L_22 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_20/L_21)), NULL);
+		V_3 = L_22;
+		bool L_23 = __this->___telePlaying;
+		if (!L_23)
+		{
+			goto IL_0116;
+		}
+	}
+	{
+		float L_24 = V_3;
+		G_B18_0 = ((((int32_t)((!(((float)L_24) >= ((float)(1.0f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_0117;
+	}
+
+IL_0116:
+	{
+		G_B18_0 = 0;
+	}
+
+IL_0117:
+	{
+		V_7 = (bool)G_B18_0;
+		bool L_25 = V_7;
+		if (!L_25)
+		{
+			goto IL_0137;
+		}
+	}
+	{
+		__this->___telePlaying = (bool)0;
+		__this->___timeElapsed = (0.0f);
+		V_3 = (0.0f);
+	}
+
+IL_0137:
 	{
 		return;
 	}
@@ -1374,10 +1532,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SliderUpdate_UpdateSlider_mF291BC3039EE9
 	bool V_14 = false;
 	bool V_15 = false;
 	bool V_16 = false;
+	bool V_17 = false;
+	bool V_18 = false;
 	int32_t G_B5_0 = 0;
 	int32_t G_B7_0 = 0;
 	int32_t G_B13_0 = 0;
 	int32_t G_B15_0 = 0;
+	int32_t G_B25_0 = 0;
+	int32_t G_B27_0 = 0;
+	int32_t G_B35_0 = 0;
+	int32_t G_B37_0 = 0;
 	{
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_0 = __this->___slider;
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_1 = __this->___inputField;
@@ -1448,7 +1612,7 @@ IL_0077:
 		bool L_16 = V_0;
 		if (!L_16)
 		{
-			goto IL_00a9;
+			goto IL_00b7;
 		}
 	}
 	{
@@ -1457,54 +1621,55 @@ IL_0077:
 		AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112(L_17, L_18, NULL);
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_19 = __this->___audioSource;
 		AudioSource_set_pitch_mD14631FC99BF38AAFB356D9C45546BC16CF9E811(L_19, (0.5f), NULL);
+		__this->___timeElapsed = (0.0f);
 		__this->___slidePlaying = (bool)1;
-		goto IL_00ef;
+		goto IL_01d0;
 	}
 
-IL_00a9:
+IL_00b7:
 	{
 		bool L_20 = __this->___penPlaying;
 		if (L_20)
 		{
-			goto IL_00be;
+			goto IL_00cc;
 		}
 	}
 	{
 		int32_t L_21 = ___0_fieldNum;
 		if ((((int32_t)L_21) == ((int32_t)3)))
 		{
-			goto IL_00bb;
+			goto IL_00c9;
 		}
 	}
 	{
 		int32_t L_22 = ___0_fieldNum;
 		G_B13_0 = ((((int32_t)L_22) == ((int32_t)4))? 1 : 0);
-		goto IL_00bc;
+		goto IL_00ca;
 	}
 
-IL_00bb:
+IL_00c9:
 	{
 		G_B13_0 = 1;
 	}
 
-IL_00bc:
+IL_00ca:
 	{
 		G_B15_0 = G_B13_0;
-		goto IL_00bf;
+		goto IL_00cd;
 	}
 
-IL_00be:
+IL_00cc:
 	{
 		G_B15_0 = 0;
 	}
 
-IL_00bf:
+IL_00cd:
 	{
 		V_1 = (bool)G_B15_0;
 		bool L_23 = V_1;
 		if (!L_23)
 		{
-			goto IL_00ef;
+			goto IL_010d;
 		}
 	}
 	{
@@ -1513,264 +1678,421 @@ IL_00bf:
 		AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112(L_24, L_25, NULL);
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_26 = __this->___audioSource;
 		AudioSource_set_pitch_mD14631FC99BF38AAFB356D9C45546BC16CF9E811(L_26, (1.0f), NULL);
+		__this->___timeElapsed = (0.0f);
 		__this->___penPlaying = (bool)1;
+		goto IL_01d0;
 	}
 
-IL_00ef:
+IL_010d:
 	{
-		int32_t L_27 = ___0_fieldNum;
-		V_2 = (bool)((((int32_t)L_27) == ((int32_t)1))? 1 : 0);
-		bool L_28 = V_2;
-		if (!L_28)
+		bool L_27 = __this->___typePlaying;
+		if (L_27)
 		{
-			goto IL_0110;
+			goto IL_0138;
 		}
 	}
 	{
-		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_29 = __this->___resourceManager;
-		int32_t L_30 = __this->___resourcesAllocated;
-		ResourceManager_SetM1Resources_m4917FBD6CEE64D3DA2398BD89349ED9483A53DBA(L_29, L_30, NULL);
-		goto IL_02f1;
+		int32_t L_28 = ___0_fieldNum;
+		if ((((int32_t)L_28) == ((int32_t)((int32_t)10))))
+		{
+			goto IL_0135;
+		}
 	}
-
-IL_0110:
+	{
+		int32_t L_29 = ___0_fieldNum;
+		if ((((int32_t)L_29) == ((int32_t)((int32_t)11))))
+		{
+			goto IL_0135;
+		}
+	}
+	{
+		int32_t L_30 = ___0_fieldNum;
+		if ((((int32_t)L_30) == ((int32_t)((int32_t)12))))
+		{
+			goto IL_0135;
+		}
+	}
 	{
 		int32_t L_31 = ___0_fieldNum;
-		V_3 = (bool)((((int32_t)L_31) == ((int32_t)2))? 1 : 0);
-		bool L_32 = V_3;
-		if (!L_32)
+		if ((((int32_t)L_31) == ((int32_t)((int32_t)13))))
 		{
-			goto IL_0131;
+			goto IL_0135;
 		}
 	}
 	{
-		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_33 = __this->___resourceManager;
-		int32_t L_34 = __this->___resourcesAllocated;
-		ResourceManager_SetM2Resources_m2B23702F86F6D5BC643BC40478398D01312EA3AE(L_33, L_34, NULL);
-		goto IL_02f1;
-	}
-
-IL_0131:
-	{
-		int32_t L_35 = ___0_fieldNum;
-		V_4 = (bool)((((int32_t)L_35) == ((int32_t)3))? 1 : 0);
-		bool L_36 = V_4;
-		if (!L_36)
+		int32_t L_32 = ___0_fieldNum;
+		if ((((int32_t)L_32) == ((int32_t)((int32_t)14))))
 		{
-			goto IL_0154;
+			goto IL_0135;
 		}
 	}
 	{
-		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_37 = __this->___resourceManager;
-		int32_t L_38 = __this->___resourcesAllocated;
-		ResourceManager_SetM3Resources_mEA5394595F22C57C4B776D303A5C19ED11823293(L_37, L_38, NULL);
-		goto IL_02f1;
+		int32_t L_33 = ___0_fieldNum;
+		G_B25_0 = ((((int32_t)L_33) == ((int32_t)((int32_t)15)))? 1 : 0);
+		goto IL_0136;
 	}
 
-IL_0154:
+IL_0135:
+	{
+		G_B25_0 = 1;
+	}
+
+IL_0136:
+	{
+		G_B27_0 = G_B25_0;
+		goto IL_0139;
+	}
+
+IL_0138:
+	{
+		G_B27_0 = 0;
+	}
+
+IL_0139:
+	{
+		V_2 = (bool)G_B27_0;
+		bool L_34 = V_2;
+		if (!L_34)
+		{
+			goto IL_0176;
+		}
+	}
+	{
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_35 = __this->___audioSource;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_36 = __this->___typeWriting;
+		AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112(L_35, L_36, NULL);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_37 = __this->___audioSource;
+		AudioSource_set_pitch_mD14631FC99BF38AAFB356D9C45546BC16CF9E811(L_37, (1.0f), NULL);
+		__this->___timeElapsed = (0.0f);
+		__this->___typePlaying = (bool)1;
+		goto IL_01d0;
+	}
+
+IL_0176:
+	{
+		bool L_38 = __this->___telePlaying;
+		if (L_38)
+		{
+			goto IL_0194;
+		}
+	}
 	{
 		int32_t L_39 = ___0_fieldNum;
-		V_5 = (bool)((((int32_t)L_39) == ((int32_t)4))? 1 : 0);
-		bool L_40 = V_5;
-		if (!L_40)
+		if ((((int32_t)L_39) == ((int32_t)6)))
 		{
-			goto IL_0177;
+			goto IL_0191;
 		}
 	}
 	{
-		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_41 = __this->___resourceManager;
-		int32_t L_42 = __this->___resourcesAllocated;
-		ResourceManager_SetM4Resources_mE2F518F79F74F917C827F22F452E02E540739C12(L_41, L_42, NULL);
-		goto IL_02f1;
-	}
-
-IL_0177:
-	{
-		int32_t L_43 = ___0_fieldNum;
-		V_6 = (bool)((((int32_t)L_43) == ((int32_t)5))? 1 : 0);
-		bool L_44 = V_6;
-		if (!L_44)
+		int32_t L_40 = ___0_fieldNum;
+		if ((((int32_t)L_40) == ((int32_t)7)))
 		{
-			goto IL_019a;
+			goto IL_0191;
 		}
 	}
 	{
-		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_45 = __this->___resourceManager;
-		int32_t L_46 = __this->___resourcesAllocated;
-		ResourceManager_SetM5Resources_mB705A1F7EB45D619332A86A6A5EFB036B2EF9804(L_45, L_46, NULL);
-		goto IL_02f1;
+		int32_t L_41 = ___0_fieldNum;
+		if ((((int32_t)L_41) == ((int32_t)8)))
+		{
+			goto IL_0191;
+		}
+	}
+	{
+		int32_t L_42 = ___0_fieldNum;
+		G_B35_0 = ((((int32_t)L_42) == ((int32_t)((int32_t)9)))? 1 : 0);
+		goto IL_0192;
 	}
 
-IL_019a:
+IL_0191:
+	{
+		G_B35_0 = 1;
+	}
+
+IL_0192:
+	{
+		G_B37_0 = G_B35_0;
+		goto IL_0195;
+	}
+
+IL_0194:
+	{
+		G_B37_0 = 0;
+	}
+
+IL_0195:
+	{
+		V_3 = (bool)G_B37_0;
+		bool L_43 = V_3;
+		if (!L_43)
+		{
+			goto IL_01d0;
+		}
+	}
+	{
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_44 = __this->___audioSource;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_45 = __this->___teleTyping;
+		AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112(L_44, L_45, NULL);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_46 = __this->___audioSource;
+		AudioSource_set_pitch_mD14631FC99BF38AAFB356D9C45546BC16CF9E811(L_46, (0.5f), NULL);
+		__this->___timeElapsed = (0.0f);
+		__this->___telePlaying = (bool)1;
+	}
+
+IL_01d0:
 	{
 		int32_t L_47 = ___0_fieldNum;
-		V_7 = (bool)((((int32_t)L_47) == ((int32_t)6))? 1 : 0);
-		bool L_48 = V_7;
+		V_4 = (bool)((((int32_t)L_47) == ((int32_t)1))? 1 : 0);
+		bool L_48 = V_4;
 		if (!L_48)
 		{
-			goto IL_01bd;
+			goto IL_01f3;
 		}
 	}
 	{
 		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_49 = __this->___resourceManager;
 		int32_t L_50 = __this->___resourcesAllocated;
-		ResourceManager_SetDi6Resources_m2DB5ED8413882CACCBF5E34BCDF895989B5DF0E8(L_49, L_50, NULL);
-		goto IL_02f1;
+		ResourceManager_SetM1Resources_m4917FBD6CEE64D3DA2398BD89349ED9483A53DBA(L_49, L_50, NULL);
+		goto IL_03d6;
 	}
 
-IL_01bd:
+IL_01f3:
 	{
 		int32_t L_51 = ___0_fieldNum;
-		V_8 = (bool)((((int32_t)L_51) == ((int32_t)7))? 1 : 0);
-		bool L_52 = V_8;
+		V_5 = (bool)((((int32_t)L_51) == ((int32_t)2))? 1 : 0);
+		bool L_52 = V_5;
 		if (!L_52)
 		{
-			goto IL_01e0;
+			goto IL_0216;
 		}
 	}
 	{
 		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_53 = __this->___resourceManager;
 		int32_t L_54 = __this->___resourcesAllocated;
-		ResourceManager_SetDi7Resources_m6A2BEC6DB36E9DBCA7606F43D9F9FC6ECAE89852(L_53, L_54, NULL);
-		goto IL_02f1;
+		ResourceManager_SetM2Resources_m2B23702F86F6D5BC643BC40478398D01312EA3AE(L_53, L_54, NULL);
+		goto IL_03d6;
 	}
 
-IL_01e0:
+IL_0216:
 	{
 		int32_t L_55 = ___0_fieldNum;
-		V_9 = (bool)((((int32_t)L_55) == ((int32_t)8))? 1 : 0);
-		bool L_56 = V_9;
+		V_6 = (bool)((((int32_t)L_55) == ((int32_t)3))? 1 : 0);
+		bool L_56 = V_6;
 		if (!L_56)
 		{
-			goto IL_0203;
+			goto IL_0239;
 		}
 	}
 	{
 		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_57 = __this->___resourceManager;
 		int32_t L_58 = __this->___resourcesAllocated;
-		ResourceManager_SetDi8Resources_mDC9FE1C73C5904B6DC9ECF9513023998AF4F0D30(L_57, L_58, NULL);
-		goto IL_02f1;
+		ResourceManager_SetM3Resources_mEA5394595F22C57C4B776D303A5C19ED11823293(L_57, L_58, NULL);
+		goto IL_03d6;
 	}
 
-IL_0203:
+IL_0239:
 	{
 		int32_t L_59 = ___0_fieldNum;
-		V_10 = (bool)((((int32_t)L_59) == ((int32_t)((int32_t)9)))? 1 : 0);
-		bool L_60 = V_10;
+		V_7 = (bool)((((int32_t)L_59) == ((int32_t)4))? 1 : 0);
+		bool L_60 = V_7;
 		if (!L_60)
 		{
-			goto IL_0227;
+			goto IL_025c;
 		}
 	}
 	{
 		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_61 = __this->___resourceManager;
 		int32_t L_62 = __this->___resourcesAllocated;
-		ResourceManager_SetDi9Resources_mD5D0442A43CD4D2C8279A41F724F225834D080D5(L_61, L_62, NULL);
-		goto IL_02f1;
+		ResourceManager_SetM4Resources_mE2F518F79F74F917C827F22F452E02E540739C12(L_61, L_62, NULL);
+		goto IL_03d6;
 	}
 
-IL_0227:
+IL_025c:
 	{
 		int32_t L_63 = ___0_fieldNum;
-		V_11 = (bool)((((int32_t)L_63) == ((int32_t)((int32_t)10)))? 1 : 0);
-		bool L_64 = V_11;
+		V_8 = (bool)((((int32_t)L_63) == ((int32_t)5))? 1 : 0);
+		bool L_64 = V_8;
 		if (!L_64)
 		{
-			goto IL_024b;
+			goto IL_027f;
 		}
 	}
 	{
 		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_65 = __this->___resourceManager;
 		int32_t L_66 = __this->___resourcesAllocated;
-		ResourceManager_SetDo10Resources_m1D1C0DDABFF1F0168FA112C322B0FCA989B9E1EF(L_65, L_66, NULL);
-		goto IL_02f1;
+		ResourceManager_SetM5Resources_mB705A1F7EB45D619332A86A6A5EFB036B2EF9804(L_65, L_66, NULL);
+		goto IL_03d6;
 	}
 
-IL_024b:
+IL_027f:
 	{
 		int32_t L_67 = ___0_fieldNum;
-		V_12 = (bool)((((int32_t)L_67) == ((int32_t)((int32_t)11)))? 1 : 0);
-		bool L_68 = V_12;
+		V_9 = (bool)((((int32_t)L_67) == ((int32_t)6))? 1 : 0);
+		bool L_68 = V_9;
 		if (!L_68)
 		{
-			goto IL_026f;
+			goto IL_02a2;
 		}
 	}
 	{
 		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_69 = __this->___resourceManager;
 		int32_t L_70 = __this->___resourcesAllocated;
-		ResourceManager_SetDo11Resources_m82CD05BB5A328BF28B9F72DC8CB1DAB6AA9100B5(L_69, L_70, NULL);
-		goto IL_02f1;
+		ResourceManager_SetDi6Resources_m2DB5ED8413882CACCBF5E34BCDF895989B5DF0E8(L_69, L_70, NULL);
+		goto IL_03d6;
 	}
 
-IL_026f:
+IL_02a2:
 	{
 		int32_t L_71 = ___0_fieldNum;
-		V_13 = (bool)((((int32_t)L_71) == ((int32_t)((int32_t)12)))? 1 : 0);
-		bool L_72 = V_13;
+		V_10 = (bool)((((int32_t)L_71) == ((int32_t)7))? 1 : 0);
+		bool L_72 = V_10;
 		if (!L_72)
 		{
-			goto IL_0290;
+			goto IL_02c5;
 		}
 	}
 	{
 		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_73 = __this->___resourceManager;
 		int32_t L_74 = __this->___resourcesAllocated;
-		ResourceManager_SetDo12Resources_mBED5FF0EA9F2B642BC8E64D46F3DC2985C6E3E12(L_73, L_74, NULL);
-		goto IL_02f1;
+		ResourceManager_SetDi7Resources_m6A2BEC6DB36E9DBCA7606F43D9F9FC6ECAE89852(L_73, L_74, NULL);
+		goto IL_03d6;
 	}
 
-IL_0290:
+IL_02c5:
 	{
 		int32_t L_75 = ___0_fieldNum;
-		V_14 = (bool)((((int32_t)L_75) == ((int32_t)((int32_t)13)))? 1 : 0);
-		bool L_76 = V_14;
+		V_11 = (bool)((((int32_t)L_75) == ((int32_t)8))? 1 : 0);
+		bool L_76 = V_11;
 		if (!L_76)
 		{
-			goto IL_02b1;
+			goto IL_02e8;
 		}
 	}
 	{
 		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_77 = __this->___resourceManager;
 		int32_t L_78 = __this->___resourcesAllocated;
-		ResourceManager_SetDo13Resources_m73C5DB1C6AACE65321042CA68F6B3BDBD6D06EE9(L_77, L_78, NULL);
-		goto IL_02f1;
+		ResourceManager_SetDi8Resources_mDC9FE1C73C5904B6DC9ECF9513023998AF4F0D30(L_77, L_78, NULL);
+		goto IL_03d6;
 	}
 
-IL_02b1:
+IL_02e8:
 	{
 		int32_t L_79 = ___0_fieldNum;
-		V_15 = (bool)((((int32_t)L_79) == ((int32_t)((int32_t)14)))? 1 : 0);
-		bool L_80 = V_15;
+		V_12 = (bool)((((int32_t)L_79) == ((int32_t)((int32_t)9)))? 1 : 0);
+		bool L_80 = V_12;
 		if (!L_80)
 		{
-			goto IL_02d2;
+			goto IL_030c;
 		}
 	}
 	{
 		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_81 = __this->___resourceManager;
 		int32_t L_82 = __this->___resourcesAllocated;
-		ResourceManager_SetDo14Resources_mEBF5160DE1866DA91DD72B9CF3B7935F4C54F948(L_81, L_82, NULL);
-		goto IL_02f1;
+		ResourceManager_SetDi9Resources_mD5D0442A43CD4D2C8279A41F724F225834D080D5(L_81, L_82, NULL);
+		goto IL_03d6;
 	}
 
-IL_02d2:
+IL_030c:
 	{
 		int32_t L_83 = ___0_fieldNum;
-		V_16 = (bool)((((int32_t)L_83) == ((int32_t)((int32_t)15)))? 1 : 0);
-		bool L_84 = V_16;
+		V_13 = (bool)((((int32_t)L_83) == ((int32_t)((int32_t)10)))? 1 : 0);
+		bool L_84 = V_13;
 		if (!L_84)
 		{
-			goto IL_02f1;
+			goto IL_0330;
 		}
 	}
 	{
 		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_85 = __this->___resourceManager;
 		int32_t L_86 = __this->___resourcesAllocated;
-		ResourceManager_SetDo15Resources_mA402552D223F872495EB966A6DB44EB622CC5D07(L_85, L_86, NULL);
+		ResourceManager_SetDo10Resources_m1D1C0DDABFF1F0168FA112C322B0FCA989B9E1EF(L_85, L_86, NULL);
+		goto IL_03d6;
 	}
 
-IL_02f1:
+IL_0330:
+	{
+		int32_t L_87 = ___0_fieldNum;
+		V_14 = (bool)((((int32_t)L_87) == ((int32_t)((int32_t)11)))? 1 : 0);
+		bool L_88 = V_14;
+		if (!L_88)
+		{
+			goto IL_0354;
+		}
+	}
+	{
+		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_89 = __this->___resourceManager;
+		int32_t L_90 = __this->___resourcesAllocated;
+		ResourceManager_SetDo11Resources_m82CD05BB5A328BF28B9F72DC8CB1DAB6AA9100B5(L_89, L_90, NULL);
+		goto IL_03d6;
+	}
+
+IL_0354:
+	{
+		int32_t L_91 = ___0_fieldNum;
+		V_15 = (bool)((((int32_t)L_91) == ((int32_t)((int32_t)12)))? 1 : 0);
+		bool L_92 = V_15;
+		if (!L_92)
+		{
+			goto IL_0375;
+		}
+	}
+	{
+		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_93 = __this->___resourceManager;
+		int32_t L_94 = __this->___resourcesAllocated;
+		ResourceManager_SetDo12Resources_mBED5FF0EA9F2B642BC8E64D46F3DC2985C6E3E12(L_93, L_94, NULL);
+		goto IL_03d6;
+	}
+
+IL_0375:
+	{
+		int32_t L_95 = ___0_fieldNum;
+		V_16 = (bool)((((int32_t)L_95) == ((int32_t)((int32_t)13)))? 1 : 0);
+		bool L_96 = V_16;
+		if (!L_96)
+		{
+			goto IL_0396;
+		}
+	}
+	{
+		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_97 = __this->___resourceManager;
+		int32_t L_98 = __this->___resourcesAllocated;
+		ResourceManager_SetDo13Resources_m73C5DB1C6AACE65321042CA68F6B3BDBD6D06EE9(L_97, L_98, NULL);
+		goto IL_03d6;
+	}
+
+IL_0396:
+	{
+		int32_t L_99 = ___0_fieldNum;
+		V_17 = (bool)((((int32_t)L_99) == ((int32_t)((int32_t)14)))? 1 : 0);
+		bool L_100 = V_17;
+		if (!L_100)
+		{
+			goto IL_03b7;
+		}
+	}
+	{
+		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_101 = __this->___resourceManager;
+		int32_t L_102 = __this->___resourcesAllocated;
+		ResourceManager_SetDo14Resources_mEBF5160DE1866DA91DD72B9CF3B7935F4C54F948(L_101, L_102, NULL);
+		goto IL_03d6;
+	}
+
+IL_03b7:
+	{
+		int32_t L_103 = ___0_fieldNum;
+		V_18 = (bool)((((int32_t)L_103) == ((int32_t)((int32_t)15)))? 1 : 0);
+		bool L_104 = V_18;
+		if (!L_104)
+		{
+			goto IL_03d6;
+		}
+	}
+	{
+		ResourceManager_t3C786E6B9CB06BD30723E3099A98FEF2F853355E* L_105 = __this->___resourceManager;
+		int32_t L_106 = __this->___resourcesAllocated;
+		ResourceManager_SetDo15Resources_mA402552D223F872495EB966A6DB44EB622CC5D07(L_105, L_106, NULL);
+	}
+
+IL_03d6:
 	{
 		return;
 	}
@@ -1780,6 +2102,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SliderUpdate__ctor_m63105398FD2F5823A263
 	{
 		__this->___slideDuration = (2.0f);
 		__this->___penDuration = (3.0f);
+		__this->___typeDuration = (5.0f);
+		__this->___teleDuration = (2.0f);
 		__this->___timeElapsed = (0.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;

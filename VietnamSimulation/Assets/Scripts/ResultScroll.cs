@@ -41,4 +41,9 @@ public class ResultScroll : MonoBehaviour
         isScrolling = true;
         Debug.Log("scroll function entered");
     }
+    public void ChangePositions()
+    {
+        startingTextPosition = new Vector3(0.903f, -14.03f, -1273.34f);
+        endingTextPosition = new Vector3(0.903f, 400f, -1273.34f);
+    }
 }

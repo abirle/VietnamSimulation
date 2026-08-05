@@ -40,6 +40,7 @@ extern void Pause_Start_mAD3B2E7199082E99CD30F2864538996D1FEB50CE (void);
 extern void Pause_Update_m93C50E270526C8F1DACFACAD20AEAFC982D4B1F5 (void);
 extern void Pause_nextSliders_m33B254E0135431A6090352E0B981F3B8014A7A28 (void);
 extern void Pause_previousSliders_mE33E2995717C30465C28955BCD18088B6332E48F (void);
+extern void Pause_PauseClicked_mB522BC11450CD477A618C40BEEC8CAE75CC189F2 (void);
 extern void Pause_ClosePauseMenu_mD7374F00254A0604B446A9471FFBD962A03ED310 (void);
 extern void Pause__ctor_m27228FDF21C94BF26431A3DA3CD46F0BC7022B8E (void);
 extern void PointOfInterest_Start_m8C441EC537CFAAE25F19FA24AF6049545DA52505 (void);
@@ -77,6 +78,7 @@ extern void ResourceManager_SetDo12Resources_mBED5FF0EA9F2B642BC8E64D46F3DC2985C
 extern void ResourceManager_SetDo13Resources_m73C5DB1C6AACE65321042CA68F6B3BDBD6D06EE9 (void);
 extern void ResourceManager_SetDo14Resources_mEBF5160DE1866DA91DD72B9CF3B7935F4C54F948 (void);
 extern void ResourceManager_SetDo15Resources_mA402552D223F872495EB966A6DB44EB622CC5D07 (void);
+extern void ResourceManager_SetOriginalInputs_m3863A97B247F7EE276CBE221921266DBCE962282 (void);
 extern void ResourceManager_CalculateResults_m80D74149BF8563F90E1D18C86512C5B5F547043C (void);
 extern void ResourceManager_FinalizeResults_mAB944230410DAE7015A0D92B72C8C69CF7229A4A (void);
 extern void ResourceManager__ctor_m0895A816FF3A70D6BD14077742487BAEF05CC9A3 (void);
@@ -84,10 +86,12 @@ extern void ResourceManager__cctor_m24DE72EB75796C2973DE1753E3308511AC85BF70 (vo
 extern void ResultScroll_Start_m1593F9EA9F40DC3FF33C72A185A6F4380C0629A9 (void);
 extern void ResultScroll_FixedUpdate_m855016A6590197E96A977E3BAFE3C6417923168C (void);
 extern void ResultScroll_Scroll_m4E3D2201BAF81B4D399A1A3F1B049D7985BF6064 (void);
+extern void ResultScroll_ChangePositions_m14E5D20979D6F49588361B3D19E209E0761976F3 (void);
 extern void ResultScroll__ctor_m71A3827FEF2D49F9C0FBA438A6FD3E55FE695C8A (void);
 extern void SceneTransition_Start_m3EED3EEFBBDC2F2DBCD8F97962EB1884AFE3DA18 (void);
 extern void SceneTransition_Update_mA7239AD26F1EFBD3705089EBB6AF8F35CB6EB73F (void);
-extern void SceneTransition_StartClicked_m6C10438F6BAAB43430A1519132FF733952EBFD2B (void);
+extern void SceneTransition_LoadGameScene_m671F06D710661CBC953777EA56EAEB3DEF509ACC (void);
+extern void SceneTransition_Quit_m837A39A9F2838EFB356683BDB0943FF61DE2432E (void);
 extern void SceneTransition__ctor_m6FEBED7A92C4C5A3ED76C9251DC10A680690B5E5 (void);
 extern void ScreenChange_AllScreensActive_mF081000F4F6D800E122F216EDF4189C9FE0410EB (void);
 extern void ScreenChange_AllScreensInactive_mBCB73D7ED37F07818C8EEE5C109BCB2148F2F048 (void);
@@ -133,7 +137,7 @@ extern void WebGLVideo_Update_m1AAFD58041D488E07A94740DF89A1F439E48AFC7 (void);
 extern void WebGLVideo__ctor_mC501C27037E7F142F58F0EEEE313AFC55CFA1717 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[126] = 
+static Il2CppMethodPointer s_methodPointers[130] = 
 {
 	AdvisorQuestions_Start_m281F67D3AD111259F729ED747B887B4552280FC4,
 	AdvisorQuestions_Update_m0A848064EE9FABC253AB3A4493209198A79DC7D6,
@@ -168,6 +172,7 @@ static Il2CppMethodPointer s_methodPointers[126] =
 	Pause_Update_m93C50E270526C8F1DACFACAD20AEAFC982D4B1F5,
 	Pause_nextSliders_m33B254E0135431A6090352E0B981F3B8014A7A28,
 	Pause_previousSliders_mE33E2995717C30465C28955BCD18088B6332E48F,
+	Pause_PauseClicked_mB522BC11450CD477A618C40BEEC8CAE75CC189F2,
 	Pause_ClosePauseMenu_mD7374F00254A0604B446A9471FFBD962A03ED310,
 	Pause__ctor_m27228FDF21C94BF26431A3DA3CD46F0BC7022B8E,
 	PointOfInterest_Start_m8C441EC537CFAAE25F19FA24AF6049545DA52505,
@@ -205,6 +210,7 @@ static Il2CppMethodPointer s_methodPointers[126] =
 	ResourceManager_SetDo13Resources_m73C5DB1C6AACE65321042CA68F6B3BDBD6D06EE9,
 	ResourceManager_SetDo14Resources_mEBF5160DE1866DA91DD72B9CF3B7935F4C54F948,
 	ResourceManager_SetDo15Resources_mA402552D223F872495EB966A6DB44EB622CC5D07,
+	ResourceManager_SetOriginalInputs_m3863A97B247F7EE276CBE221921266DBCE962282,
 	ResourceManager_CalculateResults_m80D74149BF8563F90E1D18C86512C5B5F547043C,
 	ResourceManager_FinalizeResults_mAB944230410DAE7015A0D92B72C8C69CF7229A4A,
 	ResourceManager__ctor_m0895A816FF3A70D6BD14077742487BAEF05CC9A3,
@@ -212,10 +218,12 @@ static Il2CppMethodPointer s_methodPointers[126] =
 	ResultScroll_Start_m1593F9EA9F40DC3FF33C72A185A6F4380C0629A9,
 	ResultScroll_FixedUpdate_m855016A6590197E96A977E3BAFE3C6417923168C,
 	ResultScroll_Scroll_m4E3D2201BAF81B4D399A1A3F1B049D7985BF6064,
+	ResultScroll_ChangePositions_m14E5D20979D6F49588361B3D19E209E0761976F3,
 	ResultScroll__ctor_m71A3827FEF2D49F9C0FBA438A6FD3E55FE695C8A,
 	SceneTransition_Start_m3EED3EEFBBDC2F2DBCD8F97962EB1884AFE3DA18,
 	SceneTransition_Update_mA7239AD26F1EFBD3705089EBB6AF8F35CB6EB73F,
-	SceneTransition_StartClicked_m6C10438F6BAAB43430A1519132FF733952EBFD2B,
+	SceneTransition_LoadGameScene_m671F06D710661CBC953777EA56EAEB3DEF509ACC,
+	SceneTransition_Quit_m837A39A9F2838EFB356683BDB0943FF61DE2432E,
 	SceneTransition__ctor_m6FEBED7A92C4C5A3ED76C9251DC10A680690B5E5,
 	ScreenChange_AllScreensActive_mF081000F4F6D800E122F216EDF4189C9FE0410EB,
 	ScreenChange_AllScreensInactive_mBCB73D7ED37F07818C8EEE5C109BCB2148F2F048,
@@ -262,7 +270,7 @@ static Il2CppMethodPointer s_methodPointers[126] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[126] = 
+static const int32_t s_InvokerIndices[130] = 
 {
 	4686,
 	4686,
@@ -279,11 +287,12 @@ static const int32_t s_InvokerIndices[126] =
 	4686,
 	4686,
 	4686,
-	11127,
+	11128,
 	4686,
 	4686,
 	3935,
 	3935,
+	4686,
 	4686,
 	4686,
 	4686,
@@ -337,7 +346,10 @@ static const int32_t s_InvokerIndices[126] =
 	4686,
 	4686,
 	4686,
-	11127,
+	4686,
+	11128,
+	4686,
+	4686,
 	4686,
 	4686,
 	4686,
@@ -388,14 +400,14 @@ static const int32_t s_InvokerIndices[126] =
 	4686,
 	4686,
 	4686,
-	11153,
+	11154,
 	4686,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	126,
+	130,
 	s_methodPointers,
 	0,
 	NULL,

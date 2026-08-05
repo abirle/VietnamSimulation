@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - RadioPlayPause
     - ResourceManager
     - ResultScroll
+    - SceneTransition
     - ScreenChange
     - SliderUpdate
     - WebGLVideo
@@ -318,9 +319,6 @@ ScriptsOnlyBuild:
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
   - assembly: Assembly-CSharp
-    fullTypeName: PointOfInterest
-    methodName: PointofInterestClose
-  - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
   - assembly: Assembly-CSharp
@@ -356,6 +354,15 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
@@ -392,6 +399,21 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: RecorderZoomOut
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -470,6 +492,12 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
@@ -485,12 +513,30 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: ViewResults
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: ImageScroll
     methodName: ScrollRight
@@ -545,9 +591,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: ImageScroll
     methodName: ScrollLeft
@@ -566,9 +618,15 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ImageScroll
+    methodName: Open
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: Hovered
@@ -590,9 +648,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
-  - assembly: Assembly-CSharp
-    fullTypeName: ChangeChannel
-    methodName: PreviousChannel
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
@@ -620,6 +675,18 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.VideoModule
     fullTypeName: UnityEngine.Video.VideoPlayer
     methodName: Play
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -678,15 +745,6 @@ ScriptsOnlyBuild:
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
   - assembly: Assembly-CSharp
-    fullTypeName: PointOfInterest
-    methodName: Hovered
-  - assembly: Assembly-CSharp
-    fullTypeName: PointOfInterest
-    methodName: Unhovered
-  - assembly: Assembly-CSharp
-    fullTypeName: PointOfInterest
-    methodName: PointofInterestClick
-  - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
   - assembly: Assembly-CSharp
@@ -695,6 +753,21 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: ImageScroll
     methodName: ScrollRight
@@ -713,6 +786,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: UpdateSlider
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -764,6 +843,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: ResultScroll
+    methodName: ChangePositions
+  - assembly: Assembly-CSharp
+    fullTypeName: ResultScroll
+    methodName: Scroll
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
@@ -812,6 +903,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: UpdateSlider
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneTransition
+    methodName: LoadGameScene
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
@@ -866,12 +963,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: Unhovered
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
   - assembly: Assembly-CSharp
     fullTypeName: ChangeChannel
     methodName: PreviousChannel
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
@@ -893,6 +996,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneTransition
+    methodName: Quit
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Stop
@@ -908,9 +1014,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ChangeChannel
     methodName: NextChannel
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: POINext
@@ -951,6 +1063,9 @@ ScriptsOnlyBuild:
     fullTypeName: IntroSkip
     methodName: Continue
   - assembly: Assembly-CSharp
+    fullTypeName: SceneTransition
+    methodName: Quit
+  - assembly: Assembly-CSharp
     fullTypeName: ImageScroll
     methodName: ScrollRight
   - assembly: UnityEngine.AudioModule
@@ -971,6 +1086,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: MilitaryScene
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -1028,6 +1149,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: UpdateSlider
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
@@ -1043,30 +1167,9 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
-  - assembly: UnityEngine.VideoModule
-    fullTypeName: UnityEngine.Video.VideoPlayer
-    methodName: Play
-  - assembly: UnityEngine.VideoModule
-    fullTypeName: UnityEngine.Video.VideoPlayer
-    methodName: Play
-  - assembly: UnityEngine.VideoModule
-    fullTypeName: UnityEngine.Video.VideoPlayer
-    methodName: Play
-  - assembly: UnityEngine.VideoModule
-    fullTypeName: UnityEngine.Video.VideoPlayer
-    methodName: Play
-  - assembly: UnityEngine.VideoModule
-    fullTypeName: UnityEngine.Video.VideoPlayer
-    methodName: Play
-  - assembly: UnityEngine.VideoModule
-    fullTypeName: UnityEngine.Video.VideoPlayer
-    methodName: Play
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: set_mute
-  - assembly: Assembly-CSharp
-    fullTypeName: PointOfInterest
-    methodName: IncrementPointsInvestigated
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
@@ -1103,12 +1206,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: ChalkboardZoomOut
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -1169,6 +1266,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: TeletypeZoomIn
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: InputFieldEntered
@@ -1178,9 +1281,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: POIPrevious
-  - assembly: Assembly-CSharp
-    fullTypeName: ChangeChannel
-    methodName: NextChannel
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
@@ -1193,6 +1293,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
+  - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: ViewResults
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
@@ -1220,6 +1329,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: UpdateSlider
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
@@ -1232,6 +1350,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
+  - assembly: Assembly-CSharp
+    fullTypeName: ImageScroll
+    methodName: Open
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: Hovered
@@ -1289,6 +1410,12 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
@@ -1313,6 +1440,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: ChangeYourMind
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
@@ -1346,9 +1476,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: SliderReleased
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: POINext
@@ -1364,9 +1500,18 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
@@ -1379,6 +1524,21 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: set_mute
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: InputFieldUpdate
     methodName: UpdateInputField
@@ -1421,6 +1581,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: RecorderZoomIn
+  - assembly: UnityEngine.VideoModule
+    fullTypeName: UnityEngine.Video.VideoPlayer
+    methodName: Pause
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: PointofInterestClick
@@ -1430,6 +1593,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: Unhovered
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneTransition
+    methodName: LoadGameScene
   - assembly: Assembly-CSharp
     fullTypeName: PointOfInterest
     methodName: POINext
@@ -1460,6 +1626,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ImageScroll
     methodName: ScrollRight
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: ViewResults
@@ -1478,6 +1647,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SliderUpdate
     methodName: UpdateSlider
+  - assembly: Assembly-CSharp
+    fullTypeName: Pause
+    methodName: PauseClicked
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -1494,11 +1666,23 @@ ScriptsOnlyBuild:
     fullTypeName: PointOfInterest
     methodName: PointofInterestClose
   - assembly: Assembly-CSharp
+    fullTypeName: ScreenChange
+    methodName: BackToLobby
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
     fullTypeName: MoreInfoButton
     methodName: MoreInfo
   - assembly: Assembly-CSharp
     fullTypeName: ScreenChange
     methodName: Decide
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Stop
   - assembly: Assembly-CSharp
     fullTypeName: AdvisorQuestions
     methodName: AskQuestion
@@ -1532,6 +1716,9 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -1624,6 +1811,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 40768}
     - Class: 114
       Script: {instanceID: 42366}
+    - Class: 114
+      Script: {instanceID: 47676}
     - Class: 114
       Script: {instanceID: 45844}
     - Class: 114
@@ -1803,7 +1992,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: cbabab29d95d09e70051366c19e738c3
+      Hash: be16669bf8c1881d0ef7729db168e1a6
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: AdvisorQuestions
@@ -2931,7 +3120,7 @@ ScriptsOnlyBuild:
     className: UnityOnControllerColliderHitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 998494c0038eca1ccd44057d2fdc7eb4
+      Hash: da67d46b33becdedfd89528badeb398d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ScreenChange
@@ -3153,7 +3342,7 @@ ScriptsOnlyBuild:
     className: UnityOnScrollMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c9638ea782999372b664bf090ad8204c
+      Hash: c707d3bfe0d396270e817a7501f11f81
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: IntroSkip
@@ -3177,7 +3366,7 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerStayMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 98f5af3ca5d032836244750a8d631252
+      Hash: 776f7a5ead97a40c634416968fcab37f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ChangeChannel
